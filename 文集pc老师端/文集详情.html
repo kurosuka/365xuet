@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <title>个人中心</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1258756_dc64tksqhae.css?date= new Date()"><!--PC个人中心改版2019-2019-08-14-->
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/personalCenter.css">
+    <link rel="stylesheet" href="css/teacherCenter.css">
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css"/>
+    <link rel="stylesheet" href="css/corpus.css" />
+    <script>/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <script src="layui/layui.js"></script>
+    <script src="js/turn.js"></script>
+    <script src="js/basic.js" ></script>
+</head>
+<body>
+        <div class="flipbook-viewport hide">
+            <div class="container">
+                <div class="flipbook">
+                    <div>
+                        <img src="pages/1.jpg" />
+                    </div>
+                    <div>
+                        <div class="gradient"></div>
+                        <img src="pages/2.jpg" />
+                    </div>
+                    <div>
+                        <div class="gradient"></div>
+                        <img src="pages/3.jpg" />
+                    </div>
+                    <div>
+                        <div class="gradient"></div>
+                        <img src="pages/4.jpg" />
+                    </div>
+                    <div>
+                        <div class="gradient"></div>
+                        <img src="pages/5.jpg" />
+                    </div>
+                    <div>
+                        <div class="gradient"></div>
+                        <img src="pages/6.jpg" />
+                    </div>
+                    <div>
+                        <div class="gradient"></div>
+                        <img src="pages/7.jpg" />
+                    </div>
+                    <div>
+                        <div class="gradient"></div>
+                        <img src="pages/8.jpg" />
+                    </div>
+                    <div>
+                        <div class="gradient"></div>
+                        <img src="pages/9.jpg" />
+                    </div>
+                    <div>
+                        <img src="pages/10.jpg" />
+                    </div>
+                </div>
+                <!--左按钮-->
+                <div class="flipBookLeftBtn iconfont icon-arrowleft"></div>
+                <!--右按钮-->
+                <div class="flipBookRightBtn iconfont icon-arrowright"></div>
+                <!--退出按钮-->
+                <!--页数-->
+                <div class="pagesItem"></div>
+                <div class="flipBookBack">退出预览</div>
+            </div>
+        
+        </div>
+        <script>
+            $(function(){
+                $('.flipbook').turn({
+                // Width
+
+                width: 922,
+
+                // Height   
+
+                height: 600,
+
+                // Elevation
+
+                elevation: 50,
+
+                // Enable gradients
+
+                gradients: true,
+
+                // Auto center this flipbook
+
+                autoCenter: true,
+                when: {
+                    turned: function (e, page, view) {
+                        setArrows($('.flipbook').turn('page'), $('.flipbook').turn('pages'));
+                        setPages($('.flipbook').turn('page'), $('.flipbook').turn('pages'));
+                    }
+                }
+
+            });
+            //按钮显示
+            setArrows($('.flipbook').turn('page'),$('.flipbook').turn('pages'));
+            //显示页数
+            setPages($('.flipbook').turn('page'),$('.flipbook').turn('pages'));
+            // Events for the next button
+
+            $('.flipBookRightBtn').click(function () {
+
+                $('.flipbook').turn('next');
+                //按钮显示
+            setArrows($('.flipbook').turn('page'),$('.flipbook').turn('pages'));
+            //显示页数
+            setPages($('.flipbook').turn('page'),$('.flipbook').turn('pages'));
+            });
+
+            // Events for the prev button	
+
+            $('.flipBookLeftBtn').click(function () {
+
+                $('.flipbook').turn('previous');
+                //按钮显示
+            setArrows($('.flipbook').turn('page'),$('.flipbook').turn('pages'));
+            //显示页数
+            setPages($('.flipbook').turn('page'),$('.flipbook').turn('pages'));
+            });
+            //文集预览隐藏
+            $('.flipBookBack').click(function(){
+                $('.flipbook-viewport').addClass('hide');
+            })
+            //文集预览打开
+            $('.flipBookOpen').click(function(){
+                $('.flipbook-viewport').removeClass('hide');
+            })
+            })
+            //显示按钮
+            function setArrows(page,pages){
+                if(page == 1){
+                    $('.flipBookLeftBtn').hide();
+                    $('.flipBookRightBtn').show();
+                }else if(page == pages){
+                    $('.flipBookLeftBtn').show();
+                    $('.flipBookRightBtn').hide();
+                }else{
+                    $('.flipBookLeftBtn').show();
+                    $('.flipBookRightBtn').show();
+                }
+            }
+            //刷新页数显示
+            function setPages(page,pages){
+                var s = page +'/'+pages
+                $('.pagesItem').html(s)
+            }
+        </script>
+<!--轮播图-->
+<style type="text/css">
+    .swiper-container_box{
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .swiper-container .swiper-pagination-zq {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+        text-align: center;
+    }
+</style>
+<div class="swiper-container_box">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img onclick="adv_go('http://www.365xuet.com/xueT/courseIndex?series_id=7')" src="upfile/2.jpg"></div>
+            <div class="swiper-slide"><img onclick="adv_go('http://v2.365xuet.com/xueT/courseIndex?series_id=4')" src="upfile/2.jpg"></div>
+        </div>
+        <div class="swiper-pagination-zq"></div>
+    </div>
+</div>
+<script>
+    $(function () {
+        var mySwiper = new Swiper('.swiper-container_box .swiper-container', {
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination-zq',
+                clickable: true,
+            },
+            lazy: {
+                loadPrevNext: true,
+            },
+        })
+    })
+    function adv_go(url){
+        window.location.href = url;
+    }
+</script>
+<!-- 通用标题 -->
+<div class="personalTitle clearfix">
+    <h3>挑选作文</h3>
+    <!--滚动通知-->
+    <div class="rollingNotification right">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/courseIndex?tab=4" class="iconfont icon-xiaolaba">写作思路打不开？快来围观写作任务群!</a></div>
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/seriesCourseDetail/955" class="iconfont icon-xiaolaba">听故事学语文，点此免费试听~</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="writingListBox clearfix bgWhite radius15 borderThinE mt13">
+    <div class="select-corpus">
+        <div class="layui-form">
+            <div class="layui-form-item">
+                <label class="layui-form-label">文集名：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input" value="我的文集1" maxlength="7">
+                </div>
+            </div>
+            <div class="corselecet-btn">
+                <a class="template-slt-btn" href="文集模板选择.html">模板选择</a>
+                <a class="add-art-btn" href="选择作文.html">添加作文</a>
+                <a class="quick-sort-btn">快速排序</a>
+            </div>
+        </div>
+        <!--文集操作-->
+        <div class="course-operation-group">
+            <span class="iconfont icon-xiangzuoshouqi">移至最前</span>
+            <span class="iconfont icon-arrowleft">前移</span>
+            <span class="iconfont icon-arrowright">后移</span>
+            <span class="iconfont icon-xiangzuoshouqi">移至最后</span>
+            <span class="iconfont ">插入空白页</span>
+            <span class="iconfont icon-bianji"><a href="文集编辑.html" target="_parent">编辑</a></span>
+            <span class="iconfont icon-huishou">删除</span>
+            <div class="listSwitch">使用目录<span class="switch-btn"><em></em></span></div>
+        </div>
+        <div class="select-corpus-content">
+            <ul>
+                <li class="active">
+                    <img src="http://www.365xuet.com/assets/web/images/writingIndexNav/3.jpg" alt="" />
+                    <div class="editcorpus-title">
+                        <span>文章名称</span>
+                    </div>
+                    <div class="editcorpus-score">
+                        <span class="iconfont icon-yezi red2" style="display: none">69%</span>
+                        <span class="iconfont icon-yezi blue" style="display: none">79%</span>
+                        <span class="iconfont icon-yezi green" style="display: none">89%</span>
+                        <span class="iconfont icon-yezi violet">99%</span>
+                        <span>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                        </span>
+                    </div>
+                    <div class="editcorpus-date">
+                        <span>王二丫</span>
+                        <span>2018-08-09</span>
+                    </div>
+                    <div class="select-corpusi-tip"><span class="iconfont icon-test"></span></div>
+                </li>
+                <li>
+                    <img src="http://www.365xuet.com/assets/web/images/writingIndexNav/3.jpg" alt="" />
+                    <div class="editcorpus-title">
+                        <span>文章名称</span>
+                    </div>
+                    <div class="editcorpus-score">
+                        <span class="iconfont icon-yezi red2" style="display: none">69%</span>
+                        <span class="iconfont icon-yezi blue" style="display: none">79%</span>
+                        <span class="iconfont icon-yezi green" style="display: none">89%</span>
+                        <span class="iconfont icon-yezi violet">99%</span>
+                        <span>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                        </span>
+                    </div>
+                    <div class="editcorpus-date">
+                        <span>王二丫</span>
+                        <span>2018-08-09</span>
+                    </div>
+                    <div class="select-corpusi-tip"><span class="iconfont icon-test"></span></div>
+                </li>
+                <li>
+                    <img src="http://www.365xuet.com/assets/web/images/writingIndexNav/3.jpg" alt="" />
+                    <div class="editcorpus-title">
+                        <span>文章名称</span>
+                    </div>
+                    <div class="editcorpus-score">
+                        <span class="iconfont icon-yezi red2" style="display: none">69%</span>
+                        <span class="iconfont icon-yezi blue" style="display: none">79%</span>
+                        <span class="iconfont icon-yezi green" style="display: none">89%</span>
+                        <span class="iconfont icon-yezi violet">99%</span>
+                        <span>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                        </span>
+                    </div>
+                    <div class="editcorpus-date">
+                        <span>王二丫</span>
+                        <span>2018-08-09</span>
+                    </div>
+                    <div class="select-corpusi-tip"><span class="iconfont icon-test"></span></div>
+                </li>
+                <li>
+                    <img src="http://www.365xuet.com/assets/web/images/writingIndexNav/3.jpg" alt="" />
+                    <div class="editcorpus-title">
+                        <span>文章名称</span>
+                    </div>
+                    <div class="editcorpus-score">
+                        <span class="iconfont icon-yezi red2" style="display: none">69%</span>
+                        <span class="iconfont icon-yezi blue" style="display: none">79%</span>
+                        <span class="iconfont icon-yezi green" style="display: none">89%</span>
+                        <span class="iconfont icon-yezi violet">99%</span>
+                        <span>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                        </span>
+                    </div>
+                    <div class="editcorpus-date">
+                        <span>王二丫</span>
+                        <span>2018-08-09</span>
+                    </div>
+                    <div class="select-corpusi-tip"><span class="iconfont icon-test"></span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="writingPage">
+            <ul>
+                <li><a href="https://www.365xuet.com/write/markCompositionList?year=&amp;area=&amp;search=&amp;page=2">下一页</a></li>
+                <li><a href="https://www.365xuet.com/write/markCompositionList?year=&amp;area=&amp;search=&amp;page=23">末页</a></li>
+                <li class="page_select">
+                    当前第 <input type="text" id="page" value="1">页/ 共23页 <a href="javascript:toPage()">转到</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="corpus-btn-content">
+        <div class="corpus-btn-left"><span class="iconfont icon-fenping">您的文集共<i>15</i>篇作文</span></div>
+        <div class="corpus-btn-right">
+            <span class="flipBookOpen hide">预览</span>
+            <a href="#" class="export-corpus-btn hide">导出pdf</a>
+            <a href="定稿.html" class="final-corpus-btn">定稿</a>
+        </div>
+    </div>
+</div>
+<!--快速排序-->
+<div class="quickSortContent hide">
+    <div class="quickSortCTitle">
+        <h3>快速排序</h3>
+        <span class="iconfont icon-guanbi"></span>
+    </div>
+    <div class="layui-form">
+        <div class="layui-form-item">
+            <label class="layui-form-label">第一排序项：</label>
+            <div class="layui-input-block">
+                <select>
+                    <option value=""></option>
+                    <option value="0">写作</option>
+                    <option value="1" selected="">阅读</option>
+                    <option value="2">游戏</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">第一排序项：</label>
+            <div class="layui-input-block">
+                <select>
+                    <option value=""></option>
+                    <option value="0">写作</option>
+                    <option value="1" selected="">阅读</option>
+                    <option value="2">游戏</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">第一排序项：</label>
+            <div class="layui-input-block">
+                <select>
+                    <option value=""></option>
+                    <option value="0">写作</option>
+                    <option value="1" selected="">阅读</option>
+                    <option value="2">游戏</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="quickSortSureBtn">确定</div>
+</div>
+</body>
+<script>
+    $(function(){
+        layui.use(['form','element','layer'], function() {
+            var form = layui.form,
+                element = layui.element,
+                layer = layui.layer;
+        });
+        $('.switch-btn').on('click',function(){
+                   $(this).toggleClass('switch-selected')
+               });
+    $('.quick-sort-btn').click(function(){
+    layer.open({
+        title: '',
+        type : 1,
+        closeBtn : false,
+        area : ['445px','330px'],
+        skin : "quickSortContentSkin",
+        content : $('.quickSortContent'),
+        success : function(){
+            $('.quickSortSureBtn').click(function(){
+                layer.closeAll()
+            });
+            $('.quickSortCTitle span').click(function(){
+                layer.closeAll()
+            });
+        }
+    })
+    })
+    })
+</script>
+<script>
+	$(function () {
+		//通知滚动
+		var swiper = new Swiper('.rollingNotification .swiper-container', {
+			loop: true,
+			direction: 'vertical',
+			slidesPerView: 1,
+			autoplay: {
+				delay: 2000,
+			}
+		});
+        $('.select-corpus-content li').click(function(){
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+	})
+</script>
+</html>

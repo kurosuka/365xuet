@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <title>定稿</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1258756_dc64tksqhae.css"><!--PC个人中心改版2019-2019-06-26-->
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="http://www.365xuet.com/assets/web/css/userCenter/personalCenter.css">
+    <link rel="stylesheet" href="css/teacherCenter.css">
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css"/>
+    <link rel="stylesheet" href="css/corpus.css?date= new Date()" />
+    <script>/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <script src="layui/layui.js"></script>
+</head>
+<body>
+<!--轮播图-->
+<style type="text/css">
+    .swiper-container_box{
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .swiper-container .swiper-pagination-zq {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+        text-align: center;
+    }
+</style>
+<div class="swiper-container_box">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img onclick="adv_go('http://www.365xuet.com/xueT/courseIndex?series_id=7')" src="upfile/2.jpg"></div>
+            <div class="swiper-slide"><img onclick="adv_go('http://v2.365xuet.com/xueT/courseIndex?series_id=4')" src="upfile/2.jpg"></div>
+        </div>
+        <div class="swiper-pagination-zq"></div>
+    </div>
+</div>
+<script>
+    $(function () {
+        var mySwiper = new Swiper('.swiper-container_box .swiper-container', {
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination-zq',
+                clickable: true,
+            },
+            lazy: {
+                loadPrevNext: true,
+            },
+        })
+    })
+    function adv_go(url){
+        window.location.href = url;
+        document.getElementById;
+        var lodash = require('dd')
+    }
+</script>
+<!-- 通用标题 -->
+<div class="personalTitle clearfix">
+    <h3>我的文集</h3>
+    <!--滚动通知-->
+    <div class="rollingNotification right">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/courseIndex?tab=4" class="iconfont icon-xiaolaba">写作思路打不开？快来围观写作任务群!</a></div>
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/seriesCourseDetail/955" class="iconfont icon-xiaolaba">听故事学语文，点此免费试听~</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="writingListBox clearfix bgWhite radius15 borderThinE mt13">
+    <div class="finalPage">
+        <div class="finalPageContent">
+            <div class="finalPageItem">
+                <div class="finalPageImg"><img src="http://www.365xuet.com/assets/web/images/xueTang/55.jpg"/></div>
+                <div class="finalPageCotain">
+                    <p>大声说出我爱你</p>
+                    <p><span>文章数量：<em>15</em>篇</span><i>装订成册时，超过XX篇部分将收取扩容费</i></p>
+                    <p>登录电脑网页端可使用更多编辑功能；定稿后可获得公开的在线预览链接；定稿后可下单装订成册；<span>定稿后无法再对文集进行修改。</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="point">
+            <span>是否公开</span>
+            <span><i>（公开后文集将会在平台上展示）</i></span>
+            <span class="switch-btn">
+                <em></em>
+            </span>
+        </div>
+        <div class="order-amount">
+            <div class="order-amount-item clearfix">
+                <span>定稿</span>
+                <span>￥99.00</span>
+            </div>
+            <div class="order-amount-item clearfix">
+                <span>模板：模板名称七个字</span>
+                <span>￥20</span>
+            </div>
+        </div>
+        <div class="pay-content">
+            <span>支付方式</span>
+            <div class="pay-list">
+                <span class="wechatpay"><em>微信支付</em><i class="iconfont"></i></span>
+                <span class="blancepay"><em>余额支付</em><i class="iconfont is-selectd"></i></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pay-money">
+    <p>立即支付</p>
+    <span><i>实付：</i><em>99.00</em></span>
+</div>
+ <!--微信支付弹窗start-->
+ <div class="wechat-pay-box">
+    <div class="closeBtn iconfont icon-guanbi"></div>
+    <p>应付金额:<em>50</em>元</p>
+    <div class="pay-code"><img src="http://www.365xuet.com/assets/web/images/bottom_wx.jpg" alt="" /></div>
+    <span class="iconfont icon-weixin1 wechat-pay-title">微信支付</span>
+</div>
+<!--微信支付弹窗end-->
+</body>
+<script>
+    $(function(){
+        layui.use(['form','element','layer','laydate'], function() {
+            var form = layui.form,
+                element = layui.element,
+                layer = layui.layer
+        });
+         //微信支付弹窗
+         $(".pay-money p").click(function(){
+                   layer.open({
+                       type: 1,
+                       title: '',
+                       closeBtn: false,
+                       btn: false,
+                       skin: 'wechat-pay-box-skin',
+                       area: ['442px','306px'],
+                       content: $('.wechat-pay-box'),
+                       success: function(){
+                        $('.closeBtn').on('click',function(){
+                            layer.closeAll();
+                        })
+                       }
+                   })
+                })
+    })
+</script>
+<script>
+	$(function () {
+		//通知滚动
+		var swiper = new Swiper('.rollingNotification .swiper-container', {
+			loop: true,
+			direction: 'vertical',
+			slidesPerView: 1,
+			autoplay: {
+				delay: 2000,
+			}
+        });
+        $('.switch-btn').on('click',function(){
+                   $(this).toggleClass('switch-selected')
+               });
+	})
+</script>
+</html>

@@ -1,0 +1,157 @@
+﻿/* Reset */
+.htmleaf-container{
+    text-align: center;
+    overflow: hidden;
+    width: 700px;
+    height: 700px;
+    position: fixed;
+    top:50%;left:50%;
+    margin-top: -350px;
+    margin-left: -350px;
+    background: #000;
+    display: none;
+    z-index: 9999999;
+    border-radius:15px;
+    overflow: hidden;
+}
+.htmleaf-container .clipAreaTit{
+    width: 100%;
+    padding:0 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    height: 8%;
+    text-align: left;
+    line-height:56px;
+    color: #333;
+    font-weight: bold;
+}
+.fade_layer{background: #000;opacity:.5;position: fixed;width: 100%;height: 100%;top: 0;left: 0;z-index:8;display: none;cursor: pointer;}
+#clipArea {
+    height:84%;
+}
+/*上传图标*/
+#file{
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+#clipBtn{
+    float: right;
+    height: 100%;
+    width: 50%;
+    background: #fc7859;
+    border: 0;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    z-index: 999;
+}
+.foot-use{
+    background: #fff;
+    height: 8%;
+    width: 100%;
+position: relative;
+}
+
+
+.uploader {
+    position: absolute;
+    width: 54%;
+    left: 23%;
+    cursor: default;
+    height: 100%;
+    float: left;
+}
+.uploader1 {
+    position: absolute;
+    width: 50%;
+    cursor: default;
+    height: 100%;
+    left:0;
+    top:0;
+}
+.button {
+    height: 100%;
+    display: inline-block;
+    outline: 0 none;
+    margin: 0;
+    cursor: pointer;
+    border: 0;
+}
+
+.uploader input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+   border: solid 1px #ddd;
+    opacity: 0;
+}
+.uploader1 input[type=file] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width:100%;
+    cursor: pointer;
+    border: solid 1px #ddd;
+    opacity: 0;
+}
+
+
+.blue .button {
+    color: #fff;
+    background: #fc7859;
+    height: 100%;
+    width: 100%;
+    text-align: center !important;
+    font-size: 18px!important;
+
+}
+#logox{
+    width:100%;
+    display: block;
+}
+#logox img{
+    display: block;
+    width: 100%;
+}
+
+.half{
+    border-radius:5px;
+    border:1px dashed #eee;
+    overflow: hidden;
+    position: relative;
+}
+.half span{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(255,255,255,0.3);
+    pointer-events: none;
+}
+.half .PicFileBox{
+    position: absolute;
+    right:0px;
+    bottom:0px;
+    background-color: #fc7859;
+    padding:10px;
+    border-top-left-radius:5px;
+
+}
+.half a.againFile,.half a.delPic{
+    color: #fff;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-left: 5px;
+}

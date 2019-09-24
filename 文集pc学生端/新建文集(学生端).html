@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="renderer" content="webkit" />
+	<meta name="force-rendering" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+	<title>个人中心</title>
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_1258756_j2hlqjfpbm.css">
+	<!--PC个人中心改版2019-2019-07-08-->
+	<link rel="stylesheet" href="layui/css/layui.css">
+	<link rel="stylesheet" href="css/personalCenter.css">
+	<link rel="stylesheet" href="css/teacherCenter.css" />
+	<link rel="stylesheet" href="css/corpus.css"/>
+	<link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css" />
+	<script>
+		/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/
+	</script>
+	<script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+	<script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+	<script src="layui/layui.js"></script>
+</head>
+
+<body>
+	<!--轮播图-->
+	<style type="text/css">
+		.swiper-container_box {
+			border-radius: 15px;
+			overflow: hidden;
+		}
+
+		.swiper-container .swiper-pagination-zq {
+			position: absolute;
+			bottom: 15px;
+			left: 0;
+			width: 100%;
+			z-index: 9;
+			text-align: center;
+		}
+	</style>
+	<div class="swiper-container_box">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img onclick="adv_go('http://www.365xuet.com/xueT/courseIndex?series_id=7')"
+						src="upfile/2.jpg"></div>
+				<div class="swiper-slide"><img onclick="adv_go('http://v2.365xuet.com/xueT/courseIndex?series_id=4')"
+						src="upfile/2.jpg"></div>
+			</div>
+			<div class="swiper-pagination-zq"></div>
+		</div>
+	</div>
+	<script>
+		$(function () {
+			var mySwiper = new Swiper('.swiper-container_box .swiper-container', {
+				autoplay: true,
+				pagination: {
+					el: '.swiper-pagination-zq',
+					clickable: true,
+				},
+				lazy: {
+					loadPrevNext: true,
+				},
+			})
+		})
+
+		function adv_go(url) {
+			window.location.href = url;
+		}
+	</script>
+	<!-- 通用title -->
+	<div class="personalTitle clearfix">
+		<h3>创建文集</h3>
+		<!--滚动通知-->
+		<div class="rollingNotification right">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/courseIndex?tab=4"
+							class="iconfont icon-xiaolaba">写作思路打不开？快来围观写作任务群!</a></div>
+					<div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/seriesCourseDetail/955"
+							class="iconfont icon-xiaolaba">听故事学语文，点此免费试听~</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="classWritingListBox clearfix bgWhite radius15 borderThinE mt13">
+		<div class="corpus-buliding">
+			<form class="layui-form" action="" method="POST">
+				<div class="layui-form-item">
+					<label class="layui-form-label">文集名：</label>
+					<div class="layui-input-block">
+						<input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<div class="layui-form-item">
+						<label class="layui-form-label">时间段：</label>
+						<div class="layui-input-block">
+							<input type="text" class="layui-input" id="date-interval" placeholder=" - ">
+						</div>
+					</div>
+				</div>
+				<div class="layui-form-item  corpus-bulid-item">
+					<div class="layui-inline">
+						<label class="layui-form-label">星级：</label>
+						<div class="layui-input-inline" style="width: 145px">
+							<select>
+								<option value="全部" selected="">全部</option>
+								<option value="5星">5星</option>
+								<option value=">=4星">4星以上</option>
+								<option value=">=3星">3星以上</option>
+							</select>
+						</div>
+					</div>
+					<div class="layui-inline">
+						<label class="layui-form-label">新鲜度：</label>
+						<div class="layui-input-inline" style="width: 145px">
+							<select>
+								<option value="全部" selected="">全部</option>
+								<option value="90及以上">90以上</option>
+								<option value="85及以上">85以上</option>
+								<option value="80及以上">80以上</option>
+								<option value="75及以上">75以上</option>
+							</select>
+						</div>
+					</div>
+					<div class="layui-inline">
+						<label class="layui-form-label">投稿方式：</label>
+						<div class="layui-input-inline" style="width: 145px">
+							<select>
+								<option value="全部" selected="">全部</option>
+								<option value="自由投稿">自由投稿</option>
+								<option value="班级作文">班级作文</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">文体：</label>
+					<div class="submissionContent style-select">
+						<div class="content literaryStyle right parentBox tac">
+							<span class="childrenFlex"><a href="javascript:;" class="iconfont icon-fukuan active">记叙文</a></span>
+							<span class="childrenFlex"><a href="javascript:;" class="iconfont icon-pinglun active">议论文</a></span>
+							<span class="childrenFlex"><a href="javascript:;" class="iconfont icon-shici active">诗歌</a></span>
+							<span class="childrenFlex"><a href="javascript:;" class="iconfont icon-xinwen active">散文</a></span>
+							<span class="childrenFlex"><a href="javascript:;" class="iconfont icon-shuoming active">说明文</a></span>
+							<span class="childrenFlex"><a href="javascript:;" class="iconfont icon-kehuan active">虚构写作</a></span>
+							<span class="childrenFlex"><a href="javascript:;" class="iconfont icon-dushu active">读后感</a></span>
+						</div>
+					</div>
+				</div>
+				<div class="publicItem clearfix">
+					<label class="layui-form-label">只选已发表文章：</label>
+					<div class="listSwitch"><span class="switch-btn switch-selected"><em></em></span></div>
+				</div>
+				<div class="publicItem clearfix">
+					<label class="layui-form-label">保留批改痕迹：</label>
+					<div class="listSwitch"><span class="switch-btn switch-selected"><em></em></span></div>
+				</div>
+				<div class="corpusUpdateContent"><a href="选择作文.html">创建</a></div>
+			</form>
+		</div>
+	</div>
+</body>
+<script>
+	$(function () {
+		//通知滚动
+		var swiper = new Swiper('.rollingNotification .swiper-container', {
+			loop: true,
+			direction: 'vertical',
+			slidesPerView: 1,
+			autoplay: {
+				delay: 2000,
+			}
+		});
+		layui.use(['form','laydate','element','layer'], function() {
+            var form = layui.form,
+            element = layui.element,
+            layer = layui.layer,
+			laydate =  layui.laydate;
+			laydate.render({
+			elem: '#date-interval',
+			range: true
+		})
+        });
+		$('.style-select a').click(function(){
+			$(this).toggleClass('active')
+		});
+		$('.switch-btn').click(function(){
+			$(this).toggleClass('switch-selected')
+		})
+	})
+</script>
+
+</html>

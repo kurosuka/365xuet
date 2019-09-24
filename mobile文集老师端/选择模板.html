@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="hotcss" content="max-width=640">
+    <meta name="hotcss" content="design-width=750">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1147714_0660jvxcihar.css" />
+    <link href="https://www.365xuet.com/assets/mobile/layer_mobile/need/layer.css?2.0" type="text/css" rel="styleSheet" id="layermcss">
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css" />
+    <script src="js/hotcss.js"></script>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/mobileCorpus.css" />
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://at.alicdn.com/t/font_1147714_w1u23ubgs1g.js"></script>
+    <script src="https://www.365xuet.com/assets/mobile/layer_mobile/layer.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <title>选择模板</title>
+</head>
+<style>
+    *{margin:0;padding:0}
+    .galleryThumbs .swiper-slide{
+        width:80%;
+    }
+    .galleryThumbs .swiper-slide img,.galleryThumbs .swiper-slide-prev img,.galleryThumbs .swiper-slide-next img{
+        width:100%;
+        -webkit-transition: transform 1.0s;
+        transform: scale(0.92);
+    }
+    .galleryThumbs .swiper-slide-active img{
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    .swiper-pagination{
+        position: inherit;
+    }
+    .swiper-pagination-bullet{
+        margin:0 3px;
+    }
+    .swiper-pagination-bullet-active{
+        width: 12px;
+        border-radius:10px;
+        background-color: #ee8f3f;
+    }
+    /**/
+    .gallery-thumbs{
+        border-bottom:1px solid #e8e8e8;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .gallery-thumbs .swiper-slide{
+        padding:10px 0;
+    }
+    .gallery-thumbs .swiper-slide-thumb-active{
+        color: #fd9407;
+        position: relative;
+    }
+    .gallery-thumbs .swiper-slide-thumb-active:before{
+        content:'';
+        position: absolute;
+        bottom:0;
+        width:50%;
+        left:25%;
+        border-bottom:2px solid #fd9407;
+    }
+</style>
+<body style="background: #282a44">
+    
+    
+    <!---->
+    <div class="swiper-container galleryThumbs">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/mb1.jpg" class="main-img"></div>
+            <div class="swiper-slide"><img src="images/mb1.jpg" class="main-img"></div>
+            <div class="swiper-slide"><img src="images/mb1.jpg" class="main-img"></div>
+            <div class="swiper-slide"><img src="images/mb1.jpg" class="main-img"></div>
+            <div class="swiper-slide"><img src="images/mb1.jpg" class="main-img"></div>
+            <div class="swiper-slide"><img src="images/mb1.jpg" class="main-img"></div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-container gallery-thumbs">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">极速点评</div>
+            <div class="swiper-slide">免费课程</div>
+            <div class="swiper-slide">专属礼包</div>
+            <div class="swiper-slide">专享优惠</div>
+            <div class="swiper-slide">双倍积分</div>
+            <div class="swiper-slide">会员标识</div>
+        </div>
+    </div>
+</body>
+<script>
+    $(function () {
+        var galleryThumbs1 = new Swiper('.gallery-thumbs', {
+            spaceBetween: 10,
+            slidesPerView:4,
+            freeMode: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        var mySwiper=new Swiper(".galleryThumbs",{
+            slidesPerView:"auto",
+            centeredSlides:!0,
+            watchSlidesProgress:!0,
+            paginationClickable:!0,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            thumbs: {
+                swiper: galleryThumbs1
+            }
+        });
+        mySwiper.slideTo(GetQueryString('tab'), 0, false)
+    })
+    //页面传值
+    function GetQueryString(tab) {
+        var reg = new RegExp("(^|&)" + tab + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return decodeURI(r[2]);
+        return null;
+    }
+</script>
+</html>

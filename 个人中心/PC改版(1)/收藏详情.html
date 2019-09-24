@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <title>个人中心</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1258756_ysco0t88t4.css"><!--PC个人中心改版2019-2019-07-08-->
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="css/photoClip.css" />
+    <link rel="stylesheet" type="text/css" href="css/collectionLayer.css" /><!--收藏页面添加这个css-->
+    <link rel="stylesheet" href="css/personalCenter.css">
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css"/>
+    <script>/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <script src="layui/layui.js"></script>
+</head>
+<body>
+<!--轮播图-->
+<style type="text/css">
+    .swiper-container_box{
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .swiper-container .swiper-pagination-zq {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+        text-align: center;
+    }
+</style>
+<div class="swiper-container_box">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img onclick="adv_go('http://www.365xuet.com/xueT/courseIndex?series_id=7')" src="upfile/2.jpg"></div>
+            <div class="swiper-slide"><img onclick="adv_go('http://v2.365xuet.com/xueT/courseIndex?series_id=4')" src="upfile/2.jpg"></div>
+        </div>
+        <div class="swiper-pagination-zq"></div>
+    </div>
+</div>
+<script>
+    $(function () {
+        var mySwiper = new Swiper('.swiper-container_box .swiper-container', {
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination-zq',
+                clickable: true,
+            },
+            lazy: {
+                loadPrevNext: true,
+            },
+        })
+    })
+    function adv_go(url){
+        window.location.href = url;
+    }
+</script>
+<!-- 通用标题 -->
+<div class="personalTitle clearfix">
+    <h3>我的收藏</h3>
+    <!--滚动通知-->
+    <div class="rollingNotification right">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/courseIndex?tab=4" class="iconfont icon-xiaolaba">写作思路打不开？快来围观写作任务群!</a></div>
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/seriesCourseDetail/955" class="iconfont icon-xiaolaba">听故事学语文，点此免费试听~</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bgWhite radius15 borderThinE mt13 hidden">
+    <div class="collectorDetailTop">
+        <p class="tar clearfix">
+            <strong class="left fz16"><a class="red editCollector" href="javascript:;">我的收我的收藏夹名称 <i class="iconfont icon-bianji fz14"></i></a></strong>
+            <span class="left fz14 gray9">添加描述文字添加描述文字添加描述文字添加描述文字添加描述文字</span>
+            <a class="return borderThinC gray9" href="javascript:;">返回</a>
+            <a class="del gray9 textDecorationU" href="javascript:;">删除</a>
+        </p>
+        <div class="tab clearfix">
+            <p class="left">
+                <a class="active" href="">全部</a>
+                <a href="">课程</a>
+                <a href="">写作</a>
+                <a href="">音频</a>
+                <a href="">咨询</a>
+            </p>
+            <span class="right yellow">共<i>1</i>个内容</span>
+        </div>
+    </div>
+    <ul class="collectorDetailUl">
+        <li>
+            <div class="tit clearfix">
+                <h3 class="left"><a href="" class="gray3 fz16">标题标题标题标题标题标题标题标</a><em>记</em></h3>
+                <a class="blue right cancelCollection" href="">取消收藏</a>
+            </div>
+            <div class="content clearfix">
+                <div class="left contentLeft">
+                    <p class="spilloverEllipsis2 gray9 fz14">“爆竹声中一岁除，春风送暖入屠苏里春风送暖入屠苏里春风送暖入屠苏里春风送暖入屠苏里春风送暖入屠苏里春风送暖入屠苏里，鞭炮声噼里啪啦，此起彼伏。新的大红春联，挂起了灯笼。走到哪里都是热闹而又喜庆。</p>
+                    <div class="bottomDetailed tar gray9">
+                        <a href="javascript:;">写作</a>
+                        <span>评论 <i>451</i></span> ·
+                        <span>点赞 <i>451</i></span> ·
+                        <span>阅读 <i>451</i></span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="tit clearfix">
+                <h3 class="left"><a href="" class="gray3 fz16">标题标题标题标题标题标题标题标</a><em>记</em></h3>
+                <a class="blue right cancelCollection" href="">取消收藏</a>
+            </div>
+            <div class="content clearfix">
+                <div class="left contentLeft">
+                    <p class="spilloverEllipsis2 gray9 fz14">“爆竹声中一岁除，春风送暖入屠苏里春风送暖入屠苏里春风送暖入屠苏里春风送暖入屠苏里春风送暖入屠苏里春风送暖入屠苏里，鞭炮声噼里啪啦，此起彼伏。新的大红春联，挂起了灯笼。走到哪里都是热闹而又喜庆。</p>
+                    <div class="bottomDetailed tar gray9">
+                        <a href="javascript:;">咨询</a>
+                        <span>评论 <i>451</i></span> ·
+                        <span>点赞 <i>451</i></span> ·
+                        <span>阅读 <i>451</i></span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="tit clearfix">
+                <h3 class="left"><a href="" class="gray3 fz16">标题标题标题标题标题标题标题标</a><em>记</em></h3>
+                <a class="blue right cancelCollection" href="">取消收藏</a>
+            </div>
+            <div class="content content2 clearfix">
+                <div class="left contentLeft">
+                    <p class="spilloverEllipsis3 gray9 fz14">“爆竹声中一岁除，春风送暖入屠苏里春风送暖入屠苏里春风送暖入屠苏里春风送暖入屠苏里春风送暖入屠苏里春风送暖入屠苏里，鞭炮声噼里啪啦，此起彼伏。新的大红春联，挂起了灯笼。走到哪里都是热闹而又喜庆。</p>
+                    <div class="bottomDetailed tar gray9">
+                        <a href="javascript:;">课程</a>
+                        <span>评论 <i>451</i></span> ·
+                        <span>点赞 <i>451</i></span> ·
+                        <span>阅读 <i>451</i></span>
+                    </div>
+                </div>
+                <img class="right" src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/audio/7a83cf9365dd0e5d906f9b6e57f44987.jpg" alt="">
+                <span class="favoritesIoc iconfont icon-shipin"></span>
+            </div>
+        </li>
+        <li>
+            <div class="tit clearfix">
+                <h3 class="left"><a href="" class="gray3 fz16">标题标题标题标题标题标题标题标</a><em>记</em></h3>
+                <a class="blue right cancelCollection" href="">取消收藏</a>
+            </div>
+            <div class="content content2 clearfix">
+                <div class="left contentLeft">
+                    <p class="spilloverEllipsis3 gray9 fz14">“爆竹声中一岁除，春风送暖入屠苏里春风送暖入屠苏里春风送暖入屠苏里春风送暖入屠苏里春风送暖入屠苏里春风送暖入屠苏里，鞭炮声噼里啪啦，此起彼伏。新的大红春联，挂起了灯笼。走到哪里都是热闹而又喜庆。</p>
+                    <div class="bottomDetailed tar gray9">
+                        <a href="javascript:;">音频</a>
+                        <span>评论 <i>451</i></span> ·
+                        <span>点赞 <i>451</i></span> ·
+                        <span>阅读 <i>451</i></span>
+                    </div>
+                </div>
+                <img class="right" src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/audio/7a83cf9365dd0e5d906f9b6e57f44987.jpg" alt="">
+                <span class="favoritesIoc iconfont icon-yinpin1"></span>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--新建、编辑收藏夹-->
+<div class="addCollectorBox hide">
+    <input type="text" placeholder="请输入标题，最多10个字（必填）">
+    <textarea placeholder="添加描述,最多30个字（选填）"></textarea>
+</div>
+</body>
+<script>
+    $(function () {
+        layui.use(['form','element','layer'], function() {
+            var form = layui.form,
+                element = layui.element,
+                layer = layui.layer;
+        })
+        //编辑收藏夹
+        $('.editCollector').click(function () {
+            layer.open({
+                type: 1,
+                title:'编辑收藏夹',
+                skin: 'layerCommBox2',
+                area:'530px',
+                btn:'保存',
+                content:$('.addCollectorBox')
+            });
+        });
+        //删除收藏夹
+        $('.del').click(function () {
+            layer.confirm('收藏夹内所有的内容都会被取消收藏，确定删除吗？', {
+                btn: ['取消','确定']
+                ,closeBtn: 0
+                ,area:'420px'
+                ,skin:'layerConfirm'
+                ,title:''
+            })
+        })
+        //通知滚动
+        var swiper = new Swiper('.rollingNotification .swiper-container', {
+            loop: true,
+            direction: 'vertical',
+            slidesPerView: 1,
+            autoplay: {
+                delay: 2000,
+            }
+        });
+    })
+</script>
+</html>

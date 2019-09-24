@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <title>挑选作文</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1258756_hwt3rysr1xl.css?date= new Date()"><!--PC个人中心改版2019-2019-06-26-->
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="http://www.365xuet.com/assets/web/css/userCenter/personalCenter.css">
+    <link rel="stylesheet" href="css/teacherCenter.css">
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css"/>
+    <link rel="stylesheet" href="css/corpus.css?date= new Date()" />
+    <script>/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <script src="layui/layui.js"></script>
+</head>
+<body>
+<!--轮播图-->
+<style type="text/css">
+    .swiper-container_box{
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .swiper-container .swiper-pagination-zq {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+        text-align: center;
+    }
+</style>
+<div class="swiper-container_box">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img onclick="adv_go('http://www.365xuet.com/xueT/courseIndex?series_id=7')" src="upfile/2.jpg"></div>
+            <div class="swiper-slide"><img onclick="adv_go('http://v2.365xuet.com/xueT/courseIndex?series_id=4')" src="upfile/2.jpg"></div>
+        </div>
+        <div class="swiper-pagination-zq"></div>
+    </div>
+</div>
+<script>
+    $(function () {
+        var mySwiper = new Swiper('.swiper-container_box .swiper-container', {
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination-zq',
+                clickable: true,
+            },
+            lazy: {
+                loadPrevNext: true,
+            },
+        })
+    })
+    function adv_go(url){
+        window.location.href = url;
+    }
+</script>
+<!-- 通用标题 -->
+<div class="personalTitle clearfix">
+    <h3>我的文集</h3>
+    <!--滚动通知-->
+    <div class="rollingNotification right">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/courseIndex?tab=4" class="iconfont icon-xiaolaba">写作思路打不开？快来围观写作任务群!</a></div>
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/seriesCourseDetail/955" class="iconfont icon-xiaolaba">听故事学语文，点此免费试听~</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="writingListBox clearfix bgWhite radius15 borderThinE mt13">
+    <div class="select-corpus">
+            <div class="layui-form">
+                    <div class="courselecetAll"><div class="corpusListCheckBox iconfont icon-test"></div><span>全选</span></div>
+                    <div class="corselecet-btn">
+                        <span class="corselecetInput"><input type="text" placeholder="输入作文标题或作者进行搜索" /><em class="iconfont icon-sousuo"></em></span>
+                        <span class="template-slt-btn quicksortBtn">快速筛选</span>
+                        <span class="quick-sort-btn">快速排序</span>
+                    </div>
+                </div>
+    </div>
+    <ul class="freeContributeListUl courseSelectListUl">
+        <li class="clearfix">
+            <div class="tit left">
+                <div class="corpusListCheckBox iconfont icon-test selectCheckBox"></div>
+                <a class="windowPreview" href="javascript:;">写给父亲的话</a>
+                <em class="couponState bgRed">班</em>
+                <span class="stateBg">已点评</span>
+            </div>
+            <div class="operateBox right">
+                <span>
+                    <i class="iconfont icon-shoucang"></i>
+                    <i class="iconfont icon-shoucang"></i>
+                    <i class="iconfont icon-shoucang"></i>
+                    <i class="iconfont icon-shoucang"></i>
+                    <i class="iconfont icon-shoucang"></i>
+                </span>
+                <span class="iconfont icon-yezi red2">69%</span>
+                <!--70%以下 red2-->
+                <span class="iconfont icon-yezi blue">79%</span>
+                <!--80%以下 blue-->
+                <span class="iconfont icon-yezi green">89%</span>
+                <!--90%以下 green-->
+                <span class="iconfont icon-yezi violet">99%</span>
+                <!--90%以上 violet-->
+                <span class="iconfont icon-geshihua">说明文</span>
+                <span class="iconfont icon-shijian">06-01</span>
+                <a href="javascript:;" class="gray9 textDecorationU backBtn">查看</a>
+            </div>
+        </li>
+        <li class="clearfix">
+                <div class="tit left">
+                    <div class="corpusListCheckBox iconfont icon-test selectCheckBox"></div>
+                    <a class="windowPreview" href="javascript:;">写给父亲的话</a>
+                    <em class="couponState bgRed">班</em>
+                    <span class="stateBg">已发表</span>
+                </div>
+                <div class="operateBox right">
+                    <span>
+                        <i class="iconfont icon-shoucang"></i>
+                        <i class="iconfont icon-shoucang"></i>
+                        <i class="iconfont icon-shoucang"></i>
+                        <i class="iconfont icon-shoucang"></i>
+                        <i class="iconfont icon-shoucang"></i>
+                    </span>
+                    <span class="iconfont icon-yezi red2">69%</span>
+                    <!--70%以下 red2-->
+                    <span class="iconfont icon-yezi blue">79%</span>
+                    <!--80%以下 blue-->
+                    <span class="iconfont icon-yezi green">89%</span>
+                    <!--90%以下 green-->
+                    <span class="iconfont icon-yezi violet">99%</span>
+                    <!--90%以上 violet-->
+                    <span class="iconfont icon-geshihua">说明文</span>
+                    <span class="iconfont icon-shijian">06-01</span>
+                    <a href="javascript:;" class="gray9 textDecorationU backBtn">查看</a>
+                </div>
+            </li>
+    </ul>
+    <!--加载更多-->
+    <div class="selectMore"><span>点击加载更多</span></div>
+    <div class="selecetBtmContent">
+        <a href="文集详情.html" class="iconfont icon-arrowleft">返回文集</a>
+        <div class="selecetBtmRight">
+            <div class="listSwitch">只看我的学生<span class="switch-btn"><em></em></span></div>
+            <div class="selectJoinBtn"><a href="文集详情.html">加入文集（<i>1</i>）</a></div>
+        </div>
+    </div>
+</div>
+<!--快速筛选-->
+<div class="selectAirticleBox hide">
+    <div class="quickSortCTitle">
+        <h3>快速筛选</h3>
+        <span class="iconfont icon-guanbi"></span>
+    </div>
+    <div class="layui-form">
+        <div class="layui-form-item">
+            <label class="layui-form-label">时间段：</label>
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input" id="dateSpace" placeholder=" 请选择时间段">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">星级：</label>
+            <div class="layui-input-block">
+                <select>
+                    <option value=""></option>
+                    <option value="0" selected="">全部</option>
+                    <option value="1">阅读</option>
+                    <option value="2">游戏</option>
+                </select><div class="layui-unselect layui-form-select"><div class="layui-select-title"><input type="text" placeholder="请选择" value="阅读" readonly="" class="layui-input layui-unselect"><i class="layui-edge"></i></div><dl class="layui-anim layui-anim-upbit"><dd lay-value="" class="layui-select-tips">请选择</dd><dd lay-value="0" class="">写作</dd><dd lay-value="1" class="layui-this">阅读</dd><dd lay-value="2" class="">游戏</dd></dl></div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">投稿方式：</label>
+            <div class="layui-input-block">
+                <select>
+                    <option value=""></option>
+                    <option value="0" selected="">全部</option>
+                    <option value="1">阅读</option>
+                    <option value="2">游戏</option>
+                </select><div class="layui-unselect layui-form-select"><div class="layui-select-title"><input type="text" placeholder="请选择" value="阅读" readonly="" class="layui-input layui-unselect"><i class="layui-edge"></i></div><dl class="layui-anim layui-anim-upbit"><dd lay-value="" class="layui-select-tips">请选择</dd><dd lay-value="0" class="">写作</dd><dd lay-value="1" class="layui-this">阅读</dd><dd lay-value="2" class="">游戏</dd></dl></div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">文体：</label>
+            <div class="layui-input-block">
+                <ul class="articleStyle">
+                    <li class="iconfont icon-fukuan active">记叙文</li>
+                    <li class="iconfont icon-pinglun">议论文</li>
+                    <li class="iconfont icon-shici">诗歌</li>
+                    <li class="iconfont icon-xinwen">散文</li>
+                    <li class="iconfont icon-shuoming">说明文</li>
+                    <li class="iconfont icon-kehuan">读后感</li>
+                    <li class="iconfont icon-kehuan">虚拟写作</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="listSwitch">只选已发表文章：<span class="switch-btn"><em></em></span></div>
+    <div class="quickSearchBtn"><a href="#">确定</a></div>
+</div>
+<!---->
+    <!--快速筛选-->
+<div class="quickSortContent hide">
+    <div class="quickSortCTitle">
+        <h3>快速排序</h3>
+        <span class="iconfont icon-guanbi"></span>
+    </div>
+    <div class="layui-form">
+        <div class="layui-form-item">
+            <label class="layui-form-label">第一排序项：</label>
+            <div class="layui-input-block">
+                <select>
+                    <option value=""></option>
+                    <option value="0">写作</option>
+                    <option value="1" selected="">阅读</option>
+                    <option value="2">游戏</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">第一排序项：</label>
+            <div class="layui-input-block">
+                <select>
+                    <option value=""></option>
+                    <option value="0">写作</option>
+                    <option value="1" selected="">阅读</option>
+                    <option value="2">游戏</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">第一排序项：</label>
+            <div class="layui-input-block">
+                <select>
+                    <option value=""></option>
+                    <option value="0">写作</option>
+                    <option value="1" selected="">阅读</option>
+                    <option value="2">游戏</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="quickSortSureBtn">确定</div>
+</div>
+</body>
+<script>
+    $(function(){
+        layui.use(['form','element','layer','laydate'], function() {
+            var form = layui.form,
+                element = layui.element,
+                layer = layui.layer,
+                laydate = layui.laydate;
+                //日期范围
+        laydate.render({
+            elem: '#dateSpace'
+            , range: true
+        });
+        });
+        
+         
+        //快速筛选
+        $('.quicksortBtn').click(function(){
+            layer.open({
+        title: '',
+        type : 1,
+        closeBtn : false,
+        area : ['445px','auto'],
+        skin : "quickSortContentSkin",
+        content : $('.selectAirticleBox'),
+        success : function(){
+            $('.quickSortSureBtn').click(function(){
+                layer.closeAll();
+            });
+            $('.quickSortCTitle span').click(function(){
+                layer.closeAll();
+            });
+        }
+    })
+        });
+        //快速排序
+        $('.quick-sort-btn').click(function(){
+    layer.open({
+        title: '',
+        type : 1,
+        closeBtn : false,
+        area : ['445px','330px'],
+        skin : "quickSortContentSkin",
+        content : $('.quickSortContent'),
+        success : function(){
+            $('.quickSortSureBtn').click(function(){
+                layer.closeAll()
+            });
+            $('.quickSortCTitle span').click(function(){
+                layer.closeAll()
+            });
+        }
+    })
+    })
+        //列表选择
+        $('.selectCheckBox').click(function(){
+            $(this).toggleClass('corpusSelectActive');
+            if($('.selectCheckBox').length === $('.selectCheckBox.corpusSelectActive').length){
+                $('.courselecetAll .corpusListCheckBox').addClass('corpusSelectActive')
+            }else{
+                $('.courselecetAll .corpusListCheckBox').removeClass('corpusSelectActive')
+            }
+        })
+        //全选
+        $('.courselecetAll .corpusListCheckBox').click(function(){
+            $(this).toggleClass('corpusSelectActive');
+           if($(this).hasClass('corpusSelectActive')){
+            $('.selectCheckBox').addClass('corpusSelectActive')
+           }else{
+            $('.selectCheckBox').removeClass('corpusSelectActive')
+           }
+        })
+        //文体选择
+        $('.articleStyle li').click(function(){
+            $(this).toggleClass('active');
+        })
+    })
+</script>
+<script>
+	$(function () {
+		//通知滚动
+		var swiper = new Swiper('.rollingNotification .swiper-container', {
+			loop: true,
+			direction: 'vertical',
+			slidesPerView: 1,
+			autoplay: {
+				delay: 2000,
+			}
+        });
+        $('.switch-btn').on('click',function(){
+                   $(this).toggleClass('switch-selected')
+               });
+	})
+</script>
+</html>

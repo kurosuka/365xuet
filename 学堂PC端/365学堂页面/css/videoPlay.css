@@ -1,0 +1,195 @@
+body{
+    overflow: hidden;
+}
+.video_content{
+    background: url(../images/videobg.jpg) repeat;
+    float: left;
+    width: 100%;
+    height:100%;
+    position: absolute;
+    min-height: 100%;
+    top: 60px;
+    left: 0px;
+    padding-top: 10px;
+}
+.Xt_crumbs_nav{
+    width: 1040px;
+    margin:auto;
+    line-height: 40px;
+    color: #ffffff;
+    font-size: 14px;
+}
+.Xt_crumbs_nav a{
+    color: #ffffff;
+	padding-top: 15px;
+}
+.Xt_courseList{
+    width: 1040px;
+    min-width: 1040px;
+    margin: auto;
+    overflow: hidden;
+	height: 538px;
+	overflow: hidden;
+	border-radius: 8px;
+    background: #1e1e1e;
+    color: #999;
+}
+
+/*左边*/
+.Xt_courseList_L{
+    float: right;
+	width:282px;
+}
+.Xt_course_titL{
+    height: 52px;
+    line-height: 52px;
+    padding-left: 20px;
+    font-size: 20p; 
+    color: #fff;
+    border-bottom: 1px solid #313131;
+}
+.title_left{
+    width:282px;
+    height:52px;
+    font-size:20px;
+    color:#fff;
+}
+.Xt_courseListL_box{
+    height: 756px;
+    border-top:0;
+    margin-bottom: 23px;
+    /*background:url("../images/xueTang/pic.png") no-repeat center 20px ;*/
+}
+.Xt_courseListL_box .steps_img{
+    padding-top:15px;
+    height: 50px;
+}
+.Xt_courseListL_box .steps_img img{
+    display:block;
+    margin:0 auto;
+}
+.Xt_courseListL_box .list_all{
+    width: 282px;
+    height:512px;
+    overflow: auto;
+}
+.list_all .play_icon{
+    position: absolute;
+    left: -37px;
+    top:-3px;
+}
+.list_all .list_items{
+    padding-top: 2px;
+    min-height: 490px;
+}
+.list_items{
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+}
+.list_items dt{
+    cursor: pointer;
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 16px;
+    border-bottom: 1px dashed #333333;
+
+}
+.list_items dt em{
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 100%;
+    background: #333;
+    display: inline-block;
+    margin-right: 10px;
+    color: #999;
+    font-style: normal;
+}
+.list_items i{
+    display: none;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
+.list_items .video-active i{
+display: inline-block;
+margin-right: 10px;
+vertical-align: middle;
+font-size: 20px;
+}
+.list_items dt span{
+    font-size: 14px;
+    line-height: 20px;
+}
+.list_items dt:hover{
+    color: #ff856c;
+}
+.list_items .video-active{
+    color: #ff856c;
+}
+.list_items .video-active span{
+    display: inline-block;
+}
+.list_items .video-active em{
+    display: none;
+}
+.list_items dd{
+    display: none;
+    margin:-18px 0 12px 5px;
+}
+.list_items dd p{
+    padding-left: 10px;
+    line-height: 30px;
+}
+.list_items dd p a{
+    color: #999999;
+}
+/*右边*/
+.Xt_courseList_R{
+    width: 756px;
+    height: 538px;
+    border-left:0;
+    float: right;
+}
+.Xt_courseList_R .Xt_courseList_R_top .play_question{
+    display:inline-block;
+    position:absolute;
+    right:26px;
+}
+.Xt_courseList_R .Xt_courseList_R_top .play_question a{
+    font-size:16px;
+    color:#ff0000;
+}
+.video-content{
+	background: url(../images/videobg.jpg) repeat;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 90px;
+}
+
+ /*滚动条整体样式*/
+ .list_all::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 2px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+.list_all::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 10px;
+     -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.2);
+    background: #535353;
+}
+.list_all::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background: #EDEDED;
+}
+.course-gbuy-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+}

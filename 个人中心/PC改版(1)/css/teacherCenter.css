@@ -1,0 +1,517 @@
+/*班级入驻*/
+.teacher-no-data-t{
+}
+.teacher-no-data-t span{
+	font-size: 18px;
+	text-align: center;
+	color: #666666;
+	display: inline-block;
+	width: 100%;
+	line-height: 26px;
+	padding-top: 86px;
+	padding-bottom: 38px;
+}
+.teacher-no-data-t span::before{
+	margin-right: 10px;
+	color: #dadada;
+	font-size: 26px;
+}
+.teacher-data-card ul{
+ overflow: hidden;
+	 margin: 0 auto;
+	 text-align: center;
+	 display: flex;
+	 justify-content: center;
+}
+.teacher-data-card ul li{
+	width: 167px;
+	height: 184px;
+	float: left;
+	margin: 0 30px;
+	box-shadow: 0px 0px 5px #cdcdcd;
+	border-radius: 5px;
+	padding: 2px;
+	position: relative;
+}
+.teacher-data-card ul li span{
+	display: block;
+}
+.card-top{
+	width: 100%;
+	height: 105px;
+	background: linear-gradient(to right,#45d2be,#4eddeb);
+	box-sizing: border-box;
+	border-radius: 2px;
+}
+.teacher-data-card ul li:nth-of-type(2) .card-top{
+	background: linear-gradient(to right,#bfcafb,#a6e8fb);
+}
+.teacher-data-card ul li:nth-of-type(3) .card-top{
+	background: linear-gradient(to right,#f94a60,#fc889f);
+}
+.card-top i{
+	color: #fff;
+	font-size: 50px;
+	line-height: 105px;
+	text-align: center;
+	display: block;
+}
+.card-btm{
+	position: absolute;
+	top: 95px;
+	height: 70px;
+	width: 167px;
+}
+
+.card-btm i{
+	width: 16px;
+	height: 16px;
+	background: #fff;
+	border-radius: 100%;
+	display: block;
+	margin: 0 auto;
+	padding: 2px;
+	border:2px solid #fff;
+}
+.card-btm i::before{
+	border-radius: 100%;
+}
+.card-btm i.icon-guanbi{
+	background: #999;
+}
+.card-btm i.icon-guanbi::before{
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	display: block;
+	line-height: 16px;
+}
+.card-btm p{
+	text-align: center;
+	font-size: 18px;
+	color: #333;
+	margin-top: 10px;
+}
+.card-btm p+p{
+	font-size: 12px;
+	margin-top: 5px;
+}
+.faild-pass p+p{
+	color: #ff0000;
+}
+.successed-pass p+p{
+	color: #52d94f;
+}
+.card-btm i.icon-test{
+	background: #2898d8;
+}
+.card-btm i.icon-test::before{
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	display: block;
+	line-height: 16px;
+}
+.teacher-info{
+	
+	margin-top: 65px;
+	font-size: 16px;
+	color: #999999;
+	text-align: center;
+	padding-bottom: 60px;
+}
+.teacher-info ul{
+	margin: 0 55px;
+	background: #f6f6f6;
+	border-radius: 8px;
+	padding-bottom: 45px;
+	overflow: hidden;
+}
+.teacher-info ul li{
+	margin-top: 55px;
+	line-height: 24px;
+}
+.teacher-info i{
+	font-size: 18px;
+	color: #fc7859;
+	display: block;
+}
+/**
+ * 发布任务
+ */
+.edit-class{
+box-sizing: border-box;
+	margin-left: 40px;
+	margin-right: 40px;
+	font-size: 16px;
+	color: #999;
+	overflow: auto;
+	background: #fdf8f2;
+	margin: 25px 20px 20px 20px;
+	padding: 25px 20px;
+	border: 1px dashed #fdf8f2;
+}
+.edit-class li{float: left;	}
+.edit-class li span{
+	height: 36px;
+	display: line-block;
+	line-height: 36px;
+	border: 2px solid #f4f7fa;
+	border-radius: 5px;
+	padding: 10px;
+	background: #fff;
+	margin-left: 12px;
+	margin-right: 35px;
+	color: #333;
+	cursor: pointer;
+}
+.iconfont{
+	font-family: "iconfont" !important;
+}
+.edit-class li span::after{
+	content: '\e612';
+	margin-left: 10px;
+	color: #eee;
+	font-size: 14px;
+}
+.edit-class-content ul li.layui-this a{
+	color: #fc7859;
+}
+.edit-class-content ul li.layui-this::after{
+	border: none;
+}
+.edit-class-content ul li.layui-this a{
+	border: 1px solid #fc7859;
+	background: #fcf6f5;
+}
+.edit-class-content ul li a{
+ border: 1px solid #f4f7fa;
+ border-radius: 5px;
+ padding: 0 20px;
+ font-size: 14px;
+ color: #999;
+}
+.edit-class-content ul li a::before{
+	margin-right: 5px;
+}
+.edit-class-content .layui-tab-title{
+	height: 35px;
+	border: 0;
+}
+.edit-class-content .layui-tab-title li{
+	max-width: none;
+	margin-left: 1px;
+	margin-right: 15px;
+	height: 35px !important;
+	line-height: 35px;
+}
+.edit-class-content {
+	padding-top: 0;
+	padding-right: 20px;
+	padding-left: 35px;
+}
+.edit-class-content .layui-tab-item .edit-class-item{
+	padding-top: 20px;
+	overflow: hidden;
+	clear: both;
+}
+.edit-class-content .layui-tab-item .edit-class-item::after{
+	content: '';
+	clear: both;
+}
+.add-student-box-skin{
+	border-radius: 8px !important;
+}
+.add-student-box-skin .layui-layer-content{
+	border-radius: 8px;
+}
+.add-student-list{
+	overflow: auto;
+	height: 258px;
+}
+.add-student-box{
+	display: none;
+}
+.add-student-list ul{
+	margin: 0 30px;
+}
+.add-student-list ul li{
+	height: 36px;
+	width: 20%;
+	float: left;
+	margin-top: 15px;
+	
+}
+.add-student-list ul li span{
+	border: 1px solid #f4f7fa;
+	line-height: 36px;
+	margin-right: 20px;
+	display: block;
+	 text-align: center;
+	 border-radius: 5px;
+	 cursor: pointer;
+	 overflow: hidden;
+}
+.add-student-list ul li span.on{
+color: #fc7859;
+border: 1px solid #fc7859;
+position: relative;
+}
+.add-student-list ul li span.on::after{
+	content: '';
+	width: 40px;
+	height: 12px;
+	background: #fc7859;
+	text-align: right;
+	display: block;
+	position: absolute;
+	right: -11px;
+	bottom: -5px;
+	transform: rotate(135deg)
+}
+.add-student-list ul li span.on::before{
+	content: '\e608';
+	color: #fff;
+	width: 40px;
+    height: 12px;
+    text-align: right;
+    display: block;
+	right: 1px;
+	position: absolute;
+	bottom: 10px;
+	z-index: 1;
+	font-size: 12px;
+}
+.add-student-list ul li:nth-of-type(5n) span{
+	margin-right: 0;
+}
+.add-student-box .layui-layer-title{
+	height: 55px !important;
+	line-height: 55px;
+	font-size: 16px;
+	color: #000;
+	font-weight: bold;
+}
+.box-pop-title{
+	font-size: 16px;
+	color: #000;
+	height: 55px;
+	line-height: 55px;
+	text-align: right;
+	background: #fafafa;
+}
+.box-pop-title i{
+	float: left;
+	margin-left: 25px;
+}
+.box-pop-title span{
+	text-align: right;
+	margin-right: 30px;
+}
+.box-pop-title span{
+	font-size: 20px;
+	color: #999;
+	cursor: pointer;
+	margin-right: 20px;
+}
+.edit-class-item input:disabled::placeholder{
+	color: #333;
+}
+.edit-class-item input:disabled::-moz-placeholder{
+	color: #333;
+}
+.release-btn {
+	padding-top: 10px;
+	margin-top: 100px;
+	border-top: 1px solid #eee;
+	margin-bottom: 15px;
+	overflow: hidden;
+	
+}
+.release-btn span{
+	height: 40px;
+	width: 124px;
+	background: #fc7859;
+	color: #fff;
+	border-radius: 20px;
+	text-align: center;
+	line-height: 40px;
+	display: block;
+	cursor: pointer;
+	float: right; 
+	margin-right: 20px;
+}
+.edit-class-title{
+	display: flex;
+}
+.edit-class-title .layui-form-item{
+	width: auto;
+	margin-bottom: 0;
+	flex: 1;
+}
+.edit-class-title  .layui-form-item .layui-input-inline{
+	width: 100px;
+	float: right;
+	margin-right: 0;
+}
+.edit-class-title .layui-form-label{
+	padding: 0;
+	height: auto;
+	height: 35px;
+	line-height: 35px;
+	border: 0;
+	background: none;
+	width: auto;
+	float: right;
+}
+.edit-class-title .layui-input{
+	height: 35px;
+	border-radius: 5px;
+	border: 1px solid #eee;
+}
+.edit-class-content .textareaBox{
+	height: 220px;
+}
+.emi-topic-title{
+	display: flex;
+	justify-content: space-between;
+}
+.emi-topic-title span{
+	width: 46%;
+	height: 32px;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 32px;
+	color: #333;
+	cursor: pointer;
+}
+.emi-topic-title span.on{
+	border: 1px solid #fc7859;
+	background: #fcf6f5;
+}
+.edit-class-item {
+    padding-top: 20px;
+    overflow: hidden;
+	clear: both;
+}
+.add-student-btn{
+	width: 90px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	background: #fc7859;
+	border-radius: 20px;
+	display: block;
+	color: #fff;
+	font-size: 16px;
+	float: right;
+	margin-right: 30px;
+	margin-top: 14px;
+	cursor: pointer;
+}
+.add-class-box{
+	display: none;
+}
+.add-sure-content{
+	height: 66px;
+	background: #f6f6f6;
+	cursor: pointer;
+}
+.add-sure-content i{
+	margin-left: 30px;
+	margin-top: 25px;
+	float: left;
+	display: block;
+	line-height: 18px;
+	color: #999;
+
+}
+.add-sure-content i::before{
+	content: '';
+	margin-right: 10px;
+	display: block;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #eee;
+	border-radius: 3px;
+	background: #fff;
+	margin-right: 10px;
+	line-height: 16px;
+	float: left;
+}
+.add-sure-content i.active::before{
+	background: #fc7859;
+	border: 1px solid #fc7859;
+}
+.add-sure-content i.active::before{
+	content: '\e608';
+	font-size: 12px;
+	text-align: center;
+	line-height: 16px;
+	color: #fff;
+	display: inline-block;
+}
+/**班级任务*/
+.choice-content{
+	display: flex;
+	float: right;
+	font-size: 14px;
+}
+.choice-content .layui-form-label{width: 40px}
+.choice-content  .layui-form-label{
+	color: #999;
+}
+.choice-content .layui-input{
+	border-radius: 8px;
+}
+.public-task-btn a{
+	width: 132px;
+	height: 38px;
+	background: linear-gradient(to right,#f5c843,#f7a63a);
+	display: block;
+	border-radius: 8px;
+	text-align: center;
+	line-height: 38px;
+	color: #fff;
+}
+.task-list li{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+	padding-left: 34px;
+	padding-right: 34px;
+}
+.task-list p{
+	font-size: 16px;
+	color: #333;
+}
+.task-list p span {
+	color: #fc7859;
+}
+a.class-edit-btn{
+	font-size: 14px;
+	color: #fff;
+	background: #fc7859;
+	border-radius: 11px;
+	padding: 0 10px;
+	display: inline-block;
+	height:26px;
+	line-height: 26px;
+}
+.class-edit-btn::before{
+	padding-right: 4px;
+}
+.class-add-btn{
+	font-size: 14px;
+	color: #fff;
+	background: #fc7859;
+	border-radius: 11px;
+	padding: 0 10px;
+	display: inline-block;
+	height:26px;
+	line-height: 26px;
+}
+.class-add-btn::before{
+	padding-right: 4px;
+}

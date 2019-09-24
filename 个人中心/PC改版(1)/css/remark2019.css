@@ -1,0 +1,569 @@
+.remarkBox{
+	padding: 25px;
+}
+/*头部标题*/
+.remarkTit{
+	text-align: center;
+	padding-bottom:25px;
+}
+.remarkTit h3{
+	font-size: 18px;
+	color: #fc7859;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+.remarkTit h3 em{
+	font-size: 14px;
+	color: #fd9710;
+	border:1px solid #fd9710;
+	border-radius: 5px;
+	font-weight: 500;
+	display: inline-block;
+	height:18px;
+	width:18px;
+}
+.remarkTit p span{
+	font-size: 14px;
+	color: #999;
+	margin:0 20px;
+}
+.remarkTit p span:before{
+	padding-right: 6px;
+	color: #dadada;
+}
+/*原文css*/
+.originalText{
+	background-color: #fff4e3;
+	color: #999;
+	position: relative;
+	border:1px solid #f6f6f6;
+	padding: 5px 0;
+	font-size: 16px;
+	line-height: 26px;
+}
+.originalText .originalTextSml{
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	padding-left: 20px;
+	padding-right:100px;
+}
+.originalText .originalTextSml p{
+	display: inline;
+}
+.originalText .originalTextBig{
+	height: 300px;
+	overflow: auto;
+	padding:0 20px;
+}
+.originalText .originalTextBig p{
+	line-height:28px;
+	padding-bottom: 15px;
+	padding-top: 5px;
+}
+.originalText:before{
+	content: '';
+	background-color: #fc7859;
+	position: absolute;
+	width: 4px;
+	height: 100%;
+	left:0;
+	top:0;
+}
+.originalTextMore{
+	font-size: 14px;
+	color: #fc7859;
+	position: absolute;
+	right:15px;
+	bottom:5px;
+}
+.originalTextMore:after{
+	font-family: "iconfont" !important;
+	content:'\e6a1';
+	padding-left: 4px;
+	font-size: 12px;
+}
+.originalText>a.active:after{
+	font-family: "iconfont" !important;
+	content:'\e9fc';
+}
+.modifyText{
+	border:1px solid #eee;
+	margin-top:20px;
+	border-radius:8px;
+	padding-top: 50px;
+	position: relative;
+}
+.modifyTextBtnBox{
+	line-height: 50px;
+	background-color: #fdfbf7;
+	border-radius: 8px 8px 0 0;
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height:50px;
+}
+.modifyTextBtnBoxOn{
+	position: fixed;
+	top: 0;
+	z-index: 99999999;
+	border-radius:0;
+}
+.modifyTextBtn{
+	margin-left: 20px;
+}
+.modifyTextBtn button{
+	font-size: 14px;
+	border:0;
+	background-color:transparent;
+	margin-right: 10px;
+	cursor: pointer;
+	color: #333;
+}
+.modifyTextBtn button:before{
+	padding-right:3px;
+}
+.modifyTextBtn button:first-child:before{
+	color: #f00;
+}
+.modifyTextBtnR{
+	margin-right: 20px;
+	font-size: 0;
+	padding-top: 5px;
+}
+.modifyTextBtnR a{
+	background-color: #fc7859;
+	display: inline-block;
+	font-size: 14px;
+	color: #fff;
+	height:28px;
+	line-height:28px;
+	padding:0 10px;
+	border-radius: 5px;
+	margin-left: 10px;
+}
+.modifyTextBtnR a.splitScreen{
+	background-color: #59aafc;
+}
+.modifyTextBtnR a:before{
+	padding-right: 4px;
+}
+.editor_box{
+	padding:10px 30px;
+}
+.editor {
+	margin:auto;
+	outline: none;
+}
+.editor p{
+	line-height:40px;
+	font-size:16px;
+	margin: 0;
+	color: #666;
+	text-indent: 2em;
+}
+.editor p span{
+	padding:10px 0;
+}
+.editor span.theRed{
+	color:red;
+}
+.editor span.addBold{
+	font-weight: bold;
+}
+.editor span.promptLine{
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAFCAYAAACaTbYsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjU4MDU1MTlFRTZDMTExRTc5RjZFRkNEOTM0MjJGQ0VCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjU4MDU1MTlGRTZDMTExRTc5RjZFRkNEOTM0MjJGQ0VCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTgwNTUxOUNFNkMxMTFFNzlGNkVGQ0Q5MzQyMkZDRUIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTgwNTUxOURFNkMxMTFFNzlGNkVGQ0Q5MzQyMkZDRUIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4OXxUtAAAAeUlEQVR42mL4z8DAB8R9QPwMiH8A8UUgzgdidiBmwIeZgHgNEPMDsSMQiwBxDhC7APFhIJZgwASMQGwKZkFtxmZyPRA/AuJwIGaBiukB8TYgPgrEbAwEnGYPxAeA+AsQvwLiB1AvsYLkGf8zEAW4gZgHiF8iCwIEGAC/Uz0S/aIlbQAAAABJRU5ErkJggg==) repeat-x bottom left;
+}
+.editor span.focusOn{
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAADCAYAAACasY9UAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RUVBNUJENzBFQTBGMTFFN0FEN0E5MDlCNEY2NDY2N0QiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RUVBNUJENkZFQTBGMTFFN0FEN0E5MDlCNEY2NDY2N0QiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QUE1RDQxQUFFNkM1MTFFNzhGNDZCODM3QzI5NEQwNzYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QUE1RDQxQUJFNkM1MTFFNzhGNDZCODM3QzI5NEQwNzYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz70JlgYAAAAOElEQVR42mL4//8/A06sylAAxA/ANA41jCACJ1BjfAAk5YH4IcOt/wrYlDAx4AcTwJohNFYAEGAANkc1B832DxoAAAAASUVORK5CYII=) repeat-x bottom left;
+}
+.editor span.delLine{
+	text-decoration:line-through;
+	color:red;
+}
+/*全屏*/
+.remarkLayerFull {
+	position: fixed;
+	width: 100%;
+	padding: 20px 50px;
+	box-sizing: border-box;
+	height:100%;
+	left: 0;
+	top:0;
+	z-index: 999;
+	overflow: auto;
+	background-color: #fff;
+}
+/*评分*/
+.comprehensive_chart{
+	overflow: hidden;
+}
+.comprehensive{
+	width: 400px;
+	float: left;
+	padding-left: 20px;
+}
+.comprehensive table{
+	text-align: center;
+	margin:0;
+}
+.comprehensive table th{
+	text-align: center;
+	font-weight: bold;
+	color: #333;
+}
+.comprehensive table td{
+	border:0;
+}
+.comprehensive .layui-table[lay-size=sm] td,.comprehensive .layui-table[lay-size=sm] th{
+	padding:6px 0;
+	padding-top:26px;
+	text-align: left;
+	font-size: 16px;
+}
+.comprehensive table p{
+	font-weight: bold;
+	line-height:26px;
+	float: left;
+	padding:0 10px;
+}
+.comprehensive table em{
+	float: left;
+	display: block;
+	font-size:16px;
+	color: #333;
+	font-style:normal;
+	line-height:30px;
+}
+.comprehensive table strong{
+	font-size: 16px;
+	color: #fc7859;
+}
+.comprehensive table input{
+	width:54px;
+	height: 30px;
+	border:1px solid #e5e5e5;
+	text-align: center;
+	font-size:16px;
+	border-radius: 5px;
+	color: #fc7859;
+}
+.comprehensive table span{
+	display:block;
+	float: left;
+	color: #999;
+	line-height:16px;
+	text-align: center;
+	font-size: 12px;
+}
+.comprehensive table.layui-table tbody tr:hover{
+	background-color:transparent;
+}
+.comprehensive_chart .chart {
+	width:330px;
+	height:295px;
+	padding-top:25px;
+	float: right;
+}
+#chart{
+	width:330px;
+	height:295px;
+}
+.comprehensive_tit{
+	padding-top:30px;
+}
+.remarkCommTit{
+	float: left;
+	line-height: 40px;
+}
+.remarkCommTit span{
+	font-weight: bold;
+}
+.remarkCommTit span:before{
+	color: #fc7859;
+	padding-right: 4px;
+	font-size: 18px;
+	font-weight: 500;
+}
+.comprehensive_tit .remarkLiterary{
+	float: right;
+	font-size: 16px;
+}
+.comprehensive_tit .remarkLiterary .layui-form-select{
+	width: 110px;
+}
+.comprehensive_tit .remarkLiterary .layui-form-select input{
+	border-radius: 5px;
+	color: #fc7859;
+}
+.comprehensive_tit .remarkLiterary .layui-form-label{
+	padding:9px 0;
+	color: #999;
+}
+/*评语*/
+.personality_chart{
+	overflow: hidden;
+	height: 310px;
+	padding-top: 30px;
+}
+.personality_Comment{
+	width:749px;
+	height: 310px;
+	border:1px solid #f5f5f5;
+	position: absolute;
+	background-color: #fff;
+	z-index: 998;
+	border-radius: 8px;
+	text-align: right;
+}
+.personality_Comment div.tit{
+	line-height: 50px;
+	background-color:#fdfbf7;
+	color: #fff;
+	font-weight: bold;
+	padding-left: 20px;
+	cursor: move;
+	border-radius: 8px 8px 0 0;
+}
+.personality_Comment textarea{
+	height: 200px;
+	width:709px;
+	padding:15px 20px;
+	padding-bottom: 0;
+	font-size: 16px;
+	line-height: 24px;
+	color: #666;
+	border:0;
+	resize:none;
+}
+.personality_Comment p{
+	line-height:30px;
+	text-align: right;
+	font-size: 12px;
+	color: #999;
+	padding-right: 20px;
+}
+.personality_Comment p span{
+	color: #f00;
+}
+.personality_Comment .remarkCommTit{
+	line-height: 50px;
+}
+.personality_Comment .remarkCommTit span{
+	color: #333;
+}
+.personality_Comment>span{
+	color: #999;
+	font-weight: 500;
+	position: absolute;
+	right: 160px;
+	top: 15px;
+	pointer-events:none;
+}
+.personality_Comment>.reset{
+	color: #fc7859;
+	font-size: 14px;
+	font-family: "iconfont" !important;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	cursor: pointer;
+}
+.personality_Comment>.reset:before{
+	padding-right: 4px;
+	content: "\e6bd";
+}
+.personality_Comment>a{
+	display: inline-block;
+	width: 133px;
+	height:26px;
+	padding-right:15px;
+	line-height: 24px;
+	font-size: 14px;
+	font-weight: 500;
+	padding-top:8px;
+	background:url('../images/automaticRemark.png') no-repeat right bottom;
+	color: #fff;
+	position: absolute;
+	right: -4px;
+	top: 6px;
+}
+.personality_Comment>a:before{
+	padding-right: 4px;
+}
+/*考场推荐指数*/
+.commentBtn {
+	padding-top:25px;
+	height: 80px;
+}
+.commentBtn_left {
+	width: 400px;
+	float: left;
+	padding-top:8px;
+}
+.recommend_index {
+	font-size: 0;
+}
+.recommend_index span {
+	font-size: 14px;
+	position: relative;
+	font-weight: bold;
+}
+.recommend_index em {
+	color: #999;
+	padding: 0 5px;
+	position: relative;
+	font-size: 14px;
+}
+.recommend_index em.yellow {
+	color: #f8c432;
+}
+.recommend_index em.on{
+	color: #fbcc1a;
+}
+.recommend_index em i{
+	display: none;
+	position: absolute;
+	left:0;
+	top:24px;
+	padding:4px 8px;
+	line-height:16px;
+	width:110px;
+	font-size: 12px;
+	color: #666;
+	border:1px solid #eee;
+	border-radius:3px;
+	background-color: #fff;
+	font-style: normal;
+	z-index: 3;
+	text-align: center;
+}
+.recommend_index em:hover i{
+	display: block;
+}
+.commentBtn_right {
+	float: right;
+	padding-top: 6px;
+}
+.commentBtn_right a {
+	display: inline-block;
+	height:40px;
+	line-height: 40px;
+	text-align: center;
+	width: 159px;
+	overflow: hidden;
+	border:1px solid #fc7859;
+	border-radius: 30px;
+	color: #fc7859;
+	font-size: 16px;
+}
+.commentBtn_right a.commentBtn_a{
+	background-color: #fc7859;
+	color: #fff;
+}
+.recommendIndexTips span{
+	color: #999;
+	position: relative;
+}
+.recommendIndexTips span em{
+	font-size: 14px;
+}
+.recommendIndexTips span i{
+	display: none;
+	position: absolute;
+	left:0;
+	top:24px;
+	padding:4px 8px;
+	line-height:16px;
+	font-size: 12px;
+	color: #666;
+	border:1px solid #eee;
+	border-radius:3px;
+	background-color: #fff;
+	font-style: normal;
+	z-index: 3;
+}
+.recommendIndexTips span:hover i{
+	display: block;
+}
+.handwriting,.recommendIndexTips{
+	padding-top:5px;
+}
+.handwriting span{
+	display:inline-block;
+	position: relative;
+	border:1px solid #e5e5e5;
+	padding:0px 5px;
+	border-radius:3px;
+	cursor: pointer;
+}
+.handwriting span:hover,.handwriting span.on{
+	color: #fff;
+	background-color: #ed414d;
+}
+.handwriting span i{
+	display: none;
+	position: absolute;
+	left:0;
+	top:26px;
+	padding:4px 8px;
+	line-height:16px;
+	width:192px;
+	font-size: 12px;
+	text-align: center;
+	color: #666;
+	border:1px solid #eee;
+	border-radius:3px;
+	background-color: #fff;
+	font-style: normal;
+	z-index: 3;
+}
+.handwriting span:hover i{
+	display: block;
+}
+.originalTextOn,.modifyTextOn{
+	position: fixed;
+	width: 47%;
+	height: 90%;
+	top:5%;
+	z-index:9999;
+	box-sizing: border-box;
+	border-radius: 8px;
+	margin-top: 0;
+	overflow: hidden;
+}
+.originalTextOn{
+	left:2%;
+}
+.modifyTextOn{
+	right:2%;
+	background-color: #fff;
+	overflow: hidden;
+}
+.originalTextOn .content{
+	padding:10px 20px;
+}
+.originalTextOn .content p{
+	padding-bottom: 12px;
+}
+.lockover {
+	position: fixed;
+	overflow: hidden;
+}
+.layerPop{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left:0;
+	top: 0;
+	background-color:rgba(0,0,0,0.6);
+	z-index: 9998;
+}
+/*图片作文*/
+.wPaint {
+	position: relative;
+	background: #fafafa;
+	border: solid #fafafa 1px;
+	overflow: hidden;
+}

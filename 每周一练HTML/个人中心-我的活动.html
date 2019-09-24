@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" /><!--禁止识别为手机号-->
+    <title>个人中心-我的活动</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1147714_lzvvxru1lup.css"/><!--官网改版2019 - 2019-07-23 -->
+    <link rel="stylesheet" href="https://www.365xuet.com/assets/mobile/channel/css/comm.css" />
+    <link rel="stylesheet" href="https://www.365xuet.com/assets/mobile/css/xuet2019.css" />
+    <link rel="stylesheet" href="practiceWriting.css" /><!--添加每周一练-->
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://www.365xuet.com/assets/mobile/js/buttonClick.js"></script>
+    <script src="https://www.365xuet.com/assets/mobile/channel/js/flexible.min.js"></script>
+    <script src="https://www.365xuet.com/assets/mobile/layer_mobile/layer.js"></script>
+</head>
+<body>
+<!--搜索-->
+<div class="practiceWritingSilde">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide active"><span>全部</span></div>
+            <div class="swiper-slide"><span>每周一练</span></div>
+            <div class="swiper-slide"><span>征文大赛</span></div>
+            <div class="swiper-slide"><span>成语接龙</span></div>
+        </div>
+    </div>
+</div>
+<ul class="practiceWritingUl">
+    <li>
+        <a class="block clearfix" href="">
+            <div class="pic left">
+                <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/adv/78cf415d8b7b95fde2016bd17027fb3d.jpg" alt="">
+            </div>
+            <div class="tit right">
+                <h3 class="spilloverEllipsis gray3">巴黎圣母院烧毁我们应不应该惋惜？</h3>
+                <p class="spilloverEllipsis gray9">一百多年前，一群野蛮人放了一把大火烧了圆明园，还想让我们惋惜！</p>
+                <p>
+                    <em>征文活动</em>
+                    <em>128期</em>
+                    <strong class="right fw500 gray9">2019-09-20</strong>
+                </p>
+            </div>
+        </a>
+    </li>
+</ul>
+</body>
+<script>
+    $(function () {
+        var swiper = new Swiper('.practiceWritingSilde .swiper-container', {
+            slidesPerView: '4',
+            spaceBetween:10,
+        });
+        //swiper 选中状态
+        $('.practiceWritingSilde .swiper-slide').click(function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        })
+    })
+</script>
+</html>

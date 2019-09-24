@@ -1,0 +1,748 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <META name="keywords" content='学生写作投稿,老师随时点评、布置作业,名师点评,提升写作能力,信息化校园解决方案'>
+    <META name="Description" content='为中小学生提供最科学的个性化写作提升方案'>
+    <META name="author" content="苏州开智教育">
+    <title>读写空间</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1147714_fzhyujkpdsh.css"><!--官网改版2019-2019-07-17-->
+    <link rel="stylesheet" href="http://www.365xuet.com/assets/web/layui/css/layui.css">
+    <link rel="stylesheet" href="http://www.365xuet.com/assets/web/css/xuet2019.css" />
+    <link rel="stylesheet" href="css/weekwirte.css" />
+    <script src="http://www.365xuet.com/assets/web/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.2.2.css"/>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.2.2.js"></script>
+    <script>/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?7e9dc466cf5be629b01797930555270d";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+</head>
+<body bgcolor="#f8f8f8">
+<style>
+    .clearfix { *zoom:1; }
+    .clearfix:after {content:".";display:block;height:0;visibility:hidden;clear:both;}
+    .commHead{height:60px;line-height: 60px;background-color: #fff;padding:0 20px;box-sizing: border-box;margin-bottom: 16px;box-shadow:0 0 32px rgba(153,153,153,0.15);min-width:1200px;}
+    .headLogo {height: 60px;float: left;display: flex;justify-content: center;align-items: center;flex-direction: column;}
+    .headLogo img{width:120px;}
+    .headNav{float: left;}
+    .headNav ul li{float: left;padding:0 26px;}
+    .headNav ul li a{font-size: 16px;color: #7c7c7c;}
+    .headNav ul li a:hover,.headNav ul li a.on{color: #ff856c;}
+    .headLoginBox{float: right;}
+    .headLogin{float: left;}
+    .headLogin a{font-size: 16px;color: #333;margin-left: 10px;}
+    .headLogin a.headRegister{display: inline-block;height: 36px;line-height: 36px;border:1px solid #ff856c;color: #ff856c;padding:0 20px;border-radius: 20px;}
+    .headAlreadyLogin{float: left;font-size: 16px;}
+    .headAlreadyLogin img{width: 36px;height: 36px;border-radius: 100%;}
+    .headAlreadyLogin a{color: #333;margin-left: 10px;}
+    .headAlreadyLogin a.AlreadyLoginQuit{color: #999;}
+    .headWritingBtn{float: left;margin-left:18px;}
+    .headWritingBtn a{display: inline-block;background-color: #ff856c;border-radius:20px;height: 38px;line-height: 38px;width: 130px;text-align: center;color: #fff;font-size: 16px;}
+    .headWritingBtn a img{margin-right: 4px;vertical-align: middle;}
+</style>
+<div class="commHead clearfix">
+    <div class="headLogo"><img src="http://www.365xuet.com/assets/web/images/xueTang/logo.jpg" alt=""></div>
+    <div class="headNav">
+        <ul class="clearfix">
+            <li><a  href="http://www.365xuet.com">首页</a></li>
+            <li><a class="on"  href="http://www.365xuet.com/write">读写空间</a></li>
+            <li><a  href="http://www.365xuet.com/write/compositionList">作文文库</a></li>
+            <li><a  href="http://www.365xuet.com/cooperation">加入我们</a></li>
+        </ul>
+    </div>
+        <div class="headLoginBox clearfix">
+                <div class="headLogin">
+            <a href="http://www.365xuet.com/login?action=login&amp;fromUrl=http%253A%252F%252Fwww.365xuet.com%252Fwrite">登录</a>
+            <a class="headRegister" href="http://www.365xuet.com/login?action=register&amp;fromUrl=http%253A%252F%252Fwww.365xuet.com%252Fwrite">注册</a>
+        </div>
+            </div>
+    </div>
+<!--头部结束-->    <!--轮播-->
+    <!--轮播-->
+    <div class="newMainSlide swiper-container">
+        <div class="swiper-wrapper">
+                                                <div class="swiper-slide swiper-lazy" data-background='https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/adv/dfee242ccbad7c37e36f1b71786e4f1e.jpg' onclick="adv_go('/activityDetail/6')" style="background-repeat:no-repeat;" class="swiper-lazy"></div>
+                                                                <div class="swiper-slide swiper-lazy" data-background='https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/adv/e150d8228b7cc8db3032d9d44e32686d.jpg' onclick="adv_go('http://www.365xuet.com/xueT/courseDetail/1102')" style="background-repeat:no-repeat;" class="swiper-lazy"></div>
+                                                                <div class="swiper-slide swiper-lazy" data-background='https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/adv/8fd11bf78feee3801ef9b8c7847a712a.jpg' onclick="adv_go('http://www.365xuet.com/xueT/courseDetail/1069')" style="background-repeat:no-repeat;" class="swiper-lazy"></div>
+                                    </div>
+        <div class="swiper-pagination newMainPagination"></div>
+    </div>
+<!--轮播结束-->
+<script>
+    //轮播
+    var mySwiper = new Swiper('.newMainSlide', {
+        autoplay: true,
+        pagination: {
+            el: '.newMainPagination',
+            clickable: true,
+        },
+        lazy: {
+            loadPrevNext: true,
+        },
+    })
+    function adv_go(url){
+        window.location.href = url;
+    }
+</script>    <div class="newMain clearfix">
+        <div class="newMainLeft">
+            <!--作文筛选-->
+            <div class="writingIndexNav">
+                <ul class="clearfix">
+                    <li><a href="http://www.365xuet.com/write/compositionList?study_stage=1"><img src="http://www.365xuet.com/assets/web/images/writingIndexNav/1.jpg" alt=""><p>小学作文</p></a></li>
+                    <li><a href="http://www.365xuet.com/write/compositionList?study_stage=2"><img src="http://www.365xuet.com/assets/web/images/writingIndexNav/2.jpg" alt=""><p>初中作文</p></a></li>
+                    <li><a href="http://www.365xuet.com/write/compositionList?study_stage=3"><img src="http://www.365xuet.com/assets/web/images/writingIndexNav/3.jpg" alt=""><p>高中作文</p></a></li>
+                    <li><a href="http://www.365xuet.com/write/compositionList?theme_id=1"><img src="http://www.365xuet.com/assets/web/images/writingIndexNav/4.jpg" alt=""><p>记叙文</p></a></li>
+                    <li><a href="http://www.365xuet.com/write/compositionList?theme_id=2"><img src="http://www.365xuet.com/assets/web/images/writingIndexNav/5.jpg" alt=""><p>议论文</p></a></li>
+                    <li><a href="http://www.365xuet.com/write/compositionList?star_level=5"><img src="http://www.365xuet.com/assets/web/images/writingIndexNav/6.jpg" alt=""><p>五星作文</p></a></li>
+                    <li><a href="http://www.365xuet.com/write/compositionList?star_level=4"><img src="http://www.365xuet.com/assets/web/images/writingIndexNav/7.jpg" alt=""><p>四星作文</p></a></li>
+                </ul>
+            </div>
+
+            <!--每周一练模块start-->
+            <style>
+                .writingWeekMoudle{position: relative; padding: 2px; margin-top: 25px; background:linear-gradient(to right,#ffba36,#ffa632);border-radius: 8px;}
+                .writingMoudleTitle{height: 25px; background: #ffba38; padding: 6px 30px 10px 30px;border-radius: 8px;border-bottom-left-radius: 0; border-bottom-right-radius: 0;}
+                .writingMoudleTitle img{width: 115px;height: auto; display: inline-block; float: left;}
+                .wirtingweekMoudleContent .joinFrom{justify-content: space-between;font-size: 14px;color: #999; margin-top: 15px;padding: 0 30px;padding-bottom: 10px;}
+                .phaseNumber{color: #333;font-size: 16px; display: inline-block; margin-left: 0;line-height: 30px; float: left;}
+                .wirtingweekMoudleContent{background: #fff;border-radius: 8px;}
+                .writingMtext{
+                    margin-top: 20px;
+                    font-size: 18px;
+                    color: #fc7859;
+                    padding: 0 30px;
+                }
+                .writingMtext a{
+                    color: #333;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+                .writingMtext a span{color: #fc7859; font-size: 16px; font-weight: 600;}
+                .joinFrom a::after{
+                    content: '\e608';
+                    margin-left: 5px;
+                    
+                }
+                .wirtingweekMoudleContent .joinFrom a{
+                    line-height: 30px;
+                    text-align: right;
+                    float: right;
+                    color: #fc7859;
+                    font-size: 14px;
+                }
+                .wirtingweekMoudleContent .joinFrom p span{
+                    float: left;
+                }
+                .writingMtextArea{
+                    font-size: 14px;
+                    color: #666;
+                    padding: 0 30px;
+                    text-align: justify;
+                    margin-top: 5px;
+                }
+            </style>
+            <div class="writingWeekMoudle">
+                <div class="wirtingweekMoudleContent">
+                    <div class="writingMoudleTitle">
+                        <img src="images/weeklyExercisesTit.png" alt="" />
+                        <span class="phaseNumber">（第255期）</span>
+                    </div>
+                    <div class="writingMtext"><a href="#"><span>本周主题：</span>燥起来—开学前科学立的二十三种方法</a></div>
+                    <div class="writingMtextArea">随着动画片《哪吒》热映，“我命由我不由天”的经典台词也传遍大街小巷。从听命父母，到自己的人生自己做主，相信是走向成熟的必由之路。你是否还记得自己做决定那一刻的勇气呢？</div>
+                    <div class="joinFrom">
+                        <p>
+                            <span>
+                                <i><img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/headPortrait/521a2a18e2ead5a8b5e3dae955cd0223.jpg"></i>
+                                <i><img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/m-h.jpg"></i>
+                                <i><img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/headPortrait/521a2a18e2ead5a8b5e3dae955cd0223.jpg"></i>
+                                <i><img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/m-h.jpg"></i>
+                            </span>
+                            <span>已参与</span>
+                        </p>
+                        <a href="#" class="iconfont">我要参与</a>
+                    </div>
+                </div>
+            </div>
+            <!--每周一练end-->
+            <!--切换  每个切换里面显示6条-->
+            <div class="writingMainTab">
+                <div class="writingMainMore"><a href="http://www.365xuet.com/write/compositionList">更多作文 ></a></div>
+                <div class="layui-tab layui-tab-brief">
+                    <ul class="layui-tab-title">
+                        <li class="layui-this">新鲜作文</li>
+                        <li><a href="http://www.365xuet.com/write/markCompositionList">高考满分作文</a></li>
+                    </ul>
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item layui-show">
+                            <ul class="writingIndexList">
+                                                                    <li>
+                                        <div class="clearfix">
+                                            <h3 class="clearfix"><a href="http://www.365xuet.com/write/comptionDetail/34731" class="gray3">比童年</a>
+                                                <em>记</em>
+                                            </h3>
+                                            <div class="studentWritingInformation">
+                                                <span class="school">珠江学校</span>
+                                                <span class="grade">三年级</span>
+                                                <span>董家佳</span>
+                                                <span class="recommend"><i class="iconfont icon-huodong1"></i><i class="iconfont icon-huodong1"></i><i class="iconfont icon-huodong1"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="contentBox">
+                                            <div class="contentBoxLeft">
+                                                <div class="content">
+                                                    <a href="http://www.365xuet.com/write/comptionDetail/34731" class="block spilloverEllipsis2">有一天晚上，我们一家在看一部演80年代的电视剧。我突然问：“爸爸你小时候是这个样子的吗？”(开头简洁有力，颇有新意，给人留下深刻印象)爸爸感慨（了一会儿，）的说：“比较相似。”我好奇的（地）问：“你能...</a>
+                                                </div>
+                                                <div class="bottomDetailed">
+                                                                                                                                                                        <em>情感</em>
+                                                                                                                                                                                                                                <em>立意</em>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <span>评论 0</span> ·
+                                                    <span>点赞 0</span> ·
+                                                    <span>阅读 2</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottomBg bottomBg4"></div>
+                                        <!--这里底部有个背景条 class为bottomBg1到bottomBg7,给每篇文章随机加这个范围内的class-->
+                                    </li>
+                                                                    <li>
+                                        <div class="clearfix">
+                                            <h3 class="clearfix"><a href="http://www.365xuet.com/write/comptionDetail/34734" class="gray3">三角琉璃莲</a>
+                                                <em>记</em>
+                                            </h3>
+                                            <div class="studentWritingInformation">
+                                                <span class="school">相城实验小学校</span>
+                                                <span class="grade">三年级</span>
+                                                <span>周祐民</span>
+                                                <span class="recommend"><i class="iconfont icon-huodong1"></i><i class="iconfont icon-huodong1"></i><i class="iconfont icon-huodong1"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="contentBox">
+                                            <div class="contentBoxLeft">
+                                                <div class="content">
+                                                    <a href="http://www.365xuet.com/write/comptionDetail/34734" class="block spilloverEllipsis2">我们家的阳台上养着许多“多肉”，其中最老的一盆就是“三角琉璃莲了”。站远一点看，“三角琉璃莲”就像一簇簇绿色的水晶柱；近看，就像一朵朵晶莹剔透的绿莲花，正在慢慢的（地）生长。仔细看，“三角琉璃莲”的叶...</a>
+                                                </div>
+                                                <div class="bottomDetailed">
+                                                                                                                                                                        <em>中心</em>
+                                                                                                                                                                                                                                <em>立意</em>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <span>评论 0</span> ·
+                                                    <span>点赞 0</span> ·
+                                                    <span>阅读 5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottomBg bottomBg1"></div>
+                                        <!--这里底部有个背景条 class为bottomBg1到bottomBg7,给每篇文章随机加这个范围内的class-->
+                                    </li>
+                                                                    <li>
+                                        <div class="clearfix">
+                                            <h3 class="clearfix"><a href="http://www.365xuet.com/write/comptionDetail/34729" class="gray3">观《导盲犬迪克》有感</a>
+                                                <em>读</em>
+                                            </h3>
+                                            <div class="studentWritingInformation">
+                                                <span class="school">苏州工业园区唯亭学校</span>
+                                                <span class="grade">五年级</span>
+                                                <span>黄嘉俊</span>
+                                                <span class="recommend"><i class="iconfont icon-huodong1"></i><i class="iconfont icon-huodong1"></i><i class="iconfont icon-huodong1"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="contentBox">
+                                            <div class="contentBoxLeft">
+                                                <div class="content">
+                                                    <a href="http://www.365xuet.com/write/comptionDetail/34729" class="block spilloverEllipsis2">我读过的书有许多，最令我难忘的是沈石溪先生写的关于动物的书——《导盲犬迪克》。(开头直接点题，观点明确，无赘意。)迪克是一条猎犬，但由于外表丑陋，出生后就被主人丢弃，独自去森林里生活。渐渐（地）的，他...</a>
+                                                </div>
+                                                <div class="bottomDetailed">
+                                                                                                                                                                        <em>中心</em>
+                                                                                                                                                                                                                                <em>情感</em>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <span>评论 0</span> ·
+                                                    <span>点赞 5</span> ·
+                                                    <span>阅读 6</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottomBg bottomBg7"></div>
+                                        <!--这里底部有个背景条 class为bottomBg1到bottomBg7,给每篇文章随机加这个范围内的class-->
+                                    </li>
+                                                                    <li>
+                                        <div class="clearfix">
+                                            <h3 class="clearfix"><a href="http://www.365xuet.com/write/comptionDetail/34716" class="gray3">从垃圾分类做起</a>
+                                                <em>记</em>
+                                            </h3>
+                                            <div class="studentWritingInformation">
+                                                <span class="school">南昌市绳金塔小学</span>
+                                                <span class="grade">四年级</span>
+                                                <span>罗馨雨</span>
+                                                <span class="recommend"><i class="iconfont icon-huodong1"></i><i class="iconfont icon-huodong1"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="contentBox">
+                                            <div class="contentBoxLeft">
+                                                <div class="content">
+                                                    <a href="http://www.365xuet.com/write/comptionDetail/34716" class="block spilloverEllipsis2">夜幕降临，小区里寂静了下来，可垃圾桶却传来了吵架声。(文章开头简洁有力，入题快，阅读感很好)一节旧电池伤心地说:“电池具有有害物质，可以污染六百吨水，可以把我们投进红色的有害垃圾桶才对。”，眼影和腮红...</a>
+                                                </div>
+                                                <div class="bottomDetailed">
+                                                                                                                                                                        <em>情感</em>
+                                                                                                                                                                                                                                <em>立意</em>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <span>评论 0</span> ·
+                                                    <span>点赞 0</span> ·
+                                                    <span>阅读 3</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottomBg bottomBg4"></div>
+                                        <!--这里底部有个背景条 class为bottomBg1到bottomBg7,给每篇文章随机加这个范围内的class-->
+                                    </li>
+                                                                    <li>
+                                        <div class="clearfix">
+                                            <h3 class="clearfix"><a href="http://www.365xuet.com/write/comptionDetail/34727" class="gray3">捕蝉记</a>
+                                                <em>记</em>
+                                            </h3>
+                                            <div class="studentWritingInformation">
+                                                <span class="school">南昌市铁路第一小学</span>
+                                                <span class="grade">五年级</span>
+                                                <span>杨鑫翰</span>
+                                                <span class="recommend"><i class="iconfont icon-huodong1"></i><i class="iconfont icon-huodong1"></i><i class="iconfont icon-huodong1"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="contentBox">
+                                            <div class="contentBoxLeft">
+                                                <div class="content">
+                                                    <a href="http://www.365xuet.com/write/comptionDetail/34727" class="block spilloverEllipsis2">捕蝉是妈妈小时候放暑假常见的一种娱乐活动，可我只看到过一个蝉壳（。），妈妈告诉我，那是蝉脱下来的“外套”（。），这玩意真奇怪，眼睛突出了的，能飞上天吗？“我一定要捕来一只，看看它究竟是长的什么样子。”...</a>
+                                                </div>
+                                                <div class="bottomDetailed">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 <span>评论 0</span> ·
+                                                    <span>点赞 0</span> ·
+                                                    <span>阅读 5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottomBg bottomBg1"></div>
+                                        <!--这里底部有个背景条 class为bottomBg1到bottomBg7,给每篇文章随机加这个范围内的class-->
+                                    </li>
+                                                                    <li>
+                                        <div class="clearfix">
+                                            <h3 class="clearfix"><a href="http://www.365xuet.com/write/comptionDetail/34108" class="gray3">吃包子</a>
+                                                <em>记</em>
+                                            </h3>
+                                            <div class="studentWritingInformation">
+                                                <span class="school">上元小学</span>
+                                                <span class="grade">五年级</span>
+                                                <span>吴润宁</span>
+                                                <span class="recommend"><i class="iconfont icon-huodong1"></i><i class="iconfont icon-huodong1"></i><i class="iconfont icon-huodong1"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="contentBox">
+                                            <div class="contentBoxLeft">
+                                                <div class="content">
+                                                    <a href="http://www.365xuet.com/write/comptionDetail/34108" class="block spilloverEllipsis2">我爱吃包子，特别是妈妈亲手做的肉包子。(文章的开头点题，简单直接)有一天放学回家，刚打开房门，从厨房门缝传来阵阵香气。闻着这熟悉的味道，我感觉自己都快要流出口水了。我的目光顺着气味看去，哇！这包子白白...</a>
+                                                </div>
+                                                <div class="bottomDetailed">
+                                                                                                                                                                        <em>情感</em>
+                                                                                                                                                                                                                                <em>语言</em>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <span>评论 0</span> ·
+                                                    <span>点赞 0</span> ·
+                                                    <span>阅读 3</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottomBg bottomBg2"></div>
+                                        <!--这里底部有个背景条 class为bottomBg1到bottomBg7,给每篇文章随机加这个范围内的class-->
+                                    </li>
+ 
+                            </ul>
+                        </div>
+ 
+                    </div>
+                </div>
+            </div>
+            <!--footer-->
+            <div class="newFooter">
+    <p>©2018苏州开智教育科技有限公司 增值电信业务经营许可证 苏B2-20160471<a href="http://www.miitbeian.gov.cn" target="_blank">苏ICP备16010362号-2</a></p>
+    <p>客服电话 0512-67259983  </p>
+</div>        </div>
+        <div class="newMainRight">
+            <div class="newMainRightBox">
+                <div class="newMainRecommendCourses">
+                    <a href="javascript:;">
+                        <img src="http://www.365xuet.com/assets/web/images/write/ad1.jpg" alt="">
+                        <p><img class="audioCoursesCode" src="http://www.365xuet.com/assets/web/images/write/audioCoursesCode.jpg" alt=""><br/>扫描二维码学习课程</p>
+                    </a>
+                </div>
+                <div class="newMainWritingRecommend">
+                    <a href="javascript:;"><img src="http://www.365xuet.com/assets/web/images/write/WritingRecommendPic1.jpg" alt=""></a>
+                </div>
+                <div class="newMainWritingRecommend">
+                    <a href="http://www.365xuet.com/xueT/researchBeforeIndex"><img src="http://www.365xuet.com/assets/web/images/write/WritingRecommendPic2.jpg" alt=""></a>
+                </div>
+                <div class="newMainWritingRecommend">
+                    <a href="javascript:;"><img src="http://www.365xuet.com/assets/web/images/write/WritingRecommendPic3.jpg" alt=""></a>
+                </div>
+                <div class="newMainWritingRecommend">
+                    <a href="javascript:;"><img src="images/weekworkImg.png" alt=""></a>
+                </div>
+                <div class="focusWeChat clearfix">
+                    <img src="http://www.365xuet.com/assets/web/images/bottom_wx.jpg" alt="">
+                    <div class="tit"><p>关注公众号</p><span>随时随地创作发现更多精彩</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="new-login" style="display: none;">
+    <div class="new-login-content">
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <ul class="layui-tab-title">
+                <li class="layui-this">密码登录</li>
+                <li>验证码登录</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show layui-anim layui-anim-fadein">
+                    <!--密码登录start-->
+                    <form action="" method="POST">
+                        <ul>
+                            <li>
+                                <label>账号：</label>
+                                <p><input type="text" name="user_name" placeholder="请输入手机号" /></p>
+                            </li>
+                            <li>
+                                <label>密码：</label>
+                                <p><input type="password" name="password" placeholder="请输入密码" /></p>
+                            </li>
+                            <li>
+                                <label>验证码：</label>
+                                <p><input type="text" name="captcha_login_code" placeholder="请输入图片验证码" /></p>
+                                <div class="indfer-code"><img id="captcha_login" onclick="changeCaptcha('captcha_login')" src="" alt="" />
+                                </div>
+                            </li>
+                            <li class="pass-reglink">
+                                <p><a href="http://www.365xuet.com/findPassword">忘记密码</a>|<a href="http://www.365xuet.com/login?action=register" class="reg-link">注册账号</a>|
+                                    <a href="https://open.weixin.qq.com/connect/qrconnect?appid=wx5e5995663d026242&amp;redirect_uri=http%3A%2F%2Fwww.365xuet.com%2Flogin&amp;response_type=code&amp;scope=snsapi_login&amp;state=365xuetang#wechat_redirect" class="wechat-link">微信登录</a></p>
+                            </li>
+                        </ul>
+                        <div class="new-login-btn"><button type="button" onclick="login()">登录</button></div>
+                    </form>
+                    <!--密码登录end-->
+                </div>
+                <div class="layui-tab-item layui-anim layui-anim-fadein">
+                    <form action="" method="POST">
+                        <ul>
+                            <li>
+                                <label>手机号：</label>
+                                <p><input type="text" name="phone" placeholder="请输入手机号" /></p>
+                            </li>
+                            <li>
+                                <label>验证码：</label>
+                                <p><input type="text" name="captcha_phone_login_code" placeholder="请输入图片验证码" /></p>
+                                <div class="indfer-code"><img id="captcha_register" onclick="changeCaptcha('captcha_register')" src="" alt="" />
+                                </div>
+                            </li>
+                            <li>
+                                <label>验证码：</label>
+                                <p><input type="text" name="captcha_login_sms" placeholder="请输入短信验证码" /></p>
+                                <div class="indfer-code">
+                                    <input type="button" value="获取验证码" id="getSmsCode" class="" />
+                                </div>
+                            </li>
+                            <li class="identity" style="display: none;">
+                                <label>身份：</label>
+                                <div class="identity-content clearfix">
+                                    <label class="identity-stu"><input type="radio" checked value="0" name="role" class="mui-checkbox"><em>学生</em></label>
+                                    <label class="identity-teach"><input type="radio" value="1" name="role" class="mui-checkbox"><em>老师</em></label>
+                                </div>
+                            </li>
+                        </ul>
+                        <input type="hidden" name="code_type" value="login">
+                        <div class="new-login-btn"><button type="button" id="code_login_btn" onclick="user_register()">登录或注册</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="key" value="">
+</div>
+<script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jsencrypt.js"></script>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+<script>
+    console.log('365xuetang')
+    $(function () {
+        $('.layui-tab-title li').click(function () {
+            var tab_index = $(this).index();
+            if(tab_index==1){
+                changeCaptcha('captcha_register');
+            }
+        })
+    })
+    function showLogin() {
+        layui.use(['element', 'layer'], function () {
+            var element = layui.element,
+                layer = layui.layer;
+            layer.open({
+                type: 1,
+                title: '',
+                closeBtn: false,
+                shadeClose:true,
+                area: ['673px', '417px'],
+                skin: 'new-login-pop-skin',
+                content: $('.new-login'),
+                success:function () {
+                    changeCaptcha('captcha_login');
+                    var load = layer.load(1);
+                    $.ajax({
+                        headers: {
+                            'X-CSRF-TOKEN': 'YcbPiB3egybRU8yzW4WMITGUc2Ha8EfzpXBsl1D5'
+                        },
+                        url: "http://www.365xuet.com/login",
+                        type: "post",
+                        data: {},
+                        success: function (data, textStatus, jqXHR) {
+                            layer.close(load)
+                            $('#key').val(data.key);
+                        },
+                        error: function (err, textStatus) {
+                            layer.close(load)
+                        }
+                    })
+                }
+            });
+        });
+    }
+    function is_mobile(str) {
+        var myreg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/;
+        if (!myreg.test(str)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function login() {
+        var user_name = $('input[name="user_name"]').val();
+        var password = $('input[name="password"]').val();
+        var captcha = $('input[name="captcha_login_code"]').val();
+        if (user_name.length >= 4) {
+            if (password.length >= 4) {
+                if (captcha.length >= 4) {
+                    password = encrypt(password, $("#key").val());
+                    var load = layer.load(1);
+                    $.ajax({
+                        headers: {
+                            'X-CSRF-TOKEN': 'YcbPiB3egybRU8yzW4WMITGUc2Ha8EfzpXBsl1D5'
+                        },
+                        url: "http://www.365xuet.com/loginPost",
+                        type: "post",
+                        data: {user_name: user_name, password: password, captcha: captcha},
+                        success: function (data, textStatus, jqXHR) {
+                            layer.close(load)
+                            if (data.code == "200") {
+                                layer.msg(data.msg);
+                                location.reload();
+                            } else {
+                                changeCaptcha('captcha_login');
+                                layer.msg(data.msg);
+                            }
+                        },
+                        error: function (err, textStatus) {
+                            layer.close(load)
+                            changeCaptcha('captcha_login');
+                            if (err.status == 422) {
+                                $(err.responseJSON.errors).each(function (idx, item) {
+                                    for (var key in item) {
+                                        layer.msg(item[key][0]);
+                                        return false;
+                                    }
+
+                                })
+                            } else if (err.status == 419) {
+                                window.location.reload()
+                            }
+                        }
+                    })
+                } else {
+                    $("[name=captcha_login_code]").focus();
+                    layer.msg('请输入验证码！');
+                }
+
+            } else {
+                $("[name=password]").focus();
+                layer.msg('请输入正确的密码');
+            }
+        } else {
+            $("[name=user_name]").focus();
+            layer.msg('请输入正确的手机号');
+        }
+        return false;
+    }
+
+    function user_register() {
+        var phone = $("[name=phone]").val();
+        var captcha_login_sms = $("[name=captcha_login_sms]").val();
+        if(!is_mobile(phone)){
+            layer.msg('请输入正确的手机号');
+            return false;
+        }
+        var data = {user_name: phone,verifycode: captcha_login_sms};
+        if($('input[name=code_type]').val()=='register'){
+            data.role = $('input[name=role]:checked').val();
+        }
+        if (captcha_login_sms.length >= 4) {
+            var load = layer.load(1);
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': 'YcbPiB3egybRU8yzW4WMITGUc2Ha8EfzpXBsl1D5'
+                },
+                url: "http://www.365xuet.com/registerPost",
+                type: "post",
+                data: data,
+                success: function (data, textStatus, jqXHR) {
+                    layer.close(load)
+                    if (data.code == 200) {
+                        layer.msg(data.msg,{time:1000},function () {
+                            var fromUrl = localStorage.getItem('fromUrl');
+                            location.reload();
+                        });
+                    } else {
+                        layer.msg(data.msg);
+                    }
+                },
+                error: function (err, textStatus) {
+                    layer.close(load)
+                    if (err.status == 422) {
+                        $(err.responseJSON.errors).each(function (idx, item) {
+                            for (var key in item) {
+                                layer.msg(item[key][0]);
+                                return false;
+                            }
+                        })
+                    }
+                }
+            })
+        } else {
+            $("[name=captcha_register_sms]").focus();
+            layer.msg('请输入短信验证码！');
+        }
+        return false;
+    }
+
+    function changeCaptcha(id) {
+        var _img = $('#' + id);
+        var src = 'http://www.365xuet.com/web/users/captcha' + '?action=' + id + '&changetime=' + new Date().getTime()+Math.random();
+        console.log(src);
+        _img.attr('src', src);
+    }
+
+    //验证码
+    function showtime() {
+        var phone = $("[name=phone]").val();
+        var captcha_code = $("[name=captcha_phone_login_code]").val();
+        var _this = $('#getSmsCode');
+        if(!is_mobile(phone)){
+            layer.msg('请输入正确的手机号');
+            return false;
+        }
+        if (captcha_code.length >= 4) {
+            var load = layer.load(1);
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': 'YcbPiB3egybRU8yzW4WMITGUc2Ha8EfzpXBsl1D5'
+                },
+                url: "http://www.365xuet.com/webSendSms",
+                type: "post",
+                data: {captcha_register_code: captcha_code, phone: phone},
+                success: function (data, textStatus, jqXHR) {
+                    layer.close(load)
+                    if (data.code == "200") {
+                        can_send = 0;
+                        $('input[name=code_type]').val(data.type);
+                        if(data.type=='register'){
+                            $('.identity').show();
+                        }else{
+                            $('.identity').hide();
+                        }
+                        _this.addClass('is-sended');
+                        changeCaptcha('captcha_register');
+                        layer.msg(data.msg);
+                        update_p(30);
+                    } else {
+                        changeCaptcha('captcha_register');
+                        layer.msg(data.msg);
+                    }
+                },
+                error: function (err, textStatus) {
+                    layer.close(load);
+                    changeCaptcha('captcha_register');
+                    if (err.status == 422) {
+                        $(err.responseJSON.errors).each(function (idx, item) {
+                            for (var key in item) {
+                                layer.msg(item[key][0]);
+                                return false;
+                            }
+                        })
+                    } else if (err.status == 419) {
+                        window.location.reload()
+                    }
+                }
+            })
+        } else {
+            $("[name=captcha_login_code]").focus();
+            layer.msg('请输入图片验证码！');
+        }
+    }
+
+    function update_p(num) {
+        var text = '重新发送';
+        // console.log(num);
+        if (num == 0) {
+            $('#getSmsCode').removeClass('is-sended');
+            can_send = 1;
+            $('#getSmsCode').val(text);
+        }
+        else {
+            text = " (" + num + ")S后再获取";
+            $('#getSmsCode').val(text);
+            num--;
+            setTimeout("update_p("+num+")",1000);
+        }
+    }
+
+    function encrypt(data, key) {
+        var obj = new JSEncrypt();
+        obj.setPublicKey(key);    //公钥
+        var data = obj.encrypt(data);
+        return data;
+    }
+</script><script src="http://www.365xuet.com/assets/web/layui/layui.js"></script>
+
+<script>
+    $(function () {
+        /**
+         * 超出可视范围固定在头部
+         * */
+        var oTop = $(".newMainRightBox").offset().top;
+        var sTop = 0;
+        $(window).scroll(function() {
+            sTop = $(this).scrollTop();
+            if(sTop >= oTop){
+                $(".newMainRightBox").addClass('newMainRightBoxFix')
+            } else {
+                $(".newMainRightBox").removeClass('newMainRightBoxFix')
+            }
+        });
+        //tab切换
+        layui.use('element', function(){
+            var element = layui.element;
+        })
+    })
+</script>
+</body>
+</html>

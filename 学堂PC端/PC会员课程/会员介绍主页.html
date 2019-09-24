@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <META name="keywords" content='学生写作投稿,老师随时点评、布置作业,名师点评,提升写作能力,信息化校园解决方案'>
+    <META name="Description" content='为中小学生提供最科学的个性化写作提升方案'>
+    <META name="author" content="苏州开智教育">
+    <title>365学堂</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1147714_i2ev9mazk5.css">
+    <!--官网改版2019-2019-07-17-->
+    <link rel="stylesheet" href="http://www.365xuet.com/assets/web/layui/css/layui.css">
+    <link rel="stylesheet" href="http://www.365xuet.com/assets/web/css/xuet2019.css" />
+    <script src="http://www.365xuet.com/assets/web/js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.2.2.css" />
+    <link rel="stylesheet" href="css/pcmember.css" />
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.2.2.js"></script>
+    <script>/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?7e9dc466cf5be629b01797930555270d";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+
+<body bgcolor="#f8f8f8">
+    <style>
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+
+        .commHead {
+            height: 60px;
+            line-height: 60px;
+            background-color: #fff;
+            padding: 0 20px;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+            box-shadow: 0 0 32px rgba(153, 153, 153, 0.15);
+            min-width: 1200px;
+        }
+
+        .headLogo {
+            height: 60px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .headLogo img {
+            width: 120px;
+        }
+
+        .headNav {
+            float: left;
+        }
+
+        .headNav ul li {
+            float: left;
+            padding: 0 26px;
+        }
+
+        .headNav ul li a {
+            font-size: 16px;
+            color: #7c7c7c;
+        }
+
+        .headNav ul li a:hover,
+        .headNav ul li a.on {
+            color: #ff856c;
+        }
+
+        .headLoginBox {
+            float: right;
+        }
+
+        .headLogin {
+            float: left;
+        }
+
+        .headLogin a {
+            font-size: 16px;
+            color: #333;
+            margin-left: 10px;
+        }
+
+        .headLogin a.headRegister {
+            display: inline-block;
+            height: 36px;
+            line-height: 36px;
+            border: 1px solid #ff856c;
+            color: #ff856c;
+            padding: 0 20px;
+            border-radius: 20px;
+        }
+
+        .headAlreadyLogin {
+            float: left;
+            font-size: 16px;
+        }
+
+        .headAlreadyLogin img {
+            width: 36px;
+            height: 36px;
+            border-radius: 100%;
+        }
+
+        .headAlreadyLogin a {
+            color: #333;
+            margin-left: 10px;
+        }
+
+        .headAlreadyLogin a.AlreadyLoginQuit {
+            color: #999;
+        }
+
+        .headWritingBtn {
+            float: left;
+            margin-left: 18px;
+        }
+
+        .headWritingBtn a {
+            display: inline-block;
+            background-color: #ff856c;
+            border-radius: 20px;
+            height: 38px;
+            line-height: 38px;
+            width: 130px;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .headWritingBtn a img {
+            margin-right: 4px;
+            vertical-align: middle;
+        }
+    </style>
+    <div class="commHead clearfix">
+        <div class="headLogo"><img src="http://www.365xuet.com/assets/web/images/xueTang/logo.jpg" alt=""></div>
+        <div class="headNav">
+            <ul class="clearfix">
+                <li><a class="on" href="http://www.365xuet.com">首页</a></li>
+                <li><a href="http://www.365xuet.com/write">读写空间</a></li>
+                <li><a href="http://www.365xuet.com/write/compositionList">作文文库</a></li>
+                <li><a href="http://www.365xuet.com/cooperation">加入我们</a></li>
+            </ul>
+        </div>
+        <div class="headLoginBox clearfix">
+            <div class="headLogin">
+                <a href="http://www.365xuet.com/login?action=login&amp;fromUrl=http%253A%252F%252Fwww.365xuet.com">登录</a>
+                <a class="headRegister" href="http://www.365xuet.com/login?action=register&amp;fromUrl=http%253A%252F%252Fwww.365xuet.com">注册</a>
+            </div>
+        </div>
+    </div>
+    <!--头部结束-->
+    <div class="cardFreeContent">
+        <div class="cardDetail">
+            <div class="cardDetailRight">
+                <div class="cardDetailTitle">
+                    <img src="images/card_logo.png" alt="" />
+                    <span class="iconfont icon-chahao"></span>
+                    <span>365学堂学习会员</span>
+                </div>
+                <div class="cardMember">
+                    <span>首次开通仅需8元 低至0.3元/天 </span>
+                    <span> 专属会员权益，只为成就更好的你</span>
+                </div>
+                <ul class="cardMemberPrice">
+                    <li class="active">
+                        <div class="cardMemberPriceL"><i>年度</i></div>
+                        <div class="cardMemberPriceR">
+                            <span>396元/年</span>
+                            <span>超<i>800元</i>礼包</span>
+                        </div>
+                        <div class="cardPriceTipYear">赠3个月</div>
+                    </li>
+                    <li>
+                        <div class="cardMemberPriceL"><i>季度</i></div>
+                        <div class="cardMemberPriceR">
+                            <span>99元/季</span>
+                            <span>赠<i>120元</i>礼包</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cardMemberPriceL"><i>月度</i></div>
+                        <div class="cardMemberPriceR">
+                            <span>23元/月</span>
+                            <span>赠<i>40元</i>礼包</span>
+                        </div>
+                        <div class="cardPriceTipMonth">首月特惠</div>
+                    </li>
+                </ul>
+                <div class="agreeContent">开通会员即表示同意<span>《会员服务协议》</span></div>
+                <div class="cardMemberBtn"><a href="">立即开通</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="cardMemberInterest">
+        <ul id="layer-photos">
+            <li class="hasImg">
+                <div class="memberInterLeft">
+                    <i></i>
+                    <span class="iconfont icon-youxianji"></span>
+                </div>
+                <div class="memberInterRight">
+                    <span>急速点评</span>
+                    <span>24小时完成点评</span>
+                </div>
+                <img src="../images/cardKey.jpg" />
+            </li>
+            <li class="hasImg">
+                <div class="memberInterLeft">
+                    <i class="membercolor1"></i>
+                    <span class="iconfont icon-ke"></span>
+                </div>
+                <div class="memberInterRight">
+                    <span>免费课程</span>
+                    <span>会员期间免费学习</span>
+                </div>
+            </li>
+            <li class="hasImg">
+                <div class="memberInterLeft">
+                    <i class="membercolor2"></i>
+                    <span class="iconfont icon-lipin"></span>
+                </div>
+                <div class="memberInterRight">
+                    <span>专属礼包</span>
+                    <span>赠送超值礼包</span>
+                </div>
+            </li>
+            <li class="hasImg">
+                <div class="memberInterLeft">
+                    <i class="membercolor3"></i>
+                    <span class="iconfont icon-youhuiquan"></span>
+                </div>
+                <div class="memberInterRight">
+                    <span>专享优惠</span>
+                    <span>享受会员专属价格</span>
+                </div>
+            </li>
+            <li class="hasImg">
+                <div class="memberInterLeft">
+                    <i class="membercolor4"></i>
+                    <span class="iconfont icon-jifendouble"></span>
+                </div>
+                <div class="memberInterRight">
+                    <span>双倍积分</span>
+                    <span>积攒积分速度翻倍</span>
+                </div>
+            </li>
+            <li class="hasImg">
+                <div class="memberInterLeft">
+                    <i class="membercolor1"></i>
+                    <span class="iconfont icon-zuanshi"></span>
+                </div>
+                <div class="memberInterRight">
+                    <span>会员标识</span>
+                    <span>会员身份象征</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--轮播-->
+    <div class="cardMemberSilde swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-lazy"
+                data-background='images/slidePic.png'
+                onclick="adv_go('http://www.365xuet.com/xueT/courseDetail/1218')" style="background-repeat:no-repeat;"
+                class="swiper-lazy"></div>
+            <div class="swiper-slide swiper-lazy"
+                data-background='https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/adv/90bffdcd24bdae2b72a2be13bb20df88.jpg'
+                onclick="adv_go('/activityDetail/6')" style="background-repeat:no-repeat;" class="swiper-lazy"></div>
+            <div class="swiper-slide swiper-lazy"
+                data-background='https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/adv/86f0c28bb7477020acbca7ab9a679140.jpg'
+                onclick="adv_go('http://www.365xuet.com/xueT/courseDetail/1069')" style="background-repeat:no-repeat;"
+                class="swiper-lazy"></div>
+        </div>
+        <div class="swiper-pagination newcardMemberPagination"></div>
+    </div>
+
+    <div class="quickComment"></div>
+    <div class="giftContent">
+        <div class="cardOpenListTitle">
+            <span class="active">年度会员</span>
+            <span>季度会员</span>
+            <span>月度会员</span>
+        </div>
+        <ul class="swipeUl">
+            <li class="giftContent1"></li>
+            <li class="giftContent2" style="display: none"></li>
+            <li class="giftContent3" style="display: none"></li>
+        </ul>
+    </div>
+    <div class="cardOpenMember">
+        <div class="cardOpenContent">
+            <div class="cardOpenTitle"><img src="images/cardMemberTitle.jpg" /></div>
+            <div class="cardOpenList">
+                <div class="cardOpenListItem">
+                    <div class="swiper-container swiperYear">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/31949d8247ffbe0a2a3d37acc8ac8cc2.jpg" alt="" />
+                                            <span>大声说出我爱你</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/31949d8247ffbe0a2a3d37acc8ac8cc2.jpg" alt="" />
+                                            <span>大声说出我爱你</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/31949d8247ffbe0a2a3d37acc8ac8cc2.jpg" alt="" />
+                                            <span>大声说出我爱你</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="swiper-slide">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/31949d8247ffbe0a2a3d37acc8ac8cc2.jpg" alt="" />
+                                            <span>大声说出我爱你</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/31949d8247ffbe0a2a3d37acc8ac8cc2.jpg" alt="" />
+                                            <span>大声说出我爱你</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/31949d8247ffbe0a2a3d37acc8ac8cc2.jpg" alt="" />
+                                            <span>大声说出我爱你</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="iconfont icon-you card-btn-next"></div>
+                        <div class="iconfont icon-zuo card-btn-prev"></div>
+                    </div>
+                    <div class="fastTrackContent">
+                        <ul>
+                            <li class="fastTrackLeft">
+                                <a href="#">
+                                    <img src="images/fastTrack1.png" alt="" />
+                                    <div class="fastTrackTitle">
+                                        <h3>会员特惠课程</h3>
+                                        <p>海量特惠课程折扣</p>
+                                        <span>进入专区></span>
+                                    </div>
+                                </a>
+
+                            </li>
+                            <li class="fastTrackRight">
+                                <a href="#">
+                                    <img src="images/fastTrack2.png" alt="" />
+                                    <div class="fastTrackTitle">
+                                        <h3>会员免费课程</h3>
+                                        <p>海量课程免费看</p>
+                                        <span>进入专区></span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cardCommentList">
+            <ul>
+                <li>
+                    <div class="cardCommentNick">
+                        <div class="cardCommentLeft"><img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/m-h.jpg" alt="" /></div>
+                        <div class="cardCommentRight">
+                            <div class="nickNameTitle"><i>师睿</i></div>
+                            <div class="cardAddress">
+                                <span>江苏</span><span>苏州</span>
+                            </div>
+                        </div>
+                        <div class="cardComcontent">
+                         这是一个很不错的公众平台，建议家里有上学孩子可以多关注，可以尝试投稿，每篇文章都会有老师点评，让孩子知道不足之处。如果得到发表就更会激起孩子的积极性。对提高孩子写作水平有很大帮助。
+                        </div>
+                    </div>
+                    <div class="cardBottomBg cardBottomBgColor1"></div>
+                </li>
+                <li>
+                    <div class="cardCommentNick">
+                        <div class="cardCommentLeft"><img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/m-h.jpg" alt="" /></div>
+                        <div class="cardCommentRight">
+                            <div class="nickNameTitle"><i>师睿</i></div>
+                            <div class="cardAddress">
+                                <span>江苏</span><span>苏州</span>
+                            </div>
+                        </div>
+                        <div class="cardComcontent">
+                         这是一个很不错的公众平台，建议家里有上学孩子可以多关注，可以尝试投稿，每篇文章都会有老师点评，让孩子知道不足之处。如果得到发表就更会激起孩子的积极性。对提高孩子写作水平有很大帮助。
+                        </div>
+                    </div>
+                    <div class="cardBottomBg cardBottomBgColor2"></div>
+                </li>
+                <li>
+                    <div class="cardCommentNick">
+                        <div class="cardCommentLeft"><img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/m-h.jpg" alt="" /></div>
+                        <div class="cardCommentRight">
+                            <div class="nickNameTitle"><i>师睿</i></div>
+                            <div class="cardAddress">
+                                <span>江苏</span><span>苏州</span>
+                            </div>
+                        </div>
+                        <div class="cardComcontent">
+                         这是一个很不错的公众平台，建议家里有上学孩子可以多关注，可以尝试投稿，每篇文章都会有老师点评，让孩子知道不足之处。如果得到发表就更会激起孩子的积极性。对提高孩子写作水平有很大帮助。
+                        </div>
+                    </div>
+                    <div class="cardBottomBg cardBottomBgColor3"></div>
+                </li>
+                <li>
+                    <div class="cardCommentNick">
+                        <div class="cardCommentLeft"><img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/m-h.jpg" alt="" /></div>
+                        <div class="cardCommentRight">
+                            <div class="nickNameTitle"><i>师睿</i></div>
+                            <div class="cardAddress">.0
+                                <span>江苏</span><span>苏州</span>
+                            </div>
+                        </div>
+                        <div class="cardComcontent">
+                         这是一个很不错的公众平台，建议家里有上学孩子可以多关注，可以尝试投稿，每篇文章都会有老师点评，让孩子知道不足之处。如果得到发表就更会激起孩子的积极性。对提高孩子写作水平有很大帮助。
+                        </div>
+                    </div>
+                    <div class="cardBottomBg cardBottomBgColor4"></div>
+                </li>
+            </ul>
+        </div>
+        <!--使用个人中心底部footer-->
+        <style>
+            .personalCenterFooter{
+                border-top:1px solid #eee;
+                width: 100%;
+                padding-top:30px;
+                text-align: center;
+                padding-bottom: 50px;
+            }
+            .personalCenterFooter p{
+                line-height: 2;
+                font-size: 14px;
+                color: #999;
+            }
+            .personalCenterFooter p a{
+                color: #999;
+            }
+        </style>
+        <div class="personalCenterFooter">
+            <div class="personalCenter tac">
+                <p>©2018苏州开智教育科技有限公司 增值电信业务经营许可证 苏B2-20160471<a href="http://www.miitbeian.gov.cn" target="_blank">苏ICP备16010362号-2</a></p>
+                <p>客服电话 0512-67259983</p>
+            </div>
+        </div>
+        <!--365学堂学习会员服务协议-->
+        <div class="agreementBoxPop" style="display: none">
+            <div class="consent_agreement_box agreementBox">
+                <h3>《365学堂学习会员服务协议》</h3>
+                <p>欢迎使用苏州开智教育科技有限公司（以下简称“开智教育”）的365学堂学习会员服务，请您仔细阅读以下全部内容（特别是加粗部分）。当您点选同意《365学堂学习会员使用协议》（以下简称“本协议”），即表示您同意并承诺遵守本协议，承诺作为本协议的一方当事人接受本协议约束。如您不同意本协议的任一内容，请立即停止开通365学堂学习会员。
+                </p>
+                <p>本协议内容包括协议正文、本协议下述协议明确援引的其他协议、开智教育在365学堂已经发布的或将来可能发布的各类规则。所有规则为本协议不可分割的组成部分，与协议正文具有同等法律效力。除另行明确声明外，您在使用365学堂学习会员权益功能服务时均受本协议约束。
+                </p>
+                <p><strong>苏州开智教育科技有限公司有权根据法律规范及运营的合理需要，不断修改和完善本协议和各类规则，并在365学堂官方网站（www.365xuet.com）公告。如您继续使用本服务，即意味着同意并自愿遵守修改后的协议，亦或您有权终止使用。</strong>
+                </p>
+                <strong>1. 定义</strong>
+                <p><strong>1.1.您：</strong>指经过付费选择特定类型的服务成为365学堂学习会员（以下简称“会员”）的用户。</p>
+                <p><strong>1.2.365学堂</strong>（或开智教育不时修改的其他名称）：为用户提供各类学习资源，作文点评和指导，由开智教育所有和经营的有关教育、学习等数字内容聚合、管理和分发的平台产品，包括但不限于web端（网站网址：www.365xuet.com及其不时更换的域名）及其各移动端（包括但不限于更新后的版本）
+                </p>
+                <p><strong>1.3.学习会员权益：</strong>指会员在注册成功后，根据向开智教育支付对价，所获得的针对365学堂特定课程和卡券的优惠购买价格、课程免费观看资格、积分双倍、优惠券礼包及其他会员特有优惠权益，具体内容以开智教育在365学堂官网、相关页面上发布的公告、规则为准（以下简称“会员权益”）
+                </p>
+                <strong>2. 服务内容</strong>
+                <p><strong>2.1.除非另有证明，365学堂储存在其服务器上的数据是您享有会员权益的唯一有效证据。</strong></p>
+                <p>2.2.目前365学堂提供的会员服务类型为三种，您可以支付相应的对价来获得会员资格。</p>
+                <p>第一种：45元/月，从未购买过会员服务的新用户享受首月8元优惠价。</p>
+                <p>第二种：99元/季。</p>
+                <p>第三种：396元/年。</p>
+                <p>2.3.随会员赠送的卡券有效期与会员资格时间相同，从开通日起计算。</p>
+                <p>2.4.您在成为会员后，可以享受作文极速点评、全站双倍积分、会员专享积分折扣、写作卡券礼包、专属会员身份标识等权益，以开通会员时的页面公告规则为准。</p>
+                <p>2.5.会员资格有效期届满前后，您都可以通过重新开通来继续享受会员权益，有效期满前开通会员，有效期从上一期会员到期的第二天开始计算。有效期届满的，不影响您继续观看已经优惠购买的付费课程。</p>
+                <strong>3. 付费规则</strong>
+                <p>3.1.如果您希望获得会员权益，需要先登录或注册365学堂账号。您在使用365学堂学习会员服务时登录的账号是365学堂确认您身份的唯一依据。</p>
+                <p>3.2.您理解并同意：开智教育提供的365学堂学习会员权益实行先付款后使用的方式，您及时、足额、合法的支付所需的款项是您享受会员权益的前提。您有权选择使用开智教育认可的支付方式，如果该支付方式由开智教育之外具备合法资质的第三方提供，该等支付服务的使用条件及规范由您与支付服务提供方确定，与开智教育认可无关。
+                </p>
+                <p> <strong>3.3.开智教育将不对所提供的会员权益的适用性或满足您特定需求及目的进行任何明示或者默示的担保。请您在购买前确认自身的需求，同时仔细阅读会员权益的详细说明。</strong></p>
+                <p> <strong>3.4.您理解并同意，会员权益属于在线虚拟服务内容，开智教育有权根据规定对您购买的会员权益不予退款。</strong></p>
+                <p> <strong>3.5.您无权对已购买的会员权益进行出售、转让、许可或其他方式使除您自己以外的第三方（包括但不限于自然人、法人或其他组织）使用已购买的会员权益。若您违反本条款规定，开智教育有权视情况采取如下措施：</strong>
+                </p>
+                <p> <strong>3.5.1.取消您继续享用会员权益的权利；</strong></p>
+                <p> <strong>3.5.2.限制/冻结您的账号；</strong></p>
+                <p> <strong>3.5.3.要求您退还其通过出售、转让、许可等其他方式取得的收益；</strong></p>
+                <p> <strong>3.5.4.其他开智教育可以采取的救济措施。</strong></p>
+                <p> <strong>3.6.您应保管好自己的账号和密码（包括但不限于登录/支付账号），如因您未保管好自己的账号和密码而对自己、开智教育或第三方造成损害的，您将负全部责任。另外，您应对用户账号中的所有活动和事件负全责。</strong>
+                </p>
+                <p>3.7.您同意如果发现有非法使用您账号或出现安全漏洞的情况，应立即通告开智教育，开智教育将会尽力予以妥善解决。</p>
+                <p><strong>4. 其他约定</strong></p>
+                <p><strong>4.1.开智教育根据自身商业决策等原因可能会选择终止365学堂学习会员服务功能。您同意开智教育有权行使上述权利且不需对您或第三方承担任何责任。如有此等情形发生，开智教育会采取公告的形式通知您，开智教育可通过网页公告、电子邮件、电话或信件传送等方式向您发出通知，相关通知在发送时即视为已送达收件人。</strong>
+                </p>
+                <p><strong>4.2.经国家行政或司法机关的生效法律文书确认您存在违法或侵权行为，或者开智教育根据自身的判断，认为您的行为涉嫌违反《365学堂注册服务协议》、本协议内容或365学堂不时公布的使用规则等内容，或涉嫌违反法律法规的规定的，则开智教育有权中止、中断或终止向您提供服务，并不承担任何责任。</strong>
+                </p>
+                <p><strong>4.3.开智教育对不可抗力导致的损失不承担责任。本协议所指不可抗力包括：天灾、法律法规或政府指令的变更，因网络服务特性而特有的原因，例如境内外基础电信运营商的故障、计算机或互联网相关技术缺陷、互联网覆盖范围限制、计算机病毒、黑客攻击等因素，及其他合法范围内的不能预见、不能避免并不能克服的客观情况。</strong>
+                </p>
+                <p>4.4.所有发给您的通知都可通过电子邮件、常规的信件、客服电话或在365学堂网站显著位置公告的方式进行传送。任何对本协议的修改，自修改后的协议在在365学堂网站公布或以电子邮件、常规的信件等方式向您通知之日起生效。
+                </p>
+                <p>4.5.本协议自发布之日起生效并实施，构成您和开智教育之间的共识。</p>
+                <p>4.6.本协议适用中华人民共和国的法律（不含冲突法）。当本协议的任何内容与中华人民共和国法律相抵触时，应当以法律规定为准，同时相关内容将按法律规定进行修改或重新解释，而本协议其他部分的法律效力不变。</p>
+                <p><strong>4.7.凡因本协议引起的或与本协议有关的任何争议，均应提交中国国际经济贸易仲裁委员会，按照申请仲裁时该会现行有效的仲裁规则进行仲裁，并由3名仲裁员进行审理。仲裁裁决是终局的，对双方均有约束力。</strong>
+                </p>
+                <p>4.8.如您对本协议内容有任何疑问，请联系我们的客服电话：0512-67259983（周一至周五8:30-17:30）</p>
+                <p>4.9 本协议的版权归开智教育所有，本协议各项条款内容的最终解释权及修改权归开智教育所有。</p>
+            </div>
+            <div class="agreementBoxClose"><span>我知道了</span></div>
+        </div>
+    <script>
+        //轮播
+        var mySwiper = new Swiper('.cardMemberSilde', {
+            autoplay: true,
+            pagination: {
+                el: '.newcardMemberPagination',
+                clickable: true,
+            },
+            lazy: {
+                loadPrevNext: true,
+            },
+        })
+        function adv_go(url) {
+            window.location.href = url;
+        }
+    </script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jsencrypt.js"></script>
+    <script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+    <script>
+        $(function () {
+            $('.layui-tab-title li').click(function () {
+                var tab_index = $(this).index();
+                if (tab_index == 1) {
+                    changeCaptcha('captcha_register');
+                }
+            });
+            $('.cardMemberPrice li').click(function () {
+                $(this).addClass('active').siblings().removeClass('active');
+            });
+            $('.cardOpenListTitle span').each(function () {
+                $(this).click(function () {
+                    var l = $(this).index();
+                    $('.swipeUl li').hide();
+                    $(this).addClass("active").siblings().removeClass("active");
+                    $('.swipeUl li').eq(l).show();
+                })
+            });
+            //图片数据
+            var imgJson = {
+                "title": "", //相册标题
+                "id": 123, //相册id
+                "start": 0, //初始显示的图片序号，默认0
+                "data": [   //相册包含的图片，数组格式
+                    {
+                        "alt": "急速点评",
+                        "pid": 1, //图片id
+                        "src": "../images/cardPop1.png", //原图地址
+                    },
+                    {
+                        "alt": "免费课程",
+                        "pid": 2, //图片id
+                        "src": "../images/cardPop2.png", //原图地址
+                    },
+                    {
+                        "alt": "专属礼包",
+                        "pid": 3, //图片id
+                        "src": "../images/cardPop3.png", //原图地址
+                    },
+                    {
+                        "alt": "专享优惠",
+                        "pid": 4, //图片id
+                        "src": "../images/cardPop4.png", //原图地址
+                    },
+                    {
+                        "alt": "双倍积分",
+                        "pid": 5, //图片id
+                        "src": "../images/cardPop5.png", //原图地址
+                    },
+                    {
+                        "alt": "会员标识",
+                        "pid": 6, //图片id
+                        "src": "../images/cardPop6.png", //原图地址
+                    }
+                    
+                ]
+            }
+            layui.use(['element', 'layer'], function(){
+                var element = layui.element;
+                var layer = layui.layer;
+                $('.cardMemberInterest li').each(function(i){
+                    $(this).click(
+                        function(){
+                            imgJson.start = i;
+                    layer.photos({
+                        photos: imgJson,
+                        anim: 5
+                    })
+                        }
+                    )
+                    
+                })
+               //学堂服务协议弹出
+               $('.agreeContent span').click(function(){
+                   layer.open({
+                       title : '',
+                       type : 1,
+                       closeBtn : false,
+                       shadeClose : true,
+                       skin : 'agreeContentSkin',
+                       area:['600px','500px'],
+                       content : $('.agreementBoxPop')
+                   })
+               })
+               //学堂服务协议关闭
+               $('.agreementBoxClose span').click(function(){
+                   layer.closeAll();
+               })
+            })
+        })
+    </script>
+        <script>
+            var swiperYear = new Swiper('.swiperYear', {
+                navigation: {
+                    nextEl: '.swiperYear .card-btn-next',
+                    prevEl: '.swiperYear .card-btn-prev',
+                },
+                observer:true,/*启动动态检查器，当改变swiper的样式（例如隐藏/显示）或者修改swiper的子元素时，自动初始化swiper。*/
+                observeParents:true,/*将observe应用于Swiper的父元素。当Swiper的父元素变化时，例如window.resize，Swiper更新。*/
+            });
+            var swiperQuarter = new Swiper('.swiperQuarter', {
+                navigation: {
+                    nextEl: '.swiperQuarter .card-btn-next',
+                    prevEl: '.swiperQuarter .card-btn-prev',
+                },
+                observer:true,/*启动动态检查器，当改变swiper的样式（例如隐藏/显示）或者修改swiper的子元素时，自动初始化swiper。*/
+                observeParents:true,/*将observe应用于Swiper的父元素。当Swiper的父元素变化时，例如window.resize，Swiper更新。*/
+            });
+            var swiperMonth = new Swiper('.swiperMonth', {
+                navigation: {
+                    nextEl: '.swiperMonth .card-btn-next',
+                    prevEl: '.swiperMonth .card-btn-prev',
+                },
+                observer:true,/*启动动态检查器，当改变swiper的样式（例如隐藏/显示）或者修改swiper的子元素时，自动初始化swiper。*/
+                observeParents:true,/*将observe应用于Swiper的父元素。当Swiper的父元素变化时，例如window.resize，Swiper更新。*/
+            });
+        </script>
+    <script src="http://www.365xuet.com/assets/web/layui/layui.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1258756_j2hlqjfpbm.css">
+    <!--PC个人中心改版2019-2019-07-08-->
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/personalCenter.css">
+    <link rel="stylesheet" href="css/teacherCenter.css" />
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css" />
+    <link rel="stylesheet" href="css/corpus.css" />
+    <script>
+        /*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/
+    </script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <script src="layui/layui.js"></script>
+    <script src="js/html2canvas.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="editContain">
+        <!--头部工具栏start-->
+        <div class="editCorpusNav">
+            <div class="corNavLeft">
+                <div class="corpusLogo"><img src="images/studentCertificate/logo.png" /></div>
+                <div class="corpusNavTitle">编辑文集</div>
+                <span>后退</span>
+                <span class="iconfont icon-zhuanfa">前进</span>
+                <span class="iconfont icon-arrowleft">前移</span>
+                <span class="iconfont icon-arrowright">后移</span>
+                <span>插入空白页</span>
+                <span class="iconfont icon-huishou">删除</span>
+                <div class="listSwitch">使用目录<span class="switch-btn"><em></em></span></div>
+            </div>
+            <div class="corNavRight">
+                <a class="templeteBtn" href="文集模板选择.html">切换模板</a>
+                <a class="corpusSaveBtn" href="我的文集（学生端）.html">保存</a>
+                <a class="corpusFinalBtn" href="定稿.html">定稿</a>
+            </div>
+        </div>
+        <!--头部工具栏end-->
+        <div class="editCorpusContent">
+            <div class="editCorpusLeft scrollSkin">
+                <ul>
+                    <li class="pagecoverItem">
+                        <div class="editCorpus-num">01.</div>
+                        <div class="cover-content active">
+                            <div class="cover-img">
+                                <img src="images/listbg.png" />
+                            </div>
+                            <div class="editcorpus-title">封面</div>
+                        </div>
+                    </li>
+                    <li class="pageTextItem">
+                        <div class="editCorpus-num">02.</div>
+                        <div class="cover-content">
+                            <div class="cover-img">
+                                <img src="images/listbg.png" />
+                            </div>
+                            <div class="editcorpus-title">
+                                <span>有种力量从未消失</span>
+                            </div>
+                            <div class="editcorpus-score">
+                                <span class="iconfont icon-yezi red2" style="display: none">69%</span>
+                                <span class="iconfont icon-yezi blue" style="display: none">79%</span>
+                                <span class="iconfont icon-yezi green" style="display: none">89%</span>
+                                <span class="iconfont icon-yezi violet">99%</span>
+                                <span>
+                                    <i class="iconfont icon-shoucang"></i>
+                                    <i class="iconfont icon-shoucang"></i>
+                                    <i class="iconfont icon-shoucang"></i>
+                                    <i class="iconfont icon-shoucang"></i>
+                                    <i class="iconfont icon-shoucang"></i>
+                                </span>
+                            </div>
+                            <div class="corpusDate">2018-10-24</div>
+                        </div>
+                    </li>
+                    <li class="pageTextItem">
+                        <div class="editCorpus-num">03.</div>
+                        <div class="cover-content">
+                            <div class="cover-img">
+                                <img src="images/listbg.png" />
+                            </div>
+                            <div class="editcorpus-title">
+                                <span>苦中作乐</span>
+                            </div>
+                            <div class="editcorpus-score">
+                                <span class="iconfont icon-yezi red2" style="display: none">69%</span>
+                                <span class="iconfont icon-yezi blue" style="display: none">79%</span>
+                                <span class="iconfont icon-yezi green">89%</span>
+                                <span class="iconfont icon-yezi violet" style="display: none">99%</span>
+                                <span>
+                                    <i class="iconfont icon-shoucang"></i>
+                                    <i class="iconfont icon-shoucang"></i>
+                                    <i class="iconfont icon-shoucang"></i>
+                                    <i class="iconfont icon-shoucang"></i>
+                                    <i class="iconfont icon-shoucang"></i>
+                                </span>
+                            </div>
+                            <div class="corpusDate">2018-10-24</div>
+                        </div>
+                    </li>
+                    <li class="backCoverItem">
+                        <div class="editCorpus-num">04.</div>
+                        <div class="cover-content">
+                            <div class="cover-img">
+                                <img src="images/listbg.png" />
+                            </div>
+                            <div class="editcorpus-title">封底</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="editCorpusRight">
+                <!--文集封面-->
+                <div class="coverPage" style="background-image: url('images/pageBg.png');">
+                    <!--我的文集-->
+                    <div id="editer" class="coverPage-title dashad" contenteditable="true">我的文集</div>
+                    <div class="coverPage-style coverPage-date dashad" contenteditable="true">2019年7月1号</div>
+                    <div class="coverPage-style coverPage-shool dashad" contenteditable="true">苏州工业园区唯亭学校</div>
+                    <div class="coverPage-style coverPage-class dashad" contenteditable="true">六年级1班</div>
+                    <div class="coverPage-style coverPage-name dashad" contenteditable="true">张一一</div>
+                </div>
+                <!--引言-->
+                <div class="corpusPage" style="background-image: url('images/preface.png'); display: none">
+                    <div class="subPageContent" contenteditable="true">
+                    </div>
+                </div>
+                <!---->
+                <!--作文第一页-->
+                <div class="corpusPage" id="capture" style="background-image: url('images/pageBg.png');display: none">
+                    <div class="corpusPageTitle"><i>记</i>有种力量从未消失</div>
+                    <div class="corpusPageClass"><span>苏州工业园区唯亭学校</span><span>六年级<span>张一一</span></div>
+                    <div class="editcorpus-score">
+                        <em>推荐指数：</em>
+                        <span>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                        </span>
+                    </div>
+                    <div class="indexPageContent" contenteditable="true">
+                        <p>最近回家<span class="theRed">，</span>一进小区门，我就头疼，因为妈妈经常交给我一项烦心的“工作”<span class="theRed">，</span>就是找车位。<span class="theRed">(这篇作文线索明朗，开头结尾主题突出，结构合理，佳作)</span></p><p>我家的小区是老城区，小区里面没有地下停车场，在小区靠墙边缘画了一些为数不多的停车位，目的是让这些车主可以把车停在规定的地方。可是对于我们<span class="delLine">家</span>这个人多车多的小区来说，这些划线区域就变得供不应求了。于是车主们为了停车，开辟了停车线以<span class="delLine">为</span>外的更多区域。有的见缝插针，拐弯道，直行道，能停的都不放过；有的自制车位，把家门口的绿化草坪铲平，涂上水泥变成自家私人车位；还有的各自为王，不管三七二十一，想怎么停就怎么停。<span class="theRed">（这一段中“有的”句式将停车位的现象写得非常得传神。）</span></p><p>今天妈妈接我回家，车一开到小区门口，就看见歪七竖八<span class="theRed">（地）</span><span class="delLine">的</span>停着各种牌子的车<span class="theRed">（。）</span><span class="delLine">，</span>小区被这些车子挤的密不透风，只有一条进的通道，<span class="delLine">如果你</span><span class="theRed">（里面的）</span>车子想出来，那只有考验你的倒车技能呢！我妈妈的车技就是在小区里面进进出出提升的。妈妈见着着这停车<span class="theRed">（场面）</span><span class="delLine">症状</span>，赶紧大呼：“儿子，赶快下来帮我找车位，省的我进去没车位，走弯路。”“好！”我不耐烦地应和着。看着这密密麻麻的车<span class="theRed">，</span>其实我也不想做这苦差事。没办法，只得下车找。<span class="theRed">（这一段如果能把你眼前停车的场面描写一番，一定会更有趣。）</span></p><p>我仔细<span class="delLine">的</span><span class="theRed">（地）</span>边走边看，不放过每一块地方，围着小区转了一圈圈，又一圈，只见一部车挨着一部<span class="theRed">，</span>根本不让<span class="delLine">你</span><span class="theRed">（我）</span>有插空的机会<span class="delLine">，</span>正当我要放弃的时候，我闪亮的眼睛发现最顶端好像有一个空位，哈哈<span class="theRed">，</span>肯定是被前面的车子挡住了视线，没被别人发现，成了一个漏网之鱼<span class="theRed">，却</span>被<span class="theRed">（细心的）</span>我细心<span class="theRed">（地）</span><span class="delLine">的</span>发现了。我太高兴了，走进<span class="theRed">去</span>看看<span class="theRed">，</span>确认一下，好到妈妈那领功。可当我走<span class="delLine">进</span><span class="theRed">（近）</span>一看傻眼了，原来那个车位被电动车霸占了，我家的车子根本停不了。真是太可恶了！自家的车子不能早到，就用这方法来霸占，太不道德了！我气急败坏地跑到妈妈身边跟他说了这一切，妈妈安慰我说：“没关系，我们就先停小区外吧，待会吃完饭看看是否有车子走了，有空位我们就停进来。”正当我们要开出去的时候，好运气降临了，前面的车要开走，我们兴奋不已，可以把车安稳<span class="delLine">的</span><span class="theRed">（地）</span>停好了。</p><p>停好车，我们正要上楼，这时听到隔壁单元的滴滴滴滴的汽车喇叭声，接着传来喊叫声：“这谁的车，能不能挪挪，挡住了我的车子，我还有急事呢？”只见这个车主一边跺着脚，一边看看手表，嘴里还不停的喊叫。</p><p>唉，停个车位怎么这么难？小区里整天上演抢车位大战，为了车位有的人破坏公共设施，有的人堵通道，为了一己私欲损害他人利益，这是很不道德的。希望大家互相体谅，停车的时候多想想是否影响他人，懂的与人方便也是与己方便的道理。<span class="theRed">(收尾的独具匠心是本文的一大特色，也体现了作者的敏锐细致)(分段合理，构思严谨。内容逐层深入，步步为营)</span></p>
+                    </div>
+                </div>
+                <!--封底-->
+                <div class="corpusPage" id="backCoverPage" style="background-image: url('images/pageEnd.png'); display: none"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" language="javascript">
+    $(function(){
+        $('.editCorpusLeft li').click(function(){
+            $(this).find('.cover-content').addClass("active").parents('li').siblings().find('.cover-content').removeClass('active');
+            if($(this).hasClass('pagecoverItem')){
+                $('.coverPage').css("display",'block');
+                $('#capture').css('display',"none")
+                $('#backCoverPage').css('display','none')
+            }else if($(this).hasClass('pageTextItem')){
+                $('#capture').css('display',"block")
+                $('.coverPage').css("display",'none')
+                $('#backCoverPage').css('display','none')
+            }else if($(this).hasClass('backCoverItem')){
+                $('#capture').css('display',"none")
+                $('.coverPage').css("display",'none')
+                $('#backCoverPage').css('display','block')
+            }
+        })
+        
+    })
+</script>
+
+</html>

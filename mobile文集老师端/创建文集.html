@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="hotcss" content="max-width=640">
+    <meta name="hotcss" content="design-width=750">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1147714_9e1h0p8h3ru.css" />
+    <link href="https://www.365xuet.com/assets/mobile/layer_mobile/need/layer.css?2.0" type="text/css" rel="styleSheet" id="layermcss">
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css" />
+    <script src="js/hotcss.js"></script>
+    <link href="css/caleran.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/mobileCorpus.css" />
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://at.alicdn.com/t/font_1147714_w1u23ubgs1g.js"></script>
+    <script src="https://www.365xuet.com/assets/mobile/layer_mobile/layer.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <script src="js/caleran.min.js"></script>
+    <title>我的文集</title>
+</head>
+<body>
+    <div class="mobile-wraper">
+        <div class="corpusLabel">
+            <label><span>我的文集：</span><input type="text" placeholder="文集名称" value="" /></label>
+        </div>
+        <div class="m-quick-select">
+            <div class="m-quick-title iconfont icon-wendang">快速选文</div>
+            <div class="corpusLabel">
+                <label><span>时间段：</span><input type="text" placeholder="时间段" value="" id="caleran-header" /></label>
+            </div>
+            <div class="corpusLabel">
+                <label class="select iconfont">
+                    <span>星级：</span>
+                    <select>
+                        <option selected>全部</option>
+                        <option>五星</option>
+                        <option>四星</option>
+                        <option>三星</option>
+                        <option>二星</option>
+                        <option>一星</option>
+                    </select>
+                </label>
+            </div>
+            <div class="corpusLabel">
+                <label class="select iconfont">
+                    <span>新鲜度：</span>
+                    <select>
+                        <option selected>全部</option>
+                        <option>80%~90%</option>
+                    </select>
+                </label>
+            </div>
+            <div class="corpusLabel">
+                <label class="select iconfont">
+                    <span>选择班级：</span>
+                    <select>
+                        <option selected value="0">入住班级</option>
+                    </select>
+                </label>
+            </div>
+            <div class="corpusLabel">
+                <label class="select iconfont">
+                    <span>投稿方式：</span>
+                    <select>
+                        <option value="">全部</option>
+                    </select>
+                </label>
+            </div>
+            <div class="corpusLabel">
+                <div class="checkBoxContent">
+                    <span>文体类型：</span>
+                    <div class="checkBoxList">
+                        <p><input type="checkbox" class="iconfont" />记叙文</p>
+                        <p><input type="checkbox" class="iconfont" />说明文</p>
+                        <p><input type="checkbox" class="iconfont" />诗歌</p>
+                        <p><input type="checkbox" class="iconfont" />散文</p>
+                        <p><input type="checkbox" class="iconfont" />读后感</p>
+                        <p><input type="checkbox" class="iconfont" />议论文(杂文)</p>
+                        <p><input type="checkbox" class="iconfont" />虚拟写作（小说、童话等）</p>
+                    </div>
+                </div>
+            </div>
+            <div class="corpusLabel corpusBtnList">
+                <span>只选已发表</span>
+                <div>
+                    <em class=""><i></i></em>
+                </div>
+            </div>
+            <div class="corpusLabel corpusBtnList">
+                    <span>保留批改痕迹</span>
+                    <div>
+                        <em class=""><i></i></em>
+                    </div>
+                </div>
+        </div>
+        <div class="corpus-select-btn">创建</div>
+    </div>
+</body>
+<script>
+    $(function(){
+        $('.corpusBtnList').click(function(){
+            $(this).find('em').toggleClass('active')
+        });
+        $("#caleran-header").caleran({ startEmpty:true,inline: false,showHeader:false,locale:"zh-cn",singleDate:false,cancelLabel:'取消',applyLabel:'确定',showFooter:false,dateSeparator:' ~ ',onafterselect:function(caleran, startDate, endDate){console.log(startDate,endDate)}});
+    })
+</script>
+</html>

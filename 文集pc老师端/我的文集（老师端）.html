@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <title>个人中心</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1258756_hwt3rysr1xl.css?date= new Date()"><!--PC个人中心改版2019-2019-06-26-->
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/personalCenter.css">
+    <link rel="stylesheet" href="css/teacherCenter.css">
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css"/>
+    <link rel="stylesheet" href="css/corpus.css?date= new Date()" />
+    <script>/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <script src="layui/layui.js"></script>
+    <script src="js/turn.js"></script>
+    <script src="js/basic.js" ></script>
+</head>
+<body>
+<!--轮播图-->
+<style type="text/css">
+    .swiper-container_box{
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .swiper-container .swiper-pagination-zq {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+        text-align: center;
+    }
+</style>
+<div class="flipbook-viewport hide">
+        <div class="container">
+            <div class="flipbook">
+                <div>
+                    <img src="pages/1.jpg" />
+                </div>
+                <div>
+                    <div class="gradient"></div>
+                    <img src="pages/2.jpg" />
+                </div>
+                <div>
+                    <div class="gradient"></div>
+                    <img src="pages/3.jpg" />
+                </div>
+                <div>
+                    <div class="gradient"></div>
+                    <img src="pages/4.jpg" />
+                </div>
+                <div>
+                    <div class="gradient"></div>
+                    <img src="pages/5.jpg" />
+                </div>
+                <div>
+                    <div class="gradient"></div>
+                    <img src="pages/6.jpg" />
+                </div>
+                <div>
+                    <div class="gradient"></div>
+                    <img src="pages/7.jpg" />
+                </div>
+                <div>
+                    <div class="gradient"></div>
+                    <img src="pages/8.jpg" />
+                </div>
+                <div>
+                    <div class="gradient"></div>
+                    <img src="pages/9.jpg" />
+                </div>
+                <div>
+                    <img src="pages/10.jpg" />
+                </div>
+            </div>
+            <!--左按钮-->
+            <div class="flipBookLeftBtn iconfont icon-arrowleft"></div>
+            <!--右按钮-->
+            <div class="flipBookRightBtn iconfont icon-arrowright"></div>
+            <!--退出按钮-->
+            <!--页数-->
+            <div class="pagesItem"></div>
+            <div class="flipBookBack">退出预览</div>
+        </div>
+    
+    </div>
+    <script>
+        $(function(){
+            $('.flipbook').turn({
+            // Width
+
+            width: 922,
+
+            // Height   
+
+            height: 600,
+
+            // Elevation
+
+            elevation: 50,
+
+            // Enable gradients
+
+            gradients: true,
+
+            // Auto center this flipbook
+
+            autoCenter: true,
+            when: {
+                turned: function (e, page, view) {
+                    setArrows($('.flipbook').turn('page'), $('.flipbook').turn('pages'));
+                    setPages($('.flipbook').turn('page'), $('.flipbook').turn('pages'));
+                }
+            }
+
+        });
+        //按钮显示
+        setArrows($('.flipbook').turn('page'),$('.flipbook').turn('pages'));
+        //显示页数
+        setPages($('.flipbook').turn('page'),$('.flipbook').turn('pages'));
+        // Events for the next button
+
+        $('.flipBookRightBtn').click(function () {
+
+            $('.flipbook').turn('next');
+            //按钮显示
+        setArrows($('.flipbook').turn('page'),$('.flipbook').turn('pages'));
+        //显示页数
+        setPages($('.flipbook').turn('page'),$('.flipbook').turn('pages'));
+        });
+
+        // Events for the prev button	
+
+        $('.flipBookLeftBtn').click(function () {
+
+            $('.flipbook').turn('previous');
+            //按钮显示
+        setArrows($('.flipbook').turn('page'),$('.flipbook').turn('pages'));
+        //显示页数
+        setPages($('.flipbook').turn('page'),$('.flipbook').turn('pages'));
+        });
+        //文集预览隐藏
+        $('.flipBookBack').click(function(){
+            $('.flipbook-viewport').addClass('hide');
+        })
+        //文集预览打开
+        $('.flipBookOpen').click(function(){
+            $('.flipbook-viewport').removeClass('hide');
+        })
+        })
+        //显示按钮
+        function setArrows(page,pages){
+            if(page == 1){
+                $('.flipBookLeftBtn').hide();
+                $('.flipBookRightBtn').show();
+            }else if(page == pages){
+                $('.flipBookLeftBtn').show();
+                $('.flipBookRightBtn').hide();
+            }else{
+                $('.flipBookLeftBtn').show();
+                $('.flipBookRightBtn').show();
+            }
+        }
+        //刷新页数显示
+        function setPages(page,pages){
+            var s = page +'/'+pages
+            $('.pagesItem').html(s)
+        }
+    </script>
+<div class="swiper-container_box">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img onclick="adv_go('http://www.365xuet.com/xueT/courseIndex?series_id=7')" src="upfile/2.jpg"></div>
+            <div class="swiper-slide"><img onclick="adv_go('http://v2.365xuet.com/xueT/courseIndex?series_id=4')" src="upfile/2.jpg"></div>
+        </div>
+        <div class="swiper-pagination-zq"></div>
+    </div>
+</div>
+<script>
+    $(function () {
+        var mySwiper = new Swiper('.swiper-container_box .swiper-container', {
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination-zq',
+                clickable: true,
+            },
+            lazy: {
+                loadPrevNext: true,
+            },
+        })
+    })
+    function adv_go(url){
+        window.location.href = url;
+    }
+</script>
+<!-- 通用标题 -->
+<div class="personalTitle clearfix">
+    <h3>我的文集</h3>
+    <!--滚动通知-->
+    <div class="rollingNotification right">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/courseIndex?tab=4" class="iconfont icon-xiaolaba">写作思路打不开？快来围观写作任务群!</a></div>
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/seriesCourseDetail/955" class="iconfont icon-xiaolaba">听故事学语文，点此免费试听~</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="writingListBox clearfix bgWhite radius15 borderThinE mt13">
+    <div class="deliverWritingBtn tac"><a class="iconfont icon-add1" href="新建文集(老师端).html" target="iFrame1">新建文集</a></div>
+    <ul class="corpusListCotain">
+        <!--草稿-->
+        <li>
+            <div class="corpusListLeft">
+                <span class="corpus-draft-title">文集名称文集名称文集名称</span>
+                <i>草稿</i>
+            </div>
+            <div class="corpusListRight">
+                <!--篇数-->
+                <span class="iconfont icon-wenzhang">共99篇</span>
+                <!--end-->
+                <!--日期-->
+                <span class="iconfont icon-shijian">6-1</span>
+                <!--end-->
+                <!---->
+                <a href="文集详情.html" class="class-edit-btn iconfont icon-bianji">编辑</a>
+                <a class="text-underline corpus-delete-btn" href="#">删除</a>
+                <!---->
+            </div>
+        </li>
+        <!---->
+        <li>
+                <div class="corpusListLeft">
+                    <span>文集名称文集名称文集名称</span>
+                    <i style="display: none">草稿</i>
+                </div>
+                <div class="corpusListRight">
+                    <!--篇数-->
+                    <span class="iconfont icon-wenzhang">共99篇</span>
+                    <!--end-->
+                    <!--日期-->
+                    <span class="iconfont icon-shijian">6-1</span>
+                    <!--end-->
+                    <!---->
+                    <a class="iconfont icon-yulan text-underline flipBookOpen" href="javascript:;">预览</a>
+                    <a class="iconfont icon-PDF text-underline" href="javascript:;">导出pdf</a>
+                    <a class="class-edit-btn iconfont icon-gouwu" href="装订成册.html">购买</a>
+                    <!---->
+                </div>
+            </li>
+        <li></li>
+    </ul>
+</div>
+<div class="writingPage">
+    <ul>
+        <li><a href="https://www.365xuet.com/write/markCompositionList?year=&amp;area=&amp;search=&amp;page=2">下一页</a></li>
+        <li><a href="https://www.365xuet.com/write/markCompositionList?year=&amp;area=&amp;search=&amp;page=23">末页</a></li>
+        <li class="page_select">
+            当前第 <input type="text" id="page" value="1">页/ 共23页 <a href="javascript:toPage()">转到</a>
+        </li>
+    </ul>
+</div>
+</body>
+<script>
+    $(function(){
+        layui.use(['form','element','layer'], function() {
+            var form = layui.form,
+                element = layui.element,
+                layer = layui.layer;
+        });
+        //删除弹出
+        $('.corpus-delete-btn').click(function(){
+            layer.confirm('删除草稿后将无法恢复，是否删除该草稿？', {
+                btn: ['再想想','确定删除']
+                ,closeBtn: 0
+                ,area:'490px'
+                ,skin:'layerConfirm'
+                ,title:''
+                ,style:'height:490px'
+            })
+        })
+    })
+</script>
+<script>
+	$(function () {
+		//通知滚动
+		var swiper = new Swiper('.rollingNotification .swiper-container', {
+			loop: true,
+			direction: 'vertical',
+			slidesPerView: 1,
+			autoplay: {
+				delay: 2000,
+			}
+		});
+	})
+</script>
+</html>

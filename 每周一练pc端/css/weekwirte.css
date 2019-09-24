@@ -1,0 +1,600 @@
+.weekworkNav a{
+    color: #999;
+    padding: 5px 10px;;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-right: 25px;
+    font-size: 14px;
+    display: inline-block;
+}
+.weekworkNav{
+    font-size: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    padding:0 30px 10px 30px;
+}
+.weekworkNav a.actived{
+    border: 1px solid #fc7859;
+    color: #fc7859;
+    display: inline-block;
+    background: #fcf6f5;
+}
+.weekworkBox{
+    padding-top: 13px;
+    overflow: hidden;
+}
+.weekworkList{
+    padding: 0 40px;
+}
+.weekworkList li{
+    padding:25px 0;
+    border-bottom: 1px solid #eee;
+}
+.weekworkList li:last-child{
+    border: 0;
+}
+.weekArticleImg{
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    float: left;
+}
+.weekArticleImg img{
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+}
+.weekArticleItem{
+    margin-left: 100px;
+}
+.weekArticleItem p a{
+    font-size: 18px;
+    color: #333;
+    height: 32px;
+    line-height: 32px;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-right: 1px;
+}
+.weekArticleItem p+p a{
+    font-size: 16px;
+    color: #999;
+    height: 22px;
+    line-height: 22px;
+}
+.weekArticleDate{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.weekDateLeft{
+    font-size: 0;
+}
+.weekDateLeft span{
+    background: #feecea;
+    color: #fc7859;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 8px;
+}
+.weekDateRight span{
+    color: #999;
+    margin-right: 10px;
+}
+.weekDateLeft span.championName{
+    color: #fbb82e;
+    background: none;
+    padding-left: 25px;
+    margin-left: 10px;
+}
+.weekDateLeft span.championLevelFir{
+    background: url(../images/weekcap1.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: #f8d14b;
+    background-size: 21px 16px;
+}
+.weekDateLeft span.championLevelSec{
+    background: url(../images/weekcap2.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: #b9b9b9;
+    background-size: 21px 16px;
+}
+.weekwriteBoxTitle{
+    padding:10px 30px 0px 30px;
+    position: relative;
+}
+.weekDateLeft span.championLevelThr{
+    background: url(../images/weekcap3.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: #a7643f;
+    background-size: 21px 16px;
+}
+.weekwriteBox{
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.weekwriteBox .writingSearch {
+    padding: 15px 25px;
+}
+.weekwriteBox .compositionDetails{
+    padding-bottom: 50px;
+    border: 0;
+    overflow: auto;
+}
+.workWritingT{
+    text-align: center;
+    font-size: 0;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+.workWritingT span{
+    color: #000;
+    position: relative;
+}
+.workWritingT span::after{
+
+}
+.workWritingT span{
+    width: 64px;
+    height: 24px;
+    background-color: #fd6645;
+    position: relative;
+    display: inline-block;
+    line-height: 24px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 3px;
+}
+.workWritingT p{
+    display: inline-block;
+    margin-left: 22px;
+    font-size: 22px;
+    overflow: hidden;
+    height: 32px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 80%;
+    line-height: 32px;
+}
+.workWritingT span::after{
+    width: 0;
+    height: 0;
+    left: 100%;
+    top: 0px;
+    position: absolute;
+    content: "";
+    border-top: 14px solid transparent;
+    border-left: 12px solid #fd6645;
+    border-bottom: 10px solid transparent;
+}
+.workweektitle{
+    position: relative;
+}
+.workWritingTitle{
+    background: #fdf8f2;
+    border: 1px solid #fde8cc;
+    margin: 0 30px;
+    padding: 14px 0;
+}
+.joinFrom{
+    margin-top: 6px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    font-size: 0；
+
+}
+.joinFrom span{
+    margin-right: 30px;
+    line-height: 30px;
+}
+.joinFrom span:last-child{
+    margin-left: -10px;
+}
+.joinFrom em{
+    color: #e9a944;
+    font-style: normal;
+}
+.joinFrom span i{
+    width: 28px;
+    height: 28px;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    border-radius: 100%;
+    float: right;
+    margin-right: -10px;
+}
+.joinFrom span i img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    display: block;
+}
+.workweekIcon{
+    width: 50px;
+    height: 50px;
+    border: 4px solid #e5e5e5;
+    float: left;
+    border-radius: 100%;
+    
+}
+.workweekIcon img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.workweekStu{
+    margin-left: 80px;
+    margin-top: 30px;
+}
+.workweekStu p{
+    font-size: 18px;
+    color: #333;
+    line-height: 30px;
+}
+.workweekStu p span{
+    font-size: 16px;
+    color: #999;
+    margin-right: 20px;
+}
+.workweekContent{
+    padding: 0 30px;
+}
+.weekarticleLevel img{
+    width: 46px;
+    height: auto;
+    display: block;
+}
+.weekarticleLevel{
+    width: 46px;
+    position: absolute;
+    right: 8px;
+    top: 0;
+}
+.weekarticleLevel span{
+    display: block;
+    text-align: center;
+}
+.weekStugold span{
+    color:#f8d14b;
+}
+.weekStuSilver span{
+    color: #b9b9b9;
+}
+.weekStuCopper span{
+    color: #b9b9b9;
+}
+.workweekContent .content{
+    font-size: 16px;
+    color: #333;
+    line-height: 34px;
+    overflow: hidden;
+}
+.workweekContent .content p{
+    margin: 20px 0;
+}
+.workweekContent .web-collect-alert{
+    margin-left: 15px;
+}
+.practiceImg{
+    width: 58px;
+    height: 58px;
+    border-radius: 5px;
+    float: left;
+}
+.practiceImg img{
+    width: 58px;
+    height: 58px;
+    border-radius: 5px;
+}
+.practiceWriteBox{
+    margin: 15px 0;
+}
+.practiceWriteBox li{
+    margin-top: 20px;
+    overflow: hidden;
+    padding: 0 15px;
+}
+.practiceText{
+    margin-left: 75px;
+}
+.practiceText p{
+    font-size: 16px;
+    padding-top: 7px;
+    color: #333;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.practiceText p+p{
+    font-size: 14px;
+    color: #999;
+    padding-top: 6px;
+}
+.themeTitle{
+    margin: 20px 0;
+    display: block;
+}
+.themeTitle img{
+    display: block;
+}
+.themeContent{
+    font-size: 16px;
+    color: #333;
+    line-height: 34px;
+}
+.toggleClassBtn{
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.toggleClassBtn::before{
+    margin-right: 5px;
+}
+.workWritingNobg{
+    background: #fff;
+    border: 0;
+    border-bottom: 1px solid #eee;
+}
+.weekworkUpload{
+    padding: 8px;
+    text-align: center;
+    background: #fdf8f2;
+    margin-left: 110px;
+    border: 1px dashed #fde8cc;
+    border-radius: 5px;
+}
+.weekworkUpload a{
+    color: #fd9308;
+}
+.weeekWorkInputBox label{
+    color: #999;
+    font-size: 16px;
+}
+.weekworkUploadTip{
+    color: #fd0000;
+}
+.weeekWorkInputBox input{
+    border-radius: 8px;
+    font-size: 16px;
+}
+.weeekWorkInputBox .layui-form-item{
+    position: relative;
+}
+.weekworkMapping{
+    width: 654px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.weekworkMapping img{
+    width: 100%;
+    height: auto;
+}
+.weeekWorkInputBox .layui-textarea{
+    resize: none;
+}
+.weekworkBack{
+    font-size: 14px;
+    height: 30px;
+    border: 1px dashed #fde8cc;
+    background: #fdf8f2;
+    box-sizing: border-box;
+    line-height: 28px;
+    text-align: center;
+    color: #fd9308;
+    margin: 0 30px 15px 30px;
+}
+.weekworkBack::before{
+    margin-right: 6px;
+}
+.joinBtn{
+    padding: 28px 0;
+    margin-top: 50px;
+    border-top: 1px solid #eee;
+    position: relative;
+}
+.joinBtn .is-collected{
+    color:  #fc7859;
+}
+.joinBtn span{
+    margin: 0 auto;
+    display: block;
+    width: 186px;
+    height: 50px;
+}
+.joinBtn span a{
+    width: 186px;
+    height: 50px;
+    color: #fff;
+    line-height: 50px;
+    font-size: 18px;
+    text-align: center;
+    background: #fe6d41;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.joinBtn i{
+    position: absolute;
+    right: 50px;
+    top:28px;
+    line-height: 50px;
+    color: #999;
+    font-size: 14px;
+    cursor: pointer;
+}
+.joinBtn i::before{
+    margin-right: 5px;
+    font-size: 16px;
+}
+.weekWritingTitle{
+    margin: 40px 0 30px 0;
+    text-align: center;
+}
+.weekChamLevel{
+    display: inline-block;
+    padding-left: 35px;
+    background-repeat: no-repeat;
+    background-size: 33px 25px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.age{
+    border-left: 1px solid #e5e5e5;
+    padding-left: 5px;
+    margin-right: 10px;
+}
+.studentWritingInformation .weekChamLevel{
+    margin-left: 5px;
+    font-size: 16px;
+}
+.weekChamLevelFir{
+    background-image: url(../images/weekcap1.png);
+    color: #f8d14b;
+}
+.weekChamLevelSec{
+    background-image: url(../images/weekcap2.png);
+    color: #b9b9b9;
+}
+.weekChamLevelThr{
+    background-image: url(../images/weekcap3.png);
+    color: #9f5e37;
+}
+.weekCheckBox{
+    height: 32px;
+}
+.weekCheckBox input[type='checkbox']{
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    -webkit-appearance:none;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin-left: 110px;
+    float: left;
+    
+}
+.weekworkRecommand{
+    color: #ec7c64;
+}
+.weekworkRecommand::before{
+    margin-right: 5px;
+}
+.weekCheckBox input[type='checkbox']:checked::before{
+    content: '\e607';
+    color: #fd9308;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    line-height: 16px;
+}
+.weekCheckBox input[type='checkbox']:checked{
+    border: 1px solid #fd9308;
+}
+.weekCheckBox input[type='checkbox']:checked+input{
+    display: block;
+}
+.weeekWorkInputBox .layui-textarea{
+    min-height: 190px;
+    font-size: 16px;
+}
+.weekCheckBox label{
+    margin-top: -2px;
+    display: block;
+    float: left;
+    margin-left: 5px;
+    color: #fd9308;
+}
+.weekCheckBox input[type='text']{
+    padding: 8px;
+    border: none;
+    resize: none;
+    outline: none;
+    border: 1px solid #eee;
+    margin-left: 10px;
+    display: none;
+    float: left;
+    width: 190px;
+    box-sizing: border-box;
+}
+.weekSubmitBtn{
+    text-align: center;
+}
+.weekSubmitBtn span{
+    width: 125px;
+    height: 40px;
+    border-radius: 21px;
+    line-height: 40px;
+    color: #fff;
+    background: #fc7859;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    margin: 25px auto 0 auto;
+}
+.weekSubmitBtn span a{
+    display: block;
+    color: #fff;
+}
+.weeekWorkInputBox .clipAreaTit em{
+    float: right;
+}
+.loadingMore {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+.loadingMore span{
+    font-size: 14px;
+    cursor: pointer;
+}
+.loadingMore span::before{
+    margin-right: 5px;
+}
+ul.writingIndexList li .bottomDetailed em.weekworkDate{
+    background: none;
+}
+.weeekWorkInputBox .uploader1 input{
+    border-radius: 0;
+}
+.weekWorkBackBoxSkin{
+    background: #fff;
+    border-radius: 8px;
+}
+.weekWorkBackBox{
+    position: relative;
+    font-size: 16px;
+    line-height: 28px;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+.weekWorkBackContent{
+ padding: 20px;
+}
+.weekWorkeditBtn a{
+    display: block;
+    border-radius: 20px;
+    line-height: 40px;
+    background: #ff856c;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    width: 110px;
+    font-size: 16px;
+    margin: 0 auto;
+}

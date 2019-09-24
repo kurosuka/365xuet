@@ -1,0 +1,915 @@
+/*首页每周一练模块*/
+.weeklyExercisesIndex{
+    margin:0.3rem 0.26rem;
+    background-color: #fff;
+    border-radius: 0.16rem;
+    box-shadow: 0 0 0.5rem rgba(51,51,51,0.1);
+}
+.weeklyExercisesIndexTit>img{
+    width: 1.8rem;
+}
+.weeklyExercisesIndexTit span{
+    font-size: 0.2rem;
+}
+.weeklyExercisesIndex a{
+    position: relative;
+    padding: 0.26rem 0.37rem;
+}
+.weeklyExercisesIndex a strong{
+    display: block;
+    padding:0.1rem 0;
+    font-size: 0.34rem;
+    color: #fc7859;
+}
+.weeklyExercisesIndex a strong i{
+    font-weight:500;
+}
+.weeklyExercisesIndex a>img{
+    position: absolute;
+    bottom:-0.07rem;
+    right:-0.04rem;
+    width:1.2rem;
+}
+.weeklyExercisesIndex p{
+    font-size: 0.3rem;
+}
+.weeklyExercisesIndex p span img{
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 100%;
+    border:3px solid #fff;
+    float: right;
+    margin-left: -0.18rem;
+}
+.weeklyExercisesIndex p>i{
+    color: #e9a944;
+    margin-left: 0.1rem;
+}
+/*列表-个人中心*/
+.practiceWritingUl{
+    padding:0 0.4rem;
+}
+.practiceWritingUl li{
+    padding:0.3rem 0;
+    border-bottom: 1px solid #eee;
+}
+.practiceWritingUl li .pic,.practiceWritingUl li .pic img{
+    width: 1.55rem;
+    height: 1.55rem;
+    border-radius:0.15rem;
+    display: block;
+}
+.practiceWritingUl li .tit{
+    width: 4.8rem;
+}
+.practiceWritingUl li .tit h3{
+    font-weight:700;
+    font-size: 0.32rem;
+}
+.practiceWritingUl li .tit p{
+    padding-top: 0.08rem;
+}
+.practiceWritingUl li .tit p em{
+    display: inline-block;
+    background-color: #feecea;
+    color: #eb5f56;
+    padding:0 0.1rem;
+    border-radius: 0.05rem;
+    font-size: 0.26rem;
+    margin-right: 0.2rem;
+}
+.practiceWritingUl li .tit p span{
+    font-size: 0.26rem;
+    padding-left: 0.5rem;
+}
+.practiceWritingUl li .tit p span.first{
+    background:url("images/weekcap1.png") no-repeat left center;
+    background-size:0.4rem;
+    color: #f8d14b;
+}
+.practiceWritingUl li .tit p span.second{
+    background:url("images/weekcap2.png") no-repeat left center;
+    background-size:0.4rem;
+    color: #b9b9b9;
+}
+.practiceWritingUl li .tit p span.third{
+    background:url("images/weekcap3.png") no-repeat left center;
+    background-size:0.4rem;
+    color: #a7643f;
+}
+.practiceWritingUl li .tit p strong{
+    font-size: 0.26rem;
+}
+/*个人中心-练笔头部*/
+.practiceWritingSilde{
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 0.6rem;
+    padding:0.26rem 0.3rem;
+    border-bottom:0.2rem solid #f8f4f2;
+}
+.practiceWritingSilde .swiper-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.practiceWritingSilde .swiper-container .swiper-slide{
+    text-align: center;
+}
+.practiceWritingSilde .swiper-container .active{
+    color: #fc7859;
+    position: relative;
+
+}
+.practiceWritingSilde .swiper-container .swiper-slide span{
+    white-space: nowrap;
+    font-size: 0.28rem;
+    border:1px solid #dadada;
+    display: block;
+    border-radius: 0.6rem;
+    color: #666;
+}
+.practiceWritingSilde .swiper-container .active span{
+    background-color: #fc7859;
+    border-color: #fc7859;
+    color: #fff;
+    pointer-events: none;
+}
+/*练笔列表-头部搜索*/
+.practiceWritingSearch{
+    padding:0.26rem 0.3rem;
+    border-bottom:0.2rem solid #f8f4f2;
+}
+.practiceWritingSearch .writingSearchList {
+    width: 100%;
+}
+.practiceWritingSearch .writingSearchList input{
+    background-color:transparent;
+    border:1px solid #eee;
+    border-right:0;
+    width:88%;
+}
+.practiceWritingSearch .writingSearchList button{
+    width: 12%;
+}
+/*练笔详情页*/
+.practiceWritingTit{
+    padding:0.26rem;
+}
+.practiceWritingTit a>i{
+    background-color: #fd6645;
+    color: #fff;
+    display:inline-block;
+    position: relative;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    margin-right: 0.4rem;
+    padding:0 0.2rem;
+    font-size: 0.26rem;
+    vertical-align:middle;
+}
+.practiceWritingTit a>i:before{
+    content:'';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right:-0.4rem;
+    top:0;
+    border-width:0.2rem;
+    border-style: solid;
+    border-color: transparent #fd6645 transparent transparent;
+    transform: rotate(180deg);
+}
+.practiceWritingTit a{
+    font-size:0.4rem;
+    color: #333;
+}
+.practiceWritingTit p{
+    line-height: 0.5rem;
+    font-size: 0.28rem;
+}
+.practiceWritingTit p span img{
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 100%;
+    border: 3px solid #fff;
+    float: right;
+    margin-left: -0.18rem;
+}
+.practiceWritingTit p>i {
+    color: #e9a944;
+    margin-left: 0.1rem;
+}
+.practiceWritingTit>div{
+    line-height: 0.5rem;
+    font-size: 0.26rem;
+    padding-top: 0.1rem;
+}
+.practiceWritingTit>div em{
+    margin-right: 0.2rem;
+}
+.practiceWritingDetail,.practiceWritingRequire{
+    padding:0.4rem;
+    font-size: 0.3rem;
+}
+.practiceWritingDetail p{
+    padding-bottom: 0.2rem;
+    line-height: 1.8;
+}
+.practiceWritingRequire img{
+    width: 1.9rem;
+}
+.practiceWritingRequire p{
+    padding-top: 0.1rem;
+    line-height: 1.8;
+}
+/*练笔二级列表样式*/
+.practiceWritingList{
+    padding:0.26rem;
+}
+.practiceWritingList .tit{
+    padding:0.2rem 0;
+    padding-bottom:0.4rem;
+}
+.practiceWritingList .tit img{
+    width: 3.8rem;
+}
+.practiceWritingList ul.writingIndexList li{
+    padding:0;
+}
+.practiceWritingList ul.writingIndexList li a{
+    padding: 0.26rem 0.37rem;
+    color: #333;
+}
+.practiceWritingList ul.writingIndexList li h3 img{
+    width: 0.4rem;
+    height: 0.4rem;
+    float: left;
+    border-radius: 100%;
+    margin-right: 0.1rem;
+}
+.practiceWritingList ul.writingIndexList li h3 span{
+    font-weight: 500;
+    font-size: 0.26rem;
+    color: #999;
+    margin-left: 0.2rem;
+}
+.practiceWritingList span.recommend{
+    font-size: 0.26rem;
+    padding-left: 0.5rem;
+    font-weight: bold;
+}
+.practiceWritingList span.first{
+    background:url("images/weekcap1.png") no-repeat left center;
+    background-size:0.4rem;
+    color: #f8d14b;
+}
+.practiceWritingList span.second{
+    background:url("images/weekcap2.png") no-repeat left center;
+    background-size:0.4rem;
+    color: #b9b9b9;
+}
+.practiceWritingList span.third{
+    background:url("images/weekcap3.png") no-repeat left center;
+    background-size:0.4rem;
+    color: #a7643f;
+}
+.practiceWritingList span.hot{
+    color: #ec7c64;
+}
+.practiceWritingList span.hot:before{
+    padding-right: 0.1rem;
+}
+.practiceWritingList ul.writingIndexList li .content{
+    padding-top: 0.2rem;
+    color: #666;
+}
+.practiceWritingList ul.writingIndexList li .pic{
+    padding-top: 0.2rem;
+}
+.practiceWritingList ul.writingIndexList li .pic img{
+    border-radius: 0.15rem;
+}
+/*底部操作栏*/
+.message_textarea_block {
+    height: 16vw;
+    width: 100%;
+}
+.footer_operation{
+    position: fixed;
+    bottom:0;
+    left:0;
+    width: 100%;
+    padding:3vw 0;
+    background-color: #fff;
+    box-shadow:0 0 2vw #dadada;
+    z-index: 9;
+}
+.footer_operation a{
+    display: block;
+    text-align: center;
+}
+.footer_operation a span{
+    color: #999999;
+    padding-left: 2vw;
+}
+.footer_operation a i{
+    font-size:5vw;
+    color: #666;
+}
+.footer_operation a:last-child{
+    padding-top:0.5vw;
+}
+.footer_operation a:last-child i{
+    font-size: 4.5vw;
+}
+.footer_reply i:before{
+    content:'\e60d';
+}
+.footer_reply i.footer_reply_on:before{
+    content:'\e60f';
+    color: #ff613c;
+}
+.footer_Collection i:before{
+    content:'\e651';
+}
+.footer_Collection .footer_Collection_on:before{
+    content:'\e639';
+    color: #ff613c;
+}
+.footer_operation a span.on {
+    color: #ff613c;
+}
+/**/
+#message_textarea{
+    width:20vw;
+    min-height:6vw;
+    line-height:6vw;
+    max-height:24vw;
+    outline: 0;
+    border:0;
+    font-size:3.6vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding:2vw;
+    -webkit-user-modify: read-write-plaintext-only;
+    background-color: #f6f6f6;
+    box-sizing: border-box;
+    border-radius:1vw;
+    width:84vw;
+}
+.message_textarea_box{
+    padding:2vw;
+    background-color: #fff;
+    position: fixed;
+    bottom:0;
+    left:0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index:10;
+    display: none;
+    box-shadow: 0 0 2vw #e6e6e6;
+}
+.message_textarea_Shelter{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.3;
+    z-index: 3;
+    display: none;
+    cursor: pointer;
+}
+#message_textarea:empty:before{
+    content: attr(placeholder);
+    color:#ccc;
+}
+#message_textarea:focus:before{
+    content:none;
+}
+.message_textarea_btn{
+    width:12vw;
+    text-align: center;
+}
+.message_textarea_btn button{
+    border:0;
+    background-color: #fff;
+    color: #ff5932;
+    outline: none;
+    font-size: 4vw;
+    padding:2vw 0;
+}
+.grouopBuyingLayer{
+    background-color: transparent!important;
+}
+.grouopBuyingLayer img{
+    width: 100%;
+}
+.grouopBuyingLayer .layui-m-layercont{
+    padding: 0!important;
+}
+/*练笔退回提示*/
+.practiceWritingTips{
+    background-color: #fefbf1;
+    border-bottom: 1px solid #fcefc7;
+    padding:0.2rem;
+    text-align: center;
+    color: #fcc007;
+}
+.practiceWritingTips i{
+    margin-right: 0.1rem;
+}
+.practiceWritingEdit{
+    -moz-box-flex: 3;
+    -webkit-box-flex: 3;
+    box-flex:3;
+    position: relative;
+}
+/*底部添加练笔按钮*/
+.footer_operation .practiceWritingEdit span{
+    background-image: linear-gradient(to left,#fe6d41,#fc594d);
+    display: block;
+    color: #fff;
+    line-height: 0.6rem;
+    border-radius: 0.8rem;
+    position: absolute;
+    top:0;
+    right:0.3rem;
+    width:75%;
+    padding-left: 0;
+}
+.footer_operation .practiceWritingEdit span:before{
+    padding-right: 0.1rem;
+}
+/**/
+.practiceWritingTitBor{
+    border-bottom: 0.2rem solid #f8f4f2;
+}
+/*留言*/
+.comment_tit{
+    background-color: #fff;
+    position: relative;
+    padding:0.26rem;
+    border-bottom: 1px solid #eee;
+}
+.comment_tit em{
+    position: absolute;
+    top:33%;
+    left:0;
+    width:0.08rem;
+    height:34%;
+    background-color: #ff5932;
+}
+.comment_tit a{
+    font-size:0.28rem;
+    color: #999;
+}
+.comment_tit a:before{
+    padding-right:0.1rem;
+    font-size:0.32rem;
+}
+.filter_btn{
+    color: #4f7ca5;
+}
+.comment_list{
+    background-color: #fff;
+}
+.comment_list dd{
+    padding:0.26rem;
+    border-top:1px solid #eee;
+}
+.comment_list dd:first-child{
+    border:0;
+}
+.comment_list_top{
+    position: relative;
+}
+.comment_list_top .pic{
+    width:0.8rem;
+    height:0.8rem;
+}
+.comment_list_top .pic img{
+    width:0.8rem;
+    height:0.8rem;
+    border-radius: 100%;
+}
+.comment_list_top .tit{
+    padding-top: 0.1rem;
+    padding-left: 0.2rem;
+    font-size: 0.32rem;
+}
+.comment_list_bottom{
+    padding-left:1rem;
+}
+.comment_list_bottom a{
+    display: block;
+    background-color: #f2f2f2;
+    color: #4f7ca5;
+    padding:0.05rem 0.2rem;
+    border-radius: 0.08rem;
+    margin-top: 0.1rem;
+}
+.comment_more {
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+    background-color: #fff;
+    padding:0.2rem;
+}
+.comment_more a{
+    font-size: 0.26rem;
+    color: #999;
+}
+.fabulous_reply{
+    right:0;
+    top:0.1rem;
+    position: absolute;
+}
+.fabulous_reply a{
+    color: #999999;
+    margin-right: 0.2rem;
+}
+.fabulous_reply a.reply:before {
+    content: "\e651";
+    padding-right:0.1rem;
+}
+.fabulous_reply a.reply_on{
+    color: #ff5932;
+}
+.fabulous_reply a.reply_on:before {
+    content: "\e639";
+}
+/*三级详情页面头部*/
+.practiceWritingUser{
+    padding:0.4rem;
+    padding-bottom: 0;
+}
+.practiceWritingUser .pic,.practiceWritingUser .pic img{
+    width:0.7rem;
+    height:0.7rem;
+    border: 3px solid #e3e3e3;
+    border-radius: 100%;
+}
+.practiceWritingUser .pic img{
+    border:0;
+}
+.practiceWritingUser .tit{
+    width: 4.5rem;
+    margin-left: 0.2rem;
+}
+.practiceWritingUser .tit span{
+    color: #999;
+    font-size: 0.26rem;
+    margin-left: 0.2rem;
+}
+.practiceWritingUser .tit em{
+    font-size: 0.28rem;
+    color: #999;
+}
+.practiceWritingUser .rank{
+    width: 0.6rem;
+    text-align: center;
+}
+.practiceWritingUser .rank img{
+    display: block;
+}
+.practiceWritingUser .rank span{
+    font-size: 0.26rem;
+    font-weight: bold;
+}
+.practiceWritingUser .first span{
+    color: #f8d14b;
+}
+.practiceWritingUser .second span{
+    color: #b9b9b9;
+}
+.practiceWritingUser .third span{
+    color: #a7643f;
+}
+.practiceWritingUser .hot span{
+    color: #ec7c64;
+}
+.practiceWritingUser .hot i{
+    font-size: 0.4rem;
+    color: #ec7c64;
+    line-height: 1;
+}
+/*相关练笔列表*/
+.practiceWritingRelevant ul.writingIndexList{
+    padding:0 0.2rem;
+}
+.practiceWritingRelevant ul.writingIndexList li{
+    box-shadow:none;
+    border-bottom: 1px solid #eee;
+    border-radius: 0;
+}
+.practiceWritingRelevant ul.writingIndexList li a{
+    padding:0.26rem 0;
+}
+.practiceWritingRelevant ul.writingIndexList span.recommend{
+    right:0;
+}
+/*弹窗样式*/
+.commTipsLayer {
+    border-radius:0.15rem!important;
+}
+.commTipsLayer .layui-m-layercont {
+    max-height: 70vh;
+    overflow: auto;
+    padding:0.4rem!important;
+    padding-bottom: 0!important;
+}
+.commTipsLayer .layui-m-layerbtn span[yes] {
+    border: thin solid #eb7621;
+    background-color: #eb7621;
+    color: #ffffff;
+}
+.commTipsLayer .layui-m-layerbtn span[no]{
+    border: thin solid #999;
+    color: #999;
+}
+.commTipsLayer .layui-m-layerbtn span{
+    margin: 0 0.3rem;
+    border-radius: 0.5rem!important;
+}
+.commTipsLayer .layui-m-layerbtn{
+    margin:0.3rem 0;
+    border: 0;
+    padding: 0 0.25rem;
+    height:0.7rem;
+    line-height:0.7rem;
+    box-sizing: border-box;
+    background-color:transparent;
+}
+/*展开收起规则*/
+.practiceWritingSwitch{
+    padding-bottom:0.26rem;
+}
+.practiceWritingSwitch a{
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #999;
+}
+.practiceWritingSwitch a:before{
+    content:'\e600';
+    padding-right: 0.1rem;
+}
+.practiceWritingSwitch a.active:before{
+    content:'\e601';
+}
+/*重置input*/
+.mui-checkbox {
+    width:0.3rem;
+    height:0.3rem;
+    background-color: #fff;
+    border: solid 1px #e0e0e0;
+    background-clip: padding-box;
+    display: inline-block;
+    border-radius:0.05rem;
+    -webkit-appearance: none;
+    outline: none;
+    resize: none;
+    overflow: hidden;
+}
+.mui-checkbox:checked {
+    background-color: #ff5933!important;
+    border: solid 1px #ff5933!important; }
+.mui-checkbox:disabled{
+    border-color: #eaeaea;
+    background: #eaeaea;
+}
+.mui-checkbox:checked:before {
+    height: -webkit-fill-available;
+    font-family: iconfont;
+    content: "\e607";
+    color: #FFFFFF;
+    font-size:0.22rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/*提交练笔*/
+.practiceWritingContribute{
+    margin:0.26rem;
+    border-radius: 0.15rem;
+    padding:0.26rem;
+    padding-top: 0;
+    border: 1px solid #eee;
+    /*box-shadow: 0 0 0.4rem rgba(51,51,51,0.1);*/
+}
+.freeContributeUl li {
+    padding-top: 0.3rem;
+}
+.freeContributeUl li.pseudonym{
+    line-height: 0.7rem;
+}
+.freeContributeUl li.pseudonym label{
+    font-size: 0.3rem;
+    color: #fd9308;
+}
+.freeContributeUl li.pseudonym label input{
+    vertical-align: text-bottom;
+    margin-right: 0.1rem;
+}
+.freeContributeUl li.pseudonym>input{
+    -webkit-appearance: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    height: 0.7rem;
+    width:70%;
+    padding: 0 0.2rem;
+    background-color: transparent;
+    box-sizing: border-box;
+    font-size: 0.3rem;
+    border:1px solid #eee;
+    float: right;
+    border-radius: 0.08rem;
+}
+.freeContributeUl .tit {
+    padding-bottom: 0.15rem;
+}
+.freeContributeUl .tit strong {
+    font-size: 0.32rem;
+    font-weight: 500;
+}
+.freeContributeUl .content {
+    border: 1px solid #eee;
+    border-radius: 0.1rem;
+    position: relative;
+    overflow: hidden;
+}
+.freeContributeUl .content input, .freeContributeUl .content select, .freeContributeUl .content textarea {
+    -webkit-appearance: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    height: 0.7rem;
+    width: 100%;
+    padding: 0 0.2rem;
+    background-color: transparent;
+    box-sizing: border-box;
+    font-size: 0.3rem;
+}
+.upPic a.upPicBtn {
+    display: block;
+    border: 1px dashed #fde8cc;
+    background-color: #fdf8f1;
+    color: #fd9308;
+    text-align: center;
+    line-height: 0.6rem;
+}
+.freeContributeUl .tit a {
+    float: right;
+    font-size: 0.28rem;
+    color: #f54c45;
+}
+.freeContributeUl .content textarea {
+    height: 4rem;
+    padding: 0.2rem;
+}
+.freeContributeUl .content p {
+    line-height: 0.8rem;
+    text-align: right;
+    padding-right: 0.3rem;
+    font-size: 0.26rem;
+    color: #999;
+}
+.freeContributeUl .content p i {
+    color: #dc5e48;
+}
+/*补全信息*/
+.complementInformation{
+    margin:0.4rem 0.22rem;
+    background-color: #f7f2f1;
+    border:1px solid #f54c45;
+    border-radius: 0.16rem;
+    padding:0.2rem 0.4rem;
+    padding-bottom: 0.4rem;
+}
+.complementInformation>p{
+    color: #999;
+    font-size: 0.28rem;
+}
+.complementInformationUl li{
+    line-height: 0.7rem;
+    margin-top: 0.3rem;
+}
+.complementInformationUl li>span{
+    float: left;
+    width:16%;
+    text-align: right;
+    padding-right: 2%;
+    font-size: 0.32rem;
+}
+.complementInformationUl li>.inputBox{
+    width: 80%;
+    float: left;
+    background-color: #fff;
+    border-radius: 0.1rem;
+    border:1px solid #eee;
+    position: relative;
+    box-sizing: border-box;
+    height: 0.7rem;
+}
+.complementInformationUl li>.inputBox i{
+    position: absolute;
+    right:0.2rem;
+    top:0;
+    height: 100%;
+    pointer-events: none;
+    color: #999;
+}
+.complementInformationUl li>.inputBox input,.complementInformationUl li>.inputBox select{
+    width: 100%;
+    padding:0 0.2rem;
+    padding-right: 0.6rem;
+    box-sizing: border-box;
+    height: -webkit-fill-available;
+    background-color:transparent;
+    -webkit-appearance: none;
+    border:0;
+    outline: none;
+    resize: none;
+    font-size: 0.28rem;
+}
+.schoolPulldown{
+    position: absolute;
+    top:0.55rem;
+    padding-top: 0.2rem;
+    left:-1px;
+    width: 100%;
+    background-color: #fff;
+    border:1px solid #eee;
+    border-top:0;
+    z-index: 2;
+    border-radius: 0 0 0.1rem 0.1rem;
+}
+.schoolPulldown dl{
+    max-height: 2.8rem;
+    overflow: auto;
+    border-bottom:1px solid #eee;
+}
+.schoolPulldown dl dd{
+    border-top:1px solid #eee;
+}
+.schoolPulldown dl dd:first-child{
+}
+.schoolPulldown dl dd a{
+    display: block;
+    color: #333;
+    line-height: 0.4rem;
+    padding:0.15rem 0.2rem;
+}
+.notFoundSchool{
+    font-size: 0.24rem;
+    color: #f00;
+    text-decoration: underline;
+    padding-left: 0.2rem;
+}
+.notFoundSchoolText{
+    width: 100%;
+    padding:0.2rem;
+    border:1px solid #eee;
+    box-sizing: border-box;
+    height:1.2rem;
+    resize: none;
+    outline: none;
+    display: block;
+    border-radius: 0.1rem;
+}
+.editSchool{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    border:1px solid #d9d9d9;
+    border-radius: 0.1rem;
+    padding-left: 0.2rem;
+    box-sizing: border-box;
+    line-height: 0.6rem;
+}
+.editSchool a{
+    float: right;
+    margin-right: 0.2rem;
+    color: #999;
+}
+.practiceWritingContributeB a{
+    display: inline-block;
+    background-image: linear-gradient(to left,#de6751,#ea8c59);
+    color: #fff;
+    width: 40%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    border-radius: 0.8rem;
+    font-size: 0.34rem;
+    margin-bottom:0.5rem;
+}

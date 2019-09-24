@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <title>个人中心</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1258756_i9a1gb6s4rf.css"><!--PC个人中心改版2019-2019-07-10-->
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="css/photoClip.css" />
+    <link rel="stylesheet" href="css/personalCenter.css">
+    <link rel="stylesheet" href="css/teacherCenter.css">
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css"/>
+    <script>/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <script src="layui/layui.js"></script>
+    <script src="photoClip/iscroll-zoom.js"></script>
+    <script src="photoClip/hammer.js"></script>
+    <script src="photoClip/jquery.photoClip.js"></script>
+</head>
+<body>
+<!--轮播图-->
+<style type="text/css">
+    .swiper-container_box{
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .swiper-container .swiper-pagination-zq {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+        text-align: center;
+    }
+</style>
+<div class="swiper-container_box">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img onclick="adv_go('http://www.365xuet.com/xueT/courseIndex?series_id=7')" src="upfile/2.jpg"></div>
+            <div class="swiper-slide"><img onclick="adv_go('http://v2.365xuet.com/xueT/courseIndex?series_id=4')" src="upfile/2.jpg"></div>
+        </div>
+        <div class="swiper-pagination-zq"></div>
+    </div>
+</div>
+<script>
+    $(function () {
+        var mySwiper = new Swiper('.swiper-container_box .swiper-container', {
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination-zq',
+                clickable: true,
+            },
+            lazy: {
+                loadPrevNext: true,
+            },
+        })
+    })
+    function adv_go(url){
+        window.location.href = url;
+    }
+</script>
+<!-- 通用标题 -->
+<div class="personalTitle clearfix">
+    <h3>资料设置</h3>
+    <!--滚动通知-->
+    <div class="rollingNotification right">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/courseIndex?tab=4" class="iconfont icon-xiaolaba">写作思路打不开？快来围观写作任务群!</a></div>
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/seriesCourseDetail/955" class="iconfont icon-xiaolaba">听故事学语文，点此免费试听~</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bgWhite radius15 borderThinE mt13 teacherDataSettings layui-form">
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">基本资料</li>
+            <li>身份认证</li>
+            <li>入驻班级</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show dataSettingsBox">
+                <div class="dataSettings clearfix">
+                    <div class="dataSettingsLeft left">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">姓名：</label>
+                                <div class="layui-input-inline name">
+                                    <input type="text" class="layui-input" placeholder="请输入姓名">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">性别：</label>
+                                <div class="layui-input-inline sex">
+                                    <select>
+                                        <option value="1">男</option>
+                                        <option value="2">女</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">教龄：</label>
+                                <div class="layui-input-inline teachingAge">
+                                    <input type="text" class="layui-input tac">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item region">
+                            <label class="layui-form-label">地区：</label>
+                            <div class="layui-input-inline">
+                                <select>
+                                    <option value="">请选择省</option>
+                                    <option value="浙江" selected="">浙江省</option>
+                                </select>
+                            </div>
+                            <div class="layui-input-inline">
+                                <select>
+                                    <option value="">请选择市</option>
+                                    <option value="杭州">杭州</option>
+                                </select>
+                            </div>
+                            <div class="layui-input-inline">
+                                <select>
+                                    <option value="">请选择县/区</option>
+                                    <option value="西湖区">西湖区</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-form-item school">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">学校：</label>
+                                <div class="layui-input-inline schoolInput">
+                                    <input type="text" class="layui-input" id="searchSchool" placeholder="请输入姓名">
+                                    <div class="editSchool tar"><span class="fz16 left">彩香实验中学</span><a class="iconfont icon-guanbi" href="javascript:;"></a></div>
+                                    <div class="schoolPulldown hide">
+                                        <dl>
+                                            <dd><a href="javascript:;">彩香实验中学</a></dd>
+                                            <dd><a href="javascript:;">彩香实验中学</a></dd>
+                                            <dd><a href="javascript:;">彩香实验中学</a></dd>
+                                            <dd><a href="javascript:;">彩香实验中学</a></dd>
+                                            <dd><a href="javascript:;">彩香实验中学</a></dd>
+                                        </dl>
+                                        <p><a class="notFoundSchool red2" href="javascript:;">找不到我的学校？</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        //找不到学校弹出
+                        $('.notFoundSchool').click(function () {
+                            layer.open({
+                                type: 1,
+                                title:'输入学校名称',
+                                skin: 'layerCommBox',
+                                area:'350px',
+                                btn:'确定',
+                                content:'<textarea class="notFoundSchoolText" placeholder="请输入您所在学校的完整名称"></textarea>'
+                            });
+                        });
+                        //学校搜索
+                        $('#searchSchool').focus(function(){
+                            $('.schoolPulldown').show();
+                        })
+                        $(document).on('click', '.editSchool a', function () {
+                            $(this).parent().remove();
+                        })
+                    </script>
+                    <div class="dataSettingsPic left">
+                        <div class="upPic">
+                            <p class="tac"><a class="upPicBtn textDecorationU white" href="javascript:;">更换头像</a></p>
+                            <span></span>
+                            <div id="logox"><img id="bgl" src=""></div>
+                        </div>
+                        <div class="uploadedPic">
+                            <article class="htmleaf-container">
+                                <div class="clipAreaTit">上传头像<em class="iconfont icon-guanbi right gray9 cup"></em></div>
+                                <div id="clipArea"></div>
+                                <div class="foot-use clearfix">
+                                    <div class="uploader1 blue">
+                                        <input type="button" name="file" class="button" value="打开">
+                                        <input id="file" type="file" accept="image/*" multiple  />
+                                    </div>
+                                    <button id="clipBtn">截取</button>
+                                </div>
+                                <div id="view"></div>
+                            </article>
+                            <div class="fade_layer"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dataSettingsTextarea">
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">简介：</label>
+                        <div class="layui-input-block">
+                            <textarea placeholder="请输入简介" class="layui-textarea"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="dataSettingsBtn tac"><button class="btn white bgRed3">确定</button></div>
+            </div>
+            <div class="layui-tab-item">
+                <div class="identityAuthenticationBox">
+                    <p class="gray9 fz16">身份认证</p>
+                    <div class="identityAuthentication clearfix">
+                        <div class="itemBox">
+                            <div class="item">
+                                <div class="imgBox"onclick="clickImg(this);" ><i class="iconfont icon-shangchuan"></i><p class="white">重新上传</p><span>未通过</span></div>
+                                <div class="imgBoxlay"></div>
+                                <input name="url" type="file" class="upload_input" onchange="change(this)">
+                                <div class="preBlock">
+                                    <img class="preview" alt="" src="upfile/1.png" name="pic" width="290" height="190">
+                                </div>
+                            </div>
+                            <p class="red2">未通过原因：身份证背面太过模糊身份证背面太过模糊身份证背面太过模糊身份证背面太过模糊</p>
+                        </div>
+                        <div class="itemBox">
+                            <div class="item">
+                                <span>已通过</span>
+                                <div class="imgBoxlay"></div>
+                                <div class="preBlock">
+                                    <img class="preview" alt="" src="upfile/1.png" name="pic" width="290" height="190">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="gray9 fz16">教师资格证</p>
+                    <div class="identityAuthentication clearfix">
+                        <div class="itemBox">
+                            <div class="item">
+                                <div class="imgBox"onclick="clickImg(this);" ><img src="images/uploadIco.png"><p class="gray9">上传身份证正面</p></div>
+                                <input name="url" type="file" class="upload_input" onchange="change(this)">
+                                <div class="preBlock">
+                                    <img class="preview" alt="" name="pic" width="290" height="190">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="itemBox">
+                            <div class="item">
+                                <div class="imgBox"onclick="clickImg(this);" ><img src="images/uploadIco.png"><p class="gray9">上传身份证反面</p></div>
+                                <input name="url" type="file" class="upload_input" onchange="change(this)">
+                                <div class="preBlock">
+                                    <img class="preview" alt="" name="pic" width="290" height="190">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dataSettingsBtn tac"><button class="btn white bgRed3">提交</button></div>
+                </div>
+            </div>
+            <div class="layui-tab-item joinClassBox">
+                <div class="joinClassTop fz16">
+                    <div class="layui-inline grade">
+                        <label class="layui-form-label">年级</label>
+                        <div class="layui-input-inline">
+                            <select>
+                                <option value="">请选择年级</option>
+                                <option value="一年级">一年级</option>
+                                <option value="二年级">二年级</option>
+                                <option value="三年级">三年级</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-inline class">
+                        <label class="layui-form-label">班级</label>
+                        <div class="layui-input-inline">
+                            <select>
+                                <option value="">请选择班级</option>
+                                <option value="1班">1班</option>
+                                <option value="2班">2班</option>
+                                <option value="3班">3班</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="joinClassTopBtn"><a href="javascript:;" class="iconfont icon-add1">添加</a></div>
+                </div>
+                <ul class="joinClassMain clearfix">
+                    <li><span>五年级4班</span><em class="iconfont icon-guanbi"></em></li>
+                    <li><span>五年级4班</span><em class="iconfont icon-guanbi"></em></li>
+                    <li><span>五年级4班</span><em class="iconfont icon-guanbi"></em></li>
+                    <li><span>五年级4班</span><em class="iconfont icon-guanbi"></em></li>
+                    <li><span>五年级4班</span><em class="iconfont icon-guanbi"></em></li>
+                    <li><span>五年级4班</span><em class="iconfont icon-guanbi"></em></li>
+                    <li><span>五年级4班</span><em class="iconfont icon-guanbi"></em></li>
+                    <li><span>五年级4班</span><em class="iconfont icon-guanbi"></em></li>
+                    <li><span>五年级4班</span><em class="iconfont icon-guanbi"></em></li>
+                </ul>
+                <p class="tac"><button class="btn white bgRed3">提交</button></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    /**
+     * 身份认证
+     * **/
+    //点击
+    var clickImg = function(obj){
+        $(obj).parent().find('.upload_input').click();
+    }
+    //选择图片
+    function change(file) {
+        //预览
+        var pic = $(file).parent().find(".preview");
+        //添加按钮
+        var imgBox = $(file).parent().find(".imgBox");
+        var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
+        // gif在IE浏览器暂时无法显示
+        if(ext!='png'&&ext!='jpg'&&ext!='jpeg'){
+            if (ext != '') {
+                alert("图片的格式必须为png或者jpg或者jpeg格式！");
+            }
+            return;
+        }
+        //判断IE版本
+        var isIE = navigator.userAgent.match(/MSIE/)!= null,
+            isIE6 = navigator.userAgent.match(/MSIE 6.0/)!= null;
+        isIE10 = navigator.userAgent.match(/MSIE 10.0/)!= null;
+        if(isIE && !isIE10) {
+            file.select();
+            var reallocalpath = document.selection.createRange().text;
+            // IE6浏览器设置img的src为本地路径可以直接显示图片
+            if (isIE6) {
+                pic.attr("src",reallocalpath);
+            }else{
+                // 非IE6版本的IE由于安全问题直接设置img的src无法显示本地图片，但是可以通过滤镜来实现
+                pic.css("filter","progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale',src=\"" + reallocalpath + "\")");
+                // 设置img的src为base64编码的透明图片 取消显示浏览器默认图片
+                pic.attr('src','data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+            }
+            imgBox.hide();
+        }else {
+            html5Reader(file,pic,imgBox);
+        }
+    }
+    //H5渲染
+    function html5Reader(file,pic,imgBox){
+        var file = file.files[0];
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function(e){
+            pic.attr("src",this.result);
+        }
+        imgBox.html('<i class="iconfont icon-shangchuan"></i><p class="white">重新上传</p>');
+        imgBox.after('<div class="imgBoxlay"></div>')
+    }
+    $(function () {
+        layui.use(['form','element','layer','upload'], function() {
+            var form = layui.form,
+                upload = layui.upload,
+                element = layui.element,
+                layer = layui.layer;
+        })
+        //添加班级
+        $('.joinClassTopBtn a').click(function () {
+            var gradeVal = $(this).parent().prevAll('.grade').find('input').val();
+            var classVal = $(this).parent().prevAll('.class').find('input').val();
+            var addGrade = '<li><span>'+gradeVal+classVal+'</span><em class="iconfont icon-guanbi"></em></li>';
+            if(gradeVal == ''){
+                alert('请选择年级');
+                return;
+            }
+            if(classVal == ''){
+                alert('请选择班级');
+                return;
+            }
+            $('.joinClassMain').append(addGrade);
+        })
+        $(document).on('click','.joinClassMain em',function () {
+            $(this).parent().remove();
+        })
+        //图片裁剪
+        $("#clipArea").photoClip({
+            width:300,
+            height:300,
+            file: "#file",
+            view: "#view",
+            ok: "#clipBtn",
+            loadStart: function() {
+                console.log("照片读取中");
+            },
+            loadComplete: function() {
+                console.log("照片读取完成");
+            },
+            clipFinish: function(dataURL) {
+                console.log(dataURL);//图片路径
+            }
+        });
+        $(".clipAreaTit ").click(function(){
+            $(".htmleaf-container,.uploadedPic,.fade_layer").hide();
+        })
+        $(".upPicBtn").click(function(){
+            $(".htmleaf-container,.uploadedPic,.fade_layer").show();
+        })
+        $("#clipBtn").click(function(){
+            $("#logox").empty();
+            $('#logox').append('<img src="'+ imgsource + '" align="absmiddle" >');
+            if($("#logox").find('img').attr("src").length!=0){
+                $(".htmleaf-container,.fade_layer").hide();
+            }
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <title>个人中心</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1258756_3pvjglell3g.css"><!--PC个人中心改版2019-2019-06-29-->
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="css/photoClip.css" />
+    <link rel="stylesheet" href="css/personalCenter.css">
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css"/>
+    <script>/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <script src="layui/layui.js"></script>
+    <script src="photoClip/iscroll-zoom.js"></script>
+    <script src="photoClip/hammer.js"></script>
+    <script src="photoClip/jquery.photoClip.js"></script>
+    <script src="js/html2canvas.min.js"></script>
+</head>
+<body>
+<!--轮播图-->
+<style type="text/css">
+    .swiper-container_box{
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .swiper-container .swiper-pagination-zq {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+        text-align: center;
+    }
+</style>
+<div class="swiper-container_box">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img onclick="adv_go('http://www.365xuet.com/xueT/courseIndex?series_id=7')" src="upfile/2.jpg"></div>
+            <div class="swiper-slide"><img onclick="adv_go('http://v2.365xuet.com/xueT/courseIndex?series_id=4')" src="upfile/2.jpg"></div>
+        </div>
+        <div class="swiper-pagination-zq"></div>
+    </div>
+</div>
+<script>
+    $(function () {
+        var mySwiper = new Swiper('.swiper-container_box .swiper-container', {
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination-zq',
+                clickable: true,
+            },
+            lazy: {
+                loadPrevNext: true,
+            },
+        })
+    })
+    function adv_go(url){
+        window.location.href = url;
+    }
+</script>
+<!-- 通用标题 -->
+<div class="personalTitle clearfix">
+    <h3>我的荣誉</h3>
+    <!--滚动通知-->
+    <div class="rollingNotification right">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/courseIndex?tab=4" class="iconfont icon-xiaolaba">写作思路打不开？快来围观写作任务群!</a></div>
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/seriesCourseDetail/955" class="iconfont icon-xiaolaba">听故事学语文，点此免费试听~</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    #capture{
+        width: 2480px;
+        height: 3508px;
+        position: absolute;
+        right: 2480px;
+        padding: 80px;
+        top:0;
+    }
+    #capture>img{
+        width: 50%;
+    }
+    #capture .titIco{
+        position: absolute;
+        top: 450px;
+        left:0;
+        width: 100%;
+        text-align: center;
+    }
+    #capture .titIco .ico img{
+        width: 413px;
+        height: 169px;
+    }
+    #capture .tit{
+        margin-top: 150px;
+    }
+    #capture .tl{
+        position: absolute;
+        left:0;
+        top:0;
+    }
+    #capture .tr{
+        transform:scaleX(-1);
+        position: absolute;
+        right:0;
+        top:0;
+    }
+    #capture .bl{
+        transform:scaleX(-1) rotate(180deg);
+        position: absolute;
+        left:0;
+        bottom:0;
+    }
+    #capture .br{
+        transform:rotate(180deg);
+        position: absolute;
+        right:0;
+        bottom:0;
+    }
+    #capture .content{
+        position: absolute;
+        top:1500px;
+        left: 400px;
+        font-size: 80px;
+        width:1680px;
+        line-height:160px;
+    }
+    #capture .content h3{
+        font-weight: 500;
+        padding-bottom: 50px;
+    }
+    #capture .content span{
+        padding:0 20px;
+    }
+    #capture .content p{
+        text-indent:2em;
+        padding-bottom: 100px;
+    }
+    #capture .content {
+        position: absolute;
+        top: 1330px;
+        left:515px;
+        width: 1600px;
+    }
+    .date_Sign_box .code{
+        position: absolute;
+        left: 470px;
+        bottom: 450px;
+    }
+    .date_Sign_box{
+        position: absolute;
+        bottom:0;
+        left:0;
+        width: 100%;
+        height: 600px;
+        font-size: 72px;
+    }
+    .date_Sign_box .date_Sign{
+        position: absolute;
+        right: 440px;
+        bottom: 620px;
+        color: #3b2a16;
+        text-align: center;
+    }
+    .date{
+        font-size: 56px;
+    }
+    #capture .date_Sign_box>img{
+        width: 536px;
+        height: 536px;
+        position: absolute;
+        right: 500px;
+        bottom:450px;
+    }
+</style>
+<div class="bgWhite radius15 borderThinE mt13 hidden">
+    <!--生成图片的div-->
+    <div id="capture">
+        <img class="tl" src="images/teacherCert/bg.jpg" alt="">
+        <img class="tr" src="images/teacherCert/bg.jpg" alt="">
+        <img class="bl" src="images/teacherCert/bg.jpg" alt="">
+        <img class="br" src="images/teacherCert/bg.jpg" alt="">
+        <div class="titIco">
+            <div class="ico"><img src="images/teacherCert/logo.png" alt=""></div>
+            <div class="tit"><img src="images/teacherCert/guidanceTit.png" alt=""></div>
+        </div>
+        <div class="content">
+            <h3><span>某某某</span>老师：</h3>
+            <p>您学生 <span>  某某某  </span>的作文《作文名称作文名称》经您悉心指导，已发表成功。祝贺您获得“优秀指导老师”荣誉称号。</p><!--特级-->
+            <p>写作路上，我们一起前行！</p>
+        </div>
+        <div class="date_Sign_box clearfix">
+            <div class="code"><img src="images/teacherCert/code.jpg" alt=""></div>
+            <div class="date_Sign">
+                <div id="sign">365学堂写作研究院</div>
+                <div class="date"><span id="year">二〇一九</span>年 <span id="month">八</span>月 <span id="day">二十三</span>日</div>
+            </div>
+            <img src="images/teacherCert/Seal2.png" alt="">
+        </div>
+    </div>
+    <ul class="myTabUl">
+        <li><a href="老师我的荣誉.html" target="iFrame1" class="gray9">班级导师证书</a></li>
+        <li class="active">作文指导证书</li>
+    </ul>
+    <ul class="certificateUl teacherCertificateUl clearfix">
+        <li class="clearfix">
+            <div class="pic left"><img src="images/teacherCert/guidanceCertificateIco.png" alt=""></div>
+            <div class="tit left">
+                <p class="tar clearfix"><strong class="left fz16">优秀指导老师证书</strong><em class="gray9">2019-08-12</em></p>
+                <p class="tar clearfix"><span class="gray9 left spilloverEllipsis2">您的学生 某某某 的作文获得发表</span><a class="blue viewCertificates" href="javascript:;">查看详情</a></p>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--弹出证书-->
+<div class="capturePop tac hide">
+    <em class="iconfont icon-guanbi close"></em>
+    <img class="capture" src="" alt="">
+    <a id="downImg" onclick="captureScreenshot()">保存图片</a>
+</div>
+</body>
+<script>
+    function base64Img2Blob(code){
+        var parts = code.split(';base64,');
+        var contentType = parts[0].split(':')[1];
+        var raw = window.atob(parts[1]);
+        var rawLength = raw.length;
+        var uInt8Array = new Uint8Array(rawLength);
+        for (var i = 0; i < rawLength; ++i) {
+            uInt8Array[i] = raw.charCodeAt(i);
+        }
+        return new Blob([uInt8Array], {type: contentType});
+    }
+    function captureScreenshot(){
+        html2canvas(document.querySelector("#capture")).then(canvas => {
+            var aLink = document.getElementById('downImg');
+            $(aLink).removeAttr('onclick');
+            var blob = base64Img2Blob(canvas.toDataURL("image/png")); //new Blob([content]);
+            aLink.download = '荣誉证书.png';
+            aLink.href = URL.createObjectURL(blob);
+            aLink.click();
+        })
+    }
+    $(function () {
+        html2canvas(document.querySelector("#capture"),{scale:1}).then(canvas => {
+            var src=canvas.toDataURL();
+            $('.capture').attr('src',src);
+        }).then(function () {
+            $('.viewCertificates').click(function () {
+                layer.open({
+                    type: 1,
+                    closeBtn: 0,
+                    anim: 2,
+                    skin:'layerCommTransparent',
+                    title:false,
+                    shadeClose: true,
+                    area:'500px',
+                    content:$('.capturePop'),
+                    success:function () {
+                        $('.close').click(function () {
+                            layer.closeAll();
+                        })
+                    }
+                });
+            })
+        });
+        layui.use(['form','element','layer'], function() {
+            var form = layui.form,
+                element = layui.element,
+                layer = layui.layer;
+        })
+        //通知滚动
+        var swiper = new Swiper('.rollingNotification .swiper-container', {
+            loop: true,
+            direction: 'vertical',
+            slidesPerView: 1,
+            autoplay: {
+                delay: 2000,
+            }
+        });
+    })
+</script>
+</html>

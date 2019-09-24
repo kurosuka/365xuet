@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <title>个人中心</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1258756_xpn2pz8eze.css"><!--PC个人中心改版2019-2019-07-03-->
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/personalCenter.css">
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css"/>
+    <script>/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <script src="layui/layui.js"></script>
+</head>
+<body>
+<!--轮播图-->
+<style type="text/css">
+    .swiper-container_box{
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .swiper-container .swiper-pagination-zq {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+        text-align: center;
+    }
+</style>
+<div class="swiper-container_box">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img onclick="adv_go('http://www.365xuet.com/xueT/courseIndex?series_id=7')" src="upfile/2.jpg"></div>
+            <div class="swiper-slide"><img onclick="adv_go('http://v2.365xuet.com/xueT/courseIndex?series_id=4')" src="upfile/2.jpg"></div>
+        </div>
+        <div class="swiper-pagination-zq"></div>
+    </div>
+</div>
+<script>
+    $(function () {
+        var mySwiper = new Swiper('.swiper-container_box .swiper-container', {
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination-zq',
+                clickable: true,
+            },
+            lazy: {
+                loadPrevNext: true,
+            },
+        })
+    })
+    function adv_go(url){
+        window.location.href = url;
+    }
+</script>
+<!-- 通用标题 -->
+<div class="personalTitle clearfix">
+    <h3>我的卡包</h3>
+    <!--滚动通知-->
+    <div class="rollingNotification right">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/courseIndex?tab=4" class="iconfont icon-xiaolaba">写作思路打不开？快来围观写作任务群!</a></div>
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/seriesCourseDetail/955" class="iconfont icon-xiaolaba">听故事学语文，点此免费试听~</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="classWritingListBox clearfix bgWhite radius15 borderThinE mt13">
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">可使用</li>
+            <li>已使用</li>
+            <li>已过期</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+               <ul class="cardVoucherBoxUl clearfix">
+                   <li class="clearfix xzzx">
+                       <div class="left pic"><img src="images/cardVoucherIco/writing_ico.png" alt=""></div>
+                       <div class="left tit">
+                           <div class="in">
+                               <p class="fz16">写作咨询券</p>
+                               <p class="fz12 red">可免费咨询一次写作问题</p>
+                           </div>
+                           <p class="fz12 gray9">有效期:2019.03.15-2019.09.13</p>
+                           <a href="">立即使用</a>
+                       </div>
+                   </li>
+                   <li class="clearfix ydy">
+                       <div class="left pic"><img src="images/cardVoucherIco/Coach_ico.png" alt=""></div>
+                       <div class="left tit">
+                           <div class="in">
+                               <p class="fz16">一对一辅导券</p>
+                               <p class="fz12 red">可免费获得一对一辅导一次</p>
+                           </div>
+                           <p class="fz12 gray9">有效期:2019.03.15-2019.09.13</p>
+                           <a href="">立即使用</a>
+                       </div>
+                   </li>
+                   <li class="clearfix kc">
+                       <div class="left pic"><img src="images/cardVoucherIco/courseExchange_ico.png" alt=""></div>
+                       <div class="left tit">
+                           <div class="in">
+                               <p class="fz16">课程兑换券</p>
+                               <p class="fz12 red">可免费兑换课程一套</p>
+                           </div>
+                           <p class="fz12 gray9">有效期:2019.03.15-2019.09.13</p>
+                           <a href="">立即使用</a>
+                       </div>
+                   </li>
+                   <li class="clearfix tg">
+                       <div class="left pic"><img src="images/cardVoucherIco/submissionVoucher_ico.png" alt=""></div>
+                       <div class="left tit">
+                           <div class="in">
+                               <p class="fz16">投稿券</p>
+                               <p class="fz12 red">额外增加一次投稿机会</p>
+                           </div>
+                           <p class="fz12 gray9">有效期:2019.03.15-2019.09.13</p>
+                           <a href="">立即使用</a>
+                       </div>
+                   </li>
+                   <li class="clearfix jp">
+                       <div class="left pic"><img src="images/cardVoucherIco/fineReview_ico.png" alt=""></div>
+                       <div class="left tit">
+                           <div class="in">
+                               <p class="fz16">作文精批券</p>
+                               <p class="fz12 red">可获得一次修改指导和一次精细点评</p>
+                           </div>
+                           <p class="fz12 gray9">有效期:2019.03.15-2019.09.13</p>
+                           <a href="">立即使用</a>
+                       </div>
+                   </li>
+                   <li class="clearfix dj_bg">
+                       <div class="left pic"><strong>20元<br/>代金券</strong></div>
+                       <div class="left tit">
+                          <div class="in">
+                              <p class="fz16">20元代金券</p>
+                              <p class="fz12 red">无门槛20元代金券，不找零、不兑现</p>
+                          </div>
+                           <p class="fz12 gray9">有效期:2019.03.25-2024.10.15</p>
+                           <a href="">立即使用</a>
+                       </div>
+                   </li>
+                   <li class="clearfix dj_bg">
+                       <div class="left pic"><strong>5元<br/>代金券</strong></div>
+                       <div class="left tit">
+                           <div class="in">
+                               <p class="fz16">5元代金券</p>
+                               <p class="fz12 red">无门槛5元代金券，不找零、不兑现</p>
+                           </div>
+                           <p class="fz12 gray9">有效期:2019.03.25-2024.10.15</p>
+                           <a href="">立即使用</a>
+                       </div>
+                   </li>
+                   <li class="clearfix js">
+                       <div class="left pic"><img src="images/cardVoucherIco/commentAccelerate_ico.png" alt=""></div>
+                       <div class="left tit">
+                           <div class="in">
+                               <p class="fz16">点评加速券</p>
+                               <p class="fz12 red">2个工作日内完成作文点评</p>
+                           </div>
+                           <p class="fz12 gray9">有效期:2019.03.25-2024.10.15</p>
+                           <a href="">立即使用</a>
+                       </div>
+                   </li>
+               </ul>
+            </div>
+            <div class="layui-tab-item">
+                <ul class="cardVoucherBoxUl useOverdue clearfix">
+                    <li class="clearfix xzzx">
+                        <div class="left pic"><img src="images/cardVoucherIco/writing_ico.png" alt=""></div>
+                        <div class="left tit">
+                            <div class="in">
+                                <p class="fz16">作文精批券</p>
+                                <p class="fz12 red">可获得一次修改指导和一次精细点评</p>
+                            </div>
+                            <p class="fz12 gray9">有效期:2019.03.15-2019.09.13</p>
+                            <span>已使用</span>
+                        </div>
+                    </li>
+                    <li class="clearfix ydy">
+                        <div class="left pic"><img src="images/cardVoucherIco/Coach_ico.png" alt=""></div>
+                        <div class="left tit">
+                            <div class="in">
+                                <p class="fz16">作文精批券</p>
+                                <p class="fz12 red">可获得一次修改指导和一次精细点评</p>
+                            </div>
+                            <p class="fz12 gray9">有效期:2019.03.15-2019.09.13</p>
+                            <span>已使用</span>
+                        </div>
+                    </li>
+                    <li class="clearfix kc">
+                        <div class="left pic"><img src="images/cardVoucherIco/courseExchange_ico.png" alt=""></div>
+                        <div class="left tit">
+                            <div class="in">
+                                <p class="fz16">作文精批券</p>
+                                <p class="fz12 red">可获得一次修改指导和一次精细点评</p>
+                            </div>
+                            <p class="fz12 gray9">有效期:2019.03.15-2019.09.13</p>
+                            <span>已使用</span>
+                        </div>
+                    </li>
+                    <li class="clearfix tg">
+                        <div class="left pic"><img src="images/cardVoucherIco/submissionVoucher_ico.png" alt=""></div>
+                        <div class="left tit">
+                            <div class="in">
+                                <p class="fz16">投稿券</p>
+                                <p class="fz12 red">额外增加一次投稿机会</p>
+                            </div>
+                            <p class="fz12 gray9">有效期:2019.03.15-2019.09.13</p>
+                            <span>已使用</span>
+                        </div>
+                    </li>
+                    <li class="clearfix jp">
+                        <div class="left pic"><img src="images/cardVoucherIco/fineReview_ico.png" alt=""></div>
+                        <div class="left tit">
+                            <div class="in">
+                                <p class="fz16">作文精批券</p>
+                                <p class="fz12 red">可获得一次修改指导和一次精细点评</p>
+                            </div>
+                            <p class="fz12 gray9">有效期:2019.03.15-2019.09.13</p>
+                            <span>已使用</span>
+                        </div>
+                    </li>
+                    <li class="clearfix dj_bg">
+                        <div class="left pic"><strong>20元<br/>代金券</strong></div>
+                        <div class="left tit">
+                            <div class="in">
+                                <p class="fz16">20元代金券</p>
+                                <p class="fz12 red">无门槛20元代金券，不找零、不兑现</p>
+                            </div>
+                            <p class="fz12 gray9">有效期:2019.03.25-2024.10.15</p>
+                            <span>已使用</span>
+                        </div>
+                    </li>
+                    <li class="clearfix dj_bg">
+                        <div class="left pic"><strong>5元<br/>代金券</strong></div>
+                        <div class="left tit">
+                            <div class="in">
+                                <p class="fz16">5元代金券</p>
+                                <p class="fz12 red">无门槛5元代金券，不找零、不兑现</p>
+                            </div>
+                            <p class="fz12 gray9">有效期:2019.03.25-2024.10.15</p>
+                            <span>已使用</span>
+                        </div>
+                    </li>
+                    <li class="clearfix js">
+                        <div class="left pic"><img src="images/cardVoucherIco/commentAccelerate_ico.png" alt=""></div>
+                        <div class="left tit">
+                            <div class="in">
+                                <p class="fz16">点评加速券</p>
+                                <p class="fz12 red">2个工作日内完成作文点评</p>
+                            </div>
+                            <p class="fz12 gray9">有效期:2019.03.25-2024.10.15</p>
+                            <span>已使用</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="layui-tab-item">
+                <ul class="cardVoucherBoxUl useOverdue clearfix">
+                    <li class="clearfix xzzx">
+                        <div class="left pic"><img src="images/cardVoucherIco/writing_ico.png" alt=""></div>
+                        <div class="left tit">
+                            <div class="in">
+                                <p class="fz16">作文精批券</p>
+                                <p class="fz12 red">可获得一次修改指导和一次精细点评</p>
+                            </div>
+                            <p class="fz12 gray9">有效期:2019.03.15-2019.09.13</p>
+                            <span>已过期</span>
+                        </div>
+                    </li>
+                    <li class="clearfix ydy">
+                        <div class="left pic"><img src="images/cardVoucherIco/Coach_ico.png" alt=""></div>
+                        <div class="left tit">
+                            <div class="in">
+                                <p class="fz16">作文精批券</p>
+                                <p class="fz12 red">可获得一次修改指导和一次精细点评</p>
+                            </div>
+                            <p class="fz12 gray9">有效期:2019.03.15-2019.09.13</p>
+                            <span>已过期</span>
+                        </div>
+                    </li>
+                    <li class="clearfix kc">
+                        <div class="left pic"><img src="images/cardVoucherIco/courseExchange_ico.png" alt=""></div>
+                        <div class="left tit">
+                            <div class="in">
+                                <p class="fz16">作文精批券</p>
+                                <p class="fz12 red">可获得一次修改指导和一次精细点评</p>
+                            </div>
+                            <p class="fz12 gray9">有效期:2019.03.15-2019.09.13</p>
+                            <span>已过期</span>
+                        </div>
+                    </li>
+                    <li class="clearfix tg">
+                        <div class="left pic"><img src="images/cardVoucherIco/submissionVoucher_ico.png" alt=""></div>
+                        <div class="left tit">
+                            <div class="in">
+                                <p class="fz16">投稿券</p>
+                                <p class="fz12 red">额外增加一次投稿机会</p>
+                            </div>
+                            <p class="fz12 gray9">有效期:2019.03.15-2019.09.13</p>
+                            <span>已过期</span>
+                        </div>
+                    </li>
+                    <li class="clearfix jp">
+                        <div class="left pic"><img src="images/cardVoucherIco/fineReview_ico.png" alt=""></div>
+                        <div class="left tit">
+                            <div class="in">
+                                <p class="fz16">作文精批券</p>
+                                <p class="fz12 red">可获得一次修改指导和一次精细点评</p>
+                            </div>
+                            <p class="fz12 gray9">有效期:2019.03.15-2019.09.13</p>
+                            <span>已过期</span>
+                        </div>
+                    </li>
+                    <li class="clearfix dj_bg">
+                        <div class="left pic"><strong>20元<br/>代金券</strong></div>
+                        <div class="left tit">
+                            <div class="in">
+                                <p class="fz16">20元代金券</p>
+                                <p class="fz12 red">无门槛20元代金券，不找零、不兑现</p>
+                            </div>
+                            <p class="fz12 gray9">有效期:2019.03.25-2024.10.15</p>
+                            <span>已过期</span>
+                        </div>
+                    </li>
+                    <li class="clearfix dj_bg">
+                        <div class="left pic"><strong>5元<br/>代金券</strong></div>
+                        <div class="left tit">
+                            <div class="in">
+                                <p class="fz16">5元代金券</p>
+                                <p class="fz12 red">无门槛5元代金券，不找零、不兑现</p>
+                            </div>
+                            <p class="fz12 gray9">有效期:2019.03.25-2024.10.15</p>
+                            <span>已过期</span>
+                        </div>
+                    </li>
+                    <li class="clearfix js">
+                        <div class="left pic"><img src="images/cardVoucherIco/commentAccelerate_ico.png" alt=""></div>
+                        <div class="left tit">
+                            <div class="in">
+                                <p class="fz16">点评加速券</p>
+                                <p class="fz12 red">2个工作日内完成作文点评</p>
+                            </div>
+                            <p class="fz12 gray9">有效期:2019.03.25-2024.10.15</p>
+                            <span>已过期</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+        layui.use(['form','element','layer'], function() {
+            var form = layui.form,
+                element = layui.element,
+                layer = layui.layer;
+        })
+         //通知滚动
+        var swiper = new Swiper('.rollingNotification .swiper-container', {
+            loop: true,
+            direction: 'vertical',
+            slidesPerView: 1,
+            autoplay: {
+                delay: 2000,
+            }
+        });
+    })
+</script>
+</html>

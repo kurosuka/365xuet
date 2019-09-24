@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <title>个人中心</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1258756_3pvjglell3g.css"><!--PC个人中心改版2019-2019-06-29-->
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="css/photoClip.css" />
+    <link rel="stylesheet" href="css/personalCenter.css">
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css"/>
+    <script>/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <script src="layui/layui.js"></script>
+    <script src="photoClip/iscroll-zoom.js"></script>
+    <script src="photoClip/hammer.js"></script>
+    <script src="photoClip/jquery.photoClip.js"></script>
+</head>
+<body>
+<!--轮播图-->
+<style type="text/css">
+    .swiper-container_box{
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .swiper-container .swiper-pagination-zq {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+        text-align: center;
+    }
+</style>
+<div class="swiper-container_box">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img onclick="adv_go('http://www.365xuet.com/xueT/courseIndex?series_id=7')" src="upfile/2.jpg"></div>
+            <div class="swiper-slide"><img onclick="adv_go('http://v2.365xuet.com/xueT/courseIndex?series_id=4')" src="upfile/2.jpg"></div>
+        </div>
+        <div class="swiper-pagination-zq"></div>
+    </div>
+</div>
+<script>
+    $(function () {
+        var mySwiper = new Swiper('.swiper-container_box .swiper-container', {
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination-zq',
+                clickable: true,
+            },
+            lazy: {
+                loadPrevNext: true,
+            },
+        })
+    })
+    function adv_go(url){
+        window.location.href = url;
+    }
+</script>
+<!-- 通用标题 -->
+<div class="personalTitle clearfix">
+    <h3>投稿</h3>
+    <!--滚动通知-->
+    <div class="rollingNotification right">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/courseIndex?tab=4" class="iconfont icon-xiaolaba">写作思路打不开？快来围观写作任务群!</a></div>
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/seriesCourseDetail/955" class="iconfont icon-xiaolaba">听故事学语文，点此免费试听~</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bgWhite radius15 borderThinE mt13">
+    <div class="classTasksDetail">
+        <strong class="red fz16">以“激动”开头写一篇作文</strong>
+        <p class="gray9"><span>文体：不限</span><span>字数：不少于500字</span><span>类型：自由命题</span><span>10-19</span></p>
+        <p>要求：生活中的情绪有很多，让人最兴奋的一定是激动，也许在交流中，或者不经意的小事都会令人激动不已或者不经意的小事都会令人激动不已 <a href="javascript:;" class="red2 textDecorationU imgbtn">图片</a></p>
+    </div>
+</div>
+<div class="bgWhite radius15 borderThinE mt13">
+    <ul class="myTabUl">
+        <li class="active">文字作文</li>
+        <li>图片作文</li>
+    </ul>
+    <ul class="submissionContent gray9">
+        <li class="clearfix">
+            <div class="tit left">文体：</div>
+            <div class="content literaryStyle right parentBox tac">
+                <span class="childrenFlex"><a href="javascript:;" class="iconfont icon-fukuan active">记叙文</a></span>
+                <span class="childrenFlex"><a href="javascript:;" class="iconfont icon-pinglun">议论文</a></span>
+                <span class="childrenFlex"><a href="javascript:;" class="iconfont icon-shici">诗歌</a></span>
+                <span class="childrenFlex"><a href="javascript:;" class="iconfont icon-xinwen">散文</a></span>
+                <span class="childrenFlex"><a href="javascript:;" class="iconfont icon-shuoming off">说明文</a></span>
+                <span class="childrenFlex"><a href="javascript:;" class="iconfont icon-kehuan off">虚构写作</a></span>
+                <span class="childrenFlex"><a href="javascript:;" class="iconfont icon-dushu off">读后感</a></span>
+            </div>
+        </li>
+        <li class="clearfix">
+            <div class="tit left">标题：</div>
+            <div class="content right">
+                <input class="borderThinE gray9" type="text" placeholder="请输入作文标题">
+            </div>
+        </li>
+        <li class="clearfix ">
+            <div class="tit left">正文：</div>
+            <div class="content textTab right">
+                <div class="textareaBox borderThinE gray9">
+                    <textarea placeholder="请将作文内容复制黏贴或者直接输入在此区域，学校、年级、班级、姓名系统已默认，无需重读填写"></textarea>
+                    <p><a href="javascript:;" class="iconfont icon-mianze red2 fz14 originalStatementBtn">原创声明</a><span class="right fz14">已输入<i class="red2">0</i>字</span></p>
+                </div>
+            </div>
+            <div class="content picTab hide right">
+                <!---->
+                <div class="layui-upload clearfix">
+                    <button type="button" class="layui-btn iconfont icon-add" id="test2"></button>
+                    <div class="layui-elem-quote layui-quote-nm">
+                        <div class="layui-upload-list" id="demo2">
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <div class="mt13">
+                    <a href="javascript:;" class="iconfont icon-mianze red2 fz14 originalStatementBtn">原创声明</a>
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <div class="tit left">指导老师：</div>
+            <div class="content right">
+                <input class="borderThinE gray9 instructor" type="text" placeholder="请输入指导老师">
+            </div>
+        </li>
+    </ul>
+    <div class="submissionBtn tar">
+        <a class="fz16 red" href="javascript:;">保存草稿</a>
+        <a class="btn bgRed white submitComposition" href="javascript:;">确定投稿</a>
+    </div>
+</div>
+<!--投稿成功弹出-->
+<div class="contributeIcoBox hide">
+    <em class="iconfont icon-guanbi close"></em>
+    <div class="contributeIcoTop">
+        <img src="images/nodata/contributeIco.png" alt="">
+        <strong>投稿成功</strong>
+        <p>请等待您的老师点评</p>
+    </div>
+    <div class="contributeIcoCode clearfix">
+        <div class="pic left"><img src="http://wx.365xuet.com/Public/Weixin/images/write_qr_code.png" alt=""></div>
+        <div class="tit left">新用户可以扫描左侧二维码添加客服微信，及时获得最新写作资讯，参加丰富的活动</div>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+        //图片展示
+        $('.imgbtn').click(function () {
+            var jso = {
+                "data": [
+                    {
+                        "src": "./upfile/1.png",
+                    },
+                    {
+                        "src": "./upfile/2.jpg",
+                    }
+                ]
+            }
+                layer.photos({
+                    photos: jso //格式见API文档手册页
+                    ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机
+                });
+        })
+        layui.use(['form','element','layer','upload'], function() {
+            var form = layui.form,
+                upload = layui.upload,
+                element = layui.element,
+                layer = layui.layer;
+            //多图片上传
+            layer.photos({
+                photos: '#demo2'
+                ,anim: 5
+            });
+            upload.render({
+                elem: '#test2'
+                ,url: ''
+                ,data:''
+                ,multiple: true
+                ,before: function(obj){
+                    //预读本地文件示例，不支持ie8
+                    obj.preview(function(index, file, result){
+                        $('#demo2').append('<p><img src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img"><span class="iconfont icon-guanbi delimg"></span></p>')
+                    });
+                }
+                ,done: function(res){
+                    //上传完毕
+                }
+            });
+        })
+        //图片删除
+        $(document).on('click','.delimg',function () {
+            var num = $('#demo2 div').index($(this).parent())
+            $(this).parent().remove();
+            $('#image-lists').children('input').eq(num).remove()
+        })
+        //图片文字作文切换
+        $('.myTabUl li').click(function () {
+            $(this).addClass('active').siblings().removeClass('active');
+            $(this).index()==0?$('.textTab').show().siblings('.picTab').hide():$('.picTab').show().siblings('.textTab').hide();
+        })
+        //原创声明
+        $('.originalStatementBtn').click(function () {
+            layer.open({
+                type: 1,
+                title:'原创声明',
+                skin: 'layerCommBox',
+                area:'500px',
+                content: '<div class="revocationCauseBox">平台稿件必须为原创首发，严禁剽窃抄袭，文责自负。已被其他平台原创保护的文章，切勿再投送本平台。抄袭或转载他人作品，第一次发现，平台客服会提醒，第二次出现将提出警告，第三次发现将取消一个月投稿资格，请作者务必珍惜个人名誉</div>'
+            });
+        });
+        //文体选中
+        $('.literaryStyle a:not(".off")').click(function () {
+            $(this).addClass('active').parent().siblings().find('a').removeClass('active');
+        })
+         //通知滚动
+        var swiper = new Swiper('.rollingNotification .swiper-container', {
+            loop: true,
+            direction: 'vertical',
+            slidesPerView: 1,
+            autoplay: {
+                delay: 2000,
+            }
+        });
+        //投稿成功
+        $('.submitComposition').click(function () {
+            layer.open({
+                type: 1,
+                title:false,
+                closeBtn:false,
+                skin: 'layerCommBox',
+                btn:'我知道了',
+                area:'450px',
+                content: $('.contributeIcoBox')
+                ,success:function () {
+                    $(document).on('click','.close',function () {
+                        layer.closeAll()
+                    })
+                }
+            });
+        });
+    })
+</script>
+</html>

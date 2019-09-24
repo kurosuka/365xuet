@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <title>个人中心</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1258756_3pvjglell3g.css"><!--PC个人中心改版2019-2019-06-29-->
+    <link rel="stylesheet" href="http://www.365xuet.com/assets/web/layui/css/modules/layer/default/layer.css">
+    <link rel="stylesheet" href="http://www.365xuet.com/assets/web/photoClip/photoClip.css" />
+    <link rel="stylesheet" href="http://www.365xuet.com/assets/web/css/userCenter/personalCenter.css">
+
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css"/>
+    <script>/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <script src="http://www.365xuet.com/assets/web/layui/layui.js"></script>
+    <script src="photoClip/iscroll-zoom.js"></script>
+    <script src="http://www.365xuet.com/assets/web/photoClip/hammer.js"></script>
+    <script src="http://www.365xuet.com/assets/web/photoClip/jquery.photoClip.js"></script>
+</head>
+<body>
+<!--轮播图-->
+<style type="text/css">
+    .swiper-container_box{
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .swiper-container .swiper-pagination-zq {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+        text-align: center;
+    }
+</style>
+<!--每周一练样式-->
+<style type="text/css">
+a{
+    text-decoration: none;
+}
+    .weekworkNav a{
+        color: #999;
+        padding: 5px 10px;;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        margin-right: 25px;
+        font-size: 14px;
+        display: inline-block;
+    }
+    .weekworkNav{
+        font-size: 0;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+        padding:0 30px 10px 30px;
+    }
+    .weekworkNav a.actived{
+        border: 1px solid #fc7859;
+        color: #fc7859;
+        display: inline-block;
+        background: #fcf6f5;
+    }
+    .weekworkBox{
+        padding-top: 13px;
+        overflow: hidden;
+    }
+    .weekworkList{
+        padding: 0 40px;
+    }
+    .weekworkList li{
+        padding:25px 0;
+        border-bottom: 1px solid #eee;
+        list-style: none;
+    }
+    .weekworkList li:last-child{
+        border: 0;
+    }
+    .weekArticleImg{
+        width: 80px;
+        height: 80px;
+        border-radius: 15px;
+        float: left;
+    }
+    .weekArticleImg img{
+        width: 80px;
+        height: 80px;
+        border-radius: 15px;
+    }
+    .weekArticleItem{
+        margin-left: 100px;
+    }
+    .weekArticleItem p a{
+        font-size: 18px;
+        color: #333;
+        height: 32px;
+        line-height: 32px;
+        display: block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding-right: 1px;
+    }
+    .weekArticleItem p+p a{
+        font-size: 16px;
+        color: #999;
+        height: 22px;
+        line-height: 22px;
+    }
+    .weekArticleDate{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    .weekDateLeft{
+        font-size: 0;
+    }
+    .weekDateLeft span{
+        background: #feecea;
+        color: #fc7859;
+        padding: 2px 5px;
+        border-radius: 5px;
+        font-size: 14px;
+        margin-right: 8px;
+    }
+    .weekDateRight span{
+        color: #999;
+        margin-right: 10px;
+    }
+</style>
+<div class="swiper-container_box">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img onclick="adv_go('http://www.365xuet.com/xueT/courseIndex?series_id=7')" src="upfile/2.jpg"></div>
+            <div class="swiper-slide"><img onclick="adv_go('http://v2.365xuet.com/xueT/courseIndex?series_id=4')" src="upfile/2.jpg"></div>
+        </div>
+        <div class="swiper-pagination-zq"></div>
+    </div>
+</div>
+<script>
+    $(function () {
+        var mySwiper = new Swiper('.swiper-container_box .swiper-container', {
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination-zq',
+                clickable: true,
+            },
+            lazy: {
+                loadPrevNext: true,
+            },
+        })
+    })
+    function adv_go(url){
+        window.location.href = url;
+    }
+</script>
+<!-- 通用标题 -->
+<div class="personalTitle clearfix">
+    <h3>我的活动</h3>
+    <!--滚动通知-->
+    <div class="rollingNotification right">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/courseIndex?tab=4" class="iconfont icon-xiaolaba">写作思路打不开？快来围观写作任务群!</a></div>
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/seriesCourseDetail/955" class="iconfont icon-xiaolaba">听故事学语文，点此免费试听~</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bgWhite radius15 borderThinE mt13 weekworkBox">
+    <div class="weekworkNav">
+        <a href="#">全部</a>
+        <a href="#" class="actived">每周一练</a>
+        <a href="#">成语接龙</a>
+        <a href="#">征文活动</a>
+    </div>
+    <ul class="weekworkList">
+        <li>
+            <div class="weekArticleImg"><img src="http://www.365xuet.com/assets/web/images/writingIndexNav/4.jpg" alt="" /></div>
+            <div class="weekArticleItem">
+                <p><a href='#'>巴黎圣母院烧毁我们应不应该惋惜？</a></p>
+                <p><a href='#'>4月15日傍晚法国巴黎的标志性建筑，人类建筑史上的瑰宝——巴黎圣母院圣母院圣毁...</a></p>
+                <div class="weekArticleDate">
+                    <div class="weekDateLeft">
+                        <span>每周一练</span>
+                        <span>128期</span>
+                    </div>
+                    <div class="weekDateRight">
+                        <span>2018-9-28</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="weekArticleImg"><img src="http://www.365xuet.com/assets/web/images/writingIndexNav/4.jpg" alt="" /></div>
+            <div class="weekArticleItem">
+                <p><a href='#'>巴黎圣母院烧毁我们应不应该惋惜？</a></p>
+                <p><a href='#'>4月15日傍晚法国巴黎的标志性建筑，人类建筑史上的瑰宝——巴黎圣母院圣母院圣毁...</a></p>
+                <div class="weekArticleDate">
+                    <div class="weekDateLeft">
+                        <span>每周一练</span>
+                        <span>128期</span>
+                    </div>
+                    <div class="weekDateRight">
+                        <span>2018-9-28</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="weekArticleImg"><img src="http://www.365xuet.com/assets/web/images/writingIndexNav/4.jpg" alt="" /></div>
+            <div class="weekArticleItem">
+                <p><a href='#'>巴黎圣母院烧毁我们应不应该惋惜？</a></p>
+                <p><a href='#'>4月15日傍晚法国巴黎的标志性建筑，人类建筑史上的瑰宝——巴黎圣母院圣母院圣毁...</a></p>
+                <div class="weekArticleDate">
+                    <div class="weekDateLeft">
+                        <span>每周一练</span>
+                        <span>128期</span>
+                    </div>
+                    <div class="weekDateRight">
+                        <span>2018-9-28</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="weekArticleImg"><img src="http://www.365xuet.com/assets/web/images/writingIndexNav/4.jpg" alt="" /></div>
+            <div class="weekArticleItem">
+                <p><a href='#'>巴黎圣母院烧毁我们应不应该惋惜？</a></p>
+                <p><a href='#'>4月15日傍晚法国巴黎的标志性建筑，人类建筑史上的瑰宝——巴黎圣母院圣母院圣毁...</a></p>
+                <div class="weekArticleDate">
+                    <div class="weekDateLeft">
+                        <span>每周一练</span>
+                        <span>128期</span>
+                    </div>
+                    <div class="weekDateRight">
+                        <span>2018-9-28</span>
+                    </div>
+                </div>
+            </div>
+        </li>                        
+    </ul>
+</div>
+
+</body>
+<script>
+    $(function () {
+        //通知滚动
+        var swiper = new Swiper('.rollingNotification .swiper-container', {
+            loop: true,
+            direction: 'vertical',
+            slidesPerView: 1,
+            autoplay: {
+                delay: 2000,
+            }
+        });
+    })
+</script>
+</html>

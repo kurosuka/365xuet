@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" /><!--禁止识别为手机号-->
+    <title>学生投稿页面</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1147714_lzvvxru1lup.css"/><!--官网改版2019 - 2019-07-23 -->
+    <link rel="stylesheet" href="https://www.365xuet.com/assets/mobile/channel/css/comm.css" />
+    <link rel="stylesheet" href="https://www.365xuet.com/assets/mobile/newComposition/css/style.css" /><!--上传图片-->
+    <link rel="stylesheet" href="https://www.365xuet.com/assets/mobile/css/xuet2019.css" />
+    <link rel="stylesheet" href="practiceWriting.css" /><!--添加每周一练-->
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://www.365xuet.com/assets/mobile/js/buttonClick.js"></script>
+    <script src="https://www.365xuet.com/assets/mobile/channel/js/flexible.min.js"></script>
+    <script src="https://www.365xuet.com/assets/mobile/layer_mobile/layer.js"></script>
+    <!--上传图片js-->
+    <script src="https://www.365xuet.com/assets/mobile/newComposition/scripts/iscroll-zoom.js"></script>
+    <script src="https://www.365xuet.com/assets/mobile/newComposition/scripts/hammer.js"></script>
+    <script src="https://www.365xuet.com/assets/mobile/newComposition/scripts/jquery.photoClip.js"></script>
+</head>
+<body>
+<div class="practiceWritingTit">
+    <a href=""><i>进行中</i>巴黎圣母院烧毁我们该不该为此事件惋惜？</a>
+    <div class="clearfix gray9">
+        <em>第<i>114</i>期</em>
+        <em><i>2019-06-25</i>活动截止</em>
+        <p class="right">
+            <span class="left">
+                <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/adv/95b2717b4242c682a430299b040a0cc8.jpg" alt="">
+                <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/adv/95b2717b4242c682a430299b040a0cc8.jpg" alt="">
+                <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/adv/95b2717b4242c682a430299b040a0cc8.jpg" alt="">
+                <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/adv/95b2717b4242c682a430299b040a0cc8.jpg" alt="">
+            </span>
+            <i>28</i>人已参与
+        </p>
+    </div>
+</div>
+<div class="practiceWritingDetail">
+    <p>《用一句原创歌词给新学期立个flag》</p>
+    <p>各位同学，新学期开学在即。相信大家此刻有忐忑、有期待，都希望这是个元气满满的开始。那么就让我们用歌词表达内心的渴望吧！</p>
+    <p>各位同学，新学期开学在即。相信大家此刻有忐忑、有期待，都希望这是个元气满满的开始。那么就让我们用歌词表达内心的渴望吧！</p>
+</div>
+<div class="practiceWritingRequire">
+    <img src="images/themeTitleImg.png" alt="">
+    <p>1、创作或改编一句歌词反映内心强烈的愿望。<br/>2、看看谁的歌词最振奋人心，最能体现强烈的目标感。</p>
+</div>
+<div class="practiceWritingTitBor practiceWritingSwitch tac">
+    <a href="javascript:;">收起规则</a>
+</div>
+<div class="practiceWritingContribute">
+    <ul class="freeContributeUl">
+        <li>
+            <div class="tit"><strong>练笔标题：</strong></div>
+            <div class="content"><input type="text" name="title" placeholder="请输入练笔标题"></div>
+        </li>
+        <li>
+            <div class="tit"><strong>练笔配图：</strong></div>
+        </li>
+        <li style="padding-top: 0;">
+            <div class="upPic">
+                <a class="iconfont icon-zhaopian upPicBtn" href="javascript:;">上传练笔封面</a>
+            </div>
+            <div class="uploadedPic hide">
+                <section class="logo-license">
+                    <div class="half clearfix">
+                        <span></span> <a class="iconfont icon-tihuan againFile" href="javascript:;">替换</a><a class="iconfont icon-huishou delPic" href="javascript:;">删除</a>
+                        <a id="logox">
+                            <img id="bgl" src="">
+                        </a>
+                    </div>
+                </section>
+                <article class="htmleaf-container">
+                    <div id="clipArea"></div>
+                    <div class="foot-use clearfix">
+                        <div class="uploader1 blue">
+                            <input type="button" name="file" class="button" value="打开">
+                            <input id="file" type="file" accept="image/*" multiple  />
+                        </div>
+                        <button id="clipBtn">截取</button>
+                    </div>
+                    <div id="view"></div>
+                </article>
+            </div>
+        </li>
+        <li>
+            <div class="tit"><strong>作文正文：</strong><a class="iconfont icon-tishi originalStatementBtn" href="javascript:;">原创声明</a></div>
+            <div class="content">
+                <textarea rows="12" id="comment" name="content" placeholder="请输入练笔内容"></textarea>
+                <p>已输入<i id="contentnum">0</i>字</p>
+            </div>
+        </li>
+        <li class="pseudonym clearfix">
+            <label><input id="pseudonymSwitch" class="mui-checkbox" type="checkbox">使用笔名</label>
+            <input class="hide" type="text">
+        </li>
+    </ul>
+</div>
+<div class="complementInformation">
+    <p>为了能给您提供更好的服务，请您在投稿前完善您的个人资料</p>
+    <ul class="complementInformationUl">
+        <li class="clearfix"><span>姓名：</span><div class="inputBox"><input type="text" placeholder="请输入姓名"></div></li>
+        <li class="clearfix"><span>地区：</span><div class="inputBox"><input onfocus="this.blur();" type="text" id="regionSelection" value="浙江,舟山,普陀区"><i class="iconfont icon-you"></i></div></li>
+        <li class="clearfix"><span>学校：</span>
+            <div class="inputBox">
+                <input type="text" id="searchSchool" placeholder="请搜索并选择您所在的学校">
+                <div class="editSchool"><span>彩香实验中学</span><a class="iconfont icon-cha" href="javascript:;"></a></div>
+                <div class="schoolPulldown hide">
+                    <dl>
+                        <dd><a href="javascript:;">彩香实验中学</a></dd>
+                        <dd><a href="javascript:;">彩香实验中学</a></dd>
+                        <dd><a href="javascript:;">彩香实验中学</a></dd>
+                        <dd><a href="javascript:;">彩香实验中学</a></dd>
+                        <dd><a href="javascript:;">彩香实验中学</a></dd>
+                    </dl>
+                    <p><a class="notFoundSchool" href="javascript:;">找不到我的学校？</a></p>
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <span>学段：</span>
+            <div class="inputBox">
+                <select>
+                    <option value="">请选择您所在的学段</option>
+                    <option value="">一年级</option>
+                </select>
+                <i class="iconfont icon-you"></i>
+            </div>
+        </li>
+        <li class="clearfix">
+            <span>年级：</span>
+            <div class="inputBox">
+                <select>
+                    <option value="">请选择所在年级</option>
+                    <option value="">一年级</option>
+                </select>
+                <i class="iconfont icon-you"></i>
+            </div>
+        </li>
+        <li class="clearfix">
+            <span>班级：</span>
+            <div class="inputBox">
+                <select>
+                    <option value="">请选择所在班级</option>
+                    <option value="">一年级</option>
+                </select>
+                <i class="iconfont icon-you"></i>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="practiceWritingContributeB tac">
+    <a href="三级详情页面-学生.html">提交练笔</a>
+</div>
+</body>
+<script>
+    $(function () {
+        $(document).on('click','#pseudonymSwitch',function () {
+            var checkSwitch = $("#pseudonymSwitch[type='checkbox']").is(':checked');
+            if (checkSwitch == true){
+                $(this).parent().next('input').show();
+            }else{
+                $(this).parent().next('input').hide();
+            }
+        })
+        /**
+         * 找不到学校弹出
+         */
+        $(document).on('click', '.notFoundSchool', function () {
+            layer.open({
+                className: 'commTipsLayer',
+                content: '<textarea class="notFoundSchoolText" placeholder="请输入您所在学校的完整名称"></textarea>',
+                btn: ['确定','取消'],
+            });
+        })
+
+        $('#searchSchool').focus(function(){
+            $('.schoolPulldown').show();
+        })
+        $(document).on('click', '.editSchool a', function () {
+            $(this).parent().remove();
+        })
+        /**
+         * 图片裁剪
+         * */
+        $("#clipArea").photoClip({
+            width:400,
+            height:190,
+            file: "#file",
+            view: "#view",
+            ok: "#clipBtn",
+            loadStart: function() {
+                console.log("照片读取中");
+            },
+            loadComplete: function() {
+                console.log("照片读取完成");
+            },
+            clipFinish: function(dataURL) {
+                console.log(dataURL);//图片路径
+            }
+        });
+        $(".delPic").click(function(){
+            $(".htmleaf-container,.uploadedPic").hide();
+            $('.upPic').show();
+            $("#logox").empty();
+        })
+        $(".upPicBtn").click(function(){
+            $(".htmleaf-container,.uploadedPic").show();
+            $('.upPic').hide();
+        })
+        $(".againFile").click(function(){
+            $(".htmleaf-container").show();
+        })
+        $("#clipBtn").click(function(){
+            $("#logox").empty();
+            $('#logox').append('<img src="'+ imgsource + '" align="absmiddle" >');
+            if($("#logox").find('img').attr("src").length!=0){
+                $(".htmleaf-container").hide();
+            }
+        })
+        /**
+         * 原创声明
+         */
+        $(document).on('click', '.originalStatementBtn', function () {
+            layer.open({
+                className: 'commTipsLayer',
+                content: '<p>平台稿件必须为原创首发，严禁剽窃抄袭，文责自负。已被其他平台原创保护的文章，切勿再投送本平台。抄袭或转载他人作品，第一次发现，平台客服会提醒，第二次出现将提出警告，第三次发现将取消一个月投稿资格，请作者务必珍惜个人名誉。</p>',
+                btn: '我知道啦',
+            });
+        })
+        //展开收起规则
+        $('.practiceWritingSwitch a').click(function () {
+            $(this).toggleClass('active');
+            if ($(this).hasClass('active')){
+                $(this).text('展开规则');
+                $('.practiceWritingDetail,.practiceWritingRequire').hide();
+            }else {
+                $(this).text('收起规则');
+                $('.practiceWritingDetail,.practiceWritingRequire').show();
+            }
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" /><!--禁止识别为手机号-->
+    <title>读写空间</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1147714_b58i5v1hynl.css"/><!--官网改版2019 - 2019-07-19 -->
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css" />
+    <link rel="stylesheet" href="https://www.365xuet.com/assets/mobile/channel/css/comm.css" />
+    <link rel="stylesheet" href="https://www.365xuet.com/assets/mobile/css/xuet2019.css" />
+    <link rel="stylesheet" href="practiceWriting.css" /><!--添加每周一练-->
+    <link rel="stylesheet" type="text/css" href="https://www.365xuet.com/assets/mobile/css/dropload.css" />
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://www.365xuet.com/assets/mobile/js/buttonClick.js"></script>
+    <script src="https://www.365xuet.com/assets/mobile/channel/js/flexible.min.js"></script>
+    <script src="https://www.365xuet.com/assets/mobile/layer_mobile/layer.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <script src="https://www.365xuet.com/assets/mobile/js/dropload.min.js"></script>
+</head>
+<body>
+<!--搜索-->
+<div class="writingSearch"><a href="https://www.365xuet.com/mobile/writing/compositionLibrary" class="iconfont icon-search block gray6 tac" data-buttonno="40" title="首页搜索">搜索</a></div>
+<!--轮播-->
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?7e9dc466cf5be629b01797930555270d";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<div class="xuetSlide">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+                                                                            <div class="swiper-slide"> <img onclick="adv_go('https://www.365xuet.com/mobile/writing/activity/6')" class="swiper-lazy" data-src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/adv/072cb7a3eac0f548ece1b6563cd5b91e.jpg"> </div>
+                                                                    <div class="swiper-slide"> <img onclick="adv_go('https://www.365xuet.com/mobile/users/vipIndex')" class="swiper-lazy" data-src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/adv/5dccbd84b72ddf8da3047a731dcf74ed.jpg"> </div>
+                                                                    <div class="swiper-slide"> <img onclick="adv_go('http://www.365xuet.com/mobile/xueTang/seriesCourseDetail/1069')" class="swiper-lazy" data-src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/adv/78cf415d8b7b95fde2016bd17027fb3d.jpg"> </div>
+                                                                    <div class="swiper-slide"> <img class="swiper-lazy" data-src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/adv/59dc9afb64a6c388e9f3683d55b6f937.jpg"> </div>
+                                                </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        // 图片轮播
+        var mySwiper = new Swiper('.xuetSlide .swiper-container', {
+            autoplay: {
+                delay: 6000,//1秒切换一次
+            },
+            lazy: {
+                loadPrevNext: true,
+            },
+        })
+    })
+
+    function adv_go(url){
+        window.location.href = url;
+    }
+</script><!--功能入口-->
+<div class="writingEntranceBlock">
+    <div class="writingEntrance tac">
+        <ul class="parentBox">
+            <li class="childrenFlex entrance1">
+                <a href="https://www.365xuet.com/mobile/student/freeContribute" class="block" data-buttonno="1" title="我要投稿">
+                    <span class="iconfont icon-tougao"></span>
+                    <p>我要投稿</p>
+                </a>
+            </li>
+            <li class="childrenFlex entrance2">
+                <a href="https://www.365xuet.com/mobile/xueTang/whatJP" class="block" data-buttonno="2" title="精批作文">
+                    <span class="iconfont icon-wodebiji"></span>
+                    <p>精批作文</p>
+                </a>
+            </li>
+            <li class="childrenFlex entrance3">
+                <a href="https://www.365xuet.com/mobile/xueTang/researchIndex" class="block" data-buttonno="3" title="研学活动">
+                    <span class="iconfont icon-huodong"></span>
+                    <p>研学活动</p>
+                </a>
+            </li>
+            <li class="childrenFlex entrance4">
+                <a href="https://www.365xuet.com/mobile/writing/writingMessage" class="block" data-buttonno="4" title="小作者风采">
+                    <span class="iconfont icon-dashu"></span>
+                    <p>小作者风采</p>
+                </a>
+            </li>
+            <li class="childrenFlex entrance5">
+                <a href="https://www.365xuet.com/mobile/consult/searchList" class="block" data-buttonno="5" title="写作咨询">
+                    <span class="iconfont icon-jiaxiao"></span>
+                    <p>写作咨询</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--每周一练-->
+<div class="weeklyExercisesIndex">
+    <a href="详情页面-学生.html" class="block">
+        <div class="weeklyExercisesIndexTit"><img src="images/weeklyExercisesTit.jpg" alt=""><span class="gray9 right">第<i>258</i>期</span></div>
+        <strong><i class="iconfont icon-yinhao1"></i>燥起来—开学前科学立的二十三种方<i class="iconfont icon-yinhao"></i></strong>
+        <img src="images/weeklyExercisesIndexBg.png" alt="">
+        <p class="clearfix gray9">
+            <span class="left">
+            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/adv/95b2717b4242c682a430299b040a0cc8.jpg" alt="">
+            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/adv/95b2717b4242c682a430299b040a0cc8.jpg" alt="">
+            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/adv/95b2717b4242c682a430299b040a0cc8.jpg" alt="">
+            </span>
+            <i>28</i>人已参与
+        </p>
+    </a>
+</div>
+<!--每周一练End-->
+<!--tab-->
+<div id="writingTab" class="xuetTab posRel">
+    <ul class="resp-tabs-list hor_1">
+        <li class="resp-tab-active"><span>新鲜作文</span></li>
+        <li class=""><span><a href="https://www.365xuet.com/mobile/writing/markCompositionLibrary" style="color: #333;">高考满分作文</a></span></li>
+        <li class=""><span><a href="https://www.365xuet.com/mobile/writing/compositionLibrary" style="color: #333;">作文文库</a></span></li>
+    </ul>
+    <div class="resp-tabs-container">
+        <div class="lists">
+            <ul class="writingIndexList">
+                <li class="posRel">
+                    <span class="recommend"><i class="iconfont icon-huodong1"></i>
+                        <i class="iconfont icon-huodong1"></i>
+                        <i class="iconfont icon-huodong1"></i>
+                    </span>
+                    <h3 class="clearfix"><a href="https://www.365xuet.com/mobile/writing/compositionDetail/34554" class="gray3">狗</a><em class="type">记</em>    </h3>
+                    <p><span>吴江苏州湾实验小学</span><span>四年级</span><span>杨扬</span></p>
+                    <div class="content">
+                        <a href="https://www.365xuet.com/mobile/writing/compositionDetail/34554" class="block spilloverEllipsis2">我从小不怕狗，可自从看到了狗的壮举之后，就慢慢喜欢狗那可爱的样子，甚至做梦都梦见了……(首段平铺直叙，干脆利落点明写作意图)——题记畏惧小狗唉！真不巧，我妈妈工作的单位有三只小狗，它们每天都在戏嬉打闹</a>
+                    </div>
+                    <div class="bottomDetailed">
+                        <em>情感</em>
+                        <em>选材</em>
+                        <span class="iconfont icon-xiaoxi11">0</span>
+                        <span class="iconfont icon-dianzan2">0</span>
+                        <span class="iconfont icon-iconfonthuo">669</span>
+                    </div>
+                    <div class="bottomBg bottomBg4"></div>
+                </li><li class="posRel">
+    <span class="recommend"><i class="iconfont icon-huodong1"></i>
+</span>
+                <h3 class="clearfix"><a href="https://www.365xuet.com/mobile/writing/compositionDetail/34552" class="gray3">兵马俑</a><em class="type">记</em>    </h3>
+                <p><span>吴江苏州湾实验小学</span><span>四年级</span><span>杨扬</span></p>
+                <div class="content">
+                    <a href="https://www.365xuet.com/mobile/writing/compositionDetail/34552" class="block spilloverEllipsis2">秦兵马俑是现在世界第八大奇迹，也是世界文化遗产。上午，我们来到了秦始皇兵马俑的三个坑。(开头直抒胸臆，点明主题)一号坑的兵马俑，有些没了头，但手上却都没有一把兵器，排列整齐，十分有序。我好奇地走到三号</a>
+                </div>
+                <div class="bottomDetailed">
+                    <em>情感</em>
+                    <em>选材</em>
+                    <span class="iconfont icon-xiaoxi11">0</span>
+                    <span class="iconfont icon-dianzan2">0</span>
+                    <span class="iconfont icon-iconfonthuo">1240</span>
+                </div>
+                <div class="bottomBg bottomBg6"></div>
+            </li><li class="posRel">
+    <span class="recommend"><i class="iconfont icon-huodong1"></i>
+<i class="iconfont icon-huodong1"></i>
+</span>
+                <h3 class="clearfix"><a href="https://www.365xuet.com/mobile/writing/compositionDetail/34551" class="gray3">袁家村</a><em class="type">记</em>    </h3>
+                <p><span>吴江苏州湾实验小学</span><span>四年级</span><span>杨扬</span></p>
+                <div class="content">
+                    <a href="https://www.365xuet.com/mobile/writing/compositionDetail/34551" class="block spilloverEllipsis2">哇！各种食品数不胜数。，这里就是----袁家村。(文章的开篇即点题，围绕中心，紧紧扣题，点赞)走进袁家村，我来到了美食街。看到这家店的上面，挂着一块牌子，写着“新疆烤肉”。我开始讨价还价：，“九元行不</a>
+                </div>
+                <div class="bottomDetailed">
+                    <em>情感</em>
+                    <em>立意</em>
+                    <span class="iconfont icon-xiaoxi11">0</span>
+                    <span class="iconfont icon-dianzan2">0</span>
+                    <span class="iconfont icon-iconfonthuo">4</span>
+                </div>
+                <div class="bottomBg bottomBg7"></div>
+            </li><li class="posRel">
+    <span class="recommend"><i class="iconfont icon-huodong1"></i>
+<i class="iconfont icon-huodong1"></i>
+</span>
+                <h3 class="clearfix"><a href="https://www.365xuet.com/mobile/writing/compositionDetail/34550" class="gray3">徒步回酒店</a><em class="type">记</em>    </h3>
+                <p><span>吴江苏州湾实验小学</span><span>四年级</span><span>杨扬</span></p>
+                <div class="content">
+                    <a href="https://www.365xuet.com/mobile/writing/compositionDetail/34550" class="block spilloverEllipsis2">“啊，好累，！”“走不动了”！。……在大唐不夜城的街道里，（谁？）发出了一阵阵唉声叹气的声音。(开头简洁，重点突出，能迅速获取关键信息点，很棒)一开始刚到大唐不夜城的时候，我们先看了（）表演。一直到天</a>
+                </div>
+                <div class="bottomDetailed">
+                    <em>情感</em>
+                    <em>立意</em>
+                    <span class="iconfont icon-xiaoxi11">0</span>
+                    <span class="iconfont icon-dianzan2">0</span>
+                    <span class="iconfont icon-iconfonthuo">1</span>
+                </div>
+                <div class="bottomBg bottomBg3"></div>
+            </li><li class="posRel">
+    <span class="recommend"><i class="iconfont icon-huodong1"></i>
+<i class="iconfont icon-huodong1"></i>
+</span>
+                <h3 class="clearfix"><a href="https://www.365xuet.com/mobile/writing/compositionDetail/34539" class="gray3">一个好汉三帮</a><em class="type">记</em>    </h3>
+                <p><span>新区实验小学</span><span>四年级</span><span>严秋宇</span></p>
+                <div class="content">
+                    <a href="https://www.365xuet.com/mobile/writing/compositionDetail/34539" class="block spilloverEllipsis2">（题目应该是“一个好汉三个帮”。）暑假太无聊了，一个人不知道干什么好，爸爸就把我送去了写作夏令营。这个夏令营很好玩，上午、下午都在玩，晚上一节作文课，就像去旅游一样。(文章开头简洁有力，入题快，阅读感</a>
+                </div>
+                <div class="bottomDetailed">
+                    <em>情感</em>
+                    <em>中心</em>
+                    <span class="iconfont icon-xiaoxi11">0</span>
+                    <span class="iconfont icon-dianzan2">0</span>
+                    <span class="iconfont icon-iconfonthuo">978</span>
+                </div>
+                <div class="bottomBg bottomBg2"></div>
+            </li><li class="posRel">
+    <span class="recommend"><i class="iconfont icon-huodong1"></i>
+<i class="iconfont icon-huodong1"></i>
+</span>
+                <h3 class="clearfix"><a href="https://www.365xuet.com/mobile/writing/compositionDetail/34477" class="gray3">飞行书包</a><em class="type">记</em>    </h3>
+                <p><span>吴江苏州湾实验小学</span><span>四年级</span><span>杨扬</span></p>
+                <div class="content">
+                    <a href="https://www.365xuet.com/mobile/writing/compositionDetail/34477" class="block spilloverEllipsis2">“完了完了，要迟到了！”小明一边收拾书包一边说，收拾完就向着学校飞奔而去，可惜最终还是迟到了。(很规范的简洁开头，有吸引力，值得鼓励)这天晚上，小明找到小巫师问：“我这几天总是迟到，有没有什么好东西能</a>
+                </div>
+                <div class="bottomDetailed">
+                    <em>情感</em>
+                    <em>立意</em>
+                    <span class="iconfont icon-xiaoxi11">0</span>
+                    <span class="iconfont icon-dianzan2">0</span>
+                    <span class="iconfont icon-iconfonthuo">2200</span>
+                </div>
+                <div class="bottomBg bottomBg7"></div>
+            </li><li class="posRel">
+    <span class="recommend"><i class="iconfont icon-huodong1"></i>
+<i class="iconfont icon-huodong1"></i>
+</span>
+                <h3 class="clearfix"><a href="https://www.365xuet.com/mobile/writing/compositionDetail/34475" class="gray3">最小的幸福</a><em class="type">记</em>    </h3>
+                <p><span>苏州吴中区迎春中学</span><span>初二</span><span>崔璨</span></p>
+                <div class="content">
+                    <a href="https://www.365xuet.com/mobile/writing/compositionDetail/34475" class="block spilloverEllipsis2">对于每个人来说，幸福都有着不同的意义。对我来说，幸福就像一杯水，看上去平淡无奇，无色亦无味，但仔细品味，却能感到丝丝甜味，把生活中的烦心事都给冲掉了。(开头简明扼要，入题快)上次我从金鸡湖骑车回家，突</a>
+                </div>
+                <div class="bottomDetailed">
+                    <em>中心</em>
+                    <em>立意</em>
+                    <span class="iconfont icon-xiaoxi11">0</span>
+                    <span class="iconfont icon-dianzan2">0</span>
+                    <span class="iconfont icon-iconfonthuo">1363</span>
+                </div>
+                <div class="bottomBg bottomBg4"></div>
+            </li><li class="posRel">
+    <span class="recommend"><i class="iconfont icon-huodong1"></i>
+<i class="iconfont icon-huodong1"></i>
+</span>
+                <h3 class="clearfix"><a href="https://www.365xuet.com/mobile/writing/compositionDetail/34474" class="gray3">电子产品“益处多多”</a><em class="type">记</em>    </h3>
+                <p><span>吴江苏州湾实验小学</span><span>四年级</span><span>杨扬</span></p>
+                <div class="content">
+                    <a href="https://www.365xuet.com/mobile/writing/compositionDetail/34474" class="block spilloverEllipsis2">电子产品是眼睛的杀手，电子产品是一颗“定时炸弹”，让眼睛“山崩地裂”，可是现在很多越来越依赖手机了，由此也会给身体造成伤害。……——题记(开头点题恰到好处，读者能迅速抓到重点)比如，我的爸爸，整天对手</a>
+                </div>
+                <div class="bottomDetailed">
+                    <em>中心</em>
+                    <em>情感</em>
+                    <span class="iconfont icon-xiaoxi11">0</span>
+                    <span class="iconfont icon-dianzan2">0</span>
+                    <span class="iconfont icon-iconfonthuo">1528</span>
+                </div>
+                <div class="bottomBg bottomBg1"></div>
+            </li><li class="posRel">
+    <span class="recommend"><i class="iconfont icon-huodong1"></i>
+<i class="iconfont icon-huodong1"></i>
+<i class="iconfont icon-huodong1"></i>
+</span>
+                <h3 class="clearfix"><a href="https://www.365xuet.com/mobile/writing/compositionDetail/34430" class="gray3">祖国我爱您</a><em class="type">散</em>    </h3>
+                <p><span>新建区竞辉学校</span><span>六年级</span><span>陶建旭</span></p>
+                <div class="content">
+                    <a href="https://www.365xuet.com/mobile/writing/compositionDetail/34430" class="block spilloverEllipsis2">祖国我爱您(文章的开头结尾均点明主旨，首尾呼应)6（16）班--陶建旭“我和我的祖国，一刻也不能分割，无论我走到哪里，都流出一首赞歌……。"全国人民手举红旗，讴歌尽舞，普天同庆，迎接“国庆“这一伟大时</a>
+                </div>
+                <div class="bottomDetailed">
+                    <em>中心</em>
+                    <em>立意</em>
+                    <span class="iconfont icon-xiaoxi11">0</span>
+                    <span class="iconfont icon-dianzan2">0</span>
+                    <span class="iconfont icon-iconfonthuo">3142</span>
+                </div>
+                <div class="bottomBg bottomBg7"></div>
+            </li><li class="posRel">
+    <span class="recommend"><i class="iconfont icon-huodong1"></i>
+<i class="iconfont icon-huodong1"></i>
+</span>
+                <h3 class="clearfix"><a href="https://www.365xuet.com/mobile/writing/compositionDetail/34418" class="gray3">《射雕英雄传》中我最喜欢的武功</a><em class="type">读</em>    </h3>
+                <p><span>无锡市实验学校</span><span>六年级</span><span>仁杰</span></p>
+                <div class="content">
+                    <a href="https://www.365xuet.com/mobile/writing/compositionDetail/34418" class="block spilloverEllipsis2">今天我就想聊聊《射雕英雄传》中的武功。这本书中的武功各式各样，各有各的长处和特点，各有各的特点，而其中，我最喜欢的就是周伯通的双手互搏之术了。(开头直接点题，观点明确，无赘意。)周伯通在被黄老邪关在桃</a>
+                </div>
+                <div class="bottomDetailed">
+                    <em>立意</em>
+                    <em>中心</em>
+                    <span class="iconfont icon-xiaoxi11">0</span>
+                    <span class="iconfont icon-dianzan2">0</span>
+                    <span class="iconfont icon-iconfonthuo">1827</span>
+                </div>
+                <div class="bottomBg bottomBg4"></div>
+            </li>
+            </ul>
+        </div>
+        
+            
+            
+        
+    </div>
+</div>
+<!--结束语-->
+<div class="concludingRemarks">— 写作路上我们一同成长 —</div>
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1147714_ku6sczyzgfj.css"/>
+<!--底部导航-->
+<style>
+    /*底部导航css*/
+    .xuetFooterBlock{
+        height: 1.2rem;
+        width: 100%;
+    }
+    .xuetFooter{
+        border-top:1px solid #e5e5e5;
+        position: fixed;
+        width: 100%;
+        left:0;
+        bottom:0;
+        background-color: #fff;
+        z-index: 9;
+    }
+    .xuetFooter ul{
+        display:-moz-box;
+        display:-webkit-box;
+        display:box;
+        text-align: center;
+    }
+    .xuetFooter ul li{
+        -moz-box-flex:1;
+        -webkit-box-flex:1;
+        box-flex:1;
+        height:0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .xuetFooter ul li a span{
+        font-family: "iconfont" !important;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #ccc;
+    }
+    .xuetFooter ul li a p{
+        color: #ccc;
+    }
+    .xuetFooter ul li.xuet a span:before{
+        content: "\b608";
+    }
+    .xuetFooter ul li.readWrite a span:before{
+        content: "\b609";
+    }
+    .xuetFooter ul li.personalCenter a span:before{
+        content: "\b60c";
+    }
+    .xuetFooter ul li a.on span,.xuetFooter ul li a.on p{
+        background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(252, 120, 89, 1)), to(rgba(239, 146, 124, 1)));-webkit-background-clip: text;-webkit-text-fill-color: transparent;
+    }
+    .xuetFooter ul li.xuet a.on span:before{
+        content: "\b607";
+    }
+    .xuetFooter ul li.readWrite a.on span:before{
+        content: "\b60a";
+    }
+    .xuetFooter ul li.personalCenter a.on span:before{
+        content: "\b60b";
+    }
+    .xuetFooter ul li{
+        height:11vw!important;
+    }
+    .xuetFooter ul li a span{
+        font-size:4.5vw!important;
+        display: block;
+    }
+    .xuetFooter ul li a p{
+        line-height:1.2;
+        font-size: 3vw;
+    }
+</style>
+<div class="xuetFooterBlock"></div>
+<div class="xuetFooter">
+    <ul>
+                                    <li class="xuet"><a href="https://www.365xuet.com/mobile/xueTang/hotIndex"><span></span><p>365学堂</p></a></li>
+                                        <li class="readWrite"><a class="on" href="javascript:void(0)"><span></span><p>读写空间</p></a></li>
+                            <li class="personalCenter"><a href="https://www.365xuet.com/mobile/users/userCenter"><span></span><p>个人中心</p></a></li>
+            </ul>
+</div>
+</body>
+<script>
+    var page_1 = 0;
+    var page_2 = 0;
+    var page = 0;
+    var tab1LoadEnd = false;
+    var tab2LoadEnd = false;
+    var dropload = null;
+    var itemIndex = null;
+    $(function () {
+                        /**
+         * tab
+         * */
+//        $('#writingTab ').easyResponsiveTabs({
+//            tabidentify: 'hor_1',
+//        });
+        /**
+         * 图片轮播
+         * */
+        var mySwiper = new Swiper('.xuetSlide .swiper-container', {
+            autoplay: {
+                delay: 3000,//3秒切换一次
+            },
+            lazy: {
+                loadPrevNext: true,
+            },
+        });
+        /**
+         * 超出可视范围固定在头部
+         * */
+        var oTop = $(".writingEntrance").offset().top;
+        var wTop = $('.writingEntranceBlock').outerHeight(true);
+        var sTop = 0;
+        $('.writingEntranceBlock').css('height', wTop)
+        $(window).scroll(function () {
+            sTop = $(this).scrollTop();
+            if (sTop >= oTop + wTop) {
+                $(".writingEntrance").addClass('writingEntranceFix')
+            } else {
+                $(".writingEntrance").removeClass('writingEntranceFix')
+            }
+        });
+
+        dropload = $('.resp-tabs-container').dropload({
+            scrollArea: window,
+            loadDownFn: function (me) {
+                dropfnc(me)
+            }
+        })
+//        $('.resp-tabs-list li').click(function () {
+//            itemIndex = $('.resp-tabs-list').find('.resp-tab-active').index();
+//
+//            // 如果选中菜单一
+//            if(itemIndex == '0'){
+//                // 如果数据没有加载完
+//                if(!tab1LoadEnd){
+//                    // 解锁
+//                    dropload.unlock();
+//                    dropload.noData(false);
+//                }else{
+//                    // 锁定
+//                    dropload.lock('down');
+//                    dropload.noData();
+//                }
+//
+//                // 如果选中菜单二
+//            }else if(itemIndex == '1'){
+//                if(!tab2LoadEnd){
+//                    // 解锁
+//                    dropload.unlock();
+//                    dropload.noData(false);
+//                }else{
+//                    // 锁定
+//                    dropload.lock('down');
+//                    dropload.noData();
+//                }
+//            }
+//            dropload.resetload();
+//        })
+    })
+    function dropfnc(me) {
+//        itemIndex = $('.resp-tabs-list').find('.resp-tab-active').index();
+//        switch(itemIndex){
+//            case 0:page_1++;
+//                page = page_1;
+//                break;
+//            case 1:page_2++;
+//                page = page_2;
+//                break;
+//        }
+        itemIndex =0;
+        page_1++;
+        page = page_1;
+        if(itemIndex == 0){
+            var tab = 1;
+        }else{
+            var tab = 4;
+        }
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': 'ng8myPLglNODluMCuxCFlvIbMyEDdHY1hpd0tN8K'
+            },
+            url:'https://www.365xuet.com/mobile/writing/indexGetCompositions',
+            type:'post',
+            data:{
+                tab:tab,
+                page:page
+            },
+            success: function (data, textStatus, jqXHR) {
+                var str = "";
+                if(data.length>0){
+                    var str = "";
+                        for(var i in data){
+                            var m = Math.ceil(Math.random()*7);
+                            str += '<li class="posRel">\n' +
+                                '    <span class="recommend">';
+                            for(var n = 1 ;n <= data[i].exam_recommend; n++) {
+                                str += '<i class="iconfont icon-huodong1"></i>\n';
+                            }
+                            str += '</span>\n' +
+                                '    <h3 class="clearfix"><a href="https://www.365xuet.com/mobile/writing/compositionDetail/'+ data[i].id +'" class="gray3">'+ data[i].title +'</a>';
+                            switch(data[i].theme_id){
+                                case 1: str += '<em class="type">记</em>';break;
+                                case 2: str += '<em class="type">议</em>';break;
+                                case 3: str += '<em class="type">诗</em>';break;
+                                case 4: str += '<em class="type">散</em>';break;
+                                case 5: str += '<em class="type">说</em>';break;
+                                case 6: str += '<em class="type">虚</em>';break;
+                                case 7: str += '<em class="type">读</em>';break;
+                            }
+                            str += '    </h3>\n' +
+                                '    <p><span>'+ data[i].school_name +'</span><span>'+ data[i].classname +'</span><span>'+ data[i].author +'</span></p>\n' +
+                                '    <div class="content">\n' +
+                                '        <a href="https://www.365xuet.com/mobile/writing/compositionDetail/'+ data[i].id +'" class="block spilloverEllipsis2">'+ data[i].short_content +'</a>\n' +
+                                '    </div>\n' +
+                                '    <div class="bottomDetailed">\n';
+                            var literary_score = data[i].literary_score;
+                            for (var n in literary_score){
+                                if(n < 2) {
+                                    str += '<em>'+literary_score[n].ability_title+'</em>\n';
+                                }
+                            }
+                            str += '        <span class="iconfont icon-xiaoxi11">'+ data[i].discuss_num +'</span>\n' +
+                                '        <span class="iconfont icon-dianzan2">'+ data[i].zan +'</span>\n' +
+                                '        <span class="iconfont icon-iconfonthuo">'+ data[i].click +'</span>\n' +
+                                '    </div>\n' +
+                                '    <div class="bottomBg bottomBg'+ m +'"></div>\n' +
+                                '</li>';
+                        }
+                    $('.resp-tabs-container .lists').eq(itemIndex).children('.writingIndexList').append(str);
+                    me.resetload();
+                }else{
+                    switch(itemIndex){
+                        case 0:tab1LoadEnd = true;break;
+                        case 1:tab2LoadEnd = true;break;
+                    }
+                    // 锁定
+                    me.lock();
+                    // 无数据
+                    me.noData();
+                }
+            },error : function (xhr, type) {
+                // alert('Ajax error!');
+                // 即使加载出错，也得重置
+                // me.resetload();
+            }
+        })
+    }
+    function countDown(times){
+        var timer=null;
+        timer=setInterval(function(){
+            var day=0,
+                hour=0,
+                minute=0,
+                second=0;//时间默认值
+            if(times > 0){
+                day = Math.floor(times / (60 * 60 * 24));
+                hour = Math.floor(times / (60 * 60));
+                minute = Math.floor(times / 60) - (hour * 60);
+                second = Math.floor(times) - (hour * 60 * 60) - (minute * 60);
+            }
+            if (day <= 9) day = '0' + day;
+            if (hour <= 9) hour = '0' + hour;
+            if (minute <= 9) minute = '0' + minute;
+            if (second <= 9) second = '0' + second;
+
+            $('#activity_times').html('活动时间：' + hour + '时' + minute + '分' + second + '秒')
+            times--;
+            if(times<0){
+                clearInterval(timer);
+            }
+        },1000);
+    }
+</script>
+</html>

@@ -1,0 +1,1002 @@
+/*班级入驻*/
+.teacher-no-data-t{
+}
+.teacher-no-data-t span{
+	font-size: 18px;
+	text-align: center;
+	color: #666666;
+	display: inline-block;
+	width: 100%;
+	line-height: 26px;
+	padding-top: 86px;
+	padding-bottom: 38px;
+}
+.teacher-no-data-t span::before{
+	margin-right: 10px;
+	color: #dadada;
+	font-size: 26px;
+}
+.teacher-data-card ul{
+ overflow: hidden;
+	 margin: 0 auto;
+	 text-align: center;
+	 display: flex;
+	 justify-content: center;
+}
+.teacher-data-card ul li{
+	width: 167px;
+	height: 184px;
+	float: left;
+	margin: 0 30px;
+	box-shadow: 0px 0px 5px #cdcdcd;
+	border-radius: 5px;
+	padding: 2px;
+	position: relative;
+}
+.teacher-data-card ul li span{
+	display: block;
+}
+.card-top{
+	width: 100%;
+	height: 105px;
+	background: linear-gradient(to right,#45d2be,#4eddeb);
+	box-sizing: border-box;
+	border-radius: 2px;
+}
+.teacher-data-card ul li:nth-of-type(2) .card-top{
+	background: linear-gradient(to right,#bfcafb,#a6e8fb);
+}
+.teacher-data-card ul li:nth-of-type(3) .card-top{
+	background: linear-gradient(to right,#f94a60,#fc889f);
+}
+.card-top i{
+	color: #fff;
+	font-size: 50px;
+	line-height: 105px;
+	text-align: center;
+	display: block;
+}
+.card-btm{
+	position: absolute;
+	top: 95px;
+	height: 70px;
+	width: 167px;
+}
+
+.card-btm i{
+	width: 16px;
+	height: 16px;
+	background: #fff;
+	border-radius: 100%;
+	display: block;
+	margin: 0 auto;
+	padding: 2px;
+	border:2px solid #fff;
+}
+.card-btm i::before{
+	border-radius: 100%;
+}
+.card-btm i.icon-guanbi{
+	background: #999;
+}
+.card-btm i.icon-guanbi::before{
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	display: block;
+	line-height: 16px;
+}
+.card-btm p{
+	text-align: center;
+	font-size: 18px;
+	color: #333;
+	margin-top: 10px;
+}
+.card-btm p+p{
+	font-size: 12px;
+	margin-top: 5px;
+}
+.faild-pass p+p{
+	color: #ff0000;
+}
+.successed-pass p+p{
+	color: #52d94f;
+}
+.card-btm i.icon-test{
+	background: #2898d8;
+}
+.card-btm i.icon-test::before{
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	display: block;
+	line-height: 16px;
+}
+.teacher-info{
+	
+	margin-top: 65px;
+	font-size: 16px;
+	color: #999999;
+	text-align: center;
+	padding-bottom: 60px;
+}
+.teacher-info ul{
+	margin: 0 55px;
+	background: #f6f6f6;
+	border-radius: 8px;
+	padding-bottom: 45px;
+	overflow: hidden;
+}
+.teacher-info ul li{
+	margin-top: 55px;
+	line-height: 24px;
+}
+.teacher-info i{
+	font-size: 18px;
+	color: #fc7859;
+	display: block;
+}
+/**
+ * 发布任务
+ */
+.edit-class{
+box-sizing: border-box;
+	margin-left: 40px;
+	margin-right: 40px;
+	font-size: 16px;
+	color: #999;
+	overflow: auto;
+	background: #fdf8f2;
+	margin: 25px 20px 20px 20px;
+	padding: 25px 20px;
+	border: 1px dashed #fdf8f2;
+}
+.edit-class li{float: left;	}
+.edit-class li span{
+	height: 36px;
+	display: line-block;
+	line-height: 36px;
+	border: 2px solid #f4f7fa;
+	border-radius: 5px;
+	padding: 10px;
+	background: #fff;
+	margin-left: 12px;
+	margin-right: 35px;
+	color: #333;
+	cursor: pointer;
+}
+.iconfont{
+	font-family: "iconfont" !important;
+}
+.edit-class li span::after{
+	content: '\e612';
+	margin-left: 10px;
+	color: #eee;
+	font-size: 14px;
+}
+.edit-class-content ul li.layui-this a{
+	color: #fc7859;
+}
+.edit-class-content ul li.layui-this::after{
+	border: none;
+}
+.edit-class-content ul li.layui-this a{
+	border: 1px solid #fc7859;
+	background: #fcf6f5;
+}
+.edit-class-content ul li a{
+ border: 1px solid #f4f7fa;
+ border-radius: 5px;
+ padding: 0 20px;
+ font-size: 14px;
+ color: #999;
+}
+.edit-class-content ul li a::before{
+	margin-right: 5px;
+}
+.edit-class-content .layui-tab-title{
+	height: 35px;
+	border: 0;
+}
+.edit-class-content .layui-tab-title li{
+	max-width: none;
+	margin-left: 1px;
+	margin-right: 15px;
+	height: 35px !important;
+	line-height: 35px;
+}
+.edit-class-content {
+	padding-top: 0;
+	padding-right: 20px;
+	padding-left: 35px;
+}
+.edit-class-content .layui-tab-item .edit-class-item{
+	padding-top: 20px;
+	overflow: hidden;
+	clear: both;
+}
+.edit-class-content .layui-tab-item .edit-class-item::after{
+	content: '';
+	clear: both;
+}
+.add-student-box-skin{
+	border-radius: 8px !important;
+}
+.add-student-box-skin .layui-layer-content{
+	border-radius: 8px;
+}
+.add-student-list{
+	overflow: auto;
+	height: 258px;
+}
+.add-student-box{
+	display: none;
+}
+.add-student-list ul{
+	margin: 0 30px;
+}
+.add-student-list ul li{
+	height: 36px;
+	width: 20%;
+	float: left;
+	margin-top: 15px;
+	
+}
+.add-student-list ul li span{
+	border: 1px solid #f4f7fa;
+	line-height: 36px;
+	margin-right: 20px;
+	display: block;
+	 text-align: center;
+	 border-radius: 5px;
+	 cursor: pointer;
+	 overflow: hidden;
+}
+.add-student-list ul li span.on{
+color: #fc7859;
+border: 1px solid #fc7859;
+position: relative;
+}
+.add-student-list ul li span.on::after{
+	content: '';
+	width: 40px;
+	height: 12px;
+	background: #fc7859;
+	text-align: right;
+	display: block;
+	position: absolute;
+	right: -11px;
+	bottom: -5px;
+	transform: rotate(135deg)
+}
+.add-student-list ul li span.on::before{
+	content: '\e608';
+	color: #fff;
+	width: 40px;
+    height: 12px;
+    text-align: right;
+    display: block;
+	right: 1px;
+	position: absolute;
+	bottom: 10px;
+	z-index: 1;
+	font-size: 12px;
+}
+.add-student-list ul li:nth-of-type(5n) span{
+	margin-right: 0;
+}
+.add-student-box .layui-layer-title{
+	height: 55px !important;
+	line-height: 55px;
+	font-size: 16px;
+	color: #000;
+	font-weight: bold;
+}
+.box-pop-title{
+	font-size: 16px;
+	color: #000;
+	height: 55px;
+	line-height: 55px;
+	text-align: right;
+	background: #fafafa;
+}
+.box-pop-title i{
+	float: left;
+	margin-left: 25px;
+}
+.box-pop-title span{
+	text-align: right;
+	margin-right: 30px;
+}
+.box-pop-title span{
+	font-size: 20px;
+	color: #999;
+	cursor: pointer;
+	margin-right: 20px;
+}
+.edit-class-item input:disabled::placeholder{
+	color: #333;
+}
+.edit-class-item input:disabled::-moz-placeholder{
+	color: #333;
+}
+.release-btn {
+	padding-top: 10px;
+	margin-top: 100px;
+	border-top: 1px solid #eee;
+	margin-bottom: 15px;
+	overflow: hidden;
+	
+}
+.release-btn span{
+	height: 40px;
+	width: 124px;
+	background: #fc7859;
+	color: #fff;
+	border-radius: 20px;
+	text-align: center;
+	line-height: 40px;
+	display: block;
+	cursor: pointer;
+	float: right; 
+	margin-right: 20px;
+}
+.edit-class-title{
+	display: flex;
+}
+.edit-class-title .layui-form-item{
+	width: auto;
+	margin-bottom: 0;
+	flex: 1;
+}
+.edit-class-title  .layui-form-item .layui-input-inline{
+	width: 100px;
+	float: right;
+	margin-right: 0;
+}
+.edit-class-title .layui-form-label{
+	padding: 0;
+	height: auto;
+	height: 35px;
+	line-height: 35px;
+	border: 0;
+	background: none;
+	width: auto;
+	float: right;
+}
+.edit-class-title .layui-input{
+	height: 35px;
+	border-radius: 5px;
+	border: 1px solid #eee;
+}
+.edit-class-content .textareaBox{
+	height: 220px;
+}
+.emi-topic-title{
+	display: flex;
+	justify-content: space-between;
+}
+.emi-topic-title span{
+	width: 46%;
+	height: 32px;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 32px;
+	color: #333;
+	cursor: pointer;
+}
+.emi-topic-title span.on{
+	border: 1px solid #fc7859;
+	background: #fcf6f5;
+}
+.edit-class-item {
+    padding-top: 20px;
+    overflow: hidden;
+	clear: both;
+}
+.add-student-btn{
+	width: 90px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	background: #fc7859;
+	border-radius: 20px;
+	display: block;
+	color: #fff;
+	font-size: 16px;
+	float: right;
+	margin-right: 30px;
+	margin-top: 14px;
+	cursor: pointer;
+}
+.add-class-box{
+	display: none;
+}
+.add-sure-content{
+	height: 66px;
+	background: #f6f6f6;
+	cursor: pointer;
+}
+.add-sure-content i{
+	margin-left: 30px;
+	margin-top: 25px;
+	float: left;
+	display: block;
+	line-height: 18px;
+	color: #999;
+
+}
+.add-sure-content i::before{
+	content: '';
+	margin-right: 10px;
+	display: block;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #eee;
+	border-radius: 3px;
+	background: #fff;
+	margin-right: 10px;
+	line-height: 16px;
+	float: left;
+}
+.add-sure-content i.active::before{
+	background: #fc7859;
+	border: 1px solid #fc7859;
+}
+.add-sure-content i.active::before{
+	content: '\e608';
+	font-size: 12px;
+	text-align: center;
+	line-height: 16px;
+	color: #fff;
+	display: inline-block;
+}
+/**班级任务*/
+.choice-content{
+	display: flex;
+	float: right;
+	font-size: 14px;
+}
+.choice-content .layui-form-item{
+ float: right;
+ clear: none;
+}
+.choice-content .layui-form-item .layui-input-inline{
+	width: 120px;
+}
+.choice-content .layui-form-label{width: auto}
+.choice-content  .layui-form-label{
+	color: #999;
+}
+.choice-content .layui-input{
+	border-radius: 8px;
+}
+.public-task-btn a{
+	width: 132px;
+	height: 38px;
+	background: linear-gradient(to right,#f5c843,#f7a63a);
+	display: block;
+	border-radius: 8px;
+	text-align: center;
+	line-height: 38px;
+	color: #fff;
+	font-size: 14px;
+}
+.public-task-btn a span::before{
+	margin-right: 5px;
+	line-height: 16px;
+	font-size: 16px;
+}
+.public-task-btn a::before{
+	color: #fff;
+}
+.task-item{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+.task-list li{
+	padding-left: 34px;
+    padding-right: 34px;
+}
+.task-item a{
+	margin-left: 10px;
+}
+.task-item p{
+	font-size: 16px;
+	color: #333;
+	flex: 1;
+	height: 26px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-right: 20px;
+}
+.task-item p span {
+	color: #fc7859;
+}
+a.class-edit-btn{
+	font-size: 14px;
+	color: #fff;
+	background: #fc7859;
+	border-radius: 11px;
+	padding: 0 10px;
+	display: inline-block;
+	height:26px;
+	line-height: 26px;
+}
+.class-edit-btn::before{
+	padding-right: 4px;
+}
+a.class-add-btn{
+	font-size: 14px;
+	color: #fff;
+	background: #34aae7;
+	border-radius: 11px;
+	padding: 0 10px;
+	display: inline-block;
+	height:26px;
+	line-height: 26px;
+}
+.class-add-btn::before{
+	padding-right: 4px;
+}
+a.class-delete-btn{
+ text-decoration: underline;
+}
+.requirement-box{
+	background: #fdf8f2;
+	padding: 13px 0;
+	height: auto;
+	padding-left: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items:flex-end;
+	position: relative;
+	margin-top: 7px;
+	border: 1px solid #fdf8f2;
+}
+.requirement-box span{
+	color: #999;
+	cursor: pointer;
+	margin-right: 10px;
+	font-size: 14px;
+}
+
+.requirement-box p{
+	flex: 1;
+	color: #999;
+}
+.requirement-box span::after{
+	content: '\e6a1';
+	font-size: 12px;
+	color: #999;
+	margin-left: 5px;
+	
+}
+.onlyheight{
+	height: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.abso {
+	padding-bottom: 40px
+}
+.abso span{
+	position: absolute;
+	right: 0;
+	bottom: 15px
+}
+.requirement-item-box span{
+	font-size: 14px;
+	color: #999;
+	margin-right: 25px;
+}
+.requirement-item-box span::before{
+	margin-right: 5px;
+}
+.requirement-item-box {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 15px;
+	padding-bottom: 30px;
+}
+.requirement-item-box .requirement-item-left{
+	flex: 1;
+}
+.req-no-submit a{
+	color: #ff5932;
+	font-weight: bold;
+}
+.req-no-comment a{
+	color: #6c95d3;
+	font-weight: bold;
+}
+.req-comment a{
+	color: #44b242;
+	font-weight: bold;
+}
+.req-forwarded a{
+	color: #f7a63a;
+	font-weight: bold;
+}
+.requirement-item-right span:last-child{
+	margin-right: 0;
+}
+.req-content-box{
+	background: #fff;
+	border-radius: 8px;
+}
+.req-no-submit-title{
+	height: 56px;
+	text-align: right;
+	background: #fafafa;
+	display: flex;
+	justify-content: space-between;
+}
+.req-no-submit-title span{
+	font-size: 18px;
+	line-height: 56px;
+	margin-right: 25px;
+	color: #1b1b1b;
+	cursor: pointer;
+}
+.req-no-submit-title>span i{
+	color: #fc7859;
+}
+.req-no-submit-title>span{
+	font-size: 16px;
+	font-weight: bold;
+	margin-left: 25px;
+}
+.req-no-submit-list{
+	height: 438px;
+	overflow: auto
+}
+.req-no-submit-list ul li{
+	height: 60px;
+	line-height: 60px;
+	padding: 0 30px;
+}
+.req-no-submit-list ul li:nth-of-type(2n){
+	background: #fbfbfb;
+}
+.req-no-submit-list ul li i{
+	border: 1px solid #dadada;
+	width: 16px;
+	height: 16px;
+	border-radius: 3px;
+	float: left;
+	margin-top: 21px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.req-no-submit-list ul li span{
+	float: left;
+}
+.req-no-submit-list ul li em{
+	float: right;
+	background: #dadada;
+	border-radius: 11px;
+	height: 22px;
+	line-height: 22px;
+	padding: 0 10px;
+	margin-top: 18px;
+	color: #fff;
+}
+.req-content-box{
+	display: none;
+}
+.req-content-box .is-active{
+	background: #fc7859;
+	border: 1px solid #fc7859;
+}
+.req-content-box .is-active::before{
+	content: '\e608';
+	float: left;
+	width: 16px;
+	height: 16px;
+	color: #fff;
+	text-align: center;
+	line-height: 16px;
+	font-size: 14px;
+	font-weight: normal;
+}
+.req-no-submit-list ul li.is-concerned em{
+	background:#fdf8f2;
+	border: 1px solid #fdf8f2;
+	color: #fd9308;
+}
+.req-content-box-skin{
+	border-radius: 8px;
+}
+.req-content-box-skin .layui-layer-content{
+	border-radius: 8px !important;
+}
+.req-comment-list{
+	height:500px;
+	overflow: auto;
+}
+.req-comment-list ul li{
+	padding: 20px 25px;
+}
+.req-comment-list ul li:nth-of-type(2n){
+	background: #fbfbfb;
+}
+
+.req-comment-list ul li>p i{
+	background: #34aae7;
+	color: #fff;
+	border-radius: 5px;
+	padding: 0 3px;
+	margin-left: 10px;
+}
+.req-comment-list ul li>p span{
+	font-size: 16px;
+}
+.req-comment-tip span{
+	color: #999;
+	margin-right: 20px;
+}
+.req-comment-tip span::before{
+	font-size: 14px;
+	margin-right: 5px;
+}
+.req-comment-tip{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+.req-btn-group span{
+	font-size: 14px;
+	color: #fff;
+	background: #999;
+	border-radius: 11px;
+	display: inline-block;
+	padding-left: 5px;
+	padding:2px 10px;
+}
+.req-btn-group span{
+	margin-right: 10px;
+	cursor: pointer;
+}
+.req-btn-group span:last-child{
+	margin-right: 0;
+}
+.req-btn-group span.req-comment-btn{
+	background: #fc7859;
+}
+.req-btn-group span.req-forward-btn{
+	background: #34aae7;
+}
+.req-btn-group span.req-sendback-btn{
+	background: #f7a63a;
+}
+.req-btn-group span.req-recommend-btn{
+	background: #f7a63a;
+}
+.req-textarea{padding: 10px}
+.req-textarea textarea{
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	resize: none;
+	border: 1px solid #eee;
+	font-size: 14px;
+	padding: 10px;
+}
+.requirement-box>p i a{
+	margin-left: 5px;
+	color: #fc7859;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.req-forward-box .req-comment-list ul li{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 25px;
+}
+.req-forward-box .req-comment-list ul li .req-comment-tip{
+	margin-top: 0;
+}
+.req-forward-box .req-comment-list ul li em{    
+	background-image: linear-gradient(to left,#f7a63a,#f5c843);
+	display: inline-block;
+    border-radius: 5px;
+    line-height: 1;
+    padding: 3px 3px;
+    font-size: 14px;
+	color: #fff;
+	margin-left: 5px;
+}
+/**
+*投稿作文
+*/
+.post-acticle-content{
+	position: relative;
+	padding-bottom: 20px;
+}
+.post-acticle-content .choice-content{
+position: absolute;
+right: 25px;
+top: 20px;
+z-index: 1;
+}
+.post-acticle-content .writingPage{
+	padding-bottom: 10px!important;
+}
+.post-acticle-content .myTabUl li{
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.post-acticle-content th{
+	font-size: 16px;
+	color: #999;
+	font-weight: normal !important;
+}
+.post-acticle-content  table td{
+	font-size: 16px;
+}
+.post-acticle-content  table td:first-child{
+	font-weight: bold;
+}
+.post-acticle-content .layui-table[lay-skin=line] th{
+	background: #fff !important;
+}
+.post-acticle-content  table  tr td{
+	border: 0;
+}
+.post-acticle-content  .layui-table  tr:nth-of-type(2n+1) td{
+	background: #f6f6f6 !important;
+}
+/*班级管理*/
+.post-acticle-content .student-entry-content table{
+	text-align: center;
+}
+.post-acticle-content .student-entry-content .layui-table[lay-skin=line] th{
+	text-align: center;
+}
+.stu-no-checked{
+	width: 16px;
+	height: 16px;
+	border: 1px solid #eee;
+	display: inline-block;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.is-checked{
+	background: #ff856c;
+	border: 1px solid #ff856c;
+}
+.is-checked::before{
+	content: '\e608';
+	color: #fff;
+	display: block;
+	line-height: 14px;
+	font-size: 12px;
+}
+.public-task-btn{
+	margin-right: 10px;
+}
+.public-task-btn:last-child{
+	margin-right: 0;
+}
+.batch-audit-btn a{
+	background: #ff0000;
+}
+/*
+*作文列表
+*/
+.teach-composition{
+	position: absolute;
+	right: 25px;
+	top: 27px;
+	display: flex;
+	justify-content: right;
+}
+.teach-composition-left span{
+	height: 36px;
+    display: line-block;
+    line-height: 36px;
+    border: 2px solid #f4f7fa;
+    border-radius: 5px;
+    padding: 10px;
+    background: #fff;
+    margin-right: 35px;
+    color: #333;
+    cursor: pointer;
+}
+.teach-composition-left i{
+	color: #999;
+}
+.teach-composition-left span::after {
+    content: '\e612';
+    margin-left: 10px;
+    color: #eee;
+	font-size: 14px;
+}
+.input-box{
+	box-sizing: border-box;
+	border:1px solid #eee;
+	height: 36px;
+	box-sizing: border-box;
+	border-radius: 8px;
+	width: 216px;
+	display: flex;
+}
+.input-box input{
+	border: 0;
+	outline: none;
+	height: 100%;
+	border-radius: 8px;
+	text-indent: 10px;
+	float: left;
+	flex: 1;
+}
+.input-box span{
+	width:36px;
+	text-align: center;
+	border-left: 1px solid #eee;
+	height: 100%;
+	float: left;
+	cursor: pointer;
+}
+.input-box span::before{
+	height: 100%;
+	display: block;
+	margin-top: 8px;
+}
+.composition-list-content .layui-form .layui-form{
+	display: flex;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+}
+.composition-list-content{
+	margin-top: 15px;
+	margin-bottom: 0;
+	overflow: inherit;
+	background: #fdf8f2;
+	padding: 15px 30px;
+	padding-bottom: 1px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.lay-compsition-list{
+	
+}
+
+.composition-list-content .layui-form-item label{
+	float: left;
+	line-height: 40px;
+	color: #999;
+}
+.composition-list-content .re-input{
+	float: left;
+	border-radius: 20px;
+}
+.composition-list-content .lay-compsition-list{
+	float: left;
+	margin-right: 20px;
+}
+.short-input{
+	width: 90px;
+}
+.mid-input{
+	width: 140px;
+}
+.long-input{
+	width: 170px;
+}
+.re-input .layui-form-select .layui-input{
+	border-radius: 8px;
+	font-size: 14px;
+}
+.re-input .layui-input{
+	border-radius: 8px;
+	font-size: 12px;
+}
+.mar-right0{
+	margin-right: 0!important;
+}

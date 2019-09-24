@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <title>个人中心</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1258756_nejat85fbgk.css"><!--PC个人中心改版2019-2019-06-26-->
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/personalCenter.css">
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css"/>
+    <script>/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <script src="layui/layui.js"></script>
+</head>
+<body>
+<div class="commNoData"><img src="images/nodata/noDataIco.png" alt=""><p class="gray9 fz16">所有缺省页都用这个样式</p></div><!--/*所有缺省页样式*/-->
+<style>
+    .clearfix { *zoom:1; }
+    .clearfix:after {content:".";display:block;height:0;visibility:hidden;clear:both;}
+    .commHead{height:60px;line-height: 60px;background-color: #fff;padding:0 20px;box-sizing: border-box;margin-bottom: 16px;box-shadow:0 0 32px rgba(153,153,153,0.15);min-width:1200px;}
+    .headLogo {height: 60px;float: left;display: flex;justify-content: center;align-items: center;flex-direction: column;}
+    .headLogo img{width:120px;}
+    .headNav{float: left;}
+    .headNav ul li{float: left;padding:0 26px;}
+    .headNav ul li a{font-size: 16px;color: #7c7c7c;}
+    .headNav ul li a:hover,.headNav ul li a.on{color: #ff856c;}
+    .headLoginBox{float: right;}
+    .headLogin{float: left;}
+    .headLogin a{font-size: 16px;color: #333;margin-left: 10px;}
+    .headLogin a.headRegister{display: inline-block;height: 36px;line-height: 36px;border:1px solid #ff856c;color: #ff856c;padding:0 20px;border-radius: 20px;}
+    .headAlreadyLogin{float: left;font-size: 16px;}
+    .headAlreadyLogin img{width: 36px;height: 36px;border-radius: 100%;}
+    .headAlreadyLogin a{color: #333;margin-left: 10px;}
+    .headAlreadyLogin a.AlreadyLoginQuit{color: #999;}
+    .headWritingBtn{float: left;margin-left:18px;}
+    .headWritingBtn a{display: inline-block;background-color: #ff856c;border-radius:20px;height: 38px;line-height: 38px;width: 130px;text-align: center;color: #fff;font-size: 16px;}
+    .headWritingBtn a img{margin-right: 4px;vertical-align: middle;}
+</style>
+<div class="commHead clearfix">
+    <div class="headLogo"><img src="https://www.365xuet.com/assets/web/images/xueTang/logo.jpg" alt=""></div>
+    <div class="headNav">
+        <ul class="clearfix">
+            <li><a class="on" href="https://www.365xuet.com">首页</a></li>
+            <li><a href="https://www.365xuet.com/write">读写空间</a></li>
+            <li><a href="https://www.365xuet.com/write/compositionList">作文文库</a></li>
+            <li><a href="https://www.365xuet.com/cooperation">加入我们</a></li>
+        </ul>
+    </div>
+    <div class="headLoginBox clearfix">
+        <div class="headLogin">
+            <a href="https://www.365xuet.com/login?action=login&amp;fromUrl=https%253A%252F%252Fwww.365xuet.com">登录</a>
+            <a class="headRegister" href="https://www.365xuet.com/login?action=register&amp;fromUrl=https%253A%252F%252Fwww.365xuet.com">注册</a>
+        </div>
+    </div>
+</div>
+<div class="personalCenter clearfix">
+    <!--左侧导航-->
+    <div class="personalCenterLeft">
+        <div class="personalCenterLeftBor">
+            <div class="personalDataBg memberOn"><!--memberOn 这个class 加上就是会员的样式-->
+                <div class="personalHead">
+                    <img src="images/memberLogoGray.png" alt=""><!--已购买，会员过期图标-->
+                    <img src="images/memberLogo.png" alt=""><!--会员正在使用图标-->
+                    <a href=""><img src="upfile/1.png" alt=""></a>
+                </div>
+                <p class="name">小明爱学习</p>
+                <p><span>普通用户<strong class="hide">2019-08-12到期</strong></span></p><!--如果是会员，显示会员用户-->
+                <div class="openMemberBtn tac"><a class="white" href=""><img src="images/memberLogo2.png" alt="">开通会员</a></div><!--如是已过期会员，显示“立即续费”-->
+            </div>
+            <div class="per_center_nav">
+                <ul class="layui-nav layui-nav-tree" lay-shrink="all">
+                    <!--学生我的写作-->
+                    <li class="layui-nav-item">
+                        <a class="iconfont icon-bi" href="javascript:;">我的写作</a>
+                        <dl class="layui-nav-child">
+                            <dd ><a href="自由投稿列表.html" target="iFrame1">自由投稿</a></dd>
+                            <dd ><a href="班级作文列表.html" target="iFrame1">班级作文</a></dd>
+                            <dd ><a href="写作诊断.html" target="iFrame1">写作诊断</a></dd>
+                            <dd ><a href="制作文集.html" target="iFrame1">制作文集</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item ">
+                        <a class="iconfont icon-kecheng" href="我的课程.html" target="iFrame1">我的课程</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a class="iconfont icon-shoucang" href="我的收藏.html" target="iFrame1">我的收藏</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a class="iconfont icon-rongyu" href="我的荣誉.html" target="iFrame1">我的荣誉</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a class="iconfont icon-rongyu" href="老师我的荣誉.html" target="iFrame1">老师我的荣誉</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a class="iconfont icon-fuwu" href="javascript:;">我的服务</a>
+                        <dl class="layui-nav-child">
+                            <dd ><a href="我的钱包.html"  target="iFrame1">我的钱包</a></dd>
+                            <dd ><a href="我的卡包.html"  target="iFrame1">我的卡包</a></dd>
+                            <dd ><a href="我的订单.html"  target="iFrame1">我的订单</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item ">
+                        <a class="iconfont icon-setup" href="javascript:;">老师个人设置</a>
+                        <dl class="layui-nav-child">
+                            <dd ><a href="老师资料设置.html"  target="iFrame1">资料设置</a></dd>
+                            <dd ><a href="javascript:;" class="securitySettingBtn">安全设置</a></dd>
+                            <dd ><a href="javascript:;" class="switchingAccountsBtn">切换账号</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item ">
+                        <a class="iconfont icon-setup" href="javascript:;">个人设置</a>
+                        <dl class="layui-nav-child">
+                            <dd ><a href="资料设置.html"  target="iFrame1">资料设置</a></dd>
+                            <dd ><a href="javascript:;" class="securitySettingBtn">安全设置</a></dd>
+                            <dd ><a href="javascript:;" class="switchingAccountsBtn">切换账号</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="feedbackAdvice">
+            <a class="iconfont icon-bianji" href="javascript:;">建议与反馈</a>
+        </div>
+    </div>
+    <div class="personalCenterRight">
+        <iframe src="./作文评改.html" width="100%" height="1000" name="iFrame1" frameborder="0"></iframe>
+    </div>
+</div>
+<div class="personalCenterFooter">
+    <div class="personalCenter tac">
+        <p>©2018苏州开智教育科技有限公司 增值电信业务经营许可证 苏B2-20160471<a href="http://www.miitbeian.gov.cn" target="_blank">苏ICP备16010362号-2</a></p>
+        <p>客服电话 0512-67259983</p>
+    </div>
+</div>
+<!--切换账号弹出-->
+<div class="switchingAccounts hide">
+    <ul class="switchingAccountsUl">
+        <li class="active">
+            <label class="clearfix">
+                <div class="pic left"><img src="upfile/1.png" alt=""></div>
+                <div class="name left"><p><strong class="fz16">高速明</strong><em class="bgYellow">老师</em></p><span class="gray9">ID:7</span></div>
+                <div class="inputBox right"><input type="radio" name="switching" class="mui-checkbox"></div>
+            </label>
+        </li>
+        <li>
+            <label class="clearfix">
+                <div class="pic left"><img src="upfile/1.png" alt=""></div>
+                <div class="name left"><p><strong class="fz16">高速明</strong><em class="bgRed3">学生</em></p><span class="gray9">ID:7</span></div>
+                <div class="inputBox right"><input type="radio" name="switching" class="mui-checkbox"></div>
+            </label>
+        </li>
+        <li>
+            <label class="clearfix">
+                <div class="pic left"><img src="upfile/1.png" alt=""></div>
+                <div class="name left"><p><strong class="fz16">高速明</strong><em class="bgRed3">学生</em></p><span class="gray9">ID:7</span></div>
+                <div class="inputBox right"><input type="radio" name="switching" class="mui-checkbox"></div>
+            </label>
+        </li>
+    </ul>
+</div>
+<!--安全设置弹出-->
+<div class="securitySetting layui-form hide">
+    <div class="layui-form-item">
+        <label class="layui-form-label">原密码：</label>
+        <div class="layui-input-inline">
+            <input type="password" name="password" lay-verify="pass" placeholder="请输入原密码" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">新密码：</label>
+        <div class="layui-input-inline">
+            <input type="password" name="password" lay-verify="pass" placeholder="请输入新密码" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">确认密码：</label>
+        <div class="layui-input-inline">
+            <input type="password" name="password" lay-verify="pass" placeholder="请再次输入新密码" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+</div>
+<!--建议反馈-->
+<div class="feedbackAdvice1 hide">
+    <div class="feedbackAdviceTab1 layui-form">
+        <div class="feedbackAdviceTab1Box">
+            <div class="layui-form-item clearfix">
+                <div class="layui-inline">
+                    <label class="layui-form-label">问题类型：</label>
+                    <div class="layui-input-inline">
+                        <select name="quiz">
+                            <option value="">请选择问题类型</option>
+                            <option value="0">投稿问题</option>
+                            <option value="1">课程相关问题</option>
+                            <option value="2">购买相关问题</option>
+                            <option value="3">其他问题</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline right">
+                    <label class="layui-form-label">联系方式：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" placeholder="请输入手机或邮箱">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">问题描述：</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入您遇到的问题" class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <p class="tac"><button class="btn bgRed3 white">提交问题</button></p>
+        </div>
+        <div class="feedbackAdviceContact parentBox">
+            <div class="childrenFlex clearfix">
+                <div class="pic left"><img src="http://www.365xuet.com/assets/web/images/bottom_wx.jpg" alt=""></div>
+                <div class="tit left"><strong>微信咨询</strong><p class="gray9">关注公众号可在第一时间<br/>获得反馈提醒</p></div>
+            </div>
+            <div class="childrenFlex clearfix">
+                <div class="pic left"><i class="iconfont icon-dianhua"></i></div>
+                <div class="tit left"><strong>电话咨询</strong><p class="gray9">0512-67259983</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--反馈记录-->
+<div class="feedbackAdvice2 hide">
+    <div class="feedbackAdviceTab2Box">
+        <div class="noData tac hide"><img src="images/nodata/noDataIco.png" alt=""><p class="gray9 fz16">您还没有咨询过问题哦~</p></div><!--/*缺省页样式*/-->
+        <ul class="historicalFeedbackUl">
+            <li>
+                <div class="clearfix">
+                    <span class="green left">问题：</span>
+                    <p class="left">我并没有抄袭，我的诗是老师帮我修改的，我也不知道有两首诗歌与我写的诗高度雷同，我不希望我斟酌了两个小时的诗因为这种奇怪的理由退回，请麻烦再重新审批一下，谢谢！<em class="gray9">[2109-08-12]</em></p>
+                </div>
+                <div class="clearfix">
+                    <span class="red2 left">回复：</span>
+                    <p class="left">我并没有抄袭，我的诗是老师帮我修改的，我也不知道有两首诗歌与我写的诗高度雷同，我不希望我斟酌了两个小时的诗因为这种奇怪的理由退回，请麻烦再重新审批一下，谢谢！</p>
+                </div>
+            </li>
+            <li>
+                <div class="clearfix">
+                    <span class="green left">问题：</span>
+                    <p class="left">我并没有抄袭，我的诗是老师帮我修改的，我也不知道有两首诗歌与我写的诗高度雷同，我不希望我斟酌了两个小时的诗因为这种奇怪的理由退回，请麻烦再重新审批一下，谢谢！<em class="gray9">[2109-08-12]</em></p>
+                </div>
+                <div class="clearfix">
+                    <span class="red2 left">回复：</span>
+                    <p class="left">我并没有抄袭，我的诗是老师帮我修改的，我也不知道有两首诗歌与我写的诗高度雷同，我不希望我斟酌了两个小时的诗因为这种奇怪的理由退回，请麻烦再重新审批一下，谢谢！</p>
+                </div>
+            </li>
+            <li>
+                <div class="clearfix">
+                    <span class="green left">问题：</span>
+                    <p class="left">我并没有抄袭，我的诗是老师帮我修改的，我也不知道有两首诗歌与我写的诗高度雷同，我不希望我斟酌了两个小时的诗因为这种奇怪的理由退回，请麻烦再重新审批一下，谢谢！<em class="gray9">[2109-08-12]</em></p>
+                </div>
+                <div class="clearfix">
+                    <span class="red2 left">回复：</span>
+                    <p class="left">我并没有抄袭，我的诗是老师帮我修改的，我也不知道有两首诗歌与我写的诗高度雷同，我不希望我斟酌了两个小时的诗因为这种奇怪的理由退回，请麻烦再重新审批一下，谢谢！</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+        layui.use(['form','element','layer'], function() {
+            var form = layui.form,
+                element = layui.element,
+                layer = layui.layer;
+        })
+        //切换账号
+        $('.switchingAccountsBtn').click(function () {
+            layer.open({
+                type: 1,
+                title:'切换账号',
+                skin: 'layerCommBox',
+                area:'350px',
+                btn:'确定',
+                content:$('.switchingAccounts')
+            });
+        });
+        //安全设置
+        $('.securitySettingBtn').click(function () {
+            layer.open({
+                type: 1,
+                title:'修改密码',
+                skin: 'layerCommBox4',
+                area:'330px',
+                btn:['确定','取消'],
+                content:$('.securitySetting')
+            });
+        });
+        //建议与反馈
+        $('.feedbackAdvice').click(function () {
+            layer.tab({
+                skin:"layerTab",
+                area: ['700px', '415px'],
+                move:false,
+                tab: [{
+                    title: '建议与反馈',
+                    content:$('.feedbackAdvice1').html()
+                }, {
+                    title: '历史记录',
+                    content:$('.feedbackAdvice2').html()
+                }],
+                success:function () {
+                    layui.form.render('select');
+                }
+            });
+        })
+    })
+</script>
+</html>

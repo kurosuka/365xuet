@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <title>订单管理</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1258756_dc64tksqhae.css"><!--PC个人中心改版2019-2019-06-26-->
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="http://www.365xuet.com/assets/web/css/userCenter/personalCenter.css">
+    <link rel="stylesheet" href="css/teacherCenter.css">
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css"/>
+    <link rel="stylesheet" href="css/corpus.css?date= new Date()" />
+    <script>/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <script src="layui/layui.js"></script>
+</head>
+<body>
+<!--轮播图-->
+<style type="text/css">
+    .swiper-container_box{
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .swiper-container .swiper-pagination-zq {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+        text-align: center;
+    }
+</style>
+<div class="swiper-container_box">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img onclick="adv_go('http://www.365xuet.com/xueT/courseIndex?series_id=7')" src="upfile/2.jpg"></div>
+            <div class="swiper-slide"><img onclick="adv_go('http://v2.365xuet.com/xueT/courseIndex?series_id=4')" src="upfile/2.jpg"></div>
+        </div>
+        <div class="swiper-pagination-zq"></div>
+    </div>
+</div>
+<script>
+    $(function () {
+        var mySwiper = new Swiper('.swiper-container_box .swiper-container', {
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination-zq',
+                clickable: true,
+            },
+            lazy: {
+                loadPrevNext: true,
+            },
+        })
+    })
+    function adv_go(url){
+        window.location.href = url;
+    }
+</script>
+<!-- 通用标题 -->
+<div class="personalTitle clearfix">
+    <h3>地址管理</h3>
+    <!--滚动通知-->
+    <div class="rollingNotification right">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/courseIndex?tab=4" class="iconfont icon-xiaolaba">写作思路打不开？快来围观写作任务群!</a></div>
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/seriesCourseDetail/955" class="iconfont icon-xiaolaba">听故事学语文，点此免费试听~</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="classWritingListBox clearfix bgWhite radius15 borderThinE mt13">
+    <ul class="myTabUl">
+        <li class="active"><a href="http://www.365xuet.com/web/userCenter/myOrder?status=99">全部订单</a></li>
+        <li><a href="http://www.365xuet.com/web/userCenter/myOrder?status=0">待支付</a></li>
+        <li><a href="http://www.365xuet.com/web/userCenter/myOrder?status=1">交易成功</a></li>
+        <li><a href="http://www.365xuet.com/web/userCenter/myOrder?status=3">交易关闭</a></li>
+    </ul>
+    <ul class="myOrderUl">
+        <!--文集订单-->
+        <li class="borderThinE">
+            <p class="tar bgGrayFa gray6">
+                <em class="left">订单编号：201907301804423333380</em>
+                <span>2019-07-30 18:04:42</span>
+                <span>交易成功</span>
+            </p>
+            <div class="myOrderContent clearfix">
+                <div class="left">
+                    <a href="http://www.365xuet.com/xueT/courseDetail/1231">
+                        <div class="finalPageImg"><img src="http://www.365xuet.com/assets/web/images/xueTang/55.jpg"></div>
+                    </a>
+                </div>
+                <div class="myOrderContentR left">
+                    <h3>
+                        <a class="spilloverEllipsis" href="http://www.365xuet.com/xueT/courseDetail/1231">【定稿】大声说出我爱你</a>
+                    </h3>
+                    <p class="pageBtm"><span>文章数量：<em>15</em>篇</span></p>
+                    <p>
+                        <strong class="red fz18">￥<i>999</i></strong>
+                        <span class="gray9">（余额支付）</span>
+                        <span class="corpusNumber">共<i>1</i>件</span>
+                    </p>
+                    <div class="operation tac">
+                        <a href="javascript:;" class="scanLink">立即查看</a>
+                        <a href="javascript:;" class="payment mt13">删除订单</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="borderThinE">
+            <p class="tar bgGrayFa gray6">
+                <em class="left">订单编号：201907301645331015858</em>
+                <span>2019-07-30 16:45:33</span>
+                <span>交易关闭</span>
+            </p>
+            <div class="myOrderContent clearfix">
+                <div class="myOrderContentPic left">
+                    <a href="http://www.365xuet.com/xueT/courseDetail/1218">
+                        <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/201907/b645f4c1f93669074a332b2728cad91f.jpg"
+                            alt="">
+                    </a>
+                </div>
+                <div class="myOrderContentR left">
+                    <h3>
+                        <a class="spilloverEllipsis"
+                            href="http://www.365xuet.com/xueT/courseDetail/1218">马老师带你读西游（上）</a>
+                        <span>直播课程</span>
+                    </h3>
+                    <p class="speaker gray6">主讲人：马玉炜</p>
+                    <p>
+                        <strong class="red fz18">￥<i>99</i></strong>
+                        <span class="gray9">（微信支付）</span>
+                    </p>
+                    <div class="operation tac">
+                        <a href="javascript:;" onclick="del_order(2660)" class="payment mt13">删除订单</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="borderThinE">
+            <p class="tar bgGrayFa gray6">
+                <em class="left">订单编号：201907191558143865680</em>
+                <span>2019-07-19 15:58:14</span>
+                <span>交易关闭</span>
+            </p>
+            <div class="myOrderContent clearfix">
+                <div class="myOrderContentPic left">
+                    <a href="http://www.365xuet.com/xueT/courseDetail/1171">
+                        <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/ac445f9c2a7da8cf96ccdb2e778ad206.jpg"
+                            alt="">
+                    </a>
+                </div>
+                <div class="myOrderContentR left">
+                    <h3>
+                        <a class="spilloverEllipsis"
+                            href="http://www.365xuet.com/xueT/courseDetail/1171">牛津学姐10节课助你获得“故事力”</a>
+                        <span>写作课程</span>
+                    </h3>
+                    <p class="speaker gray6">主讲人：365学堂</p>
+                    <p>
+                        <strong class="red fz18">￥<i>99</i></strong>
+                        <span class="gray9">（微信支付）</span>
+                    </p>
+                    <div class="operation tac">
+                        <a href="javascript:;" onclick="del_order(2510)" class="payment mt13">删除订单</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="borderThinE">
+            <p class="tar bgGrayFa gray6">
+                <em class="left">订单编号：201907191558104931516</em>
+                <span>2019-07-19 15:58:10</span>
+                <span>交易关闭</span>
+            </p>
+            <div class="myOrderContent clearfix">
+                <div class="myOrderContentPic left">
+                    <a href="http://www.365xuet.com/xueT/courseDetail/1171">
+                        <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/ac445f9c2a7da8cf96ccdb2e778ad206.jpg"
+                            alt="">
+                    </a>
+                </div>
+                <div class="myOrderContentR left">
+                    <h3>
+                        <a class="spilloverEllipsis"
+                            href="http://www.365xuet.com/xueT/courseDetail/1171">牛津学姐10节课助你获得“故事力”</a>
+                        <span>写作课程</span>
+                    </h3>
+                    <p class="speaker gray6">主讲人：365学堂</p>
+                    <p>
+                        <strong class="red fz18">￥<i>99</i></strong>
+                        <span class="gray9">（微信支付）</span>
+                    </p>
+                    <div class="operation tac">
+                        <a href="javascript:;" onclick="del_order(2509)" class="payment mt13">删除订单</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+<script>
+    $(function(){
+        layui.use(['form','element','layer','laydate'], function() {
+            var form = layui.form,
+                element = layui.element,
+                layer = layui.layer
+        });
+        //新增收货地址
+        $('.addressEditBtn').click(function(){
+    layer.open({
+        title: '',
+        type : 1,
+        closeBtn : false,
+        area : ['445px','auto'],
+        skin : "quickSortContentSkin",
+        content : $('.quickSortContent'),
+        success : function(){
+            $('.quickSortSureBtn').click(function(){
+                layer.closeAll()
+            });
+            $('.quickSortCTitle span').click(function(){
+                layer.closeAll()
+            });
+        }
+    })
+    })
+    //设为默认地址
+    $('.defaultAddAddressBtn').click(function(){
+        $(this).parents('li').addClass('active').siblings().removeClass('active');
+    })
+    //删除地址
+    $('.addressDeleteBtn').click(function(){
+        layer.confirm('确定删除该收货地址吗？', {
+                btn: ['取消','确定']
+                ,closeBtn: 0
+                ,area:'490px'
+                ,skin:'layerConfirm'
+                ,title:''
+                ,style:'height:490px'
+            })
+    })
+         //微信支付弹窗
+         $(".pay-money p").click(function(){
+                   layer.open({
+                       type: 1,
+                       title: '',
+                       closeBtn: false,
+                       btn: false,
+                       skin: 'wechat-pay-box-skin',
+                       area: ['442px','306px'],
+                       content: $('.wechat-pay-box'),
+                       success: function(){
+                        $('.closeBtn').on('click',function(){
+                            layer.closeAll();
+                        })
+                       }
+                   })
+                });
+                //地址选择
+                $('.finalPageAddress li .defaultAddressBtn,.finalPageAddress li .pageRaido').on('click',function(){
+                    $(this).parents('li').addClass('active').siblings().removeClass('active');
+                })
+                //地址展开
+                $('.pageAddressMore ').click(function(){
+                    if($(this).hasClass('isClick')){
+                        $(".finalPageAddress li:not('.active')").css('display','none');
+                        $(this).removeClass('isClick');
+                    }else{
+                        $(".finalPageAddress li").css('display','block');
+                        $(this).addClass('isClick');
+                    }
+                    
+                });
+                //印刷方式，开本切换
+                $('.printBtn i').click(function(){
+                    $(this).addClass('active').siblings().removeClass('active')
+                })
+    })
+</script>
+<script>
+	$(function () {
+		//通知滚动
+		var swiper = new Swiper('.rollingNotification .swiper-container', {
+			loop: true,
+			direction: 'vertical',
+			slidesPerView: 1,
+			autoplay: {
+				delay: 2000,
+			}
+        });
+        $('.switch-btn').on('click',function(){
+                   $(this).toggleClass('switch-selected')
+               });
+	})
+</script>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <META name="keywords" content='初中作文-'>
+    <META name="Description" content='为中小学生提供最科学的个性化写作提升方案'>
+    <META name="author" content="苏州开智教育">
+    <title>每周一练列表页</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1147714_i8x7iivbd9.css">
+    <!--官网改版2019-2019-07-17-->
+    <link rel="stylesheet" href="http://www.365xuet.com/assets/web/layui/css/layui.css">
+    <link rel="stylesheet" href="http://www.365xuet.com/assets/web/css/xuet2019.css" />
+    <link rel="stylesheet" href="css/weekwirte.css" />
+    <script src="http://www.365xuet.com/assets/web/js/jquery-3.3.1.min.js"></script>
+    <script src="http://www.365xuet.com/assets/web/layui/layui.js"></script>
+    <script>
+        var DEFAULT_VERSION = 9.0;
+        var ua = navigator.userAgent.toLowerCase();
+        var isIE = ua.indexOf("msie") > -1;
+        var safariVersion;
+        if (isIE) {
+            safariVersion = ua.match(/msie ([\d.]+)/)[1];
+        }
+        if (safariVersion <= DEFAULT_VERSION) {
+            var r = confirm("系统检测到您正在使用ie9以下内核的浏览器，不能实现完美体验，请更换或升级浏览器访问！《点击确定去下载谷歌浏览器》")
+            if (r == true) { window.open("https://www.google.cn/intl/zh-CN/chrome/"); }
+        };
+    </script>
+    <script>/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?7e9dc466cf5be629b01797930555270d";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+
+<body bgcolor="#f8f8f8">
+    <style>
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+
+        .commHead {
+            height: 60px;
+            line-height: 60px;
+            background-color: #fff;
+            padding: 0 20px;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+            box-shadow: 0 0 32px rgba(153, 153, 153, 0.15);
+            min-width: 1200px;
+        }
+
+        .headLogo {
+            height: 60px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .headLogo img {
+            width: 120px;
+        }
+
+        .headNav {
+            float: left;
+        }
+
+        .headNav ul li {
+            float: left;
+            padding: 0 26px;
+        }
+
+        .headNav ul li a {
+            font-size: 16px;
+            color: #7c7c7c;
+        }
+
+        .headNav ul li a:hover,
+        .headNav ul li a.on {
+            color: #ff856c;
+        }
+
+        .headLoginBox {
+            float: right;
+        }
+
+        .headLogin {
+            float: left;
+        }
+
+        .headLogin a {
+            font-size: 16px;
+            color: #333;
+            margin-left: 10px;
+        }
+
+        .headLogin a.headRegister {
+            display: inline-block;
+            height: 36px;
+            line-height: 36px;
+            border: 1px solid #ff856c;
+            color: #ff856c;
+            padding: 0 20px;
+            border-radius: 20px;
+        }
+
+        .headAlreadyLogin {
+            float: left;
+            font-size: 16px;
+        }
+
+        .headAlreadyLogin img {
+            width: 36px;
+            height: 36px;
+            border-radius: 100%;
+        }
+
+        .headAlreadyLogin a {
+            color: #333;
+            margin-left: 10px;
+        }
+
+        .headAlreadyLogin a.AlreadyLoginQuit {
+            color: #999;
+        }
+
+        .headWritingBtn {
+            float: left;
+            margin-left: 18px;
+        }
+
+        .headWritingBtn a {
+            display: inline-block;
+            background-color: #ff856c;
+            border-radius: 20px;
+            height: 38px;
+            line-height: 38px;
+            width: 130px;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .headWritingBtn a img {
+            margin-right: 4px;
+            vertical-align: middle;
+        }
+    </style>
+    <div class="commHead clearfix">
+        <div class="headLogo"><img src="http://www.365xuet.com/assets/web/images/xueTang/logo.jpg" alt=""></div>
+        <div class="headNav">
+            <ul class="clearfix">
+                <li><a href="http://www.365xuet.com">首页</a></li>
+                <li><a href="http://www.365xuet.com/write">读写空间</a></li>
+                <li><a class="on" href="http://www.365xuet.com/write/compositionList">作文文库</a></li>
+                <li><a href="http://www.365xuet.com/cooperation">加入我们</a></li>
+            </ul>
+        </div>
+        <div class="headLoginBox clearfix">
+            <div class="headLogin">
+                <a
+                    href="http://www.365xuet.com/login?action=login&amp;fromUrl=http%253A%252F%252Fwww.365xuet.com%252Fwrite%252FcompositionList%253Fstudy_stage%253D2">登录</a>
+                <a class="headRegister"
+                    href="http://www.365xuet.com/login?action=register&amp;fromUrl=http%253A%252F%252Fwww.365xuet.com%252Fwrite%252FcompositionList%253Fstudy_stage%253D2">注册</a>
+            </div>
+        </div>
+    </div>
+    <!--头部结束-->
+    <div class="newMain clearfix">
+        <div class="newMainLeft">
+            <div class="writingIndexListBox weekwriteBox">
+                <!--作文筛选-->
+                <div class="writingSearch clearfix">
+                    <img src="images/weekWriteImg.jpg" alt="">
+                    <div class="search"><input type="text" id="search" value="" placeholder="请输入关键字搜索练笔话题">
+                        <button class="iconfont icon-search" onclick="searchJump()"></button>
+                    </div>
+                </div>
+                <!--文章列表-->
+                <ul class="weekworkList">
+                        <li>
+                            <div class="weekArticleImg"><img src="http://www.365xuet.com/assets/web/images/writingIndexNav/4.jpg" alt="" /></div>
+                            <div class="weekArticleItem">
+                                <p><a href='主题详情页主页.html'>巴黎圣母院烧毁我们应不应该惋惜？</a></p>
+                                <p><a href='主题详情页主页.html'>4月15日傍晚法国巴黎的标志性建筑，人类建筑史上的瑰宝——巴黎圣母院圣母院圣毁...</a></p>
+                                <div class="weekArticleDate">
+                                    <div class="weekDateLeft">
+                                        <span>128期</span>
+                                        <span class="championName championLevelFir">洪静宝</span>
+                                    </div>
+                                    <div class="weekDateRight">
+                                        <span>2018-9-28</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="weekArticleImg"><img src="http://www.365xuet.com/assets/web/images/writingIndexNav/4.jpg" alt="" /></div>
+                            <div class="weekArticleItem">
+                                <p><a href='#'>巴黎圣母院烧毁我们应不应该惋惜？</a></p>
+                                <p><a href='#'>4月15日傍晚法国巴黎的标志性建筑，人类建筑史上的瑰宝——巴黎圣母院圣母院圣毁...</a></p>
+                                <div class="weekArticleDate">
+                                    <div class="weekDateLeft">
+                                        <span>128期</span>
+                                        <span class="championName championLevelSec">洪静宝</span>
+                                    </div>
+                                    <div class="weekDateRight">
+                                        <span>2018-9-28</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="weekArticleImg"><img src="http://www.365xuet.com/assets/web/images/writingIndexNav/4.jpg" alt="" /></div>
+                            <div class="weekArticleItem">
+                                <p><a href='#'>巴黎圣母院烧毁我们应不应该惋惜？</a></p>
+                                <p><a href='#'>4月15日傍晚法国巴黎的标志性建筑，人类建筑史上的瑰宝——巴黎圣母院圣母院圣毁...</a></p>
+                                <div class="weekArticleDate">
+                                    <div class="weekDateLeft">
+                                        <span>128期</span>
+                                        <span class="championName championLevelThr">洪静宝</span>
+                                    </div>
+                                    <div class="weekDateRight">
+                                        <span>2018-9-28</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="weekArticleImg"><img src="http://www.365xuet.com/assets/web/images/writingIndexNav/4.jpg" alt="" /></div>
+                            <div class="weekArticleItem">
+                                <p><a href='#'>巴黎圣母院烧毁我们应不应该惋惜？</a></p>
+                                <p><a href='#'>4月15日傍晚法国巴黎的标志性建筑，人类建筑史上的瑰宝——巴黎圣母院圣母院圣毁...</a></p>
+                                <div class="weekArticleDate">
+                                    <div class="weekDateLeft">
+                                        <span>128期</span>
+                                        <span class="championName championLevelFir">洪静宝</span>
+                                    </div>
+                                    <div class="weekDateRight">
+                                        <span>2018-9-28</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>                        
+                    </ul>
+            </div>
+
+            <!--分页-->
+            <div class="writingPage">
+                <ul>
+                    <li><a
+                            href="http://www.365xuet.com/write/compositionList?study_stage=2&amp;grade_id=&amp;order=new&amp;page=2">下一页</a>
+                    </li>
+                    <li><a
+                            href="http://www.365xuet.com/write/compositionList?study_stage=2&amp;grade_id=&amp;order=new&amp;page=512">末页</a>
+                    </li>
+                    <li class="page_select">
+                        当前第 <input type="text" id="page" value="1">页/ 共512页 <a href="javascript:toPage()">转到</a>
+                    </li>
+                </ul>
+            </div>
+            <!--footer-->
+            <div class="newFooter">
+                <p>©2018苏州开智教育科技有限公司 增值电信业务经营许可证 苏B2-20160471<a href="http://www.miitbeian.gov.cn"
+                        target="_blank">苏ICP备16010362号-2</a></p>
+                <p>客服电话 0512-67259983 </p>
+            </div>
+        </div>
+        <div class="newMainRight" style="margin-top:1px;">
+            <div class="newMainRightBox">
+                <div class="newMainRecommendCourses">
+                    <a href="javascript:;">
+                        <img src="http://www.365xuet.com/assets/web/images/write/ad1.jpg" alt="">
+                        <p><img class="audioCoursesCode"
+                                src="http://www.365xuet.com/assets/web/images/write/audioCoursesCode.jpg"
+                                alt=""><br />扫描二维码学习课程</p>
+                    </a>
+                </div>
+                <div class="newMainWritingRecommend">
+                    <a href="javascript:;"><img src="http://www.365xuet.com/assets/web/images/write/WritingRecommendPic1.jpg" alt=""></a>
+                </div>
+                <div class="newMainWritingRecommend">
+                    <a href="http://www.365xuet.com/xueT/researchBeforeIndex"><img src="http://www.365xuet.com/assets/web/images/write/WritingRecommendPic2.jpg" alt=""></a>
+                </div>
+                <div class="newMainWritingRecommend">
+                    <a href="javascript:;"><img src="http://www.365xuet.com/assets/web/images/write/WritingRecommendPic3.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jsencrypt.js"></script>
+    <script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+    <script>
+    </script>
+    <script src="http://www.365xuet.com/assets/web/layui/layui.js"></script>
+
+    <script>
+        var page = "1";
+        $(function () {
+            //百度收录
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+
+            layui.use(['element', 'layer'], function () {
+                var element = layui.element,
+                    layer = layui.layer;
+            })
+            /**
+             * 超出可视范围固定在头部
+             * */ 
+            var sTop = 0;
+            $(window).scroll(function () {
+                sTop = $(this).scrollTop();
+                if (sTop >= oTop) {
+                    $(".newMainRightBox").addClass('newMainRightBoxFix')
+                } else {
+                    $(".newMainRightBox").removeClass('newMainRightBoxFix')
+                }
+            })
+
+            $(document).on('click', '.writingScreen a', function () {
+                $(this).addClass('on').siblings('a').removeClass('on');
+                if ($(this).parents('li').attr('id') == 'study_stage') {
+                    $('#grade_id a.on').removeClass('on');
+                    $('#grade_id a').eq(0).addClass('on');
+                }
+
+                toPage('index');
+            })
+        })
+    </script>
+</body>
+
+</html>

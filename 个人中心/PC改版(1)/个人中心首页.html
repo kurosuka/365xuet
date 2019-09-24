@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <title>个人中心</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1258756_nejat85fbgk.css"><!--PC个人中心改版2019-2019-06-26-->
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/personalCenter.css">
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css"/>
+    <script>/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <script src="layui/layui.js"></script>
+</head>
+<body>
+<!--轮播图-->
+<style type="text/css">
+    .swiper-container_box{
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .swiper-container .swiper-pagination-zq {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+        text-align: center;
+    }
+</style>
+<div class="swiper-container_box">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img onclick="adv_go('http://www.365xuet.com/xueT/courseIndex?series_id=7')" src="upfile/2.jpg"></div>
+            <div class="swiper-slide"><img onclick="adv_go('http://v2.365xuet.com/xueT/courseIndex?series_id=4')" src="upfile/2.jpg"></div>
+        </div>
+        <div class="swiper-pagination-zq"></div>
+    </div>
+</div>
+<script>
+    $(function () {
+        var mySwiper = new Swiper('.swiper-container_box .swiper-container', {
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination-zq',
+                clickable: true,
+            },
+            lazy: {
+                loadPrevNext: true,
+            },
+        })
+    })
+    function adv_go(url){
+        window.location.href = url;
+    }
+</script>
+<!-- 投稿信息统计 -->
+<div class="personalStatistics clearfix bgWhite radius15 borderThinE mt13">
+    <div class="parentBox">
+        <div class="childrenFlex">
+            <p class="gray9"><span class="iconfont icon-gongyi red"></span>累计投稿<a href="" class="gray3">18</a>篇</p>
+            <p class="gray9"><span class="iconfont icon-yezi green"></span>平均新鲜度<a href="" class="gray3">18</a>%</p>
+        </div>
+        <div class="childrenFlex">
+            <p class="gray9"><span class="iconfont icon-fabiao green2"></span>已发表<a href="" class="gray3">18</a>篇</p>
+            <p class="gray9"><span class="iconfont icon-jiaru blue"></span>加入了<a href="" class="gray3">18</a>天</p>
+        </div>
+    </div>
+    <ul class="parentBox tac">
+        <li class="childrenFlex"><a href=""><img src="images/personalCenterIco/1.png" alt=""><p>自由投稿</p></a></li>
+        <li class="childrenFlex"><a href=""><img src="images/personalCenterIco/2.png" alt=""><p>精批作文</p></a></li>
+        <li class="childrenFlex"><a href=""><img src="images/personalCenterIco/3.png" alt=""><p>班级任务</p></a></li>
+        <li class="childrenFlex"><a href=""><img src="images/personalCenterIco/4.png" alt=""><p>写作诊断</p></a></li>
+    </ul>
+</div>
+<!-- 通用标题 -->
+<div class="personalTitle"><h3>自由投稿</h3><a href="">更多&gt;</a></div>
+<div class="writingListBox clearfix bgWhite radius15 borderThinE mt13">
+    <ul class="freeContributeListUl">
+        <li class="clearfix">
+            <div class="tit left">
+                <a class="windowPreview" href="javascript:;">写给父亲的话</a>
+                <em class="couponState bgBlue">图</em>
+                <em class="couponState bgRed">加</em>
+                <span class="memberState">24:00:00 内完成点评</span>
+            </div>
+            <div class="operateBox right">
+                        <span>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                        </span>
+                <span class="iconfont icon-yezi violet">99%</span>
+                <span class="iconfont icon-geshihua">说明文</span>
+                <span class="iconfont icon-shijian">06-01</span>
+                <a href="javascript:;" class="iconfont icon-shandian operateRadius bgRed2">加速</a>
+                <a href="javascript:;" class="gray9 textDecorationU">删除</a>
+            </div>
+        </li>
+        <li class="clearfix ">
+            <div class="tit left">
+                <a class="windowPreview" href="javascript:;">写给父亲的话</a>
+                <em class="couponState bgBlue">图</em>
+                <em class="couponState bgRed">加</em>
+                <em class="couponState bgGreen">精</em>
+                <a href="javascript:;" class="revocationCause bgEee">被退回 <i class="iconfont icon-wenhao"></i></a>
+                <span class="state bgEee">草稿</span>
+                <span class="state bgEee">待点评</span>
+                <span class="stateBg">已点评</span>
+                <span class="stateBg">已发表</span>
+                <span class="stateBg">已推荐</span>
+                <span class="memberState">24:00:00 内完成点评</span>
+                <a href="javascript:;" class="markingSpeed">待第一次点评 <i class="iconfont icon-arrowdown"></i>
+                    <img src="images/markingProgress/1.png" alt="">
+                </a>
+                <a href="javascript:;" class="markingSpeed">待点评 <i class="iconfont icon-arrowdown"></i>
+                    <img src="images/markingProgress/2.png" alt="">
+                </a>
+            </div>
+            <div class="operateBox right">
+                        <span>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                        </span>
+                <span class="iconfont icon-yezi red2">69%</span><!--70%以下 red2-->
+                <span class="iconfont icon-yezi blue">79%</span><!--80%以下 blue-->
+                <span class="iconfont icon-yezi green">89%</span><!--90%以下 green-->
+                <span class="iconfont icon-yezi violet">99%</span><!--90%以上 violet-->
+                <span class="iconfont icon-geshihua">说明文</span>
+                <span class="iconfont icon-shijian">06-01</span>
+                <a href="javascript:;" class="iconfont icon-shandian operateRadius bgRed2 addAccelerateBtn">加速</a>
+                <a href="自由投稿.html" target="iFrame1" class="iconfont icon-bianji operateRadius bgRed3">编辑</a>
+                <a href="自由投稿.html" target="iFrame1" class="iconfont icon-bianji operateRadius bgRed3">去修改</a>
+                <a href="javascript:;" class="gray9 textDecorationU del">删除</a>
+                <a href="javascript:;" class="gray9 textDecorationU backBtn">撤回</a>
+            </div>
+        </li>
+    </ul>
+</div>
+<!-- 通用标题 -->
+<div class="personalTitle"><h3>班级任务</h3><a href="">更多&gt;</a></div>
+<div class="classWritingListBox clearfix bgWhite radius15 borderThinE mt13">
+    <ul class="freeContributeListUl">
+        <li class="clearfix">
+            <div class="tit titClass left">
+                <p class="fz16 spilloverEllipsis"><span class="red">标题：</span>以“激动”开头写一篇作文开头写一<span class="state bgEee">待点评</span></p>
+                <p class="gray9 fz14 spilloverEllipsis">要求：情感真切，可以表达对秋天的憧憬和喜爱可以表达对秋天的憧憬和喜爱可以表达对秋天的憧憬和喜爱</p>
+            </div>
+            <div class="operateBox operateBoxClass right">
+                <span class="iconfont icon-guzhang">命题作文</span>
+                <span class="iconfont icon-shijian">06-01</span>
+                <a href="班级投稿.html" target="iFrame1" class="iconfont icon-bianji operateRadius bgRed3">去完成</a>
+            </div>
+        </li>
+        <li class="clearfix ">
+            <div class="tit left">
+                <a class="windowPreview" href="javascript:;">写给父亲的话</a>
+                <em class="couponState bgBlue">图</em>
+                <span class="state bgEee">草稿</span>
+                <span class="state bgEee">待点评</span>
+                <span class="stateBg">已点评</span>
+                <span class="stateBg">已发表</span>
+                <span class="stateBg">已推荐</span>
+                <span class="activityIco">活动作文</span>
+            </div>
+            <div class="operateBox right">
+                        <span>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                            <i class="iconfont icon-shoucang"></i>
+                        </span>
+                <span class="iconfont icon-yezi violet">99%</span>
+                <span class="iconfont icon-geshihua">说明文</span>
+                <span class="iconfont icon-shijian">06-01</span>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--追加使用加速券弹出-->
+<div class="addAccelerateBox hide">
+    <em class="iconfont icon-guanbi close"></em>
+    <img src="images/addAccelerateBg.jpg" alt="">
+    <div class="addAccelerateContent">
+        <p><span class="gray6">作文名称：</span>测试标题1</p>
+        <p><span class="gray6">投稿时间：</span>2019年06月26日</p>
+        <p class="gray9"><em>由于平台来稿量大，正常点评完成时限为7个工作日</em></p>
+        <div class="addAccelerateIco clearfix">
+            <div class="addAccelerateIcoL left"><img src="https://demo.365xuet.com/assets/mobile/images/card/addAccelerateIco.png" alt=""></div>
+            <div class="addAccelerateIcoR left"><p>点评加速券</p>
+                <p>
+                    <span class="gray9">暂无卡券</span>
+                    <i class="red">￥20</i>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--追加使用加速券支付-->
+<div class="addAcceleratePayment hide">
+    <div class="paymentBor">
+        <p><span>加速券</span><span class="right"><i>20</i>元</span></p>
+    </div>
+    <div class="paymentBor">
+        <p>优惠券 <span class="gray9 right fz14">暂无优惠券</span></p>
+        <ul class="clipCoupons_box">
+            <li class="clearfix">
+                <div class="left pic">
+                    <img src="images/cardVoucherIco/dj20.png" alt="">
+                </div>
+                <div class="right tit">
+                    <p><span>20元代金券</span></p>
+                    <p><span>拥有1张</span></p>
+                    <a href="javascript:;" class="clipCouponsBtn" data-price="2000" data-id="9">使用</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="integralDeduction paymentBor">
+        <span>积分抵扣</span>
+        <span class="gray9 fz14">共 <em>628</em> 本单可用 <em id="cuse_intergral">628</em></span>
+        <a href="javascript:;" class="right switch_integral"></a>
+    </div>
+    <div class="paymentBor">
+        <p><span>订单金额</span><span class="right"><i>20</i>元</span></p>
+        <p><span>优惠券抵扣</span><span class="right red">-<i>10</i>元</span></p>
+    </div>
+    <div class="paymentMethodBox parentBox">
+        <div class="childrenFlex">
+            <label>
+                <img src="http://www.365xuet.com/assets/mobile/images/vip_img/weixin.png" alt="">
+                <span>微信支付</span>
+                <input type="radio" name="paymentMethod" checked="" value="1" class="mui-checkbox right">
+            </label>
+        </div>
+        <div class="childrenFlex">
+            <label>
+                <img src="http://www.365xuet.com/assets/mobile/images/vip_img/ye.png" alt="">
+                <span>余额支付</span>
+                <input type="radio" name="paymentMethod" value="2" class="mui-checkbox right">
+            </label>
+        </div>
+    </div>
+    <div class="weixinPayment tac">
+        <img src="http://www.365xuet.com/assets/web/images/bottom_wx.jpg" alt="">
+        <p>扫码支付<b class="red">30.00</b></p>
+    </div>
+    <div class="yePayment hide">
+        <span class="fz18">合计：￥<strong>159</strong></span><button class="bgRed white right btn">立即支付</button>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+        layui.use(['form','element','layer'], function() {
+            var form = layui.form,
+                element = layui.element,
+                layer = layui.layer;
+        })
+         //支付状态切换
+        $('input[name="paymentMethod"]').click(function () {
+            if (this.value == 2) {
+                $('.yePayment').show().siblings('.weixinPayment').hide();
+            } else {
+                $('.weixinPayment').show().siblings('.yePayment').hide();
+            }
+        })
+         //开关
+        $(document).on('click','.switch_integral',function () {
+            $(this).toggleClass('switch_integral_on');
+        })
+        //使用优惠券
+        $(document).on('click','.clipCouponsBtn',function () {
+            $(this).toggleClass('clipCoupons_on');
+            $(this).parents('li').siblings().find('a').removeClass('clipCoupons_on').text('使用');
+            if ($(this).is('.clipCoupons_on')) {
+                $(this).text('已使用');
+            } else {
+                $(this).text('使用');
+            }
+        })
+        //使用加速券
+        $('.addAccelerateBtn').click(function () {
+            layer.open({
+                type: 1,
+                title:false,
+                closeBtn:false,
+                skin: 'layerCommBox',
+                btn:'立即使用',
+                area:'450px',
+                content: $('.addAccelerateBox')
+                ,success:function () {
+                    $(document).on('click','.close',function () {
+                        layer.closeAll()
+                    })
+                }
+                ,yes:function () {
+                    layer.closeAll()
+                    layer.open({
+                        type: 1,
+                        title:'确认订单',
+                        move:false,
+                        skin: 'layerCommBox',
+                        area:'450px',
+                        content: $('.addAcceleratePayment')
+                    });
+                }
+            });
+        });
+        //未点评文章弹出
+        $('.windowPreview').click(function () {
+            layer.open({
+                type: 1,
+                title:'文章标题',
+                skin: 'layerCommBox',
+                area:'750px',
+                content: '<div class="windowPreviewBox"><p>今阅史书，聆国闻，有感于国之兴盛，民之富强，心境久而不平，遂作此篇，文曰：(文章的开头精炼有序，交代了写作目的，使人印象深刻)悠远之启夏兮，承禹舜而拓疆；</p><p>浩浩之殷商兮，征西隅而兵胡；壮哉之周朝兮，启封建之曙光；儒雅之春秋兮，开百家之争鸣；礼崩之战国兮，诸侯颓而嬴兴。严明之霸秦兮，扫六国而立郡县；</p><p>辽阔之炎汉兮，开丝路而统西域；风败之南北兮，久丧乱而曝尸。百年兵刃，出隋而平，唐遇安史，极盛而衰，富宋偏居，失地千里，暴元西征，蹄声不已，强明之昌，败于贪贿，末清灭时，邦国分裂。中华虽久经沧桑，仍心力旺盛，百年战火何足道也！</p><p>中华之渊远如九天之繁星，经千载而不熄，民族之坚毅如江河之流水，历万世而不涸。</p></div>'
+            });
+        });
+        //退回
+        $('.revocationCause').click(function () {
+            layer.open({
+                type: 1,
+                title:'退回原因',
+                skin: 'layerCommBox',
+                area:'500px',
+                content: '<div class="revocationCauseBox">文章内容不符合规范，长度不够，写的太粗糙，不是很完美，还需要努力，继续加油！文章内容不符合规范，长度不够，写的太粗糙，不是很完美，还需要努力，继续加油！</div>'
+            });
+        });
+        //撤回
+        $('.backBtn').click(function () {
+            layer.confirm('你确定撤回吗？', {
+                btn: ['取消','确定']
+                ,closeBtn: 0
+                ,area:'350px'
+                ,skin:'layerConfirm'
+                ,title:''
+            })
+
+        })
+        //删除
+        $('.del').click(function () {
+            layer.confirm('你确定删除吗？', {
+                btn: ['取消','确定']
+                ,closeBtn: 0
+                ,area:'350px'
+                ,skin:'layerConfirm'
+                ,title:''
+                ,style:'width:auto'
+            })
+        })
+    })
+</script>
+</html>

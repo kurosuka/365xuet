@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <title>个人中心</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1258756_dc64tksqhae.css?date= new Date()"><!--PC个人中心改版2019-2019-08-14-->
+    
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css"/>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/personalCenter.css">
+    <link rel="stylesheet" href="css/teacherCenter.css">
+    <link rel="stylesheet" href="css/corpus.css?date= new Date()" />
+    <script>/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <script src="layui/layui.js"></script>
+    <script src="js/turn.js"></script>
+    <script src="js/basic.js" ></script>
+</head>
+<body>
+        <div class="flipbook-viewport hide">
+            <div class="containerTemplete">
+                <div class="flipbook"></div>
+                <!--左按钮-->
+                <div class="flipBookLeftBtn iconfont icon-arrowleft"></div>
+                <!--右按钮-->
+                <div class="flipBookRightBtn iconfont icon-arrowright"></div>
+                <!--退出按钮-->
+                <!--页数-->
+                <div class="pagesItem"></div>
+                <div class="flipBookBack">退出预览</div>
+            </div>
+        
+        </div>
+        <script>
+            $(function () {
+                // Events for the next button
+                $('.flipBookRightBtn').click(function () {
+                    $('.flipbook').turn('next');
+                    //按钮显示
+                    setArrows($('.flipbook').turn('page'), $('.flipbook').turn('pages'));
+                    setPages($('.flipbook').turn('page'), $('.flipbook').turn('pages'));
+                });
+
+                // Events for the prev button	
+
+                $('.flipBookLeftBtn').click(function () {
+
+                    $('.flipbook').turn('previous');
+                    //按钮显示
+                    setArrows($('.flipbook').turn('page'), $('.flipbook').turn('pages'));
+                    setPages($('.flipbook').turn('page'), $('.flipbook').turn('pages'));
+                });
+                //翻页完成后
+                $(".flipbook").bind("turning", function (event, page, view) {
+                    //按钮显示
+                    setArrows($('.flipbook').turn('page'), $('.flipbook').turn('pages'));
+                    setPages($('.flipbook').turn('page'), $('.flipbook').turn('pages'));
+
+                })
+                //文集预览隐藏
+                $('.flipBookBack').click(function () {
+                    $('.flipbook-viewport').addClass('hide');
+                    $(".flipbook").turn("destroy")
+                })
+                //模板显示
+                $('.edit-translate i').click(function () {
+                    $('.flipbook-viewport').removeClass('hide');
+                    pageTemplete();
+                    //跳转到指定模板页
+                    $('.flipbook').turn('page',$(this).parent().parent().index()+1)
+                })
+                //
+            })
+            function pageTemplete() {
+                //加载书页Page
+                $('.flipbook').html('<div style="background-image:url(pages/1.jpg)"></div><div style=""></div><div style=""></div><div style="background-image:url(pages/4.jpg)"></div>')
+                $('.flipbook').turn({
+                    // Width
+
+                    width: 461,
+
+                    // Height
+
+                    height: 600,
+
+                    // Elevation
+
+                    elevation: 50,
+                    page: 1,
+                    disable: false,
+                    // Enable gradients
+
+                    gradients: true,
+
+                    // Auto center this flipbook
+
+                    autoCenter: true,
+                    when: {
+                        turning: function (e, page, view) {
+                        },
+                        turned: function (e, page, view) {
+                        setArrows($('.flipbook').turn('page'), $('.flipbook').turn('pages'));
+                        setPages($('.flipbook').turn('page'), $('.flipbook').turn('pages'));
+                    },
+                    },
+                });
+                $(".flipbook").turn("display", "single");
+                //按钮显示
+                setArrows($('.flipbook').turn('page'), $('.flipbook').turn('pages'));
+                setPages($('.flipbook').turn('page'), $('.flipbook').turn('pages'));
+            }
+            function setPages(page, pages) {
+                $('.pagesItem').html(page + '/' + pages)
+            }
+            //显示按钮
+            function setArrows(page, pages) {
+                if (page == 1) {
+                    $('.flipBookLeftBtn').hide();
+                    $('.flipBookRightBtn').show();
+                } else if (page == pages) {
+                    $('.flipBookLeftBtn').show();
+                    $('.flipBookRightBtn').hide();
+                } else {
+                    $('.flipBookLeftBtn').show();
+                    $('.flipBookRightBtn').show();
+                }
+            }
+        </script>
+<!--轮播图-->
+<style type="text/css">
+    .swiper-container_box{
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .swiper-container .swiper-pagination-zq {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+        text-align: center;
+    }
+</style>
+<div class="swiper-container_box">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img onclick="adv_go('http://www.365xuet.com/xueT/courseIndex?series_id=7')" src="upfile/2.jpg"></div>
+            <div class="swiper-slide"><img onclick="adv_go('http://v2.365xuet.com/xueT/courseIndex?series_id=4')" src="upfile/2.jpg"></div>
+        </div>
+        <div class="swiper-pagination-zq"></div>
+    </div>
+</div>
+<script>
+    $(function () {
+        var mySwiper = new Swiper('.swiper-container_box .swiper-container', {
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination-zq',
+                clickable: true,
+            },
+            lazy: {
+                loadPrevNext: true,
+            },
+        })
+    })
+    function adv_go(url){
+        window.location.href = url;
+    }
+</script>
+<!-- 通用标题 -->
+<div class="personalTitle clearfix">
+    <h3>模板选择</h3>
+    <!--滚动通知-->
+    <div class="rollingNotification right">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/courseIndex?tab=4" class="iconfont icon-xiaolaba">写作思路打不开？快来围观写作任务群!</a></div>
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/seriesCourseDetail/955" class="iconfont icon-xiaolaba">听故事学语文，点此免费试听~</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="writingListBox clearfix bgWhite radius15 borderThinE mt13">
+        <div class="select-corpus-content">
+            <ul>
+                <li class="active">
+                    <img src="http://www.365xuet.com/assets/web/images/writingIndexNav/3.jpg" alt="" />
+                    <div class="select-corpusi-tip"><span class="iconfont icon-test"></span></div>
+                    <div class="edit-translate">
+                        <span>文章名称</span>
+                        <i class="iconfont icon-yulan"></i>
+                    </div>
+                    <span class="templatePrice">￥98</span>
+                </li>
+                <li>
+                    <img src="http://www.365xuet.com/assets/web/images/writingIndexNav/3.jpg" alt="" />
+                    <div class="select-corpusi-tip"><span class="iconfont icon-test"></span></div>
+                    <div class="edit-translate">
+                        <span>文章名称</span>
+                        <i class="iconfont icon-yulan"></i>
+                    </div>
+                    <span class="templatePrice">￥98</span>
+                </li>
+                <li>
+                    <img src="http://www.365xuet.com/assets/web/images/writingIndexNav/3.jpg" alt="" />
+                    <div class="select-corpusi-tip"><span class="iconfont icon-test"></span></div>
+                    <div class="edit-translate">
+                        <span>文章名称</span>
+                        <i class="iconfont icon-yulan"></i>
+                    </div>
+                    <span class="templatePrice">￥98</span>
+                </li>
+                <li>
+                    <img src="http://www.365xuet.com/assets/web/images/writingIndexNav/3.jpg" alt="" />
+                    <div class="select-corpusi-tip"><span class="iconfont icon-test"></span></div>
+                    <div class="edit-translate">
+                        <span>文章名称</span>
+                        <i class="iconfont icon-yulan"></i>
+                    </div>
+                    <span class="templatePrice">￥98</span>
+                </li>
+            </ul>
+        </div>
+        <a href="文集编辑.html" class="selTemplateBtn">确定</a>
+    </div>
+</div>
+</body>
+<script>
+    $(function(){
+        layui.use(['form','element','layer'], function() {
+            var form = layui.form,
+                element = layui.element,
+                layer = layui.layer;
+        });
+        $('.switch-btn').on('click',function(){
+                   $(this).toggleClass('switch-selected')
+               });
+    })
+</script>
+<script>
+	$(function () {
+		//通知滚动
+		var swiper = new Swiper('.rollingNotification .swiper-container', {
+			loop: true,
+			direction: 'vertical',
+			slidesPerView: 1,
+			autoplay: {
+				delay: 2000,
+			}
+		});
+        $('.select-corpus-content li').click(function(){
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+	})
+</script>
+</html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <META name="keywords" content='学生写作投稿,老师随时点评、布置作业,名师点评,提升写作能力,信息化校园解决方案'>
+    <META name="Description" content='为中小学生提供最科学的个性化写作提升方案'>
+    <META name="author" content="苏州开智教育">
+    <title>课程列表页</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1147714_e72zro5xq18.css">
+    <!--官网改版2019-2019-07-17-->
+    <link rel="stylesheet" href="http://www.365xuet.com/assets/web/layui/css/layui.css">
+    <link rel="stylesheet" href="http://www.365xuet.com/assets/web/css/xuet2019.css" />
+    <script src="http://www.365xuet.com/assets/web/js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.2.2.css" />
+    <link rel="stylesheet" href="css/pcmember.css" />
+    <script>/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?7e9dc466cf5be629b01797930555270d";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+
+<body bgcolor="#f8f8f8">
+    <style>
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+
+        .commHead {
+            height: 60px;
+            line-height: 60px;
+            background-color: #fff;
+            padding: 0 20px;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+            box-shadow: 0 0 32px rgba(153, 153, 153, 0.15);
+            min-width: 1200px;
+        }
+
+        .headLogo {
+            height: 60px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .headLogo img {
+            width: 120px;
+        }
+
+        .headNav {
+            float: left;
+        }
+
+        .headNav ul li {
+            float: left;
+            padding: 0 26px;
+        }
+
+        .headNav ul li a {
+            font-size: 16px;
+            color: #7c7c7c;
+        }
+
+        .headNav ul li a:hover,
+        .headNav ul li a.on {
+            color: #ff856c;
+        }
+
+        .headLoginBox {
+            float: right;
+        }
+
+        .headLogin {
+            float: left;
+        }
+
+        .headLogin a {
+            font-size: 16px;
+            color: #333;
+            margin-left: 10px;
+        }
+
+        .headLogin a.headRegister {
+            display: inline-block;
+            height: 36px;
+            line-height: 36px;
+            border: 1px solid #ff856c;
+            color: #ff856c;
+            padding: 0 20px;
+            border-radius: 20px;
+        }
+
+        .headAlreadyLogin {
+            float: left;
+            font-size: 16px;
+        }
+
+        .headAlreadyLogin img {
+            width: 36px;
+            height: 36px;
+            border-radius: 100%;
+        }
+
+        .headAlreadyLogin a {
+            color: #333;
+            margin-left: 10px;
+        }
+
+        .headAlreadyLogin a.AlreadyLoginQuit {
+            color: #999;
+        }
+
+        .headWritingBtn {
+            float: left;
+            margin-left: 18px;
+        }
+
+        .headWritingBtn a {
+            display: inline-block;
+            background-color: #ff856c;
+            border-radius: 20px;
+            height: 38px;
+            line-height: 38px;
+            width: 130px;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .headWritingBtn a img {
+            margin-right: 4px;
+            vertical-align: middle;
+        }
+    </style>
+    <div class="commHead clearfix">
+        <div class="headLogo"><img src="http://www.365xuet.com/assets/web/images/xueTang/logo.jpg" alt=""></div>
+        <div class="headNav">
+            <ul class="clearfix">
+                <li><a href="http://www.365xuet.com">首页</a></li>
+                <li><a href="http://www.365xuet.com/write">读写空间</a></li>
+                <li><a href="http://www.365xuet.com/write/compositionList">作文文库</a></li>
+                <li><a href="http://www.365xuet.com/cooperation">加入我们</a></li>
+            </ul>
+        </div>
+        <div class="headLoginBox clearfix">
+            <div class="headAlreadyLogin">
+                <a href="http://www.365xuet.com/web/userCenter/index"><img
+                        src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/headPortrait/30ed7aee6e2d3146a1e3d6752643763a.jpg"
+                        alt=""></a>
+                <a class="AlreadyLoginName" href="http://www.365xuet.com/web/userCenter/index">赵建</a>
+                <a class="AlreadyLoginQuit" href="http://www.365xuet.com/web/users/logout">退出</a>
+            </div>
+            <div class="headWritingBtn"><a href="http://www.365xuet.com/web/userCenter/submission"><img
+                        src="http://www.365xuet.com/assets/web/images/xueTang/headWritingIco.png" alt="">我要投稿</a></div>
+        </div>
+    </div>
+    <!--头部结束-->
+    <!--头部结束-->
+    <div class="newMain clearfix">
+        <div class="newMainLeft">
+            <div class="courseTabcontent">
+                <div class="courseTabnav">
+                    <ul>
+                        <li class="active">写作课程</li>
+                        <li>音频课程</li>
+                        <li>直播课程</li>
+                        <li>特色课程</li>
+                        <li>特色课程</li>
+                    </ul>
+                </div>
+                <div class="writingScreen">
+                    <ul>
+                        <li class="clearfix" id="study_stage">
+                            <span>学段：</span>
+                            <p>
+                                <a href="http://www.365xuet.com/write/compositionList?order=new&amp;page=1&amp;study_stage=all"
+                                    class="on" data-id="all">全部</a>
+                                <a href="http://www.365xuet.com/write/compositionList?order=new&amp;page=1&amp;study_stage=1"
+                                    data-id="1">小学阶段</a>
+                                <a href="http://www.365xuet.com/write/compositionList?order=new&amp;page=1&amp;study_stage=2"
+                                    data-id="2">初中阶段</a>
+                                <a href="http://www.365xuet.com/write/compositionList?order=new&amp;page=1&amp;study_stage=3"
+                                    data-id="3">高中阶段</a>
+                            </p>
+                        </li>
+                        <li class="clearfix" id="grade_id">
+                            <span>难度：</span>
+                            <p>
+                                <a class="on"
+                                    href="http://www.365xuet.com/write/compositionList?order=new&amp;page=1&amp;grade_id=">全部</a>
+                                <a href="http://www.365xuet.com/write/compositionList?order=new&amp;page=1&amp;grade_id=1"
+                                    data-id="1">易</a>
+                                <a href="http://www.365xuet.com/write/compositionList?order=new&amp;page=1&amp;grade_id=2"
+                                    data-id="2">中</a>
+                                <a href="http://www.365xuet.com/write/compositionList?order=new&amp;page=1&amp;grade_id=3"
+                                    data-id="3">难</a>
+                            </p>
+                        </li>
+                </div>
+            </div>
+            <div class="teacherColumnTabBox">
+                <div class="teacherColumnTab">
+                    <div class="resp-tabs-container">
+                        <div class="courseIndexBox">
+                            <ul class="hotCourseUl clearfix">
+                                <li>
+                                    <div class="pic">
+                                        <a target="_blank" href="http://www.365xuet.com/xueT/courseDetail/1102">
+                                            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/31949d8247ffbe0a2a3d37acc8ac8cc2.jpg"
+                                                alt="">
+                                            <p>
+                                                <span class="green iconfont icon-huiyuan">会员免费</span>
+                                                <em>共25节</em>
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <p class="spilloverEllipsis"><a target="_blank"
+                                            href="http://www.365xuet.com/xueT/courseDetail/1102">当哈利波特遇上西游记</a></p>
+                                    <p>
+                                        <span class="iconfont icon-iconfonthuo">500</span>
+                                        <!--会员免费-->
+                                        <s>￥99</s>
+                                        <strong class="green">免费</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="pic">
+                                        <a target="_blank" href="http://www.365xuet.com/xueT/courseDetail/955">
+                                            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/audio/7a83cf9365dd0e5d906f9b6e57f44987.jpg"
+                                                alt="">
+                                            <p>
+                                                <span class="iconfont icon-huiyuan">会员特惠</span>
+                                                <em>共105节</em>
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <p class="spilloverEllipsis"><a target="_blank"
+                                            href="http://www.365xuet.com/xueT/courseDetail/955">听故事学语文，语文能力训练100天</a>
+                                    </p>
+                                    <p>
+                                        <span class="iconfont icon-iconfonthuo">6417</span>
+                                        <!--会员价-->
+                                        <s>￥33</s>
+                                        <em><i>199</i></em>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="pic">
+                                        <a target="_blank" href="http://www.365xuet.com/xueT/courseDetail/855">
+                                            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/1ce4078cf0838734a31380aba1feabf5.jpg"
+                                                alt="">
+                                            <p>
+                                                <em>共1节</em>
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <p class="spilloverEllipsis"><a target="_blank"
+                                            href="http://www.365xuet.com/xueT/courseDetail/855">大声说出我爱你</a></p>
+                                    <p>
+                                        <span class="iconfont icon-iconfonthuo">810</span>
+                                        <em>￥<i>8.8</i></em>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="pic">
+                                        <a target="_blank" href="http://www.365xuet.com/xueT/courseDetail/855">
+                                            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/1ce4078cf0838734a31380aba1feabf5.jpg"
+                                                alt="">
+                                            <p>
+                                                <em>共1节</em>
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <p class="spilloverEllipsis"><a target="_blank"
+                                            href="http://www.365xuet.com/xueT/courseDetail/855">大声说出我爱你</a></p>
+                                    <p>
+                                        <span class="iconfont icon-iconfonthuo">810</span>
+                                        <em>￥<i>8.8</i></em>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="pic">
+                                        <a target="_blank" href="http://www.365xuet.com/xueT/courseDetail/855">
+                                            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/1ce4078cf0838734a31380aba1feabf5.jpg"
+                                                alt="">
+                                            <p>
+                                                <em>共1节</em>
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <p class="spilloverEllipsis"><a target="_blank"
+                                            href="http://www.365xuet.com/xueT/courseDetail/855">大声说出我爱你</a></p>
+                                    <p>
+                                        <span class="iconfont icon-iconfonthuo">810</span>
+                                        <em>￥<i>8.8</i></em>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="pic">
+                                        <a target="_blank" href="http://www.365xuet.com/xueT/courseDetail/1102">
+                                            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/31949d8247ffbe0a2a3d37acc8ac8cc2.jpg"
+                                                alt="">
+                                            <p>
+                                                <em>共25节</em>
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <p class="spilloverEllipsis"><a target="_blank"
+                                            href="http://www.365xuet.com/xueT/courseDetail/1102">当哈利波特遇上西游记</a></p>
+                                    <p>
+                                        <span class="iconfont icon-iconfonthuo">500</span>
+                                        <em>￥<i>199</i></em>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="pic">
+                                        <a target="_blank" href="http://www.365xuet.com/xueT/courseDetail/955">
+                                            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/audio/7a83cf9365dd0e5d906f9b6e57f44987.jpg"
+                                                alt="">
+                                            <p>
+                                                <em>共105节</em>
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <p class="spilloverEllipsis"><a target="_blank"
+                                            href="http://www.365xuet.com/xueT/courseDetail/955">听故事学语文，语文能力训练100天</a>
+                                    </p>
+                                    <p>
+                                        <span class="iconfont icon-iconfonthuo">6417</span>
+                                        <em>￥<i>119</i></em>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="pic">
+                                        <a target="_blank" href="http://www.365xuet.com/xueT/courseDetail/855">
+                                            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/1ce4078cf0838734a31380aba1feabf5.jpg"
+                                                alt="">
+                                            <p>
+                                                <em>共1节</em>
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <p class="spilloverEllipsis"><a target="_blank"
+                                            href="http://www.365xuet.com/xueT/courseDetail/855">大声说出我爱你</a></p>
+                                    <p>
+                                        <span class="iconfont icon-iconfonthuo">810</span>
+                                        <em>￥<i>8.8</i></em>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="pic">
+                                        <a target="_blank" href="http://www.365xuet.com/xueT/courseDetail/855">
+                                            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/1ce4078cf0838734a31380aba1feabf5.jpg"
+                                                alt="">
+                                            <p>
+                                                <em>共1节</em>
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <p class="spilloverEllipsis"><a target="_blank"
+                                            href="http://www.365xuet.com/xueT/courseDetail/855">大声说出我爱你</a></p>
+                                    <p>
+                                        <span class="iconfont icon-iconfonthuo">810</span>
+                                        <em>￥<i>8.8</i></em>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="pic">
+                                        <a target="_blank" href="http://www.365xuet.com/xueT/courseDetail/855">
+                                            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/1ce4078cf0838734a31380aba1feabf5.jpg"
+                                                alt="">
+                                            <p>
+                                                <em>共1节</em>
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <p class="spilloverEllipsis"><a target="_blank"
+                                            href="http://www.365xuet.com/xueT/courseDetail/855">大声说出我爱你</a></p>
+                                    <p>
+                                        <span class="iconfont icon-iconfonthuo">810</span>
+                                        <em>￥<i>8.8</i></em>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="pic">
+                                        <a target="_blank" href="http://www.365xuet.com/xueT/courseDetail/855">
+                                            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/1ce4078cf0838734a31380aba1feabf5.jpg"
+                                                alt="">
+                                            <p>
+                                                <em>共1节</em>
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <p class="spilloverEllipsis"><a target="_blank"
+                                            href="http://www.365xuet.com/xueT/courseDetail/855">大声说出我爱你</a></p>
+                                    <p>
+                                        <span class="iconfont icon-iconfonthuo">810</span>
+                                        <em>￥<i>8.8</i></em>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="pic">
+                                        <a target="_blank" href="http://www.365xuet.com/xueT/courseDetail/855">
+                                            <img src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/1ce4078cf0838734a31380aba1feabf5.jpg"
+                                                alt="">
+                                            <p>
+                                                <em>共1节</em>
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <p class="spilloverEllipsis"><a target="_blank"
+                                            href="http://www.365xuet.com/xueT/courseDetail/855">大声说出我爱你</a></p>
+                                    <p>
+                                        <span class="iconfont icon-iconfonthuo">810</span>
+                                        <em>￥<i>8.8</i></em>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--分页-->
+                        <div class="writingPage">
+                            <ul>
+                                <li><a href="#">下一页</a></li>
+                                <li><a href="#">末页</a></li>
+                                <li class="page_select">
+                                    当前第 <input type="text" id="page" value="1">页/ 共1441页 <a
+                                        href="javascript:toPage()">转到</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--footer-->
+            <div class="newFooter">
+                <p>©2018苏州开智教育科技有限公司 增值电信业务经营许可证 苏B2-20160471<a href="http://www.miitbeian.gov.cn"
+                        target="_blank">苏ICP备16010362号-2</a></p>
+                <p>客服电话 0512-67259983 </p>
+            </div>
+        </div>
+        <div class="newMainRight" style="margin-top: 1px;">
+            <div class="newMainRightBox">
+                <div class="newMainRecommendCourses">
+                    <a href="javascript:;">
+                        <img src="http://www.365xuet.com/assets/web/images/xueTang/ad1.jpg" alt="">
+                        <p><img class="audioCoursesCode"
+                                src="http://www.365xuet.com/makeQrCode?url=http%253A%252F%252Fwww.365xuet.com%252Fmobile%252FxueTang%252FseriesCourseDetail%252F955"
+                                alt=""><br />扫描二维码学习课程</p>
+                    </a>
+                </div>
+                <div class="newRightCoursesBox">
+                    <div class="tit"><img src="http://www.365xuet.com/assets/web/images/xueTang/newCourseTitBg.jpg"
+                            alt=""></div>
+                    <ul class="newRightCoursesUl">
+                        <li class="clearfix">
+                            <div class="pic"><a href="http://www.365xuet.com/xueT/courseDetail/1102"
+                                    target="_blank"><img
+                                        src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/31949d8247ffbe0a2a3d37acc8ac8cc2.jpg"
+                                        alt=""></a></div>
+                            <div class="tit">
+                                <a target="_blank" class="spilloverEllipsis"
+                                    href="http://www.365xuet.com/xueT/courseDetail/1102">当哈利波特遇上西游记</a>
+                                <span class="iconfont icon-zuihuo">498</span>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="pic"><a href="http://www.365xuet.com/xueT/courseDetail/955" target="_blank"><img
+                                        src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/audio/7a83cf9365dd0e5d906f9b6e57f44987.jpg"
+                                        alt=""></a></div>
+                            <div class="tit">
+                                <a target="_blank" class="spilloverEllipsis"
+                                    href="http://www.365xuet.com/xueT/courseDetail/955">听故事学语文，语文能力训练100天</a>
+                                <span class="iconfont icon-zuihuo">6414</span>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="pic"><a href="http://www.365xuet.com/xueT/courseDetail/855" target="_blank"><img
+                                        src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/1ce4078cf0838734a31380aba1feabf5.jpg"
+                                        alt=""></a></div>
+                            <div class="tit">
+                                <a target="_blank" class="spilloverEllipsis"
+                                    href="http://www.365xuet.com/xueT/courseDetail/855">大声说出我爱你</a>
+                                <span class="iconfont icon-zuihuo">810</span>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="pic"><a href="http://www.365xuet.com/xueT/courseDetail/831" target="_blank"><img
+                                        src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/video/201810/080375a44f7e143db70c5b6e8866b3ba.jpg"
+                                        alt=""></a></div>
+                            <div class="tit">
+                                <a target="_blank" class="spilloverEllipsis"
+                                    href="http://www.365xuet.com/xueT/courseDetail/831">写作课程入门课：学会写作文</a>
+                                <span class="iconfont icon-zuihuo">454</span>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="pic"><a href="http://www.365xuet.com/xueT/courseDetail/69" target="_blank"><img
+                                        src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/online/images/online/course/interactive/201900/1548118465344.jpg"
+                                        alt=""></a></div>
+                            <div class="tit">
+                                <a target="_blank" class="spilloverEllipsis"
+                                    href="http://www.365xuet.com/xueT/courseDetail/69">“联想”是爱国还是卖国？</a>
+                                <span class="iconfont icon-zuihuo">399</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="newRightCoursesBtn"><a href="http://www.365xuet.com/xueT/courseIndex">查看更多</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://www.365xuet.com/assets/web/js/jquery-3.3.1.min.js"></script>
+    <script src="http://www.365xuet.com/assets/web/layui/layui.js"></script>
+
+
+    <script src="http://www.365xuet.com/assets/web/js/easyResponsiveTabs.js"></script>
+    <script>
+        $(function () {
+            $('#teacherColumnTab').easyResponsiveTabs({ tabidentify: 'hor_1' });
+            /**
+             * 超出可视范围固定在头部
+             * */
+            var oTop = $(".newMainRightBox").offset().top;
+            var sTop = 0;
+            $(window).scroll(function () {
+                sTop = $(this).scrollTop();
+                if (sTop >= oTop) {
+                    $(".newMainRightBox").addClass('newMainRightBoxFix')
+                } else {
+                    $(".newMainRightBox").removeClass('newMainRightBoxFix')
+                }
+            });
+            layui.use(['element', 'layer'], function () {
+                var element = layui.element,
+                    layer = layui.layer;
+                //微信二维码弹出
+                $('.weChat').click(function () {
+                    layer.open({
+                        title: ""
+                        , btn: false
+                        , content: '<img style="width:320px; height:320px;" src="http://www.365xuet.com/assets/mobile/course/images/WeChatPic.jpg"/>'
+                    });
+                })
+            })
+        })
+        function go_page() {
+            var page = parseInt($('#currentpage').val());
+            var url = 'http://www.365xuet.com/web/xueTang/teacherDetail/204563' + '?series_id=' + '0' + 'page=' + page;
+            location.href = url;
+        }
+    </script>
+</body>
+
+</html>

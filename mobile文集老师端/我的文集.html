@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="hotcss" content="max-width=640">
+    <meta name="hotcss" content="design-width=750">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/hotcss.js"></script>
+    <link rel="stylesheet" href="https://www.365xuet.com/assets/mobile/channel/css/comm.css" />
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1147714_9e1h0p8h3ru.css" />
+    <link href="https://www.365xuet.com/assets/mobile/layer_mobile/need/layer.css?2.0" type="text/css" rel="styleSheet" id="layermcss">
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/mobileCorpus.css" />
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://at.alicdn.com/t/font_1147714_w1u23ubgs1g.js"></script>
+    <script src="https://www.365xuet.com/assets/mobile/layer_mobile/layer.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <title>我的文集</title>
+</head>
+<body style="background-color: #fafafa;">
+    <div class="mobile-wraper">
+        <div class="bulid-corpus">
+            <a href="#" class="iconfont icon-tianjia">新建文集</a>
+        </div>
+        <ul class="m-corpus-list">
+            <li>
+                <div class="m-corpus-tit"><i>草稿</i><span>我的文集</span></div>
+                <div class="m-corpus-bulid">
+                    <p><span>2018年12月25日</span></p>
+                    <p>
+                        <a href="#" class="iconfont icon-yulan">编辑</a>
+                        <a href="#" class="iconfont icon-huishou corpus-delete">删除</a>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="m-corpus-tit"><span>我的文集</span></div>
+                <div class="m-corpus-bulid">
+                    <p><span>2018年12月25日</span></p>
+                    <p>
+                        <a href="#" class="iconfont icon-yulan">预览</a>
+                        <a href="#" class="iconfont icon-zhuanfa1">分享</a>
+                        <a href="#" class="iconfont icon-gouwu m-corpus-buy">购买</a>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="m-corpus-tit"><span>我的文集</span></div>
+                <div class="m-corpus-bulid">
+                    <p><span>2018年12月25日</span></p>
+                    <p>
+                        <a href="#" class="iconfont icon-yulan">预览</a>
+                        <a href="#" class="iconfont icon-zhuanfa1">分享</a>
+                        <a href="#" class="iconfont icon-gouwu m-corpus-buy">购买</a>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="m-corpus-tit"><span>我的文集</span></div>
+                <div class="m-corpus-bulid">
+                    <p><span>2018年12月25日</span></p>
+                    <p>
+                        <a href="#" class="iconfont icon-yulan">预览</a>
+                        <a href="#" class="iconfont icon-zhuanfa1">分享</a>
+                        <a href="#" class="iconfont icon-gouwu m-corpus-buy">购买</a>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="m-corpus-tit"><span>我的文集</span></div>
+                <div class="m-corpus-bulid">
+                    <p><span>2018年12月25日</span></p>
+                    <p>
+                        <a href="#" class="iconfont icon-yulan">预览</a>
+                        <a href="#" class="iconfont icon-zhuanfa1">分享</a>
+                        <a href="#" class="iconfont icon-gouwu m-corpus-buy">购买</a>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--删除提示框-->
+    <div class="corpus-delete-box hide">
+        <div class="corpus-delete-content">
+            <p>确定删除该内容吗？</p>
+            <div class="corpus-btn-content">
+                <a href="#">取消</a>
+                <a href="#">确定</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(function(){
+        $('.corpus-delete').click(function(){
+            layer.open({
+            content: $('.corpus-delete-box').html()
+        })
+        })
+    })
+</script>
+</html>

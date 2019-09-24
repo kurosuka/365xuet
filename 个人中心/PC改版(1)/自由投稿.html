@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <title>个人中心</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1258756_3pvjglell3g.css"><!--PC个人中心改版2019-2019-06-29-->
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="css/photoClip.css" />
+    <link rel="stylesheet" href="css/personalCenter.css">
+    <link rel="stylesheet" href="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/css/swiper.min.4.5.0.css"/>
+    <script>/*@cc_on  window.location.href="http://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/jquery-2.1.1.js"></script>
+    <script src="https://365xuet-v2.oss-cn-shanghai.aliyuncs.com/general/js/swiper.min.4.5.0.js"></script>
+    <script src="layui/layui.js"></script>
+    <script src="photoClip/iscroll-zoom.js"></script>
+    <script src="photoClip/hammer.js"></script>
+    <script src="photoClip/jquery.photoClip.js"></script>
+</head>
+<body>
+<!--轮播图-->
+<style type="text/css">
+    .swiper-container_box{
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .swiper-container .swiper-pagination-zq {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+        text-align: center;
+    }
+</style>
+<div class="swiper-container_box">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img onclick="adv_go('http://www.365xuet.com/xueT/courseIndex?series_id=7')" src="upfile/2.jpg"></div>
+            <div class="swiper-slide"><img onclick="adv_go('http://v2.365xuet.com/xueT/courseIndex?series_id=4')" src="upfile/2.jpg"></div>
+        </div>
+        <div class="swiper-pagination-zq"></div>
+    </div>
+</div>
+<script>
+    $(function () {
+        var mySwiper = new Swiper('.swiper-container_box .swiper-container', {
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination-zq',
+                clickable: true,
+            },
+            lazy: {
+                loadPrevNext: true,
+            },
+        })
+    })
+    function adv_go(url){
+        window.location.href = url;
+    }
+</script>
+<!-- 通用标题 -->
+<div class="personalTitle clearfix">
+    <h3>投稿</h3>
+    <!--滚动通知-->
+    <div class="rollingNotification right">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/courseIndex?tab=4" class="iconfont icon-xiaolaba">写作思路打不开？快来围观写作任务群!</a></div>
+                <div class="swiper-slide"><a href="https://www.365xuet.com/mobile/xueTang/seriesCourseDetail/955" class="iconfont icon-xiaolaba">听故事学语文，点此免费试听~</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bgWhite radius15 borderThinE mt13">
+    <div class="activityPlateBox clearfix">
+        <div class="left">
+            <span class="iconfont icon-huore white">征文活动</span>
+            <strong><em class="textDecorationU">母亲节征文活动</em><i class="red2">火热进行中</i></strong>
+        </div>
+        <div class="right"><span class="gray9">参加活动：</span><a href="javascript:;" class="switch_integral"></a></div>
+    </div>
+</div>
+<div class="bgWhite radius15 borderThinE mt13">
+    <ul class="submissionContent gray9">
+        <li class="clearfix">
+            <div class="tit left">文体：</div>
+            <div class="content literaryStyle right parentBox tac">
+                <span class="childrenFlex"><a href="javascript:;" class="iconfont icon-fukuan active">记叙文</a></span>
+                <span class="childrenFlex"><a href="javascript:;" class="iconfont icon-pinglun">议论文</a></span>
+                <span class="childrenFlex"><a href="javascript:;" class="iconfont icon-shici">诗歌</a></span>
+                <span class="childrenFlex"><a href="javascript:;" class="iconfont icon-xinwen">散文</a></span>
+                <span class="childrenFlex"><a href="javascript:;" class="iconfont icon-shuoming">说明文</a></span>
+                <span class="childrenFlex"><a href="javascript:;" class="iconfont icon-kehuan off">虚构写作</a></span>
+                <span class="childrenFlex"><a href="javascript:;" class="iconfont icon-dushu off">读后感</a></span>
+            </div>
+        </li>
+        <li class="clearfix">
+            <div class="tit left">标题：</div>
+            <div class="content right">
+                <input class="borderThinE gray9" type="text" placeholder="请输入作文标题">
+            </div>
+        </li>
+        <li class="clearfix">
+            <div class="content upPic right">
+                <a class="iconfont icon-zhaopian upPicBtn tac" href="javascript:;">上传作文封面</a>
+            </div>
+            <div class="uploadedPic hide right">
+                <section class="logo-license">
+                    <div class="half clearfix">
+                        <span></span><div class="PicFileBox"><a class="iconfont icon-tihuan againFile" href="javascript:;">替换</a><a class="iconfont icon-huishou delPic" href="javascript:;">删除</a></div>
+                        <a id="logox">
+                            <img id="bgl" src="">
+                        </a>
+                    </div>
+                </section>
+                <article class="htmleaf-container">
+                    <div class="clipAreaTit">图片裁剪 <em class="iconfont icon-guanbi right gray9 cup"></em></div>
+                    <div id="clipArea"></div>
+                    <div class="foot-use clearfix">
+                        <div class="uploader1 blue">
+                            <input type="button" name="file" class="button" value="打开">
+                            <input id="file" type="file" accept="image/*" multiple  />
+                        </div>
+                        <button id="clipBtn">截取</button>
+                    </div>
+                    <div id="view"></div>
+                </article>
+                <div class="fade_layer"></div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <div class="tit left">正文：</div>
+            <div class="content right">
+                <div class="textareaBox borderThinE gray9">
+                    <textarea placeholder="请将作文内容复制黏贴或者直接输入在此区域，学校、年级、班级、姓名系统已默认，无需重读填写"></textarea>
+                    <p><a href="javascript:;" class="iconfont icon-mianze red2 fz14">原创声明</a><span class="right fz14">已输入<i class="red2">0</i>字</span></p>
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <div class="tit left">指导老师：</div>
+            <div class="content right">
+                <input class="borderThinE gray9 instructor" type="text" placeholder="请输入指导老师">
+            </div>
+        </li>
+        <li class="clearfix">
+            <div class="tit left">增值服务：</div>
+            <div class="addServices right">
+                <ul class="addServicesUl">
+                    <li class="clearfix"><i class="iconfont icon-jiasu"></i><em></em><strong>点评加速</strong><span class="gray9 fz14">点评速度提升7倍</span></li>
+                    <li class="clearfix"><i class="iconfont icon-pigai"></i><em></em><strong>精批服务</strong><span class="gray9 fz14">写作能力全面提升</span></li>
+                </ul>
+                <div class="accelerateDetail accFinBack">
+                    <label class="cardTicket clearfix">
+                        <em class="iconfont icon-quan red"></em><strong>使用加速券</strong><span class="red">2个工作日完成点评</span><span class="couponNumber gray9">拥有2张</span>
+                        <div class="checkboxDiv">
+                            <input class="mui-checkbox" type="checkbox">
+                        </div>
+                    </label>
+                    <div class="cardTicket">
+                        <img src="images/memberLogo2.png" alt="">
+                        <strong>开通会员</strong><span class="red memberPop cup">1个工作日完成点评(不限次) <i class="iconfont icon-wenhao gray9"></i></span>
+                    </div>
+                    <div class="cardTicketBox">
+                        <label class="cardTicket">
+                            <span class="cardTicketBg">年</span><strong>年度会员<span>(赠3个月)</span></strong><span class="couponNumber red">￥396</span>
+                            <div class="checkboxDiv">
+                                <input class="mui-checkbox" type="checkbox">
+                            </div>
+                            <p>赠价值735元礼包;每月仅需26元</p>
+                        </label>
+                        <label class="cardTicket">
+                            <span class="cardTicketBg">季</span><strong>季度会员</strong><span class="couponNumber red">￥99</span>
+                            <div class="checkboxDiv">
+                                <input class="mui-checkbox" type="checkbox">
+                            </div>
+                            <p>赠价值120元礼包;每月仅需33元</p>
+                        </label>
+                        <label class="cardTicket">
+                            <span class="cardTicketBg">月</span><strong>月度会员</strong><span class="cardTicketBg">首月特惠</span><span class="couponNumber red"><s class="gray9">￥45</s>￥8</span>
+                            <div class="checkboxDiv">
+                                <input class="mui-checkbox" type="checkbox">
+                            </div>
+                            <p>赠价值40元礼包</p>
+                        </label>
+                    </div>
+                </div>
+                <div class="fineMarkingDetail accFinBack">
+                    <label class="cardTicket">
+                        <em class="iconfont icon-quan red"></em><strong>使用精批券</strong><span class="iconDoubt markingPop"></span><span class="right red">￥20</span>
+                        <div class="checkboxDiv">
+                            <input class="mui-checkbox" type="checkbox">
+                        </div>
+                    </label>
+                    <p>一对一精细化服务，增加由专家指导学生对作文进行自主修改的环节，引导学生反思和矫正，使学生在自主思考中完成写作综合能力的提升。</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="submissionBtn tar">
+        <span class="iconfont icon-naozhong left gray6">您的投稿将在<i class="red">7个工作日内</i>点评完成</span>
+        <a class="fz16 red" href="javascript:;">保存草稿</a>
+        <a class="btn bgRed white submitComposition" href="javascript:;">确定投稿</a>
+    </div>
+</div>
+<!--支付-->
+<div class="addAcceleratePayment hide">
+    <div class="paymentBor">
+        <p><span>加速券</span><span class="right"><i>20</i>元</span></p>
+    </div>
+    <div class="paymentBor">
+        <p>优惠券<span class="gray9 right fz14">暂无优惠券</span></p>
+        <ul class="clipCoupons_box">
+            <li class="clearfix">
+                <div class="left pic">
+                    <img src="images/cardVoucherIco/djbg.png" alt="">
+                    <strong><i>20</i>元代金券</strong>
+                </div>
+                <div class="right tit">
+                    <p><span>20元代金券</span></p>
+                    <p><span>拥有1张</span></p>
+                    <a href="javascript:;" class="clipCouponsBtn" data-price="2000" data-id="9">使用</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="integralDeduction paymentBor">
+        <span>积分抵扣</span>
+        <span class="gray9 fz14">共 <em>628</em> 本单可用 <em id="cuse_intergral">628</em></span>
+        <a href="javascript:;" class="right switch_integral"></a>
+    </div>
+    <div class="paymentBor">
+        <p><span>订单金额</span><span class="right"><i>20</i>元</span></p>
+        <p><span>优惠券抵扣</span><span class="right red">-<i>10</i>元</span></p>
+    </div>
+    <div class="paymentMethodBox parentBox">
+        <div class="childrenFlex">
+            <label>
+                <img src="http://www.365xuet.com/assets/mobile/images/vip_img/weixin.png" alt="">
+                <span>微信支付</span>
+                <input type="radio" name="paymentMethod" checked="" value="1" class="mui-checkbox right">
+            </label>
+        </div>
+        <div class="childrenFlex">
+            <label>
+                <img src="http://www.365xuet.com/assets/mobile/images/vip_img/ye.png" alt="">
+                <span>余额支付</span>
+                <input type="radio" name="paymentMethod" value="2" class="mui-checkbox right">
+            </label>
+        </div>
+    </div>
+    <div class="weixinPayment tac">
+        <img src="http://www.365xuet.com/assets/web/images/bottom_wx.jpg" alt="">
+        <p>扫码支付<b class="red">30.00</b></p>
+    </div>
+    <div class="yePayment hide">
+        <span class="fz18">合计：￥<strong>159</strong></span><button class="bgRed white right btn">立即支付</button>
+    </div>
+</div>
+<!--投稿成功弹出-->
+<div class="contributeIcoBox hide">
+    <em class="iconfont icon-guanbi close"></em>
+    <div class="contributeIcoTop">
+        <img src="images/nodata/contributeIco.png" alt="">
+        <strong>投稿成功</strong>
+        <p>您的作文将在<i>1个工作日内</i>完成点评</p>
+    </div>
+    <div class="contributeIcoCode clearfix">
+        <div class="pic left"><img src="http://wx.365xuet.com/Public/Weixin/images/write_qr_code.png" alt=""></div>
+        <div class="tit left">新用户可以扫描左侧二维码添加客服微信及时获得稿件发表情况，文章发表后将受邀加入创作群，参加丰富的群活动</div>
+    </div>
+</div>
+<!--完善信息-->
+<div class="complementInformation hide">
+    <em class="iconfont icon-guanbi close"></em>
+    <p>为了能给您提供更好的服务<br/>请您在投稿前完善您的个人资料</p>
+    <div class="dataSettingsBox layui-form">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">姓名：</label>
+                <div class="layui-input-inline name">
+                    <input type="text" class="layui-input" placeholder="请输入姓名">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item region">
+            <label class="layui-form-label">地区：</label>
+            <div class="layui-input-inline">
+                <select>
+                    <option value="">请选择省</option>
+                    <option value="浙江" selected="">浙江省</option>
+                </select>
+            </div>
+            <div class="layui-input-inline">
+                <select>
+                    <option value="">请选择市</option>
+                    <option value="杭州">杭州</option>
+                </select>
+            </div>
+            <div class="layui-input-inline">
+                <select>
+                    <option value="">请选择县/区</option>
+                    <option value="西湖区">西湖区</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item school">
+            <div class="layui-inline">
+                <label class="layui-form-label">学校：</label>
+                <div class="layui-input-inline schoolInput">
+                    <input type="text" class="layui-input" id="searchSchool" placeholder="请输入姓名">
+                    <div class="editSchool tar"><span class="fz16 left">彩香实验中学</span><a class="iconfont icon-guanbi" href="javascript:;"></a></div>
+                    <div class="schoolPulldown hide">
+                        <dl>
+                            <dd><a href="javascript:;">彩香实验中学</a></dd>
+                            <dd><a href="javascript:;">彩香实验中学</a></dd>
+                            <dd><a href="javascript:;">彩香实验中学</a></dd>
+                            <dd><a href="javascript:;">彩香实验中学</a></dd>
+                            <dd><a href="javascript:;">彩香实验中学</a></dd>
+                        </dl>
+                        <p><a class="notFoundSchool red2" href="javascript:;">找不到我的学校？</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item grade">
+            <div class="layui-inline">
+                <label class="layui-form-label">学段：</label>
+                <div class="layui-input-inline">
+                    <select>
+                        <option value="1">小学</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">年级：</label>
+                <div class="layui-input-inline">
+                    <select>
+                        <option value="1">小学</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">班级：</label>
+                <div class="layui-input-inline">
+                    <select>
+                        <option value="1">小学</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+        layui.use(['form','element','layer'], function() {
+            var form = layui.form,
+                element = layui.element,
+                layer = layui.layer;
+        })
+        //找不到学校弹出
+        $('.notFoundSchool').click(function () {
+            layer.open({
+                type: 1,
+                title:'输入学校名称',
+                skin: 'layerCommBox',
+                area:'350px',
+                btn:'确定',
+                content:'<textarea class="notFoundSchoolText" placeholder="请输入您所在学校的完整名称"></textarea>'
+            });
+        });
+        //学校搜索
+        $('#searchSchool').focus(function(){
+            $('.schoolPulldown').show();
+        })
+        $(document).on('click', '.editSchool a', function () {
+            $(this).parent().remove();
+        })
+        //图片裁剪
+        $("#clipArea").photoClip({
+            width:400,
+            height:190,
+            file: "#file",
+            view: "#view",
+            ok: "#clipBtn",
+            loadStart: function() {
+                console.log("照片读取中");
+            },
+            loadComplete: function() {
+                console.log("照片读取完成");
+            },
+            clipFinish: function(dataURL) {
+                console.log(dataURL);//图片路径
+            }
+        });
+        $(".delPic ,.clipAreaTit em").click(function(){
+            $(".htmleaf-container,.uploadedPic,.fade_layer").hide();
+            $('.upPic').show();
+            $("#logox").empty();
+        })
+        $(".upPicBtn").click(function(){
+            $(".htmleaf-container,.uploadedPic,.fade_layer").show();
+            $('.upPic').hide();
+        })
+        $(".againFile").click(function(){
+            $(".htmleaf-container,.fade_layer").show();
+        })
+        $("#clipBtn").click(function(){
+            $("#logox").empty();
+            $('#logox').append('<img src="'+ imgsource + '" align="absmiddle" >');
+            if($("#logox").find('img').attr("src").length!=0){
+                $(".htmleaf-container,.fade_layer").hide();
+            }
+        })
+        //增值服务切换
+        $('.addServicesUl').find('li').click(function () {
+            var index = $(this).index();
+            if($(this).hasClass('on')){
+                $('.accelerateDetail,.fineMarkingDetail').hide().find('input').attr('checked',false);
+            }else {
+                if(index==0){
+                    $('.accelerateDetail').show().siblings('.fineMarkingDetail').hide().find('input').attr('checked',false);
+                }else if(index==1){
+                    $('.fineMarkingDetail').show().siblings('.accelerateDetail').hide().find('input').attr('checked',false);
+                }
+            }
+        })
+        $('.addServicesUl li').click(function () {
+            $(this).toggleClass('on').siblings().removeClass('on');
+        })
+        //会员疑问弹出
+        $('.memberPop').click(function () {
+            layer.open({
+                type: 1,
+                title:'会员权益',
+                skin: 'layerCommBox',
+                area:'500px',
+                content: '<div class="revocationCauseBox">1、极速点评<br/>会员享受不限次数极速点评服务;<br/>会员投稿将在24小时内完成点评（节假日顺延）。<br/>2、双倍积分<br/>开通365学堂会员，即可享受全站双倍积分。<br/>例如：普通用户投稿一次获得10分，会员用户可获得20分。<br/>3、专享优惠<br/>会员购买课程和卡券，结算时最多可用积分抵扣50%，非会员最多抵扣20%(100积分=1元）。<br/>4、专属礼包<br/>月度会员送20元代金券1张；<br/>季度会员送20元代金券3张；<br/>年度会员送20元代金券12张、作文投稿券5张、写作咨询券5张、作文精批券1张。<br/>（原礼包内所含加速券升级为极速点评服务）</div>'
+            });
+        });
+        //原创声明
+        $('.textareaBox p a').click(function () {
+            layer.open({
+                type: 1,
+                title:'原创声明',
+                skin: 'layerCommBox',
+                area:'500px',
+                content: '<div class="revocationCauseBox">平台稿件必须为原创首发，严禁剽窃抄袭，文责自负。已被其他平台原创保护的文章，切勿再投送本平台。抄袭或转载他人作品，第一次发现，平台客服会提醒，第二次出现将提出警告，第三次发现将取消一个月投稿资格，请作者务必珍惜个人名誉</div>'
+            });
+        });
+        //文体选中
+        $('.literaryStyle a:not(".off")').click(function () {
+            $(this).addClass('active').parent().siblings().find('a').removeClass('active');
+        })
+         //通知滚动
+        var swiper = new Swiper('.rollingNotification .swiper-container', {
+            loop: true,
+            direction: 'vertical',
+            slidesPerView: 1,
+            autoplay: {
+                delay: 2000,
+            }
+        });
+         //支付状态切换
+        $('input[name="paymentMethod"]').click(function () {
+            if (this.value == 2) {
+                $('.yePayment').show().siblings('.weixinPayment').hide();
+            } else {
+                $('.weixinPayment').show().siblings('.yePayment').hide();
+            }
+        })
+         //开关
+        $(document).on('click','.switch_integral',function () {
+            $(this).toggleClass('switch_integral_on');
+        })
+        //使用优惠券
+        $(document).on('click','.clipCouponsBtn',function () {
+            $(this).toggleClass('clipCoupons_on');
+            $(this).parents('li').siblings().find('a').removeClass('clipCoupons_on').text('使用');
+            if ($(this).is('.clipCoupons_on')) {
+                $(this).text('已使用');
+            } else {
+                $(this).text('使用');
+            }
+        })
+        // //支付
+        $('.submitComposition').click(function () {
+            layer.open({
+                type: 1,
+                title:'确认订单',
+                move:false,
+                skin: 'layerCommBox',
+                area:'450px',
+                content: $('.addAcceleratePayment')
+            });
+        });
+        //沒有投稿机会
+      /*  layer.confirm('您本周免费投稿机会已用完，只能存为草稿，如想继续投稿请使用“投稿券”享受额外一次投稿机会。', {
+            btn:['暂不需要','使用卡券']
+            ,closeBtn: 0
+            ,area:'350px'
+            ,skin:'layerConfirm'
+            ,title:''
+        })*/
+        //投稿成功
+       /* $('.submitComposition').click(function () {
+            layer.open({
+                type: 1,
+                title:false,
+                closeBtn:false,
+                skin: 'layerCommBox',
+                btn:'我知道了',
+                area:'450px',
+                content: $('.contributeIcoBox')
+                ,success:function () {
+                    $(document).on('click','.close',function () {
+                        layer.closeAll()
+                    })
+                }
+            });
+        });*/
+    //    完善信息
+       /* $('.submitComposition').click(function () {
+            layer.open({
+                type: 1,
+                title:false,
+                closeBtn:false,
+                skin: 'layerCommBox3',
+                btn:'确定',
+                area:'570px',
+                content: $('.complementInformation')
+                ,success:function () {
+                    $(document).on('click','.close',function () {
+                        layer.closeAll()
+                    })
+                }
+            });
+        });*/
+    })
+</script>
+</html>
